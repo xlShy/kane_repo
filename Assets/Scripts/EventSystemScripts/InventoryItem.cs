@@ -7,6 +7,8 @@ public abstract class InventoryItem : MonoBehaviour
     [SerializeField]
     public string itemName;
 
+    [SerializeField]
+    public Sprite inventoryItemImage;
 }
 
 

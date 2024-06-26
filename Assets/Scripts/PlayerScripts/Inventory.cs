@@ -1,11 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject consumableInventory;
+    [SerializeField]
+    private GameObject box1;
+    [SerializeField]
+    private GameObject box2;
+    [SerializeField]
+    private GameObject box3;
+
+    private bool isOpen;
     private List<InventoryItem> items = new List<InventoryItem>();
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab) && !isOpen)
+        {
+            consumableInventory.SetActive(true);
+            UpdateInventoryUI();
+            isOpen = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && isOpen)
+        {
+            consumableInventory.SetActive(false);
+            isOpen = false;
+        }
+
+    }
     //adds items to player inventory
     public void AddItem(InventoryItem item)
     {
@@ -54,5 +80,28 @@ public class Inventory : MonoBehaviour
             }
         }
         return result;
+    }
+
+    private void UpdateInventoryUI()
+    {
+        UpdateBox(box1, items.Count > 0 ? items[0] : null);
+        UpdateBox(box2, items.Count > 1 ? items[1] : null);
+        UpdateBox(box3, items.Count > 2 ? items[2] : null);
+    }
+
+    private void UpdateBox(GameObject box, InventoryItem item)
+    {
+        Image itemImage = box.GetComponentInChildren<Image>();
+
+        if (item != null)
+        {
+            itemImage.sprite = item.inventoryItemImage;
+            itemImage.enabled = true;
+
+        }
+        else
+        {
+            itemImage.enabled = false;
+        }
     }
 }
