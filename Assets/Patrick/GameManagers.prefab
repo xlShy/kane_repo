@@ -47,7 +47,11 @@ MonoBehaviour:
   roomSanityRates:
     Items:
     - Room: {fileID: 0}
-      SanityDecreaseRate: 0
+      SanityDecreaseRate: 0.01
+    - Room: {fileID: 0}
+      SanityDecreaseRate: 0.02
+    - Room: {fileID: 0}
+      SanityDecreaseRate: 0.03
 --- !u!1 &3496121777398930138
 GameObject:
   m_ObjectHideFlags: 0
