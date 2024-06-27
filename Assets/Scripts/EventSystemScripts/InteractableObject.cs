@@ -30,6 +30,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     Debug.Log("Item Picked Up case 1");
                     itemPickedUp.Invoke();
                     inventory.AddItem(item);
+                    canBeInteracted = false;
                     break;
                 case 2:
                     Debug.Log("You have interacted with an objective!");

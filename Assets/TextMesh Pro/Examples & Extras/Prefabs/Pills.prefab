@@ -1,0 +1,474 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &416515029625844702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430118975760429267}
+  m_Layer: 0
+  m_Name: Pills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430118975760429267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416515029625844702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4596435219335017704}
+  - {fileID: 8973338749443527421}
+  - {fileID: 2000663462159328582}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2038285293662061229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 430118975760429267}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.036119
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.616651
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.870075
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.61616653
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.815891
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Name
+      value: pills_ver1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5436254421814132099}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6988861963659766364}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2898214200321587796}
+  m_SourcePrefab: {fileID: 100100000, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+--- !u!1 &1191229027590635516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 2038285293662061229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5436254421814132099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191229027590635516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202384e66ac713e44a2e142c76d213cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Pills
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  interactableScript: {fileID: 6988861963659766364}
+  dialogueText: {fileID: 0}
+  dialogueContent: ' I''ve got some pills!'
+  dialogueDuration: 2
+--- !u!114 &6988861963659766364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191229027590635516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 6e1e30636ee7c0741bc91f5b81838f4f, type: 2}
+  item: {fileID: 5436254421814132099}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!136 &2898214200321587796
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191229027590635516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011429749
+  m_Height: 0.0199477
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.0317984e-17, z: 0.0014297508}
+--- !u!4 &2000663462159328582 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 2038285293662061229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4054198472582337283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 430118975760429267}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.036119
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.616651
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.236393
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6161666
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.67647
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Name
+      value: pills_ver1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8812163555180390566}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 400630706901516826}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8670443915778286585}
+  m_SourcePrefab: {fileID: 100100000, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+--- !u!1 &3783588656573230674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 4054198472582337283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8812163555180390566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783588656573230674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 6e1e30636ee7c0741bc91f5b81838f4f, type: 2}
+  item: {fileID: 400630706901516826}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &400630706901516826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783588656573230674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202384e66ac713e44a2e142c76d213cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Pills
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  interactableScript: {fileID: 8812163555180390566}
+  dialogueText: {fileID: 0}
+  dialogueContent: More Pills!
+  dialogueDuration: 2
+--- !u!136 &8670443915778286585
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783588656573230674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011429749
+  m_Height: 0.0199477
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.0317984e-17, z: 0.0014297508}
+--- !u!4 &4596435219335017704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 4054198472582337283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8866758023556183318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 430118975760429267}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.03612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.616652
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.618
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.574
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Name
+      value: pills_ver1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5982256669510438038}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4107529175967054455}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2637877677181088508}
+  m_SourcePrefab: {fileID: 100100000, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+--- !u!1 &8632385225653225543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 8866758023556183318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5982256669510438038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632385225653225543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202384e66ac713e44a2e142c76d213cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Pills
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  interactableScript: {fileID: 4107529175967054455}
+  dialogueText: {fileID: 0}
+  dialogueContent: This will help my sanity...
+  dialogueDuration: 2
+--- !u!114 &4107529175967054455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632385225653225543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 6e1e30636ee7c0741bc91f5b81838f4f, type: 2}
+  item: {fileID: 5982256669510438038}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!136 &2637877677181088508
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632385225653225543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011429749
+  m_Height: 0.0199477
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.0014297508}
+--- !u!4 &8973338749443527421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5226f8f416a067749ab0258bb3fe5894, type: 3}
+  m_PrefabInstance: {fileID: 8866758023556183318}
+  m_PrefabAsset: {fileID: 0}

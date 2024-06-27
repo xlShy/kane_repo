@@ -20,16 +20,21 @@ public class PillsItem : InventoryItem
 
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
+    private CapsuleCollider capsuleCollider;
 
     private void Start()
     {
         interactableScript.itemPickedUp.AddListener(dialogueActivate);
+        capsuleCollider = GetComponent<CapsuleCollider>();
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
     private void dialogueActivate()
     {
         Debug.Log("I am called to make dialogue!");
+        capsuleCollider.enabled = false;
+        meshRenderer.enabled = false;
+
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = dialogueContent;
 
@@ -38,14 +43,11 @@ public class PillsItem : InventoryItem
             StopCoroutine(dialogueCoroutine);
         }
         dialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(dialogueDuration));
-
-        meshRenderer.enabled = false;
     }
 
     private IEnumerator HideDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         dialogueText.gameObject.SetActive(false);
-        Destroy(gameObject);
     }
 }
