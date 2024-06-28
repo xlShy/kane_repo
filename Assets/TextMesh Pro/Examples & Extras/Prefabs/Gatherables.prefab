@@ -145,7 +145,9 @@ GameObject:
   - component: {fileID: 4444563892867914985}
   - component: {fileID: 5757628619507260943}
   - component: {fileID: 2999922577408311417}
-  m_Layer: 0
+  - component: {fileID: 309817662774843965}
+  - component: {fileID: 2311779066290444603}
+  m_Layer: 7
   m_Name: Fuse (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,6 +240,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &309817662774843965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649285402887679900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c803cd7b8d2dee24ca49bfd6b2dfafb0, type: 2}
+  item: {fileID: 2311779066290444603}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2311779066290444603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649285402887679900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Fuse
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  interactableScript: {fileID: 309817662774843965}
+  dialogueText: {fileID: 0}
+  dialogueContent: 
+  dialogueDuration: 0
 --- !u!1 &5672320899836669379
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +287,9 @@ GameObject:
   - component: {fileID: 5734339609108819130}
   - component: {fileID: 6696895260308991875}
   - component: {fileID: 2050643526055469476}
-  m_Layer: 0
+  - component: {fileID: 4989618049253536140}
+  - component: {fileID: 8256048934626640342}
+  m_Layer: 7
   m_Name: Fuse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,6 +382,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4989618049253536140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672320899836669379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c803cd7b8d2dee24ca49bfd6b2dfafb0, type: 2}
+  item: {fileID: 8256048934626640342}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8256048934626640342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672320899836669379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Fuse
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  interactableScript: {fileID: 4989618049253536140}
+  dialogueText: {fileID: 0}
+  dialogueContent: 
+  dialogueDuration: 0
 --- !u!1 &7308865231864730686
 GameObject:
   m_ObjectHideFlags: 0

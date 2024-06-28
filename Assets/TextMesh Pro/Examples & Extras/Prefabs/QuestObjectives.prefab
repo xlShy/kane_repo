@@ -117,7 +117,8 @@ GameObject:
   - component: {fileID: 2912136037055097626}
   - component: {fileID: 7880553393837915630}
   - component: {fileID: 7951407676529878349}
-  m_Layer: 0
+  - component: {fileID: 4957424975226676035}
+  m_Layer: 7
   m_Name: Fuse Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,6 +211,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4957424975226676035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678260292820011453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bae418849f71448196f6690f5ed4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 0659ef1d3672d6345bf76fa3cb22a182, type: 2}
+  item: {fileID: 0}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  reqNumber: 2
+  dialogueText: {fileID: 0}
+  dialogueContent: I've got the fuse running!
+  dialogueDuration: 3
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &4776556044660327221
 GameObject:
   m_ObjectHideFlags: 0
