@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,17 +7,16 @@ public class SanityStatusEffect : MonoBehaviour
     private SanityHandler sanityHandler;
     public Transform playerObject;
     public Transform shedSpawnPoint;
-
     public RawImage visionDarken;
-    public bool isVisionReturning = false;
-    public float darkenDuration = 3f; 
-    public float returnDuration = 3f; 
-    private Coroutine visionCoroutine;
+    public float darkenDuration = 3f;
+    public float returnDuration = 3f;
+    private Coroutine visionChangeCoroutine;
 
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
     }
+
     public void CheckSanityValue(float sanityValue)
     {
         if (sanityValue <= 0)
@@ -26,52 +24,60 @@ public class SanityStatusEffect : MonoBehaviour
             sanityHandler.isSanityDepleted = true;
             OnDepletedSanity();
         }
-        else if (sanityValue <= .5f)
+        else if (sanityValue <= .1f)
         {
-            OnLowSanity();
+            OnLowSanity(.97f);
         }
-        else if (sanityValue > .5f)
+        else if (sanityValue <= .3f)
+        {
+            OnLowSanity(.90f);
+        }
+        else if (sanityValue <= .6f)
+        {
+            OnLowSanity(.65f);
+        }
+        else
         {
             OnHighSanity();
         }
     }
+
     public void OnDepletedSanity()
     {
-        CharacterController controller = playerObject.GetComponent<CharacterController>();//turning off the CC to allow changes in the transform
+        CharacterController controller = playerObject.GetComponent<CharacterController>();
         if (controller != null)
         {
             controller.enabled = false;
             playerObject.position = shedSpawnPoint.position;
-
+            controller.enabled = true;
         }
-        controller.enabled = true;
         ResetVision();
         sanityHandler.ResetSanity();
     }
-    public void OnLowSanity()
+
+    public void OnLowSanity(float alpha)
     {
-        //print("vision darken");
-        if (!isVisionReturning && visionCoroutine == null)
+        if (visionChangeCoroutine != null)
         {
-            visionCoroutine = StartCoroutine(ChangeVision(0.65f, darkenDuration));
+            StopCoroutine(visionChangeCoroutine);
         }
+        visionChangeCoroutine = StartCoroutine(ChangeVision(alpha, darkenDuration));
     }
+
     public void OnHighSanity()
     {
-        //print("return vision");
-        if (visionCoroutine != null)
+        if (visionChangeCoroutine != null)
         {
-            StopCoroutine(visionCoroutine);
+            StopCoroutine(visionChangeCoroutine);
         }
-        visionCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
+        visionChangeCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
     }
+
     private IEnumerator ChangeVision(float targetAlpha, float duration)
     {
         float elapsedTime = 0f;
         Color color = visionDarken.color;
         float startAlpha = color.a;
-
-        isVisionReturning = (targetAlpha < startAlpha);
 
         while (elapsedTime < duration)
         {
@@ -80,25 +86,20 @@ public class SanityStatusEffect : MonoBehaviour
             visionDarken.color = color;
             yield return null;
         }
-        print("vision Darken");
+
         color.a = targetAlpha;
         visionDarken.color = color;
-
-        isVisionReturning = false;
-        visionCoroutine = null;
+        Debug.Log("Vision change completed. Target alpha: " + targetAlpha);
     }
+
     private void ResetVision()
     {
-        if (visionCoroutine != null)
+        if (visionChangeCoroutine != null)
         {
-            StopCoroutine(visionCoroutine);
-            visionCoroutine = null;
+            StopCoroutine(visionChangeCoroutine);
         }
-
         Color color = visionDarken.color;
-        color.a = 0f; 
+        color.a = 0f;
         visionDarken.color = color;
-
-        isVisionReturning = false;
     }
 }

@@ -583,6 +583,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+--- !u!114 &1223407404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2312605012493744872, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
+  m_PrefabInstance: {fileID: 3649034147005034419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434949865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6414842396438157785, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -1205,6 +1216,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 511383847}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: visionDarken
+      value: 
+      objectReference: {fileID: 1223407404}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: shedSpawnPoint
       value: 
