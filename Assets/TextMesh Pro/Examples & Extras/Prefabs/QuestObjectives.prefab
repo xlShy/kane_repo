@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 5872008868151653940}
   - component: {fileID: 4165712029256543465}
   - component: {fileID: 3544235737839487335}
+  - component: {fileID: 1628154643572299277}
   - component: {fileID: 6847741487301013686}
   m_Layer: 0
   m_Name: ClockInterfaceBackground
@@ -436,6 +437,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1628154643572299277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303823185850639545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 4303823185850639545}
 --- !u!114 &6847741487301013686
 MonoBehaviour:
   m_ObjectHideFlags: 0
