@@ -6,7 +6,6 @@ public class GrandfatherClock : InteractableObject
 {
 
     public GameObject puzzleCanvas;
-    private Renderer objectRenderer;
     [SerializeField]
     public LayerMask newLayerMask;
 
@@ -16,16 +15,15 @@ public class GrandfatherClock : InteractableObject
     [SerializeField]
     public ClockChecker clockChecker;
 
-    private void Start()
-    {
-        objectRenderer = GetComponent<Renderer>();
-    }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (itemInteractedCase == 2)
         {
             puzzleCanvas.SetActive(true);
             clockChecker = FindObjectOfType<ClockChecker>();
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
 
             if (clockChecker != null)
             {
@@ -45,7 +43,6 @@ public class GrandfatherClock : InteractableObject
     private void OnPuzzleCompleted()
     {
         Debug.Log("Puzzle completed! Deactivating canvas.");
-        objectRenderer.material.color = Color.green;
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         //doorToOpen.SetActive(false);
     }

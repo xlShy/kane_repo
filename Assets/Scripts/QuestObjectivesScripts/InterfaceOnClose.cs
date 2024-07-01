@@ -12,6 +12,8 @@ public class TVInterfaceOnClose : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             gameObject.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
