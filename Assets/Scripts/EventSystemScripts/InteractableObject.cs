@@ -24,26 +24,36 @@ public class InteractableObject : MonoBehaviour, IInteractable
             switch (itemInteractedCase)
             {
                 case 0:
-                    Debug.Log("Item Interacted With");
+                    //Debug.Log("Item Interacted With");
                     break;
                 case 1:
-                    Debug.Log("Item Picked Up case 1");
-                    itemPickedUp.Invoke();
-                    inventory.AddItem(item);
-                    canBeInteracted = false;
+                    
+                    if(item.type == ItemType.Consumables)
+                    {
+                        Debug.Log("Item Picked Up Consumables");
+                        itemPickedUp.Invoke();
+                        inventory.AddItem(item);
+                        canBeInteracted = false;
+                    }
+                    else if (item.type == ItemType.KeyItem)
+                    {
+                        Debug.Log("Item Picked Up Key Items");
+                        itemPickedUp.Invoke();
+                        inventory.AddKeyItem(item);
+                        canBeInteracted = false;
+                    }
                     break;
                 case 2:
-                    Debug.Log("You have interacted with an objective!");
+                    //Debug.Log("You have interacted with an objective!");
                     break;
                 case 3:
-                    Debug.Log("Item Picked Up");
+                    //Debug.Log("Item Picked Up");
                     if (item != null)
                     {
                         inventory.AddItem(item);
                         canBeInteracted = false;
                     }
                     break;
-
             }
         }
 

@@ -31,7 +31,7 @@ public class PillsItem : InventoryItem
 
     private void dialogueActivate()
     {
-        Debug.Log("I am called to make dialogue!");
+        //Debug.Log("I am called to make dialogue!");
         capsuleCollider.enabled = false;
         meshRenderer.enabled = false;
 

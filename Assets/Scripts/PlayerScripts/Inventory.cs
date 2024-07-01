@@ -15,7 +15,11 @@ public class Inventory : MonoBehaviour
     private GameObject box3;
 
     private bool isOpen = false;
-    private List<InventoryItem> items = new List<InventoryItem>();
+    private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
+    private List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
+
+    public GameObject itemPanelParentObject;
+    public GameObject itemBoxPanel;
 
     private void Start()
     {
@@ -30,27 +34,35 @@ public class Inventory : MonoBehaviour
             consumableInventory.SetActive(isOpen);
             if (isOpen)
             {
-                UpdateInventoryUI();
+                UpdateConsumableInventoryUI();
             }
         }
     }
 
     // Adds items to player inventory
-    public void AddItem(InventoryItem item)
+    public void AddItem(InventoryItem consumableItem)
     {
-        items.Add(item);
-        Debug.Log(item.itemName + " added to inventory.");
+        consumableItemsInventory.Add(consumableItem);
+        Debug.Log(consumableItem.itemName + " added to consumables inventory.");
         if (isOpen)
         {
-            UpdateInventoryUI();
+            UpdateConsumableInventoryUI();
         }
     }
-
+    public void AddKeyItem(InventoryItem keyItem)
+    {
+        keyItemsInventory.Add(keyItem);
+        Debug.Log(keyItem.itemName + "added to key items inventory");
+        if (isOpen)
+        {
+            UpdateConsumableInventoryUI();
+        }
+    }
     // Counts specific item in player inventory
     public int GetItemCount<T>() where T : InventoryItem
     {
         int count = 0;
-        foreach (var item in items)
+        foreach (var item in consumableItemsInventory)
         {
             if (item is T)
             {
@@ -68,9 +80,9 @@ public class Inventory : MonoBehaviour
 
     public bool RemoveItem<T>(T item) where T : InventoryItem
     {
-        if (items.Contains(item))
+        if (consumableItemsInventory.Contains(item))
         {
-            items.Remove(item);
+            consumableItemsInventory.Remove(item);
             return true;
         }
         return false;
@@ -79,7 +91,7 @@ public class Inventory : MonoBehaviour
     public List<T> GetAllItemsOfType<T>() where T : InventoryItem
     {
         List<T> result = new List<T>();
-        foreach (InventoryItem item in items)
+        foreach (InventoryItem item in consumableItemsInventory)
         {
             if (item is T)
             {
@@ -105,15 +117,19 @@ public class Inventory : MonoBehaviour
         {
             Image itemImage = images[1];
             itemImage.enabled = false;   // Initialize the child image as disabled
-            Debug.Log($"Initialized {box.name} child image as disabled.");
+            //Debug.Log($"Initialized {box.name} child image as disabled.");
         }
     }
 
-    private void UpdateInventoryUI()
+    private void UpdateConsumableInventoryUI()
     {
-        UpdateBox(box1, items.Count > 0 ? items[0] : null);
-        UpdateBox(box2, items.Count > 1 ? items[1] : null);
-        UpdateBox(box3, items.Count > 2 ? items[2] : null);
+        UpdateBox(box1, consumableItemsInventory.Count > 0 ? consumableItemsInventory[0] : null);
+        UpdateBox(box2, consumableItemsInventory.Count > 1 ? consumableItemsInventory[1] : null);
+        UpdateBox(box3, consumableItemsInventory.Count > 2 ? consumableItemsInventory[2] : null);
+    }
+    private void UpdateKeyItemInventoryUI()
+    {
+
     }
 
     private void UpdateBox(GameObject box, InventoryItem item)
@@ -123,19 +139,23 @@ public class Inventory : MonoBehaviour
 
         if (images.Length > 1)
         {
-            Debug.Log("I've entered");
+            //Debug.Log("I've entered");
             Image itemImage = images[1];
             if (item != null)
             {
-                Debug.Log($"{box.name} - Item found, setting image.");
+                //Debug.Log($"{box.name} - Item found, setting image.");
                 itemImage.sprite = item.inventoryItemImage;
                 itemImage.enabled = true;
             }
             else
             {
-                Debug.Log($"{box.name} - No item found, disabling image.");
+                //Debug.Log($"{box.name} - No item found, disabling image.");
                 itemImage.enabled = false;
             }
         }
+    }
+    private void UpdateBook(Image itemIcon, string description)
+    {
+
     }
 }

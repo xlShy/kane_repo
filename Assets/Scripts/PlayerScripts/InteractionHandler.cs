@@ -51,8 +51,8 @@ public class InteractionHandler : MonoBehaviour
                             Debug.Log("You interacted with me!");
                             itemInteractedCase = 0;
                             break;
-                        case InteractableType.Pickup:
-                            Debug.Log("You picked me up!");
+                        case InteractableType.PickUp:
+                            //Debug.Log("You picked up an item!");
                             itemInteractedCase = 1;
                             break;
                         case InteractableType.Objective:
