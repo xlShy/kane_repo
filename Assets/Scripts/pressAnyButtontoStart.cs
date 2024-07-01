@@ -5,12 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class pressAnyButtontoStart : MonoBehaviour
 {
-    // Update is called once per frame
+    public AudioSource audioSource;
+    public AudioClip pressSound;
+    public Animator animator;
+    private int leveltoLoad;
     void Update()
     {
         if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("Main Menu");
+            audioSource.PlayOneShot(pressSound);
+            fade(1);
+            //SceneManager.LoadScene("Main Menu");
         }
+    }
+    public void fade(int sceneIndex)
+    {
+        leveltoLoad = sceneIndex;
+        animator.SetTrigger("FadeOut");
+    }
+    public void fadefinish()
+    {
+        SceneManager.LoadScene(leveltoLoad);
     }
 }
