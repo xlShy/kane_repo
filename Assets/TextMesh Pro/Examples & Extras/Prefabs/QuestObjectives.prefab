@@ -820,13 +820,14 @@ GameObject:
   - component: {fileID: 6305389846731189607}
   - component: {fileID: 1568918244024284291}
   - component: {fileID: 5050907120469581746}
+  - component: {fileID: 4825905351151081477}
   m_Layer: 5
   m_Name: TVPuzzlePortionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6884107898483256969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -910,6 +911,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4825905351151081477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834279399339424612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 7834279399339424612}
 --- !u!1 &7868264101353228599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1132,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
-  tvInterface: {fileID: 0}
+  tvInterface: {fileID: 7834279399339424612}
   newLayerMask:
     serializedVersion: 2
     m_Bits: 0
