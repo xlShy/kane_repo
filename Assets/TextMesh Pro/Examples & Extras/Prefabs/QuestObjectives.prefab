@@ -773,8 +773,9 @@ GameObject:
   - component: {fileID: 6336192770844539119}
   - component: {fileID: 468750675717114711}
   - component: {fileID: 2915517232164629464}
+  - component: {fileID: 1131654364746546507}
   - component: {fileID: 3678474635415251316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,6 +847,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1131654364746546507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8510349334312050577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f810084864a79ba47a089beb7cff41df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 3ff9a3270b79b0f40b93cf967f80c71d, type: 2}
+  item: {fileID: 0}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  tvInterface: {fileID: 0}
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &3678474635415251316
 BoxCollider:
   m_ObjectHideFlags: 0
