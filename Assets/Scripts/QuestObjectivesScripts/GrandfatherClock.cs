@@ -44,6 +44,8 @@ public class GrandfatherClock : InteractableObject
     {
         Debug.Log("Puzzle completed! Deactivating canvas.");
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         //doorToOpen.SetActive(false);
     }
 }
