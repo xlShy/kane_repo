@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +17,14 @@ public class Inventory : MonoBehaviour
     private GameObject box3;
 
     private bool isOpen = false;
+
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
     private List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
 
-    public GameObject itemPanelParentObject;
-    public GameObject itemBoxPanel;
+    [SerializeField] private KeyItemInventory keyItemInventoryScript;
+
+    public static event Action<bool> onInventoryFull;
+    public bool isFull;
 
     private void Start()
     {
@@ -28,6 +33,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+        //put in an inputhandler script
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             isOpen = !isOpen;
@@ -42,7 +48,20 @@ public class Inventory : MonoBehaviour
     // Adds items to player inventory
     public void AddItem(InventoryItem consumableItem)
     {
+        if(consumableItemsInventory.Count >= 2)
+        {
+            print("inventory is full");
+            isFull = true;
+            onInventoryFull.Invoke(isFull);
+            return;
+        }
+        else
+        {
+            isFull = false;
+            onInventoryFull.Invoke(isFull);
+        }
         consumableItemsInventory.Add(consumableItem);
+
         Debug.Log(consumableItem.itemName + " added to consumables inventory.");
         if (isOpen)
         {
@@ -53,12 +72,12 @@ public class Inventory : MonoBehaviour
     {
         keyItemsInventory.Add(keyItem);
         Debug.Log(keyItem.itemName + "added to key items inventory");
-        if (isOpen)
-        {
-            UpdateConsumableInventoryUI();
-        }
+
+        keyItemInventoryScript.CreateOrUpdateItemPanelBox(keyItem, keyItemsInventory);
     }
+
     // Counts specific item in player inventory
+    //TO DO - put function in a separate script
     public int GetItemCount<T>() where T : InventoryItem
     {
         int count = 0;
@@ -73,6 +92,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Determines if player has specific item in inventory
+
     public bool HasItem<T>() where T : InventoryItem
     {
         return GetItemCount<T>() > 0;
@@ -87,7 +107,7 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
+    //TO DO - put function in another script
     public List<T> GetAllItemsOfType<T>() where T : InventoryItem
     {
         List<T> result = new List<T>();
@@ -127,10 +147,7 @@ public class Inventory : MonoBehaviour
         UpdateBox(box2, consumableItemsInventory.Count > 1 ? consumableItemsInventory[1] : null);
         UpdateBox(box3, consumableItemsInventory.Count > 2 ? consumableItemsInventory[2] : null);
     }
-    private void UpdateKeyItemInventoryUI()
-    {
-
-    }
+    
 
     private void UpdateBox(GameObject box, InventoryItem item)
     {
@@ -154,8 +171,5 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    private void UpdateBook(Image itemIcon, string description)
-    {
-
-    }
+    
 }

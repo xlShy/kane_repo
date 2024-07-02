@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,12 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
     public UnityEvent itemPickedUp;
 
+    private bool isInventoryFull;
+
+    private void OnEnable()
+    {
+        Inventory.onInventoryFull += InventoryFull;
+    }
     void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -30,10 +37,13 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     
                     if(item.type == ItemType.Consumables)
                     {
-                        Debug.Log("Item Picked Up Consumables");
-                        itemPickedUp.Invoke();
-                        inventory.AddItem(item);
-                        canBeInteracted = false;
+                        if (!isInventoryFull)
+                        {
+                            Debug.Log("Item Picked Up Consumables");
+                            itemPickedUp.Invoke();
+                            inventory.AddItem(item);
+                            canBeInteracted = false;
+                        }
                     }
                     else if (item.type == ItemType.KeyItem)
                     {
@@ -69,5 +79,9 @@ public class InteractableObject : MonoBehaviour, IInteractable
         Debug.Log("I reset the puzzle");
         canBeInteracted = true;
 
+    }
+    private void InventoryFull(bool isFull)
+    {
+        isInventoryFull = isFull;
     }
 }
