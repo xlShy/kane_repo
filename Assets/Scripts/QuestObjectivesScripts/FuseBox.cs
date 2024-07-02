@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class FuseBox : InteractableObject
 {
@@ -24,6 +25,7 @@ public class FuseBox : InteractableObject
     private DialogueTriggerScript oneFuseDialogue;
 
     private Coroutine dialogueCoroutine;
+    private Inventory currentInventory;
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -32,9 +34,15 @@ public class FuseBox : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
-            int fuseCount = inventory.GetItemCount<FuseItem>();
+            List<InventoryItem> keyItems = inventory.GetKeyItems();
+            int fuseCount = CountFuseItems(keyItems);
             HandleFuses(fuseCount);
         }
+    }
+
+    private int CountFuseItems(List<InventoryItem> items)
+    {
+        return items.Count(item => item is FuseItem);
     }
 
     private void HandleFuses(int fuseCount)
@@ -50,9 +58,29 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 2)
         {
-            gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-            objectRenderer.material.color = Color.green;
-            successFuseDialogue.TriggerDialogue();
+            SolvePuzzle();
+        }
+    }
+
+    private void SolvePuzzle()
+    {
+        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
+        objectRenderer.material.color = Color.green;
+        successFuseDialogue.TriggerDialogue();
+        RemoveFusesFromInventory(2);
+    }
+
+    private void RemoveFusesFromInventory(int count)
+    {
+        if (currentInventory != null)
+        {
+            List<InventoryItem> keyItems = currentInventory.GetKeyItems();
+            List<FuseItem> fusesToRemove = keyItems.OfType<FuseItem>().Take(count).ToList();
+
+            foreach (FuseItem fuse in fusesToRemove)
+            {
+                keyItems.Remove(fuse);
+            }
         }
     }
     private IEnumerator HideDialogueAfterDelay(float delay)

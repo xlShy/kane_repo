@@ -86,6 +86,12 @@ public class Inventory : MonoBehaviour
 
     // Counts specific item in player inventory
     //TO DO - put function in a separate script
+
+    public List<InventoryItem> GetKeyItems()
+    {
+        return keyItemsInventory;
+    }
+
     public int GetItemCount<T>() where T : InventoryItem
     {
         int count = 0;
@@ -105,7 +111,6 @@ public class Inventory : MonoBehaviour
     {
         return GetItemCount<T>() > 0;
     }
-
     public bool RemoveItem<T>(T item) where T : InventoryItem
     {
         if (consumableItemsInventory.Contains(item))
