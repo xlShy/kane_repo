@@ -12,7 +12,6 @@ public class ClockChecker : MonoBehaviour
     [SerializeField, Range(0, 59)]
     private int minuteHandTargetTime;
 
-
     [SerializeField]
     private float minuteHandAngleTolerance;
     [SerializeField]
@@ -20,6 +19,8 @@ public class ClockChecker : MonoBehaviour
 
     [SerializeField]
     public float howOftenCheck;
+
+
 
     private float checkTimer;
 

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 675867482575755741}
-  onCloseTVInterface: {fileID: 0}
+  onCloseInterface: {fileID: 1128098754795242724}
 --- !u!1 &685177022639976834
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 1167992742329585626}
   - component: {fileID: 7910709036731211080}
   - component: {fileID: 4009944966873280800}
+  - component: {fileID: 1128098754795242724}
   m_Layer: 5
   m_Name: CombinationCanvas
   m_TagString: Untagged
@@ -360,6 +361,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1128098754795242724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019960403373478890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - I guess I have to get the right code...
+  dialogueDuration: 2
+  isRepeating: 0
 --- !u!1 &1095012234162529022
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +881,7 @@ GameObject:
   - component: {fileID: 5872008868151653940}
   - component: {fileID: 4165712029256543465}
   - component: {fileID: 3544235737839487335}
+  - component: {fileID: 5250365410401366238}
   - component: {fileID: 1628154643572299277}
   - component: {fileID: 6847741487301013686}
   m_Layer: 0
@@ -931,6 +950,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5250365410401366238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303823185850639545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Something can be done with this clock...
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!114 &1628154643572299277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4303823185850639545}
-  onCloseTVInterface: {fileID: 0}
+  onCloseInterface: {fileID: 5250365410401366238}
 --- !u!114 &6847741487301013686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +1014,7 @@ GameObject:
   - component: {fileID: 6675383501120534944}
   - component: {fileID: 4354903185137530124}
   - component: {fileID: 7276511439451893340}
+  - component: {fileID: 4339312159283805858}
   - component: {fileID: 5834031544510747400}
   - component: {fileID: 4718728222732200423}
   m_Layer: 7
@@ -1054,6 +1091,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4339312159283805858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776556044660327221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - I cracked the code!
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!114 &5834031544510747400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1130,7 @@ MonoBehaviour:
   newLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  onPuzzleSuccess: {fileID: 4339312159283805858}
   onLockPuzzleCompletion:
     m_PersistentCalls:
       m_Calls: []
@@ -1175,6 +1230,125 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6556878115783539094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3345852267449213370}
+  - component: {fileID: 3404797873302702615}
+  - component: {fileID: 204819409545701627}
+  - component: {fileID: 6364605229616058771}
+  - component: {fileID: 712320364190801455}
+  m_Layer: 0
+  m_Name: OfficeDoorOpens
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3345852267449213370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556878115783539094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.86, y: 15.1541, z: 38.5368}
+  m_LocalScale: {x: 1, y: 5.391672, z: 3.0339892}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5970510201127824053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3404797873302702615
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556878115783539094}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &204819409545701627
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556878115783539094}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6364605229616058771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556878115783539094}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &712320364190801455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556878115783539094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5782e79adb3a12f42b5e1d1acf8850b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandFatherClockScript: {fileID: 7683826687203596729}
 --- !u!1 &6671669124767878332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1509,7 @@ Transform:
   m_Children:
   - {fileID: 3297914937818320742}
   - {fileID: 5076429132177320918}
+  - {fileID: 3345852267449213370}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6898769773700594582
@@ -1982,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 7834279399339424612}
-  onCloseTVInterface: {fileID: 1373862751000603515}
+  onCloseInterface: {fileID: 1373862751000603515}
 --- !u!1 &7868264101353228599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2587,9 @@ PrefabInstance:
       addedObject: {fileID: 1982990001786403366}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c738ae54a17e6324f97af0576e2b1176, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5894120537310210579}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c738ae54a17e6324f97af0576e2b1176, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7683826687203596729}
   m_SourcePrefab: {fileID: 100100000, guid: c738ae54a17e6324f97af0576e2b1176, type: 3}
 --- !u!1 &150866598601683077 stripped
@@ -2440,6 +2618,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.012949587, y: 0.008601905, z: 0.04484091}
   m_Center: {x: -0.00023947144, y: -0.00064934266, z: 0.021731455}
+--- !u!114 &5894120537310210579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150866598601683077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - I somehow solved the clock!
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!114 &7683826687203596729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2462,6 +2657,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   clockChecker: {fileID: 6847741487301013686}
+  onPuzzleSolve: {fileID: 5894120537310210579}
+  doorOpen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &674463470022797887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c738ae54a17e6324f97af0576e2b1176, type: 3}

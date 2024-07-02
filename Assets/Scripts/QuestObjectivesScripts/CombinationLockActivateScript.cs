@@ -15,6 +15,9 @@ public class CombinationLockActivateScript : InteractableObject
     [SerializeField]
     public LayerMask newLayerMask;
 
+    [SerializeField]
+    private DialogueTriggerScript onPuzzleSuccess;
+
     public UnityEvent onLockPuzzleCompletion;
 
     private void Start()
@@ -39,12 +42,12 @@ public class CombinationLockActivateScript : InteractableObject
 
     private void OnCorrectCombinationEntered()
     {
+        onPuzzleSuccess.TriggerDialogue();
         combinationCanvas.SetActive(false);
         objectRenderer.material.color = Color.green;
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         onLockPuzzleCompletion.Invoke();
-        
     }
 }

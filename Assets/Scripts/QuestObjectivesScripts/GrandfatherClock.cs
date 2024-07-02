@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class GrandfatherClock : InteractableObject
 {
@@ -14,6 +16,11 @@ public class GrandfatherClock : InteractableObject
 
     [SerializeField]
     public ClockChecker clockChecker;
+
+    [SerializeField]
+    private DialogueTriggerScript onPuzzleSolve;
+
+    public UnityEvent doorOpen;
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -42,6 +49,8 @@ public class GrandfatherClock : InteractableObject
     }
     private void OnPuzzleCompleted()
     {
+        doorOpen.Invoke();
+        onPuzzleSolve.TriggerDialogue();
         Debug.Log("Puzzle completed! Deactivating canvas.");
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         Cursor.visible = false;
