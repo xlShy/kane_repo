@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class KeyItemInventory : MonoBehaviour
 {
-    public GameObject itemPanelParentObject;
-    public GameObject itemBox;
-    public Transform itemName;
-    public Transform amount;
+    [SerializeField] private GameObject itemPanelParentObject;
+    [SerializeField] private GameObject itemBox;
+    [SerializeField] private Transform itemName;
+    [SerializeField] private Transform amount;
+
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI amountText;
+
     public List<GameObject> itemPanels;
 
-     int count = 1;
+    private int initialItemCount = 1;
+
     public void CreateOrUpdateItemPanelBox(InventoryItem keyItem, List<InventoryItem> keyItemInventory)
     {
         bool itemFound = false;
 
         foreach (GameObject panel in itemPanels)
         {
-            TextMeshProUGUI nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
+            nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
             if (nameText.text == keyItem.itemName)
             {
                 UpdateItemCount(panel);
@@ -33,30 +38,54 @@ public class KeyItemInventory : MonoBehaviour
             Debug.Log("New item found");
         }
     }
+    public void RemoveKeyItem(InventoryItem keyItem)
+    {
+        foreach (GameObject panel in itemPanels)
+        {
+            //nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
+            if (nameText.text == keyItem.itemName)
+            {
+                //amountText = panel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
+                int currentCount = int.Parse(amountText.text);
 
-    public void InstantiateItemBoxPanel(InventoryItem keyItem)
+                if (currentCount > 1)
+                {
+                    SetCount(panel, --currentCount);
+                    Debug.Log("Decreased item count");
+                }
+                else
+                {
+                    itemPanels.Remove(panel);
+                    Destroy(panel);
+                    Debug.Log("Item removed");
+                }
+                return;
+            }
+        }
+        Debug.Log("Item not found");
+    }
+    private void InstantiateItemBoxPanel(InventoryItem keyItem)
     {
         GameObject itemPanel = Instantiate(itemBox, itemPanelParentObject.transform);
-        Debug.Log(itemPanel);
 
-        TextMeshProUGUI nameText = itemPanel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
+        nameText = itemPanel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
         nameText.text = keyItem.itemName;
 
-        SetCount(itemPanel, 1);
+        SetCount(itemPanel, initialItemCount);
 
         itemPanels.Add(itemPanel);
     }
 
     private void UpdateItemCount(GameObject itemPanel)
     {
-        TextMeshProUGUI amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
+        amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         int currentCount = int.Parse(amountText.text);
         currentCount++;
         SetCount(itemPanel, currentCount);
     }
     private void SetCount(GameObject itemPanel, int count)
     {
-        TextMeshProUGUI amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
+        amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         amountText.text = count.ToString();
     }
 }

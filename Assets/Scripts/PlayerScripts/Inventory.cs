@@ -10,13 +10,16 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject consumableInventory;
     [SerializeField]
+    private GameObject keyItemInventory;
+    [SerializeField]
     private GameObject box1;
     [SerializeField]
     private GameObject box2;
     [SerializeField]
     private GameObject box3;
 
-    private bool isOpen = false;
+    private bool isConsumablesOpen = false;
+    private bool isKeyOpen = false;
 
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
     private List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
@@ -36,12 +39,17 @@ public class Inventory : MonoBehaviour
         //put in an inputhandler script
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            isOpen = !isOpen;
-            consumableInventory.SetActive(isOpen);
-            if (isOpen)
+            isConsumablesOpen = !isConsumablesOpen;
+            consumableInventory.SetActive(isConsumablesOpen);
+            if (isConsumablesOpen)
             {
                 UpdateConsumableInventoryUI();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            isKeyOpen = !isKeyOpen;
+            keyItemInventory.SetActive(isKeyOpen);
         }
     }
 
@@ -63,7 +71,7 @@ public class Inventory : MonoBehaviour
         consumableItemsInventory.Add(consumableItem);
 
         Debug.Log(consumableItem.itemName + " added to consumables inventory.");
-        if (isOpen)
+        if (isConsumablesOpen)
         {
             UpdateConsumableInventoryUI();
         }
