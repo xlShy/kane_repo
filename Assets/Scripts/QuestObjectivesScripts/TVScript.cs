@@ -7,9 +7,6 @@ public class TVScript : InteractableObject
 
     public GameObject tvInterface;
     private Renderer objectRenderer;
-    [SerializeField]
-    public LayerMask newLayerMask;
-
 
     private void Start()
     {

@@ -30,12 +30,16 @@ public class DialogueTriggerScript : MonoBehaviour
         public DialogueTriggerScript Trigger;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void TriggerDialogue()
     {
         if (!alreadyActivated && dialogueContent.Count > 0)
         {
             EnqueueDialogue();
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        TriggerDialogue();
     }
 
     private void OnTriggerExit(Collider other)

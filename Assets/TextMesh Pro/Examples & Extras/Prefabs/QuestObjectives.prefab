@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 675867482575755741}
+  onCloseTVInterface: {fileID: 0}
 --- !u!1 &685177022639976834
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +477,9 @@ GameObject:
   - component: {fileID: 2912136037055097626}
   - component: {fileID: 7880553393837915630}
   - component: {fileID: 7951407676529878349}
+  - component: {fileID: 5069564659553472925}
+  - component: {fileID: 3318099560819422385}
+  - component: {fileID: 7457317928170181038}
   - component: {fileID: 4957424975226676035}
   m_Layer: 7
   m_Name: Fuse Box
@@ -570,6 +574,57 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5069564659553472925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678260292820011453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - That's one, still won't turn on though...
+  dialogueDuration: 3
+  isRepeating: 0
+--- !u!114 &3318099560819422385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678260292820011453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - I think I need something before I can activate this....
+  dialogueDuration: 3
+  isRepeating: 0
+--- !u!114 &7457317928170181038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678260292820011453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Got the fuse working! Lets go!
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!114 &4957424975226676035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,11 +644,12 @@ MonoBehaviour:
       m_Calls: []
   reqNumber: 2
   dialogueText: {fileID: 0}
-  dialogueContent: I've got the fuse running!
-  dialogueDuration: 3
   newLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  successFuseDialogue: {fileID: 7457317928170181038}
+  notEnoughFusesDialogue: {fileID: 3318099560819422385}
+  oneFuseDialogue: {fileID: 5069564659553472925}
 --- !u!1 &1901948446866338931
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4303823185850639545}
+  onCloseTVInterface: {fileID: 0}
 --- !u!114 &6847741487301013686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,6 +1860,7 @@ GameObject:
   - component: {fileID: 6305389846731189607}
   - component: {fileID: 1568918244024284291}
   - component: {fileID: 5050907120469581746}
+  - component: {fileID: 1373862751000603515}
   - component: {fileID: 4825905351151081477}
   m_Layer: 5
   m_Name: TVPuzzlePortionCanvas
@@ -1894,6 +1952,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1373862751000603515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834279399339424612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Maybe this TV means something...
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!114 &4825905351151081477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,6 +1982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 7834279399339424612}
+  onCloseTVInterface: {fileID: 1373862751000603515}
 --- !u!1 &7868264101353228599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2201,7 @@ GameObject:
   - component: {fileID: 6336192770844539119}
   - component: {fileID: 468750675717114711}
   - component: {fileID: 2915517232164629464}
+  - component: {fileID: 5711208336521598690}
   - component: {fileID: 1131654364746546507}
   - component: {fileID: 3678474635415251316}
   m_Layer: 7
@@ -2200,6 +2277,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5711208336521598690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8510349334312050577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent: []
+  dialogueDuration: 0
+  isRepeating: 0
 --- !u!114 &1131654364746546507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2218,9 +2311,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   tvInterface: {fileID: 7834279399339424612}
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!65 &3678474635415251316
 BoxCollider:
   m_ObjectHideFlags: 0

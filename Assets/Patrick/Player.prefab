@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 3285211800220856391}
   - component: {fileID: 6883310537784295275}
   - component: {fileID: 7854700075321512501}
+  - component: {fileID: 2092761512964473082}
   - component: {fileID: 6165976200285315971}
   - component: {fileID: 7477853744437300971}
   m_Layer: 0
@@ -267,7 +268,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 832
 --- !u!114 &7854700075321512501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   numFound: 0
+--- !u!114 &2092761512964473082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416880441292475520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a2cd6cff59a1b4ba4a38c7e7e9fc9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPanelParentObject: {fileID: 0}
+  itemBox: {fileID: 7501350167200556097, guid: b4de1f6c8d4a7f04387460d8de7909df, type: 3}
+  itemName: {fileID: 0}
+  amount: {fileID: 0}
+  itemPanels: []
 --- !u!114 &6165976200285315971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +321,8 @@ MonoBehaviour:
   box1: {fileID: 0}
   box2: {fileID: 0}
   box3: {fileID: 0}
+  keyItemInventoryScript: {fileID: 2092761512964473082}
+  isFull: 0
 --- !u!114 &7477853744437300971
 MonoBehaviour:
   m_ObjectHideFlags: 0

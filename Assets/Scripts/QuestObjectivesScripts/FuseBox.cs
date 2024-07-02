@@ -14,13 +14,14 @@ public class FuseBox : InteractableObject
     private Text dialogueText;
 
     [SerializeField]
-    private string dialogueContent;
-
-    [SerializeField]
-    private float dialogueDuration;
-
-    [SerializeField]
     public LayerMask newLayerMask;
+
+    [SerializeField]
+    private DialogueTriggerScript successFuseDialogue;
+    [SerializeField]
+    private DialogueTriggerScript notEnoughFusesDialogue;
+    [SerializeField]
+    private DialogueTriggerScript oneFuseDialogue;
 
     private Coroutine dialogueCoroutine;
     private void Start()
@@ -29,30 +30,31 @@ public class FuseBox : InteractableObject
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (itemInteractedCase == reqNumber)
+        if (itemInteractedCase == 2)
         {
-            if (inventory.GetItemCount<FuseItem>() >= reqNumber)
-            {
-                Debug.Log("You have enough fuses!");
-                objectRenderer.material.color = Color.green;
-                gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-
-                dialogueText.gameObject.SetActive(true);
-                dialogueText.text = dialogueContent;
-
-                if (dialogueCoroutine != null)
-                {
-                    StopCoroutine(dialogueCoroutine);
-                }
-                dialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(dialogueDuration));
-            }
-            else
-            {
-                Debug.Log("You do not have enough!");
-            }
+            int fuseCount = inventory.GetItemCount<FuseItem>();
+            HandleFuses(fuseCount);
         }
     }
 
+    private void HandleFuses(int fuseCount)
+    {
+        Debug.Log(fuseCount);
+        if (fuseCount == 0)
+        {
+            notEnoughFusesDialogue.TriggerDialogue();
+        }
+        else if (fuseCount == 1)
+        {
+            oneFuseDialogue.TriggerDialogue();
+        }
+        else if (fuseCount == 2)
+        {
+            gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
+            objectRenderer.material.color = Color.green;
+            successFuseDialogue.TriggerDialogue();
+        }
+    }
     private IEnumerator HideDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

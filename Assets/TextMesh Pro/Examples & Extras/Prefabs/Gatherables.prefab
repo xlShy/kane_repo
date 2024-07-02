@@ -269,11 +269,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   itemName: Fuse
   inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: 
   interactableScript: {fileID: 309817662774843965}
   dialogueText: {fileID: 0}
-  dialogueContent: 
+  dialogueContent: Fuse acquired!
   dialogueDuration: 0
 --- !u!1 &5672320899836669379
 GameObject:
@@ -411,12 +413,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   itemName: Fuse
   inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: 
   interactableScript: {fileID: 4989618049253536140}
   dialogueText: {fileID: 0}
-  dialogueContent: 
-  dialogueDuration: 0
+  dialogueContent: I've got a fuse!
+  dialogueDuration: 3
 --- !u!1 &7308865231864730686
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6396942869009370984}
     m_Modifications:
+    - target: {fileID: 400630706901516826, guid: 4ff0e3bd499f5574abcbd9913c747610, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 416515029625844702, guid: 4ff0e3bd499f5574abcbd9913c747610, type: 3}
       propertyPath: m_Name
       value: Pills
@@ -687,6 +695,14 @@ PrefabInstance:
     - target: {fileID: 430118975760429267, guid: 4ff0e3bd499f5574abcbd9913c747610, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436254421814132099, guid: 4ff0e3bd499f5574abcbd9913c747610, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982256669510438038, guid: 4ff0e3bd499f5574abcbd9913c747610, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
