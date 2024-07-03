@@ -17,21 +17,25 @@ public class FuseItem : InventoryItem
     [SerializeField]
     private float dialogueDuration;
 
+    [SerializeField]
+    private AudioSource fusePickup;
+
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
 
     private void Start()
     {
-        interactableScript.itemPickedUp.AddListener(dialogueActivate);
+        interactableScript.itemPickedUp.AddListener(uponItemPickup);
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    private void dialogueActivate()
+    private void uponItemPickup()
     {
+        fusePickup.Play();
         Debug.Log("I am called to make dialogue!");
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = dialogueContent;
-
+        
         if (dialogueCoroutine != null)
         {
             StopCoroutine(dialogueCoroutine);

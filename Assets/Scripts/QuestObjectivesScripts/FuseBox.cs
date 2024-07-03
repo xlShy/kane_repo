@@ -28,6 +28,18 @@ public class FuseBox : InteractableObject
     [SerializeField]
     private DialogueTriggerScript oneFuseDialogue;
 
+    [SerializeField]
+    private AudioSource placingFuse;
+
+    [SerializeField]
+    private AudioSource fuseActivate;
+
+    [SerializeField]
+    private AudioSource fuseActivateSecondPhase;
+
+    [SerializeField]
+    private AudioSource fuseLoopSound;
+
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
     private void Start()
@@ -56,16 +68,30 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 1)
         {
+            placingFuse.Play();
             oneFuseDialogue.TriggerDialogue();           
             keyItemInventory.RemoveKeyItem(item, 1);
         }
         else if (fuseCount == 2)
         {
             keyItemInventory.RemoveKeyItem(item, 2);
-            SolvePuzzle();
+            SolvePuzzle();      
+            StartCoroutine(PlayFuseActivateSounds());
+            
         }
     }
+    
+    private IEnumerator PlayFuseActivateSounds()
+    {
+        placingFuse.Play();
+        fuseActivate.Play();
+        fuseActivateSecondPhase.Play();
 
+        yield return new WaitForSeconds(fuseActivateSecondPhase.clip.length - 0.5f);
+
+        Debug.Log("Now playing sound.");
+        fuseLoopSound.Play();
+    }
     private void SolvePuzzle()
     {
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
