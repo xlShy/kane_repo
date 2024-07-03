@@ -28,17 +28,15 @@ public class KeyItemInventory : MonoBehaviour
             {
                 UpdateItemCount(panel);
                 itemFound = true;
-                Debug.Log("Item is duplicate");
                 return;
             }
         }
         if (!itemFound)
         {
             InstantiateItemBoxPanel(keyItem);
-            Debug.Log("New item found");
         }
     }
-    public void RemoveKeyItem(InventoryItem keyItem)
+    public void RemoveKeyItem(InventoryItem keyItem, int itemCount)
     {
         foreach (GameObject panel in itemPanels)
         {
@@ -48,21 +46,18 @@ public class KeyItemInventory : MonoBehaviour
                 //amountText = panel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
                 int currentCount = int.Parse(amountText.text);
 
-                if (currentCount > 1)
+                if (currentCount > itemCount)
                 {
-                    SetCount(panel, --currentCount);
-                    Debug.Log("Decreased item count");
+                    SetCount(panel, currentCount - itemCount);
                 }
                 else
                 {
                     itemPanels.Remove(panel);
                     Destroy(panel);
-                    Debug.Log("Item removed");
                 }
                 return;
             }
         }
-        Debug.Log("Item not found");
     }
     private void InstantiateItemBoxPanel(InventoryItem keyItem)
     {

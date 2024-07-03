@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
     private bool isKeyOpen = false;
 
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
-    private List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
+    public List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
 
     [SerializeField] private KeyItemInventory keyItemInventoryScript;
 
@@ -51,6 +51,13 @@ public class Inventory : MonoBehaviour
             isKeyOpen = !isKeyOpen;
             keyItemInventory.SetActive(isKeyOpen);
         }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            foreach(InventoryItem item in keyItemsInventory)
+            {
+                print(item.name);
+            }
+        }
     }
 
     // Adds items to player inventory
@@ -58,7 +65,7 @@ public class Inventory : MonoBehaviour
     {
         if(consumableItemsInventory.Count >= 2)
         {
-            print("inventory is full");
+            //print("inventory is full");
             isFull = true;
             onInventoryFull.Invoke(isFull);
             return;
@@ -70,7 +77,7 @@ public class Inventory : MonoBehaviour
         }
         consumableItemsInventory.Add(consumableItem);
 
-        Debug.Log(consumableItem.itemName + " added to consumables inventory.");
+        //Debug.Log(consumableItem.itemName + " added to consumables inventory.");
         if (isConsumablesOpen)
         {
             UpdateConsumableInventoryUI();
@@ -79,7 +86,6 @@ public class Inventory : MonoBehaviour
     public void AddKeyItem(InventoryItem keyItem)
     {
         keyItemsInventory.Add(keyItem);
-        Debug.Log(keyItem.itemName + "added to key items inventory");
 
         keyItemInventoryScript.CreateOrUpdateItemPanelBox(keyItem, keyItemsInventory);
     }

@@ -6,6 +6,10 @@ using System.Linq;
 
 public class FuseBox : InteractableObject
 {
+    public Puzzle puzzle;
+    public PuzzleEventHandler pEventHandler;
+    public KeyItemInventory keyItemInventory;
+
     private Renderer objectRenderer;
 
     [SerializeField]
@@ -30,16 +34,24 @@ public class FuseBox : InteractableObject
     {
         objectRenderer = GetComponent<Renderer>();
     }
+    //public override void Interact(int itemInteractedCase, Inventory inventory)
+    //{
+    //    if (itemInteractedCase == 2)
+    //    {
+    //        List<InventoryItem> keyItems = inventory.GetKeyItems();
+    //        int fuseCount = CountFuseItems(keyItems);
+    //        HandleFuses(fuseCount);
+    //    }
+    //}
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (itemInteractedCase == 2)
         {
-            List<InventoryItem> keyItems = inventory.GetKeyItems();
-            int fuseCount = CountFuseItems(keyItems);
+            inventory.keyItemsInventory = inventory.GetKeyItems();
+            int fuseCount = CountFuseItems(inventory.keyItemsInventory);
             HandleFuses(fuseCount);
         }
     }
-
     private int CountFuseItems(List<InventoryItem> items)
     {
         return items.Count(item => item is FuseItem);
@@ -54,10 +66,12 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 1)
         {
-            oneFuseDialogue.TriggerDialogue();
+            //oneFuseDialogue.TriggerDialogue();
+            keyItemInventory.RemoveKeyItem(item, 1);
         }
         else if (fuseCount == 2)
         {
+            //keyItemInventory.RemoveKeyItem(item, 2);
             SolvePuzzle();
         }
     }
@@ -68,8 +82,11 @@ public class FuseBox : InteractableObject
         objectRenderer.material.color = Color.green;
         successFuseDialogue.TriggerDialogue();
         RemoveFusesFromInventory(2);
-    }
 
+        //set puzzle as complete
+        pEventHandler.InteractPuzzle(puzzle);
+    }
+    //TO DO - edit to remove fuses per interact
     private void RemoveFusesFromInventory(int count)
     {
         if (currentInventory != null)

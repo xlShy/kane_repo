@@ -39,7 +39,6 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     {
                         if (!isInventoryFull)
                         {
-                            Debug.Log("Item Picked Up Consumables");
                             itemPickedUp.Invoke();
                             inventory.AddItem(item);
                             canBeInteracted = false;
@@ -47,7 +46,6 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     }
                     else if (item.type == ItemType.KeyItem)
                     {
-                        Debug.Log("Item Picked Up Key Items");
                         itemPickedUp.Invoke();
                         inventory.AddKeyItem(item);
                         canBeInteracted = false;

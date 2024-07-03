@@ -45,6 +45,6 @@ public class FuseItem : InventoryItem
     {
         yield return new WaitForSeconds(delay);
         dialogueText.gameObject.SetActive(false);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

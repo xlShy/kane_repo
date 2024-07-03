@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class GrandfatherClock : InteractableObject
 {
+    public Puzzle puzzle;
+    public PuzzleEventHandler pEventHandler;
 
     public GameObject puzzleCanvas;
     [SerializeField]
@@ -56,5 +58,8 @@ public class GrandfatherClock : InteractableObject
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         //doorToOpen.SetActive(false);
+
+        //set puzzle as complete
+        pEventHandler.InteractPuzzle(puzzle);
     }
 }

@@ -42,7 +42,7 @@ public class RoomChecker : MonoBehaviour
     }
     public void CheckPlayerLocation(GameObject room)
     {
-        print(room.name);
+        //print(room.name);
         if(room == currentRoom)
         {
             return;

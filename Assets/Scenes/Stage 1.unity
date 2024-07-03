@@ -460,6 +460,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547362243}
   m_Mesh: {fileID: -5495902117074765545, guid: 4c6097c144da10f4fb8df6b9d71ff35b, type: 3}
+--- !u!1 &687961692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8507369729350834000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &687961693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687961692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &687961694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687961692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6253183740cb34eb66c84c73a9f90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBlocker: []
+  pEventHandler: {fileID: 687961693}
+  LevelList:
+  - {fileID: 11400000, guid: d67827609d0ef6941a3c740e536c8f0b, type: 2}
+  - {fileID: 11400000, guid: a0274d45986968d429c9b3167ccde26d, type: 2}
+  - {fileID: 11400000, guid: ce5d9468f5b0cc6428147e38a95b5d73, type: 2}
+  isGameComplete: 0
+  iteration: 0
 --- !u!4 &698506609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 372206305952260406, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
@@ -1014,14 +1051,26 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 4303823185850639545, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4339312159283805858, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
     - target: {fileID: 4957424975226676035, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
+    - target: {fileID: 4957424975226676035, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 4957424975226676035, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: pEventHandler
+      value: 
+      objectReference: {fileID: 687961693}
     - target: {fileID: 5069564659553472925, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1038,6 +1087,14 @@ PrefabInstance:
       propertyPath: dialogueContent.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5834031544510747400, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
+    - target: {fileID: 5834031544510747400, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: pEventHandler
+      value: 
+      objectReference: {fileID: 687961693}
     - target: {fileID: 5872008868151653940, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 25.29248
@@ -1098,6 +1155,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 7683826687203596729, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
+    - target: {fileID: 7683826687203596729, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: pEventHandler
+      value: 
+      objectReference: {fileID: 687961693}
     - target: {fileID: 8716481906101065171, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4.399658
@@ -1522,7 +1587,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8507369729350834000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 687961694}
+    - targetCorrespondingSourceObject: {fileID: 8507369729350834000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 687961693}
   m_SourcePrefab: {fileID: 100100000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
 --- !u!1001 &4706684788166481365
 PrefabInstance:

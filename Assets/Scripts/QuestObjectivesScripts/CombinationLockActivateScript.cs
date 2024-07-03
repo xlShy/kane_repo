@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class CombinationLockActivateScript : InteractableObject
 {
+    public Puzzle puzzle;
+    public PuzzleEventHandler pEventHandler;
+
     public GameObject combinationCanvas;
     private Renderer objectRenderer;
 
@@ -49,5 +52,8 @@ public class CombinationLockActivateScript : InteractableObject
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         onLockPuzzleCompletion.Invoke();
+
+        //set puzzle as complete
+        pEventHandler.InteractPuzzle(puzzle);
     }
 }
