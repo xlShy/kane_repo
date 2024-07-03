@@ -23,6 +23,10 @@ public class PlayerFlashlight : MonoBehaviour
 
     [SerializeField]
     private AudioSource toggleSwitch;
+
+    [SerializeField]
+    private InteractionHandler interactionHandler;
+
     public float currentBattery;
     private bool isFlickering = false;
 
@@ -34,17 +38,21 @@ public class PlayerFlashlight : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (!interactionHandler.IsAnyCanvasActive())
         {
-            ToggleFlashlight();
-            toggleSwitch.Play();
-        }
+            if (Input.GetMouseButtonUp(0))
+            {
+                ToggleFlashlight();
+                toggleSwitch.Play();
+            }
 
-        if (flashlight.enabled)
-        {
-            DrainBattery();
-            CheckForFlicker();
+            if (flashlight.enabled)
+            {
+                DrainBattery();
+                CheckForFlicker();
+            }
         }
+        
     }
 
     private void ToggleFlashlight()

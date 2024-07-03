@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7365814222055271680}
   mouseSens: 150
+  interactionHandler: {fileID: 7854700075321512501}
 --- !u!1 &3416880441292475520
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +197,7 @@ GameObject:
   - component: {fileID: 6883310537784295275}
   - component: {fileID: 7854700075321512501}
   - component: {fileID: 6165976200285315971}
-  - component: {fileID: 8422188869516740894}
+  - component: {fileID: 4018795075872869457}
   - component: {fileID: 7477853744437300971}
   m_Layer: 0
   m_Name: Player
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0fbf7fa2fad3e48a45c6beab3de4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionHandler: {fileID: 7854700075321512501}
   characterController: {fileID: 3285211800220856391}
   speed: 5
   gravity: -9.81
@@ -288,6 +290,10 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 128
+  uiCanvas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   numFound: 0
 --- !u!114 &6165976200285315971
 MonoBehaviour:
@@ -307,9 +313,9 @@ MonoBehaviour:
   box2: {fileID: 0}
   box3: {fileID: 0}
   keyItemsInventory: []
-  keyItemInventoryScript: {fileID: 8422188869516740894}
+  keyItemInventoryScript: {fileID: 4018795075872869457}
   isFull: 0
---- !u!114 &8422188869516740894
+--- !u!114 &4018795075872869457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,6 +535,7 @@ MonoBehaviour:
   flickerIntensity: 0.5
   flickerFrequency: 0.1
   toggleSwitch: {fileID: 892447112354712505}
+  interactionHandler: {fileID: 7854700075321512501}
   currentBattery: 0
 --- !u!82 &892447112354712505
 AudioSource:

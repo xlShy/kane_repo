@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private InteractionHandler interactionHandler;
+
     public CharacterController characterController;
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -17,19 +20,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
+        if (!interactionHandler.IsAnyCanvasActive())
         {
-            velocity.y = -2f;
-        }
-        //To Do - Create InputHandler Script
-        float xDirection = Input.GetAxisRaw("Horizontal");
-        float zDirection = Input.GetAxisRaw("Vertical");
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        Vector3 direction = transform.right * xDirection + transform.forward * zDirection;
-        characterController.Move(direction * speed * Time.deltaTime);
-        velocity.y += gravity * Time.deltaTime;
-        characterController.Move(velocity * Time.deltaTime);
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
+            //To Do - Create InputHandler Script
+            float xDirection = Input.GetAxisRaw("Horizontal");
+            float zDirection = Input.GetAxisRaw("Vertical");
+
+            Vector3 direction = transform.right * xDirection + transform.forward * zDirection;
+            characterController.Move(direction * speed * Time.deltaTime);
+            velocity.y += gravity * Time.deltaTime;
+            characterController.Move(velocity * Time.deltaTime);
+        }
     }
 }

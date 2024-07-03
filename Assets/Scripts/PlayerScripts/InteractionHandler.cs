@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public class InteractionHandler : MonoBehaviour
@@ -13,6 +14,7 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactionRadius = 0.5f;  // Increased for demo purposes
     [SerializeField] private LayerMask interactableMask;
+    [SerializeField] private List<GameObject> uiCanvas;
 
     private readonly Collider[] colliders = new Collider[3];
     [SerializeField] private int numFound;
@@ -24,16 +26,28 @@ public class InteractionHandler : MonoBehaviour
         inventory = GetComponent<Inventory>();
     }
 
+    
     void Update()
     {
         Interact();
     }
 
+    public bool IsAnyCanvasActive()
+    {
+        foreach (GameObject canvas in uiCanvas)
+        {
+            if (canvas.activeSelf)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public void Interact()
     {
         numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionRadius, colliders, interactableMask);
 
-        if (numFound > 0f)
+        if (numFound > 0f && !IsAnyCanvasActive())
         {
             interactableObj = colliders[0].GetComponent<IInteractable>();
 
