@@ -20,6 +20,9 @@ public class FuseItem : InventoryItem
     [SerializeField]
     private AudioSource fusePickup;
 
+    [SerializeField]
+    public LayerMask newLayerMask;
+
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
 
@@ -31,6 +34,7 @@ public class FuseItem : InventoryItem
 
     private void uponItemPickup()
     {
+        gameObject.layer = LayerMask.NameToLayer("Default");
         fusePickup.Play();
         Debug.Log("I am called to make dialogue!");
         dialogueText.gameObject.SetActive(true);
