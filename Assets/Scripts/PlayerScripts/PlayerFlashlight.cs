@@ -21,6 +21,8 @@ public class PlayerFlashlight : MonoBehaviour
     [SerializeField]
     private float flickerFrequency;
 
+    [SerializeField]
+    private AudioSource toggleSwitch;
     public float currentBattery;
     private bool isFlickering = false;
 
@@ -35,6 +37,7 @@ public class PlayerFlashlight : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             ToggleFlashlight();
+            toggleSwitch.Play();
         }
 
         if (flashlight.enabled)
