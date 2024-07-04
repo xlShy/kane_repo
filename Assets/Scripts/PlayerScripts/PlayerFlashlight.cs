@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerFlashlight : MonoBehaviour
 {
@@ -27,13 +28,19 @@ public class PlayerFlashlight : MonoBehaviour
     [SerializeField]
     private InteractionHandler interactionHandler;
 
+    [SerializeField]
+    private GameObject flashlightDustParticles;
+
+    private Image dustParticlesImage;
     public float currentBattery;
     private bool isFlickering = false;
+    private float dustParticleFlicker = Random.Range(0f, 1f);
 
     private void Start()
     {
         flashlight = GetComponent<Light>();
         currentBattery = maxBattery;
+        dustParticlesImage = flashlightDustParticles.GetComponent<Image>();
     }
 
     private void Update()
@@ -60,6 +67,7 @@ public class PlayerFlashlight : MonoBehaviour
         if (!flashlight.enabled && currentBattery>0)
         {
             flashlight.enabled = true;
+            flashlightDustParticles.SetActive(true);
             if (currentBattery <= flickerThreshold && !isFlickering)
             {
                 StartCoroutine(FlickerLight());
@@ -68,6 +76,7 @@ public class PlayerFlashlight : MonoBehaviour
         else
         {
             flashlight.enabled = false;
+            flashlightDustParticles.SetActive(false);
             StopAllCoroutines();
             isFlickering = false;
         }
@@ -97,11 +106,16 @@ public class PlayerFlashlight : MonoBehaviour
     {
         isFlickering = true;
         float originalIntensity = flashlight.intensity;
+        Color originalDustColor = dustParticlesImage.color;
 
         while (flashlight.enabled && currentBattery <= flickerThreshold)
         {
             flashlight.intensity = Random.Range(originalIntensity - flickerIntensity, originalIntensity);
-            yield return new WaitForSeconds(flickerFrequency);
+
+            Color newColor = dustParticlesImage.color;
+            newColor.a = originalDustColor.a * dustParticleFlicker;
+            dustParticlesImage.color = newColor;
+            yield return new WaitForSeconds(flickerFrequency);   
         }
 
         flashlight.intensity = originalIntensity;

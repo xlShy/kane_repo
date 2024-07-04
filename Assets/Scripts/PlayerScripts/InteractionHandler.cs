@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 
 public class InteractionHandler : MonoBehaviour
@@ -21,6 +23,8 @@ public class InteractionHandler : MonoBehaviour
 
     private int itemInteractedCase = 0;
     private Inventory inventory;
+    public UnityEvent isInteracting;
+    public UnityEvent isNotInteracting;
     private void Start()
     {
         inventory = GetComponent<Inventory>();
@@ -53,6 +57,7 @@ public class InteractionHandler : MonoBehaviour
 
             if (interactableObj != null)
             {
+                isInteracting.Invoke();
                 interactable = interactableObj.GetInteractableConfig();
                 showInteractableUI.SetInteractionPrompt(interactable.promptImage);
                 showInteractableUI.EnableInteractableUI();
@@ -85,6 +90,7 @@ public class InteractionHandler : MonoBehaviour
         else
         {
             showInteractableUI.DisableInteractableUI();
+            isNotInteracting.Invoke();
         }
     }
 

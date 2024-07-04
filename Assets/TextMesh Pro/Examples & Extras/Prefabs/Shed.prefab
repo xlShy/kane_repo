@@ -1847,8 +1847,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f2edd14061b12247a5d1340ac0a93ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4352948558158972090}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f2edd14061b12247a5d1340ac0a93ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 122249568601555756}
   m_SourcePrefab: {fileID: 100100000, guid: 2f2edd14061b12247a5d1340ac0a93ea, type: 3}
+--- !u!1 &8524822006138019050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f2edd14061b12247a5d1340ac0a93ea, type: 3}
+  m_PrefabInstance: {fileID: 8831323175918182843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4352948558158972090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524822006138019050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17682b8db10edf04ba0885a0054feeea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleJournalCanvas: {fileID: 0}
+--- !u!114 &122249568601555756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524822006138019050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fb1bc1f2901de4f8198beb815e21b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleImageHolder: {fileID: 0}
+  puzzleName: {fileID: 0}
+  puzzleDescription: {fileID: 0}
+  puzzleJournals: []
 --- !u!4 &9008765913385289296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f2edd14061b12247a5d1340ac0a93ea, type: 3}
