@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class PuzzleInterfaceController : MonoBehaviour
 {
+    [Header("UI When Puzzle Record Is Clicked")]
     [SerializeField] private GameObject puzzleImageHolder;
     [SerializeField] private GameObject puzzleName;
     [SerializeField] private GameObject puzzleDescription;
 
-    public List<Puzzle> puzzleJournals;
+    [Header("Puzzle Records")]
+    [SerializeField] private GameObject puzzleRecordBoxParent;
+    [SerializeField] private GameObject puzzleRecordBox;
+    [SerializeField] private GameObject recordName;
+
+    public List<Puzzle> puzzleRecords;
+    public List<GameObject> puzzleRecordBoxes; 
 
     private void OnEnable()
     {
@@ -17,10 +24,16 @@ public class PuzzleInterfaceController : MonoBehaviour
     }
     public void AddToPuzzleJournals(Puzzle puzzleJournalData)
     {
-        puzzleJournals.Add(puzzleJournalData);
+        puzzleRecords.Add(puzzleJournalData);
+        InstantiatePuzzleRecordButton();
     }
-    //On Puzzle Complete
-    public void SetDetailsToUIConfig()
+    private void InstantiatePuzzleRecordButton()
+    {
+        GameObject puzzleRecord = Instantiate(puzzleRecordBox, puzzleRecordBoxParent.transform);
+        puzzleRecordBoxes.Add(puzzleRecord);
+
+    }
+    public void ShowPuzzleRecord()
     {
 
     }
