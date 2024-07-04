@@ -50,4 +50,9 @@ public class PillsItem : InventoryItem
         yield return new WaitForSeconds(delay);
         dialogueText.gameObject.SetActive(false);
     }
+
+    public override void Use()
+    {
+        Debug.Log("You have used a pill!");
+    }
 }

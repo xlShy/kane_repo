@@ -39,7 +39,7 @@ public class FuseItem : InventoryItem
         Debug.Log("I am called to make dialogue!");
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = dialogueContent;
-        
+
         if (dialogueCoroutine != null)
         {
             StopCoroutine(dialogueCoroutine);
@@ -54,5 +54,10 @@ public class FuseItem : InventoryItem
         yield return new WaitForSeconds(delay);
         dialogueText.gameObject.SetActive(false);
         //Destroy(gameObject);
+    }
+
+    public override void Use()
+    {
+        Debug.Log("Placed for the sake of placing");
     }
 }

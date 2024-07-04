@@ -166,6 +166,8 @@ GameObject:
   - component: {fileID: 4108359295714776700}
   - component: {fileID: 258854053072693268}
   - component: {fileID: 8847387387963992137}
+  - component: {fileID: 7928586937306746217}
+  - component: {fileID: 1841761831635477512}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -209,6 +211,38 @@ MonoBehaviour:
   isGameComplete: 0
   iteration: 0
 --- !u!114 &8847387387963992137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507369729350834000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7928586937306746217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507369729350834000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6253183740cb34eb66c84c73a9f90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBlocker: []
+  pEventHandler: {fileID: 1841761831635477512}
+  LevelList:
+  - {fileID: 11400000, guid: d67827609d0ef6941a3c740e536c8f0b, type: 2}
+  - {fileID: 11400000, guid: a0274d45986968d429c9b3167ccde26d, type: 2}
+  - {fileID: 11400000, guid: ce5d9468f5b0cc6428147e38a95b5d73, type: 2}
+  isGameComplete: 0
+  iteration: 0
+--- !u!114 &1841761831635477512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

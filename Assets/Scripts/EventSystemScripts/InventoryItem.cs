@@ -21,6 +21,8 @@ public abstract class InventoryItem : MonoBehaviour
     [Tooltip("Enter the item's description here if applicable")]
     [TextArea (3,10)]
     public string itemDescription;
+
+    public abstract void Use();
 }
 
 

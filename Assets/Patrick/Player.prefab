@@ -62,7 +62,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &5864956950698886598
 MonoBehaviour:
@@ -399,6 +399,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   numFound: 0
   isInteracting:
     m_PersistentCalls:
@@ -425,6 +426,9 @@ MonoBehaviour:
   box3: {fileID: 0}
   keyItemsInventory: []
   keyItemInventoryScript: {fileID: 4018795075872869457}
+  consumableInventoryOpen:
+    m_PersistentCalls:
+      m_Calls: []
   isFull: 0
 --- !u!114 &4018795075872869457
 MonoBehaviour:

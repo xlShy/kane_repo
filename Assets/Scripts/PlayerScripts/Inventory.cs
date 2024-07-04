@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour
 {
@@ -26,6 +28,8 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private KeyItemInventory keyItemInventoryScript;
 
+    public UnityEvent consumableInventoryOpen;
+
     public static event Action<bool> onInventoryFull;
     public bool isFull;
 
@@ -44,7 +48,13 @@ public class Inventory : MonoBehaviour
             consumableInventory.SetActive(isConsumablesOpen);
             if (isConsumablesOpen)
             {
+                Debug.Log("We opening!");
                 UpdateConsumableInventoryUI();
+                consumableInventoryOpen.Invoke();
+            }
+            else
+            {
+                consumableInventoryOpen.Invoke();
             }
         }
         if (Input.GetKeyDown(KeyCode.B))
@@ -62,25 +72,47 @@ public class Inventory : MonoBehaviour
     }
 
     // Adds items to player inventory
-    public void AddItem(InventoryItem consumableItem)
+    public void AddItem(InventoryItem item)
     {
-        if(consumableItemsInventory.Count >= 3)
+        if (item.type == ItemType.Consumables)
         {
-            //print("inventory is full");
-            isFull = true;
-            onInventoryFull.Invoke(isFull);
-            return;
+            if (consumableItemsInventory.Count >= 3)
+            {
+                isFull = true;
+                onInventoryFull?.Invoke(isFull);
+                return;
+            }
+            consumableItemsInventory.Add(item);
         }
-        else
+        else if (item.type == ItemType.KeyItem)
         {
-            isFull = false;
-            onInventoryFull.Invoke(isFull);
+            keyItemsInventory.Add(item);
+            keyItemInventoryScript.CreateOrUpdateItemPanelBox(item, keyItemsInventory);
         }
-        consumableItemsInventory.Add(consumableItem);
 
-        //Debug.Log(consumableItem.itemName + " added to consumables inventory.");
+        isFull = false;
+        onInventoryFull?.Invoke(isFull);
+
         if (isConsumablesOpen)
         {
+            UpdateConsumableInventoryUI();
+        }
+    }
+
+    public InventoryItem GetConsumableItemAtIndex(int index)
+    {
+        if (index >= 0 && index < consumableItemsInventory.Count)
+        {
+            return consumableItemsInventory[index];
+        }
+        return null;
+    }
+
+    public void RemoveConsumableItemAtIndex(int index)
+    {
+        if (index >= 0 && index < consumableItemsInventory.Count)
+        {
+            consumableItemsInventory.RemoveAt(index);
             UpdateConsumableInventoryUI();
         }
     }
