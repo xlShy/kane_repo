@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System;
 
 public class CombinationLockActivateScript : InteractableObject
 {
@@ -21,7 +22,9 @@ public class CombinationLockActivateScript : InteractableObject
     [SerializeField]
     private DialogueTriggerScript onPuzzleSuccess;
 
+    //refactor
     public UnityEvent onLockPuzzleCompletion;
+    public static event Action<Puzzle> OnPuzzleComplete;
 
     private void Start()
     {
@@ -55,5 +58,6 @@ public class CombinationLockActivateScript : InteractableObject
 
         //set puzzle as complete
         pEventHandler.InteractPuzzle(puzzle);
+        OnPuzzleComplete?.Invoke(puzzle);
     }
 }

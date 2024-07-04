@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class GrandfatherClock : InteractableObject
     private DialogueTriggerScript onPuzzleSolve;
 
     public UnityEvent doorOpen;
+    public static event Action<Puzzle> OnPuzzleComplete;
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -61,5 +63,6 @@ public class GrandfatherClock : InteractableObject
 
         //set puzzle as complete
         pEventHandler.InteractPuzzle(puzzle);
+        OnPuzzleComplete?.Invoke(puzzle);
     }
 }

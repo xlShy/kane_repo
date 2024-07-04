@@ -40,10 +40,8 @@ public class KeyItemInventory : MonoBehaviour
     {
         foreach (GameObject panel in itemPanels)
         {
-            //nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
             if (nameText.text == keyItem.itemName)
             {
-                //amountText = panel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
                 int currentCount = int.Parse(amountText.text);
 
                 if (currentCount > itemCount)
@@ -73,7 +71,7 @@ public class KeyItemInventory : MonoBehaviour
 
     private void UpdateItemCount(GameObject itemPanel)
     {
-        amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
+        //amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         int currentCount = int.Parse(amountText.text);
         currentCount++;
         SetCount(itemPanel, currentCount);
