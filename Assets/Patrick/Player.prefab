@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 3161013309600020482}
   - component: {fileID: 7267912201697230477}
   - component: {fileID: 892447112354712505}
+  - component: {fileID: 2986731453954991743}
   m_Layer: 0
   m_Name: PlayerFlashlight
   m_TagString: Untagged
@@ -732,8 +733,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9245283, g: 0.87768584, b: 0.7718939, a: 1}
-  m_Intensity: 0.75
-  m_Range: 30
+  m_Intensity: 10
+  m_Range: 20
   m_SpotAngle: 70
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -794,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d1e8a9c997b8f4a9a54927deda1a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBattery: 100
+  maxBattery: 200
   batteryDrainRate: 5
   flickerThreshold: 25
   flickerIntensity: 0.5
@@ -899,6 +900,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2986731453954991743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207622949255965139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &8299413900000692828
 GameObject:
   m_ObjectHideFlags: 0

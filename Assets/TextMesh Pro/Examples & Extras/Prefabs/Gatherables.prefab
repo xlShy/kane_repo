@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a5433d11e10a0e2479fbe57f6fe9d832, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,6 +279,9 @@ MonoBehaviour:
   dialogueContent: Fuse acquired!
   dialogueDuration: 0
   fusePickup: {fileID: 2711841779402575318}
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &2711841779402575318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -440,7 +443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a1abb2bc90e7744d912afd022742e4a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -521,6 +524,9 @@ MonoBehaviour:
   dialogueContent: I've got a fuse!
   dialogueDuration: 3
   fusePickup: {fileID: 6779646536149168683}
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &6779646536149168683
 AudioSource:
   m_ObjectHideFlags: 0
