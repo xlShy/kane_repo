@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+
         //put in an inputhandler script
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -63,7 +64,7 @@ public class Inventory : MonoBehaviour
     // Adds items to player inventory
     public void AddItem(InventoryItem consumableItem)
     {
-        if(consumableItemsInventory.Count >= 2)
+        if(consumableItemsInventory.Count >= 3)
         {
             //print("inventory is full");
             isFull = true;
