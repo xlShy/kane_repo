@@ -8,19 +8,23 @@ public class InteractionHandler : MonoBehaviour
 {
 
     public ShowInteractableUI showInteractableUI;
-
     private IInteractable interactableObj;
     private InteractableConfig interactable;
 
-    [Header("Interactable Range")]
-    [SerializeField] private Transform interactionPoint;
-    [SerializeField] private float interactionRadius = 0.5f;  // Increased for demo purposes
+    [Header("Interaction Settings")]
+    [SerializeField] private float interactionDistance = 5f;
     [SerializeField] private LayerMask interactableMask;
     [SerializeField] private List<GameObject> uiCanvas;
+    [SerializeField] private Transform cameraTransform;
 
-    private readonly Collider[] colliders = new Collider[3];
-    [SerializeField] private int numFound;
-
+    // OLD INTERACTION SYSTEM 
+    //[Header("Interactable Range")]
+    //[SerializeField] private Transform interactionPoint;
+    //[SerializeField] private float interactionRadius = 0.5f;  // Increased for demo purposes
+    //[SerializeField] private LayerMask interactableMask;
+    //[SerializeField] private List<GameObject> uiCanvas;
+    //private readonly Collider[] colliders = new Collider[3];
+    
     private int itemInteractedCase = 0;
     private Inventory inventory;
     public UnityEvent isInteracting;
@@ -28,6 +32,10 @@ public class InteractionHandler : MonoBehaviour
     private void Start()
     {
         inventory = GetComponent<Inventory>();
+        if (cameraTransform == null)
+        {
+            cameraTransform = Camera.main.transform;
+        }
     }
 
     
@@ -49,13 +57,48 @@ public class InteractionHandler : MonoBehaviour
     }
     public void Interact()
     {
-        numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionRadius, colliders, interactableMask);
+        // OLD INTERACTION SYSTEM
+        //numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionRadius, colliders, interactableMask);
+        //if (numFound > 0f && !IsAnyCanvasActive())
+        //{
+        //    interactableObj = colliders[0].GetComponent<IInteractable>();
+        //    if (interactableObj != null)
+        //    {
+        //        isInteracting.Invoke();
+        //        interactable = interactableObj.GetInteractableConfig();
+        //        showInteractableUI.SetInteractionPrompt(interactable.promptImage);
+        //        showInteractableUI.EnableInteractableUI();
+        //        if (Input.GetKeyDown(KeyCode.F))
+        //        {
+        //            switch (interactable.interactableType)
+        //            {
+        //                case InteractableType.Interactable:
+        //                    Debug.Log("You interacted with me!");
+        //                    itemInteractedCase = 0;
+        //                    break;
+        //                case InteractableType.PickUp:
+        //                    //Debug.Log("You picked up an item!");
+        //                    itemInteractedCase = 1;
+        //                    break;
+        //                case InteractableType.Objective:
+        //                    Debug.Log("This is an objective!");
+        //                    itemInteractedCase = 2;
+        //                    break;
+        //                case InteractableType.PickupnoDestroy:
+        //                    Debug.Log("You picked me up! will not destroy.");
+        //                    itemInteractedCase = 3;
+        //                    break;
+        //            }
+        //            interactableObj.Interact(itemInteractedCase, inventory);
+        //        }
+        //    }
+        //}
 
-        if (numFound > 0f && !IsAnyCanvasActive())
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, interactionDistance, interactableMask))
         {
-            interactableObj = colliders[0].GetComponent<IInteractable>();
+            interactableObj = hit.collider.GetComponent<IInteractable>();
 
-            if (interactableObj != null)
+            if (interactableObj != null && !IsAnyCanvasActive())
             {
                 isInteracting.Invoke();
                 interactable = interactableObj.GetInteractableConfig();
@@ -96,7 +139,13 @@ public class InteractionHandler : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(interactionPoint.position, interactionRadius);
+        if (cameraTransform != null)
+        {
+            // OLD INTERACTION SYSTEM
+            //Gizmos.color = Color.red;
+            //Gizmos.DrawWireSphere(interactionPoint.position, interactionRadius);
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(cameraTransform.position, cameraTransform.forward * interactionDistance);
+        }
     }
 }

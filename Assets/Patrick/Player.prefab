@@ -390,8 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showInteractableUI: {fileID: 0}
-  interactionPoint: {fileID: 8542987431176470152}
-  interactionRadius: 2.2
+  interactionDistance: 5
   interactableMask:
     serializedVersion: 2
     m_Bits: 128
@@ -400,7 +399,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  numFound: 0
+  cameraTransform: {fileID: 4885775082601595754}
   isInteracting:
     m_PersistentCalls:
       m_Calls: []
@@ -795,10 +794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d1e8a9c997b8f4a9a54927deda1a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBattery: 200
+  maxBattery: 100
   batteryDrainRate: 5
   flickerThreshold: 25
-  flickerIntensity: 0.5
+  flickerIntensity: 20
   flickerFrequency: 0.1
   toggleSwitch: {fileID: 892447112354712505}
   interactionHandler: {fileID: 7854700075321512501}
