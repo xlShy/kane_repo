@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6046494217000152325}
   - component: {fileID: 7018244076851481931}
   - component: {fileID: 2592479773128315041}
-  - component: {fileID: 3123869019087114610}
+  - component: {fileID: 6761164570743399454}
   m_Layer: 6
   m_Name: Grass (8)
   m_TagString: Untagged
@@ -294,8 +294,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &3123869019087114610
-TerrainCollider:
+--- !u!65 &6761164570743399454
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -309,11 +309,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1320542308337827528
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ GameObject:
   - component: {fileID: 3524846089738387398}
   - component: {fileID: 6056212296193451848}
   - component: {fileID: 6979479073361820975}
-  - component: {fileID: 7718612736626203796}
+  - component: {fileID: 2322775703801445799}
   m_Layer: 6
   m_Name: Grass (10)
   m_TagString: Untagged
@@ -398,8 +399,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &7718612736626203796
-TerrainCollider:
+--- !u!65 &2322775703801445799
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -413,11 +414,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: -0.000000011175871}
 --- !u!1 &2431095864040966767
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +431,7 @@ GameObject:
   - component: {fileID: 7947949686141003276}
   - component: {fileID: 6989714908126579920}
   - component: {fileID: 880123563600263419}
-  - component: {fileID: 3895485796318141490}
+  - component: {fileID: 8534860064216872702}
   m_Layer: 6
   m_Name: Grass (4)
   m_TagString: Untagged
@@ -502,8 +504,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &3895485796318141490
-TerrainCollider:
+--- !u!65 &8534860064216872702
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -517,11 +519,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.000000037252903}
 --- !u!1 &2687830366931035221
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +536,7 @@ GameObject:
   - component: {fileID: 2108069659204700538}
   - component: {fileID: 6023541491252830521}
   - component: {fileID: 7805925964286512039}
-  - component: {fileID: 5493387805872086516}
+  - component: {fileID: 2354367355887525804}
   m_Layer: 6
   m_Name: Grass
   m_TagString: Untagged
@@ -550,7 +553,7 @@ Transform:
   m_GameObject: {fileID: 2687830366931035221}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.25, y: 2.2941995, z: -27.964376}
+  m_LocalPosition: {x: 39.25, y: 2.3, z: -27.964376}
   m_LocalScale: {x: 75, y: 1, z: 72}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,8 +609,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &5493387805872086516
-TerrainCollider:
+--- !u!65 &2354367355887525804
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -621,11 +624,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: -0.000000011175871}
 --- !u!1 &2782098603877630571
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +918,7 @@ GameObject:
   - component: {fileID: 8135781244728122609}
   - component: {fileID: 241839504298741648}
   - component: {fileID: 4824840995004375657}
-  - component: {fileID: 5760184772822854248}
+  - component: {fileID: 6574585912380799688}
   m_Layer: 6
   m_Name: Grass (3)
   m_TagString: Untagged
@@ -987,8 +991,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &5760184772822854248
-TerrainCollider:
+--- !u!65 &6574585912380799688
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1002,11 +1006,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3549641737522120899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1233,7 @@ GameObject:
   - component: {fileID: 681127739596471020}
   - component: {fileID: 6421067969429640235}
   - component: {fileID: 6037908713814687219}
-  - component: {fileID: 2823977523593752927}
+  - component: {fileID: 2370637198317043928}
   m_Layer: 6
   m_Name: Grass (7)
   m_TagString: Untagged
@@ -1301,8 +1306,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &2823977523593752927
-TerrainCollider:
+--- !u!65 &2370637198317043928
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1316,11 +1321,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4248456401131546480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1338,7 @@ GameObject:
   - component: {fileID: 7081533306317898720}
   - component: {fileID: 5920745661550497373}
   - component: {fileID: 2125286285040990929}
-  - component: {fileID: 4018647197437955934}
+  - component: {fileID: 127122234623564237}
   m_Layer: 6
   m_Name: Grass (6)
   m_TagString: Untagged
@@ -1405,8 +1411,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &4018647197437955934
-TerrainCollider:
+--- !u!65 &127122234623564237
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1420,11 +1426,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6102242484205897877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,7 +1443,7 @@ GameObject:
   - component: {fileID: 1480745471491835591}
   - component: {fileID: 2280135595571932991}
   - component: {fileID: 2622742383388711992}
-  - component: {fileID: 4180173457378117461}
+  - component: {fileID: 6896654465216475941}
   m_Layer: 6
   m_Name: Grass (1)
   m_TagString: Untagged
@@ -1509,8 +1516,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &4180173457378117461
-TerrainCollider:
+--- !u!65 &6896654465216475941
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1524,11 +1531,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
 --- !u!1 &6199839040710508554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1898,7 @@ GameObject:
   - component: {fileID: 7953019020672889341}
   - component: {fileID: 886508954326724111}
   - component: {fileID: 7528715902448694738}
-  - component: {fileID: 4753456434534788277}
+  - component: {fileID: 8100340297036544058}
   m_Layer: 6
   m_Name: Grass (5)
   m_TagString: Untagged
@@ -1963,8 +1971,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &4753456434534788277
-TerrainCollider:
+--- !u!65 &8100340297036544058
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1978,11 +1986,12 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8332900565272800506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2046,7 @@ GameObject:
   - component: {fileID: 1555869402049448173}
   - component: {fileID: 2011304842618884254}
   - component: {fileID: 4511459830257697294}
-  - component: {fileID: 1970767741742173451}
+  - component: {fileID: 8814258536980876008}
   m_Layer: 6
   m_Name: Grass (9)
   m_TagString: Untagged
@@ -2110,8 +2119,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!154 &1970767741742173451
-TerrainCollider:
+--- !u!65 &8814258536980876008
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2125,8 +2134,9 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0.00000011920929}
