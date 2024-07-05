@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System;
 
 public class PuzzleInterfaceController : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class PuzzleInterfaceController : MonoBehaviour
     [SerializeField] private GameObject puzzleRecordBox;
     [SerializeField] private GameObject recordName;
 
-    public List<Puzzle> puzzleRecords;
+    //public List<Puzzle> puzzleRecords;
     public List<GameObject> puzzleRecordBoxes; 
 
     private void OnEnable()
@@ -25,7 +27,7 @@ public class PuzzleInterfaceController : MonoBehaviour
     }
     public void AddToPuzzleJournals(Puzzle puzzleJournalData)
     {
-        puzzleRecords.Add(puzzleJournalData);
+        //puzzleRecords.Add(puzzleJournalData);
         InstantiatePuzzleRecordButton(puzzleJournalData);
     }
     private void InstantiatePuzzleRecordButton(Puzzle puzzleJournalData)
@@ -35,9 +37,16 @@ public class PuzzleInterfaceController : MonoBehaviour
         puzzleName.text = puzzleJournalData.name;
         puzzleRecordBoxes.Add(puzzleRecord);
 
+        PuzzleRecordBox recordBoxScript = puzzleRecord.GetComponent<PuzzleRecordBox>();
+        if (recordBoxScript != null)
+        {
+            recordBoxScript.SetPuzzleData(puzzleJournalData, this);
+        }
     }
-    public void ShowPuzzleRecord()
+    public void ShowPuzzleData(Puzzle data)
     {
-
+        puzzleImageHolder.GetComponent<Image>().sprite = data.puzzleIcon;
+        puzzleName.GetComponent<TextMeshProUGUI>().text = data.puzzleName;
+        puzzleDescription.GetComponent<TextMeshProUGUI>().text = data.puzzleDescription;
     }
 }

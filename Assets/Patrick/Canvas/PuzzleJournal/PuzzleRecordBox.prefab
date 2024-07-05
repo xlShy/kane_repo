@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4626087883571531725}
   - component: {fileID: 5716606973747301587}
   - component: {fileID: 8035433413959256391}
+  - component: {fileID: -3984420048300609317}
   m_Layer: 0
   m_Name: PuzzleRecordBox
   m_TagString: Untagged
@@ -121,7 +122,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4626087883571531725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3984420048300609317}
+        m_TargetAssemblyTypeName: PuzzleRecordBox, Assembly-CSharp
+        m_MethodName: OnClickRecordBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &8035433413959256391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -164,6 +177,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3984420048300609317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644379836190314875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c9472e5479524438bd39470086b842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  controller: {fileID: 2556045111966557064, guid: 7144d4b78026e7c4d910d45d0b002a20, type: 3}
 --- !u!1 &3122969345339804095
 GameObject:
   m_ObjectHideFlags: 0
