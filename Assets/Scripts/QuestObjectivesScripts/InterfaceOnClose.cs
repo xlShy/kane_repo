@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InterfaceOnClose : MonoBehaviour
 {
@@ -10,11 +13,18 @@ public class InterfaceOnClose : MonoBehaviour
     [SerializeField]
     private DialogueTriggerScript onCloseInterface;
 
+    public UnityEvent interfaceClosed;
+    private Image clockBackground;
 
+    private void Start()
+    {
+        clockBackground = GetComponent<Image>();
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            interfaceClosed.Invoke();
             if (onCloseInterface != null)
             {
                 onCloseInterface.TriggerDialogue();

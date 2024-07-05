@@ -23,7 +23,10 @@ public class GrandfatherClock : InteractableObject
     [SerializeField]
     private DialogueTriggerScript onPuzzleSolve;
 
-    public UnityEvent doorOpen;
+    [SerializeField] private AudioSource puzzleCompleteSounds;
+
+    public GameObject keyItem;
+    public UnityEvent puzzleComplete;
     public static event Action<Puzzle> OnPuzzleComplete;
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
@@ -53,9 +56,10 @@ public class GrandfatherClock : InteractableObject
     }
     private void OnPuzzleCompleted()
     {
-        doorOpen.Invoke();
+        keyItem.SetActive(true);
+        puzzleCompleteSounds.Play();
+        puzzleComplete.Invoke();
         onPuzzleSolve.TriggerDialogue();
-        Debug.Log("Puzzle completed! Deactivating canvas.");
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

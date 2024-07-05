@@ -1,5 +1,9 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class ClockChecker : MonoBehaviour
 {
@@ -20,6 +24,7 @@ public class ClockChecker : MonoBehaviour
     [SerializeField]
     public float howOftenCheck;
 
+    [SerializeField] private InterfaceOnClose closeInterfaceScript;
 
 
     private float checkTimer;
@@ -30,8 +35,7 @@ public class ClockChecker : MonoBehaviour
     void Start()
     {
         checkTimer = howOftenCheck;
-        minuteHand.CheckHands.AddListener(CheckHandsPosition);
-        hourHand.CheckHands.AddListener(CheckHandsPosition);
+        closeInterfaceScript.interfaceClosed.AddListener(CheckHandsPosition);
         Debug.Log("Hour Hand Target Time: " + hourHandTargetTime);
         Debug.Log("Minute Hand Target Time: " + minuteHandTargetTime);
         Debug.Log("Hour Hand Target Angle: " + hourHandTargetAngle);
@@ -39,16 +43,16 @@ public class ClockChecker : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        checkTimer -= Time.deltaTime;
+    //void Update()
+    //{
+    //    checkTimer -= Time.deltaTime;
 
-        if (checkTimer <= 0f)
-        {
-            CheckHandsPosition();
-            checkTimer = howOftenCheck;
-        }
-    }
+    //    if (checkTimer <= 0f)
+    //    {
+    //        CheckHandsPosition();
+    //        checkTimer = howOftenCheck;
+    //    }
+    //}
 
     private void CheckHandsPosition()
     {
@@ -57,10 +61,10 @@ public class ClockChecker : MonoBehaviour
         {
             onPuzzleCompleted.Invoke();
             Debug.Log("Both the hour and minute hands are in the correct position!");
-            DisableCanvas();
 
         }
     }
+
 
     private bool IsMinuteHandInCorrectPosition()
     {
@@ -81,11 +85,6 @@ public class ClockChecker : MonoBehaviour
         }
         return Mathf.Abs(currentAngle - hourHandTargetAngle) <= hourHandAngleTolerance;
     }
-    private void DisableCanvas()
-    {
-        gameObject.SetActive(false);
-    }
-
     private float NormalizeAngle(float angle)
     {
         angle = angle % 360;
