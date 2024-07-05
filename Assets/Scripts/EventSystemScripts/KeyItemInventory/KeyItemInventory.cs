@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyItemInventory : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class KeyItemInventory : MonoBehaviour
     public List<GameObject> itemPanels;
 
     private int initialItemCount = 1;
+
+    [SerializeField] private GameObject keyItemIconHolder;
+    [SerializeField] private GameObject keyItemDescription;
 
     public void CreateOrUpdateItemPanelBox(InventoryItem keyItem, List<InventoryItem> keyItemInventory)
     {
@@ -66,6 +70,12 @@ public class KeyItemInventory : MonoBehaviour
 
         SetCount(itemPanel, initialItemCount);
 
+        KeyItemBox keyItemBox = itemPanel.GetComponent<KeyItemBox>();
+        if (keyItemBox != null)
+        {
+            keyItemBox.SetKeyItemData(keyItem, this);
+        }
+
         itemPanels.Add(itemPanel);
     }
 
@@ -80,5 +90,13 @@ public class KeyItemInventory : MonoBehaviour
     {
         amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         amountText.text = count.ToString();
+    }
+
+
+    public void ShowKeyItemData(InventoryItem keyItem)
+    {
+        print(keyItem);
+        keyItemIconHolder.GetComponent<Image>().sprite = keyItem.inventoryItemImage;
+        keyItemDescription.GetComponent<TextMeshProUGUI>().text = keyItem.itemDescription;
     }
 }

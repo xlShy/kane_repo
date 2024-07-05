@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting.Antlr3.Runtime;
 
 public class Inventory : MonoBehaviour
 {
@@ -73,14 +74,17 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             isKeyOpen = !isKeyOpen;
-            keyItemInventory.SetActive(isKeyOpen);
+            keyItemInventory.SetActive(isKeyOpen);           
         }
-        if (Input.GetKeyDown(KeyCode.V))
+        if (isKeyOpen)
         {
-            foreach(InventoryItem item in keyItemsInventory)
-            {
-                print(item.name);
-            }
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

@@ -811,10 +811,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+--- !u!1 &962347897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1612198862979092375, guid: 008088181c3de244894b8f959d6d1655, type: 3}
+  m_PrefabInstance: {fileID: 346166332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992316037 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8650277741901395915, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
   m_PrefabInstance: {fileID: 1848045802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1025911862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5770274257538322742, guid: 008088181c3de244894b8f959d6d1655, type: 3}
+  m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1165605060 stripped
 MonoBehaviour:
@@ -1418,6 +1428,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 2311779066290444603, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: itemDescription
+      value: OPPOP
+      objectReference: {fileID: 0}
     - target: {fileID: 2440134231726379328, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1482,6 +1496,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 8256048934626640342, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: itemDescription
+      value: YUYUY
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1612,6 +1630,14 @@ PrefabInstance:
       propertyPath: amountText
       value: 
       objectReference: {fileID: 1165605060}
+    - target: {fileID: 4018795075872869457, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
+      propertyPath: keyItemIconHolder
+      value: 
+      objectReference: {fileID: 1025911862}
+    - target: {fileID: 4018795075872869457, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
+      propertyPath: keyItemDescription
+      value: 
+      objectReference: {fileID: 962347897}
     - target: {fileID: 4018795075872869457, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: itemPanelParentObject
       value: 
