@@ -289,6 +289,7 @@ MonoBehaviour:
   player: {fileID: 7365814222055271680}
   mouseSens: 150
   interactionHandler: {fileID: 7854700075321512501}
+  sanityScript: {fileID: 0}
 --- !u!1 &3416880441292475520
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 832
+  sanityScript: {fileID: 0}
 --- !u!114 &7854700075321512501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +431,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isFull: 0
+  gameCanvases:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &4018795075872869457
 MonoBehaviour:
   m_ObjectHideFlags: 0

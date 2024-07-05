@@ -32,17 +32,30 @@ public class Inventory : MonoBehaviour
 
     public static event Action<bool> onInventoryFull;
     public bool isFull;
+    [SerializeField] private List<GameObject> gameCanvases;
 
     private void Start()
     {
         InitializeBoxes();
     }
 
+    private bool AreAllCanvasesDisabled()
+    {
+        foreach (GameObject canvas in gameCanvases)
+        {
+            if (canvas.activeSelf)
+            {
+                return false;
+            }     
+        }
+        return true;
+    }
+
     private void Update()
     {
 
         //put in an inputhandler script
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && AreAllCanvasesDisabled())
         {
             isConsumablesOpen = !isConsumablesOpen;
             consumableInventory.SetActive(isConsumablesOpen);
