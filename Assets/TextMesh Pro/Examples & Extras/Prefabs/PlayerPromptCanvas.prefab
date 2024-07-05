@@ -88,9 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e876667032345f489d977c9855351f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapAngle: 30
   CheckHands:
     m_PersistentCalls:
       m_Calls: []
+  audioSources: []
 --- !u!1 &1865018093122455637
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,9 +783,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbdf409e3069eb449816d9dae0c37f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapAngle: 30
   CheckHands:
     m_PersistentCalls:
       m_Calls: []
+  audioSources: []
 --- !u!1 &6498855219607259801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1016,7 @@ MonoBehaviour:
   minuteHandAngleTolerance: 5
   hourHandAngleTolerance: 5
   howOftenCheck: 0.5
+  closeInterfaceScript: {fileID: 0}
   onPuzzleCompleted:
     m_PersistentCalls:
       m_Calls: []

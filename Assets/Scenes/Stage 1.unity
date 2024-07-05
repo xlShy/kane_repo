@@ -723,6 +723,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9683cd3b53b3e4eaf027593d6ee9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &919784533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7f1759e0675604ea7e10defd0c69bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &945054393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,6 +827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1190965417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3651769061179658162, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
+  m_PrefabInstance: {fileID: 1779987968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1223407404 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2312605012493744872, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -827,6 +843,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1421804618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1019960403373478890, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1434949865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6414842396438157785, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -899,6 +920,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
+--- !u!1 &1652494270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6516720701022622229, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
+  m_PrefabInstance: {fileID: 1779987968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1716798330 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 758185959961032799, guid: a8e23b16da29510449b86f56731bec5d, type: 3}
@@ -1036,7 +1062,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2816149679950842926, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1802773236}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -1047,7 +1073,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7261660648607906517, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1652494270}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1057,6 +1083,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9087116602498022858, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1802773236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6000962259522586584, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
+  m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1848045802
 PrefabInstance:
@@ -1590,6 +1621,10 @@ PrefabInstance:
       propertyPath: itemPanelParentObject
       value: 
       objectReference: {fileID: 346166336}
+    - target: {fileID: 5706969184724633507, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
+      propertyPath: sanityScript
+      value: 
+      objectReference: {fileID: 919784533}
     - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: box1
       value: 
@@ -1699,6 +1734,42 @@ PrefabInstance:
       propertyPath: shedSpawnPoint
       value: 
       objectReference: {fileID: 698506609}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 1190965417}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 1779987972}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[2]
+      value: 
+      objectReference: {fileID: 1802773236}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[3]
+      value: 
+      objectReference: {fileID: 1652494270}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[4]
+      value: 
+      objectReference: {fileID: 1484122992}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[5]
+      value: 
+      objectReference: {fileID: 1516929156}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[6]
+      value: 
+      objectReference: {fileID: 25434435}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[7]
+      value: 
+      objectReference: {fileID: 2067456314}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: canvasDisable.Array.data[8]
+      value: 
+      objectReference: {fileID: 1421804618}
     - target: {fileID: 6372715338452213385, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 

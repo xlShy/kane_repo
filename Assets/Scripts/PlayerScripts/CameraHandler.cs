@@ -10,6 +10,8 @@ public class CameraHandler : MonoBehaviour
     [SerializeField]
     private InteractionHandler interactionHandler;
 
+    [SerializeField] private SanityStatusEffect sanityScript;
+
     private float xRotation = 0f;
     //private float yRotation = 0f;
 
@@ -19,6 +21,7 @@ public class CameraHandler : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        sanityScript.playerFainted.AddListener(CameraControl);
     }
 
     // Update is called once per frame
@@ -26,16 +29,23 @@ public class CameraHandler : MonoBehaviour
     {
         if (!interactionHandler.IsAnyCanvasActive())
         {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
-
-            //yRotation += mouseX;
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            player.Rotate(Vector3.up * mouseX);
+            CameraControl();
         }
-        
+    }
+
+    private void CameraControl()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+
+        //yRotation += mouseX;
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        player.Rotate(Vector3.up * mouseX);
     }
 }

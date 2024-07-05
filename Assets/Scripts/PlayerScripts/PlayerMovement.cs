@@ -18,24 +18,35 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     private bool isGrounded;
 
+    [SerializeField] private SanityStatusEffect sanityScript;
+
+    private void Start()
+    {
+        sanityScript.playerFainted.AddListener(PlayerControl);
+    }
     void Update()
     {
         if (!interactionHandler.IsAnyCanvasActive())
         {
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-            if (isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
-            //To Do - Create InputHandler Script
-            float xDirection = Input.GetAxisRaw("Horizontal");
-            float zDirection = Input.GetAxisRaw("Vertical");
-
-            Vector3 direction = transform.right * xDirection + transform.forward * zDirection;
-            characterController.Move(direction * speed * Time.deltaTime);
-            velocity.y += gravity * Time.deltaTime;
-            characterController.Move(velocity * Time.deltaTime);
+            PlayerControl();
         }
+    }
+
+    private void PlayerControl()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+        //To Do - Create InputHandler Script
+        float xDirection = Input.GetAxisRaw("Horizontal");
+        float zDirection = Input.GetAxisRaw("Vertical");
+
+        Vector3 direction = transform.right * xDirection + transform.forward * zDirection;
+        characterController.Move(direction * speed * Time.deltaTime);
+        velocity.y += gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
     }
 }

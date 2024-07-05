@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class SanityStatusEffect : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class SanityStatusEffect : MonoBehaviour
     public float darkenDuration = 3f;
     public float returnDuration = 3f;
     private Coroutine visionChangeCoroutine;
+    [SerializeField]private List<GameObject> canvasDisable;
 
+    public UnityEvent playerFainted;
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
@@ -44,6 +48,15 @@ public class SanityStatusEffect : MonoBehaviour
 
     public void OnDepletedSanity()
     {
+        playerFainted.Invoke();
+        foreach (GameObject canvas in canvasDisable)
+        {
+            if (canvas != null)
+            {
+                canvas.SetActive(false);
+            }
+        }
+
         CharacterController controller = playerObject.GetComponent<CharacterController>();
         if (controller != null)
         {
