@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PuzzleInterfaceController : MonoBehaviour
 {
@@ -25,11 +26,13 @@ public class PuzzleInterfaceController : MonoBehaviour
     public void AddToPuzzleJournals(Puzzle puzzleJournalData)
     {
         puzzleRecords.Add(puzzleJournalData);
-        InstantiatePuzzleRecordButton();
+        InstantiatePuzzleRecordButton(puzzleJournalData);
     }
-    private void InstantiatePuzzleRecordButton()
+    private void InstantiatePuzzleRecordButton(Puzzle puzzleJournalData)
     {
         GameObject puzzleRecord = Instantiate(puzzleRecordBox, puzzleRecordBoxParent.transform);
+        TextMeshProUGUI puzzleName = puzzleRecord.transform.Find(recordName.name).GetComponent<TextMeshProUGUI>();
+        puzzleName.text = puzzleJournalData.name;
         puzzleRecordBoxes.Add(puzzleRecord);
 
     }

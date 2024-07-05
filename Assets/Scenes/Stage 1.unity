@@ -1210,6 +1210,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2003535442193539444, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3d8b7ce7ecccdf459c0a0c6c673ea0c, type: 3}
     - target: {fileID: 5966620974456296335, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
       propertyPath: m_Name
       value: PuzzleJournalCanvas
@@ -1293,6 +1297,10 @@ PrefabInstance:
     - target: {fileID: 6140805606926489979, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470267086924207724, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
+      propertyPath: m_Spacing
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
