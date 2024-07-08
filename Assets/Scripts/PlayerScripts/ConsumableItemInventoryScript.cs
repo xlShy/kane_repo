@@ -59,12 +59,12 @@ public class ConsumableItemInventoryScript : MonoBehaviour
         if (item != null)
         {
             itemSlots[slotIndex].sprite = item.inventoryItemImage;
-            itemSlots[slotIndex].color = Color.white;
+            itemSlots[slotIndex].enabled = true;
         }
         else
         {
             itemSlots[slotIndex].sprite = null;
-            itemSlots[slotIndex].color = Color.clear;
+            itemSlots[slotIndex].enabled = false;
         }
     }
 }

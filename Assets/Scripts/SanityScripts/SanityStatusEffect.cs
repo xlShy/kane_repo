@@ -13,6 +13,12 @@ public class SanityStatusEffect : MonoBehaviour
     public float darkenDuration = 3f;
     public float returnDuration = 3f;
     private Coroutine visionChangeCoroutine;
+
+    [Header("Threshhold for the sanity bar if it reaches the value")]
+    [SerializeField] private float threshHold1 = .6f;
+    [SerializeField] private float threshHold2 = .3f;
+    [SerializeField] private float threshHold3 = .1f;
+
     [SerializeField]private List<GameObject> canvasDisable;
 
     public UnityEvent playerFainted;
@@ -23,20 +29,21 @@ public class SanityStatusEffect : MonoBehaviour
 
     public void CheckSanityValue(float sanityValue)
     {
+        //add speicific bvaleuar got rffect
         if (sanityValue <= 0)   
         {
             sanityHandler.isSanityDepleted = true;
             OnDepletedSanity();
         }
-        else if (sanityValue <= .1f)
+        else if (sanityValue <= threshHold3)
         {
             OnLowSanity(.97f);
         }
-        else if (sanityValue <= .3f)
+        else if (sanityValue <= threshHold2)
         {
             OnLowSanity(.90f);
         }
-        else if (sanityValue <= .6f)
+        else if (sanityValue <= threshHold1)
         {
             OnLowSanity(.65f);
         }

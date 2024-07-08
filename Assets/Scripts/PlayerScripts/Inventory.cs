@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     public static event Action<bool> onInventoryFull;
     public bool isFull;
 
-    [SerializeField] private List<GameObject> gameCanvases;
+    [SerializeField] private List<GameObject> gameCanvases; 
 
     private void Start()
     {
@@ -76,7 +76,7 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            //isKeyOpen = !isKeyOpen;
+            isKeyOpen = !isKeyOpen;
             keyItemInventory.SetActive(isKeyOpen);           
         }
         //if (isKeyOpen)
