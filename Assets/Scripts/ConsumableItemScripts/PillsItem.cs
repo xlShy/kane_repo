@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,9 @@ public class PillsItem : InventoryItem
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
+
+
+    public static event Action<bool> OnUsePills;
 
     private void Start()
     {
@@ -54,5 +58,6 @@ public class PillsItem : InventoryItem
     public override void Use()
     {
         Debug.Log("You have used a pill!");
+        OnUsePills.Invoke(true);
     }
 }

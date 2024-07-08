@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
     private GameObject consumableInventory;
     [SerializeField]
     private GameObject keyItemInventory;
+
+    [Header("UI on Consumable Inventory")]
     [SerializeField]
     private GameObject box1;
     [SerializeField]
@@ -25,7 +27,7 @@ public class Inventory : MonoBehaviour
     private bool isKeyOpen = false;
 
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
-    public List<InventoryItem> keyItemsInventory = new List<InventoryItem>();
+    public List<InventoryItem> keyItemsInventory = new List<InventoryItem>(); //TO DO - Set to private later
 
     [SerializeField] private KeyItemInventory keyItemInventoryScript;
 
@@ -33,6 +35,7 @@ public class Inventory : MonoBehaviour
 
     public static event Action<bool> onInventoryFull;
     public bool isFull;
+
     [SerializeField] private List<GameObject> gameCanvases;
 
     private void Start()
@@ -73,19 +76,19 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            isKeyOpen = !isKeyOpen;
+            //isKeyOpen = !isKeyOpen;
             keyItemInventory.SetActive(isKeyOpen);           
         }
-        if (isKeyOpen)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        //if (isKeyOpen)
+        //{
+        //    Cursor.visible = true;
+        //    Cursor.lockState = CursorLockMode.None;
+        //}
+        //else
+        //{
+        //    Cursor.visible = false;
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //}
     }
 
     // Adds items to player inventory
@@ -140,7 +143,6 @@ public class Inventory : MonoBehaviour
         keyItemInventoryScript.CreateOrUpdateItemPanelBox(keyItem, keyItemsInventory);
     }
 
-    // Counts specific item in player inventory
     //TO DO - put function in a separate script
 
     public List<InventoryItem> GetKeyItems()

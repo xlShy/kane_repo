@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SanityHandler : MonoBehaviour
 {
     private SanityStatusEffect sanityChecker;
+    private PillEffect pillEffect;
 
     [SerializeField] private float increasePercentage = 0.01f;
     [SerializeField] private float decreasePercentage = 0.01f;
@@ -19,6 +20,7 @@ public class SanityHandler : MonoBehaviour
     private void Awake()
     {
         sanityChecker = GetComponent<SanityStatusEffect>();
+        pillEffect = GetComponent<PillEffect>();
     }
     private void Start()
     {
@@ -65,7 +67,9 @@ public class SanityHandler : MonoBehaviour
     }
     private void ChangeSanity(float changeAmount)
     {
-        sanityValue += changeAmount * interval * Time.deltaTime;
+        float adjustedChangeAmount = pillEffect.GetPillEffect(changeAmount); //Stores the calculated amount of the duration and effect amount of the Pill(Consumable Item)
+
+        sanityValue += adjustedChangeAmount * interval * Time.deltaTime;
         sanityValue = Mathf.Clamp01(sanityValue);
     }
     private void PlayerOnHouse()

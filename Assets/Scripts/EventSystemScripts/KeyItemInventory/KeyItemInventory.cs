@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class KeyItemInventory : MonoBehaviour
 {
+    [Header("UI for ItemBoxes")]
     [SerializeField] private GameObject itemPanelParentObject;
     [SerializeField] private GameObject itemBox;
     [SerializeField] private Transform itemName;
@@ -15,9 +16,9 @@ public class KeyItemInventory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI amountText;
 
     public List<GameObject> itemPanels;
-
     private int initialItemCount = 1;
 
+    [Header("UI on Clicking Item Boxes")]
     [SerializeField] private GameObject keyItemIconHolder;
     [SerializeField] private GameObject keyItemDescription;
 
@@ -78,24 +79,19 @@ public class KeyItemInventory : MonoBehaviour
 
         itemPanels.Add(itemPanel);
     }
-
     private void UpdateItemCount(GameObject itemPanel)
     {
-        //amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         int currentCount = int.Parse(amountText.text);
         currentCount++;
         SetCount(itemPanel, currentCount);
     }
-    private void SetCount(GameObject itemPanel, int count)
+    private void SetCount(GameObject itemPanel, int count) //Set item count if item is stackable
     {
         amountText = itemPanel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
         amountText.text = count.ToString();
     }
-
-
-    public void ShowKeyItemData(InventoryItem keyItem)
+    public void ShowKeyItemData(InventoryItem keyItem) //Called to show key item data in inventory on click
     {
-        print(keyItem);
         keyItemIconHolder.GetComponent<Image>().sprite = keyItem.inventoryItemImage;
         keyItemDescription.GetComponent<TextMeshProUGUI>().text = keyItem.itemDescription;
     }

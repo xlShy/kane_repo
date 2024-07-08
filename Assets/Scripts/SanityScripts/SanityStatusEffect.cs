@@ -23,7 +23,7 @@ public class SanityStatusEffect : MonoBehaviour
 
     public void CheckSanityValue(float sanityValue)
     {
-        if (sanityValue <= 0)
+        if (sanityValue <= 0)   
         {
             sanityHandler.isSanityDepleted = true;
             OnDepletedSanity();

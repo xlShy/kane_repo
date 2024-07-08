@@ -34,10 +34,12 @@ public class PlayerFlashlight : MonoBehaviour
     private Image dustParticlesImage;
     public float currentBattery;
     private bool isFlickering = false;
-    private float dustParticleFlicker = Random.Range(0f, 1f);
+    //private float dustParticleFlicker = Random.Range(0f, 1f);
+    private float dustParticleFlicker;
 
     private void Start()
     {
+        dustParticleFlicker = Random.Range(0f, 1f);
         flashlight = GetComponent<Light>();
         currentBattery = maxBattery;
         dustParticlesImage = flashlightDustParticles.GetComponent<Image>();
