@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class GrandfatherClock : InteractableObject
 {
+    public bool isPuzzleComplete = false;
+
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
 
@@ -31,7 +33,7 @@ public class GrandfatherClock : InteractableObject
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (itemInteractedCase == 2)
+        if (itemInteractedCase == 2 && !isPuzzleComplete)
         {
             puzzleCanvas.SetActive(true);
             clockChecker = FindObjectOfType<ClockChecker>();
@@ -56,17 +58,28 @@ public class GrandfatherClock : InteractableObject
     }
     private void OnPuzzleCompleted()
     {
-        keyItem.SetActive(true);
-        puzzleCompleteSounds.Play();
-        puzzleComplete.Invoke();
-        onPuzzleSolve.TriggerDialogue();
-        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        //doorToOpen.SetActive(false);
+        if (!isPuzzleComplete)
+        {
+            isPuzzleComplete = true;
 
-        //set puzzle as complete
-        pEventHandler.InteractPuzzle(puzzle);
-        OnPuzzleComplete?.Invoke(puzzle);
+            keyItem.SetActive(true);
+            puzzleCompleteSounds.Play();
+            puzzleComplete.Invoke();
+            onPuzzleSolve.TriggerDialogue();
+            gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            //doorToOpen.SetActive(false);
+
+            //set puzzle as complete
+            pEventHandler.InteractPuzzle(puzzle);
+            OnPuzzleComplete?.Invoke(puzzle);
+
+            // Remove the listener to prevent multiple invocations
+            if (clockChecker != null)
+            {
+                clockChecker.onPuzzleCompleted.RemoveListener(OnPuzzleCompleted);
+            }
+        }
     }
 }

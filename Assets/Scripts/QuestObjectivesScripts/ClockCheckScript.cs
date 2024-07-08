@@ -32,6 +32,7 @@ public class ClockChecker : MonoBehaviour
     public UnityEvent onPuzzleCompleted;
     private float hourHandTargetAngle => NormalizeAngle(-hourHandTargetTime * 30f);
     private float minuteHandTargetAngle => NormalizeAngle(-minuteHandTargetTime * 6f);
+
     void Start()
     {
         checkTimer = howOftenCheck;
