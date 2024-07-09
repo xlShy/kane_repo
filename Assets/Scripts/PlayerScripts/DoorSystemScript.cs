@@ -6,10 +6,17 @@ using System.Linq;
 
 public class DoorSystemScript : InteractableObject
 {
+    private bool canOpen = true;
     private bool isOpen = false;
+    [SerializeField] private ChemicalMixingEventTrigger chemMixTriggerScript;
+
+    private void Start()
+    {
+        chemMixTriggerScript.chemicalMixingEventInitiate.AddListener(chemicalTrigger);
+    }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (itemInteractedCase == 2 && !isOpen)
+        if (itemInteractedCase == 2 && !isOpen && canOpen)
         {
             transform.rotation = Quaternion.Euler(0, 90, 0);
             isOpen = true;
@@ -19,5 +26,10 @@ public class DoorSystemScript : InteractableObject
             transform.rotation = Quaternion.Euler(0, 0, 0);
             isOpen = false;
         }
+    }
+
+    private void chemicalTrigger()
+    {
+        canOpen = false;
     }
 }
