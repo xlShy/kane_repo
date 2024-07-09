@@ -800,6 +800,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &687961695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8847387387963992137, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &698506609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 372206305952260406, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
@@ -1627,6 +1638,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
+--- !u!114 &1904201606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1904464676975663929, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+  m_PrefabInstance: {fileID: 3589793432761451732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988426442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4622653781780159267, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -1810,6 +1832,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 5431916737317676389, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     - target: {fileID: 5711208336521598690, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1818,6 +1844,22 @@ PrefabInstance:
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961693}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1904201606}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: pEventHandler
+      value: 
+      objectReference: {fileID: 687961695}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: keyItemInventory
+      value: 
+      objectReference: {fileID: 2085152747}
     - target: {fileID: 5894120537310210579, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1882,6 +1924,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 8258944374557843499, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
+    - target: {fileID: 8852377614301990458, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1895,6 +1945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1904464676975663929, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     - target: {fileID: 2311779066290444603, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1975,6 +2029,10 @@ PrefabInstance:
       propertyPath: itemDescription
       value: YUYUY
       objectReference: {fileID: 0}
+    - target: {fileID: 9052288082376144678, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
