@@ -607,6 +607,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3829860035817289430, guid: 5fa3d9fb16fca89468d8255faf3b73e0, type: 3}
   m_PrefabInstance: {fileID: 1848045802}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &474677514 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
+  m_PrefabInstance: {fileID: 3649034147005034419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &481300688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3496121777398930138, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
@@ -869,6 +874,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &727495540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4894742817569862970, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
+  m_PrefabInstance: {fileID: 1634221687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &739606901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1205,7 @@ Transform:
   - {fileID: 261252392}
   - {fileID: 1516929157}
   - {fileID: 1484122993}
+  - {fileID: 474677514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484122992 stripped
@@ -1922,7 +1933,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1447439379}
     m_Modifications:
     - target: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
       propertyPath: m_Pivot.x
@@ -2097,6 +2108,10 @@ PrefabInstance:
       propertyPath: gameCanvases.Array.data[4]
       value: 
       objectReference: {fileID: 1484122992}
+    - target: {fileID: 7267912201697230477, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
+      propertyPath: batteryDrainRate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.97999954
@@ -2226,6 +2241,14 @@ PrefabInstance:
       propertyPath: interval
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: gameObjectsWithLights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: gameObjectsWithLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 727495540}
     - target: {fileID: 6372715338452213385, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 
@@ -3295,7 +3318,6 @@ SceneRoots:
   - {fileID: 161733653}
   - {fileID: 7933519317876947055}
   - {fileID: 4614911185076699634}
-  - {fileID: 3649034147005034419}
   - {fileID: 4230698652132090527}
   - {fileID: 945054393}
   - {fileID: 3589793432761451732}

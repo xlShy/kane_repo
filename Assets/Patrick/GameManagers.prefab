@@ -62,6 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8958643074115754470}
   - component: {fileID: 2593785832678190295}
+  - component: {fileID: 4936673747371673390}
   - component: {fileID: 864382233524305535}
   m_Layer: 0
   m_Name: SanityManager
@@ -99,11 +100,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increasePercentage: 0.01
   decreasePercentage: 0.01
-  interval: 0
+  interval: 1
   sanityValue: 0
   isSanityDecreasing: 0
   isSanityIncreasing: 0
   isSanityDepleted: 0
+--- !u!114 &4936673747371673390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496121777398930138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34466da05651864fb3005e91715f5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPillActive: 1
+  pillDelayDuration: 0.5
+  pillEffectDuration: 2
 --- !u!114 &864382233524305535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +182,7 @@ Transform:
   - {fileID: 8958643074115754470}
   - {fileID: 4964134655134307535}
   - {fileID: 4108359295714776700}
+  - {fileID: 8935828588353873112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8507369729350834000
@@ -267,3 +284,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9128609637978092965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8935828588353873112}
+  - component: {fileID: 5370398022595457380}
+  m_Layer: 0
+  m_Name: LightManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8935828588353873112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128609637978092965}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6508795903779757834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5370398022595457380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128609637978092965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d89fcb52c3e514c8b2f0eef61b5a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managedLights:
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  - light: {fileID: 0}
+    isOn: 0
+  selectedLights: []
