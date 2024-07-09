@@ -12,27 +12,12 @@ public class ConsumableItemInventoryScript : MonoBehaviour
 
     private void Start()
     {
-        inventoryScript.consumableInventoryOpen.AddListener(consumableOpen);
-
         for (int i = 0; i < itemSlots.Length; i++)
         {
             int index = i;
             itemSlots[i].GetComponent<Button>().onClick.AddListener(() => OnItemClick(index));
         }
     }
-
-    private void consumableOpen()
-    {
-        ToggleCursorState();
-    }
-
-    private void ToggleCursorState()
-    {
-        isCursorVisible = !isCursorVisible;
-        Cursor.visible = isCursorVisible;
-        Cursor.lockState = isCursorVisible ? CursorLockMode.None : CursorLockMode.Locked;
-    }
-
     private void OnItemClick(int slotIndex)
     {
         InventoryItem item = inventoryScript.GetConsumableItemAtIndex(slotIndex);

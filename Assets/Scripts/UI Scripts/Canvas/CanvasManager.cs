@@ -1,18 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<GameObject> UICanvas;
+    public List<GameObject> PuzzleCanvas;
+    public GameObject enabledCanvas;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        CheckEnabledCanvas();
+    }
+    private void DisableAllCanvas()
+    {
+        foreach(GameObject canvas in UICanvas)
+        {
+            canvas.SetActive(false);
+        }
+    }
+    private void CheckEnabledCanvas()
+    {
+        foreach(GameObject canvas in UICanvas)
+        {
+            if (canvas == canvas.activeSelf)
+            {
+                enabledCanvas = canvas;
+                SetCursorEnabled();
+            }
+        }
+        if (enabledCanvas != null)
+        {
+            foreach (GameObject canvas in UICanvas)
+            {
+                if (canvas != enabledCanvas)
+                {
+                    canvas.SetActive(false);
+                }
+            }
+        } 
+        else if(enabledCanvas == null)
+        {
+            SetCursorDisabled();
+        }
+    }
+    private void SetCursorDisabled()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    private void SetCursorEnabled()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

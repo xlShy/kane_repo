@@ -10,10 +10,11 @@ using Unity.VisualScripting.Antlr3.Runtime;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject consumableInventory;
-    [SerializeField]
-    private GameObject keyItemInventory;
+    private bool isKeyOpen = false;
+    [SerializeField] private GameObject keyItemInventory;
+
+    private bool isConsumablesOpen = false;
+    [SerializeField] private GameObject consumableInventory;
 
     [Header("UI on Consumable Inventory")]
     [SerializeField]
@@ -23,72 +24,32 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject box3;
 
-    private bool isConsumablesOpen = false;
-    private bool isKeyOpen = false;
-
+    //Player Inventories
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
     public List<InventoryItem> keyItemsInventory = new List<InventoryItem>(); //TO DO - Set to private later
 
     [SerializeField] private KeyItemInventory keyItemInventoryScript;
 
-    public UnityEvent consumableInventoryOpen;
-
     public static event Action<bool> onInventoryFull;
+
     public bool isFull;
 
-    [SerializeField] private List<GameObject> gameCanvases; 
+    [SerializeField] private List<GameObject> gameCanvases;
+
+    public void OnEnable()
+    {
+        InputHandler.OnConsumableInventoryOpen += SetConsumableOpen;
+        InputHandler.OnKeyItemInventoryOpen += SetKeyItemOpen;
+    }
+    private void OnDisable()
+    {
+        InputHandler.OnConsumableInventoryOpen -= SetConsumableOpen;
+        InputHandler.OnKeyItemInventoryOpen -= SetKeyItemOpen;
+    }
 
     private void Start()
     {
         InitializeBoxes();
-    }
-
-    private bool AreAllCanvasesDisabled()
-    {
-        foreach (GameObject canvas in gameCanvases)
-        {
-            if (canvas.activeSelf)
-            {
-                return false;
-            }     
-        }
-        return true;
-    }
-
-    private void Update()
-    {
-
-        //put in an inputhandler script
-        if (Input.GetKeyDown(KeyCode.Tab) && AreAllCanvasesDisabled())
-        {
-            isConsumablesOpen = !isConsumablesOpen;
-            consumableInventory.SetActive(isConsumablesOpen);
-            if (isConsumablesOpen)
-            {
-                Debug.Log("We opening!");
-                UpdateConsumableInventoryUI();
-                consumableInventoryOpen.Invoke();
-            }
-            else
-            {
-                consumableInventoryOpen.Invoke();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            isKeyOpen = !isKeyOpen;
-            keyItemInventory.SetActive(isKeyOpen);           
-        }
-        //if (isKeyOpen)
-        //{
-        //    Cursor.visible = true;
-        //    Cursor.lockState = CursorLockMode.None;
-        //}
-        //else
-        //{
-        //    Cursor.visible = false;
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //}
     }
 
     // Adds items to player inventory
@@ -242,5 +203,20 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    
+    private void SetConsumableOpen(bool isOpen)
+    {
+        isConsumablesOpen = isOpen;
+        consumableInventory.SetActive(isConsumablesOpen);
+
+        if (isConsumablesOpen)
+        {
+            Debug.Log("We opening!");
+            UpdateConsumableInventoryUI();
+        }
+    }
+    private void SetKeyItemOpen(bool isOpen)
+    {
+        isKeyOpen = isOpen;
+        keyItemInventory.SetActive(isKeyOpen);
+    }
 }

@@ -13,16 +13,16 @@ public class PuzzleJournalHandler : MonoBehaviour
         {
             isOpen = !isOpen;
             puzzleJournalCanvas.SetActive(isOpen);
-            if(isOpen )
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            //if(isOpen )
+            //{
+            //    Cursor.visible = true;
+            //    Cursor.lockState = CursorLockMode.None;
+            //}
+            //else
+            //{
+            //    Cursor.visible = false;
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //}
         }
     }
 }
