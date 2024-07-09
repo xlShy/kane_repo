@@ -18,8 +18,7 @@ public class FuseBox : InteractableObject
     [SerializeField]
     private Text dialogueText;
 
-    [SerializeField]
-    public LayerMask newLayerMask;
+    [SerializeField] public GameObject televisionGameObject;
 
     [SerializeField]
     private DialogueTriggerScript successFuseDialogue;
@@ -95,7 +94,7 @@ public class FuseBox : InteractableObject
     private void SolvePuzzle()
     {
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-        objectRenderer.material.color = Color.green;
+        televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
         successFuseDialogue.TriggerDialogue();
         //RemoveFusesFromInventory(2);
 

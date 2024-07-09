@@ -33,7 +33,12 @@ public class OfficeDoorScript : InteractableObject
 
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
+
+    [SerializeField]private GameObject doorAnchor;
     private int keyCount;
+    private bool isOpen = false;
+    private bool isUnlocked = false;
+
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -42,6 +47,10 @@ public class OfficeDoorScript : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
+            if (isUnlocked)
+            {
+                doorAnchor.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
             List<InventoryItem> keyItems = inventory.GetKeyItems();
             keyCount = CountDoorKeyItem(keyItems);
             HandleKey(keyCount);
@@ -54,18 +63,20 @@ public class OfficeDoorScript : InteractableObject
 
     private void HandleKey(int fuseCount)
     {
-        if (keyCount == 0)
+        if (!isUnlocked)
         {
-            doorIsLocked.Play();
-            noKey.TriggerDialogue();
-        }
-        else if (keyCount == 1)
-        {
-            objCollider.enabled = false;
-            objRenderer.enabled = false;
-            doorisOpen.Play();
-            yesKey.TriggerDialogue();
-            keyItemInventory.RemoveKeyItem(item, 1);
+            if (keyCount == 0)
+            {
+                doorIsLocked.Play();
+                noKey.TriggerDialogue();
+            }
+            else if (keyCount == 1)
+            {
+                doorisOpen.Play();
+                yesKey.TriggerDialogue();
+                keyItemInventory.RemoveKeyItem(item, 1);
+                isUnlocked = true;
+            }
         }
     }
 
