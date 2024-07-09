@@ -36,16 +36,6 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private List<GameObject> gameCanvases;
 
-    public void OnEnable()
-    {
-        InputHandler.OnConsumableInventoryOpen += SetConsumableOpen;
-        InputHandler.OnKeyItemInventoryOpen += SetKeyItemOpen;
-    }
-    private void OnDisable()
-    {
-        InputHandler.OnConsumableInventoryOpen -= SetConsumableOpen;
-        InputHandler.OnKeyItemInventoryOpen -= SetKeyItemOpen;
-    }
 
     private void Start()
     {
@@ -78,6 +68,7 @@ public class Inventory : MonoBehaviour
         {
             UpdateConsumableInventoryUI();
         }
+        UpdateConsumableInventoryUI();
     }
 
     public InventoryItem GetConsumableItemAtIndex(int index)
@@ -96,6 +87,7 @@ public class Inventory : MonoBehaviour
             consumableItemsInventory.RemoveAt(index);
             UpdateConsumableInventoryUI();
         }
+        UpdateConsumableInventoryUI();
     }
     public void AddKeyItem(InventoryItem keyItem)
     {
@@ -203,20 +195,5 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    private void SetConsumableOpen(bool isOpen)
-    {
-        isConsumablesOpen = isOpen;
-        consumableInventory.SetActive(isConsumablesOpen);
-
-        if (isConsumablesOpen)
-        {
-            Debug.Log("We opening!");
-            UpdateConsumableInventoryUI();
-        }
-    }
-    private void SetKeyItemOpen(bool isOpen)
-    {
-        isKeyOpen = isOpen;
-        keyItemInventory.SetActive(isKeyOpen);
-    }
+    
 }

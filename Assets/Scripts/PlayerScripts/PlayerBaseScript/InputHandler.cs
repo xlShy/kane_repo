@@ -2,47 +2,84 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
+    private bool isUIOpen;
+    private KeyCode currentOpenedUIKey;
 
-    private bool isConsumablesOpen;
-    private bool isKeyOpen;
     //EVENTS
     public static event Action<bool> OnConsumableInventoryOpen;
     public static event Action<bool> OnKeyItemInventoryOpen;
+    public static event Action<bool> OnPuzzleJournalOpen;
+
     private void Update()
     {
-        KeyItemInventoryInput();
-        ConsumbaleInventoryInput();
+        if (!isUIOpen)
+        {
+            CheckOpenUI();
+        }
+        else
+        {
+            CheckCloseUI();
+        }
     }
-    public void ConsumbaleInventoryInput()
+
+    private void CheckOpenUI()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            isConsumablesOpen = !isConsumablesOpen;
-
-            //Invokes in the Inventory, a method SetConsumableOpen is subscribed.
-            OnConsumableInventoryOpen?.Invoke(isConsumablesOpen);
+            OpenUI(KeyCode.Tab, OnConsumableInventoryOpen);
         }
-    }
-    public void KeyItemInventoryInput()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.B))
         {
-            isKeyOpen = !isKeyOpen;
-
-            //Invokes in the Inventory, a method SetKeyItemOpen is subscribed.
-            OnKeyItemInventoryOpen?.Invoke(isKeyOpen);
+            OpenUI(KeyCode.B, OnKeyItemInventoryOpen);
+        }
+        else if (Input.GetKeyDown(KeyCode.J))
+        {
+            OpenUI(KeyCode.J, OnPuzzleJournalOpen);
         }
     }
-    public void OnOpenPuzzleJournal()
-    {
 
+    private void CheckCloseUI()
+    {
+        if (Input.GetKeyDown(currentOpenedUIKey))
+        {
+            CloseUI();
+        }
     }
+
+    private void OpenUI(KeyCode key, Action<bool> openEvent)
+    {
+        isUIOpen = true;
+        currentOpenedUIKey = key;
+        openEvent?.Invoke(true);
+    }
+
+    private void CloseUI()
+    {
+        isUIOpen = false;
+        
+        if (currentOpenedUIKey == KeyCode.Tab)
+        {
+            OnConsumableInventoryOpen?.Invoke(false);
+        }
+        else if (currentOpenedUIKey == KeyCode.B)
+        {
+            OnKeyItemInventoryOpen?.Invoke(false);
+        }
+        else if(currentOpenedUIKey == KeyCode.J)
+        {
+            OnPuzzleJournalOpen?.Invoke(false);
+        }
+
+        currentOpenedUIKey = KeyCode.None;
+    }
+
     public void ClosePuzzlesCanvas()
     {
-
+        // Implementation for closing puzzle canvas
     }
 }

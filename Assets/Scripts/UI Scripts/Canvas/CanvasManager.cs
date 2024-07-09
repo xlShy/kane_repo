@@ -4,12 +4,21 @@ using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CanvasManager : MonoBehaviour
+public class CanvasManager : CanvasToggler
 {
-    public List<GameObject> UICanvas;
-    public List<GameObject> PuzzleCanvas;
+    private List<GameObject> UICanvas;
+    private List<GameObject> PuzzleCanvas;
     public GameObject enabledCanvas;
 
+
+
+    private void Start()
+    {
+        UICanvas = new List<GameObject>();
+        UICanvas.Add(consumableInventory);
+        UICanvas.Add(keyItemInventory);
+        UICanvas.Add(puzzleJournal);
+    }
     private void Update()
     {
         CheckEnabledCanvas();

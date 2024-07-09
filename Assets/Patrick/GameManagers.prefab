@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &63513610447101020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2191817601831526522}
+  - component: {fileID: 926579298934901709}
+  m_Layer: 0
+  m_Name: CanvasManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2191817601831526522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63513610447101020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6508795903779757834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926579298934901709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63513610447101020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ceb3406dd09e34d9f7429e0fb4111f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyItemInventory: {fileID: 0}
+  consumableInventory: {fileID: 0}
+  puzzleJournal: {fileID: 0}
+  enabledCanvas: {fileID: 0}
 --- !u!1 &2244745719541819569
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8958643074115754470}
   - component: {fileID: 2593785832678190295}
+  - component: {fileID: 8765483443422348581}
   - component: {fileID: 4936673747371673390}
   - component: {fileID: 864382233524305535}
   m_Layer: 0
@@ -105,6 +154,21 @@ MonoBehaviour:
   isSanityDecreasing: 0
   isSanityIncreasing: 0
   isSanityDepleted: 0
+--- !u!114 &8765483443422348581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496121777398930138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34466da05651864fb3005e91715f5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPillActive: 1
+  pillDelayDuration: 0.5
+  pillEffectDuration: 2
 --- !u!114 &4936673747371673390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +201,9 @@ MonoBehaviour:
   visionDarken: {fileID: 0}
   darkenDuration: 3
   returnDuration: 3
+  threshHold1: 0.6
+  threshHold2: 0.3
+  threshHold3: 0.1
   canvasDisable:
   - {fileID: 0}
   - {fileID: 0}
@@ -183,6 +250,7 @@ Transform:
   - {fileID: 4964134655134307535}
   - {fileID: 4108359295714776700}
   - {fileID: 8935828588353873112}
+  - {fileID: 2191817601831526522}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8507369729350834000
@@ -328,21 +396,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d89fcb52c3e514c8b2f0eef61b5a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectsWithLights:
+  - {fileID: 0}
   managedLights:
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
-  - light: {fileID: 0}
-    isOn: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   selectedLights: []
