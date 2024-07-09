@@ -11,8 +11,7 @@ public class CombinationLockScript : MonoBehaviour
     private int[] digits;
     private int[] correctCombination = { 1, 2, 3, 4 };
     private Renderer objectRenderer;
-
-    public UnityEvent onCorrectCombinationEntered;
+    public bool isCorrect = false;
 
     public void Start()
     {
@@ -62,16 +61,17 @@ public class CombinationLockScript : MonoBehaviour
         OnScroll((PointerEventData)eventData, 3);
     }
 
-    private void CheckCombination()
+    public void CheckCombination()
     {
+        isCorrect = true;
         for (int i = 0; i < digits.Length; i++)
         {
             if (digits[i] != correctCombination[i])
             {
-                return;
+                isCorrect = false;
+                break;
             }
         }
 
-        onCorrectCombinationEntered.Invoke();
     }
 }

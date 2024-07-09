@@ -47,9 +47,17 @@ public class OfficeDoorScript : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
-            if (isUnlocked)
+            if (isUnlocked && !isOpen)
             {
+                doorisOpen.Play();
                 doorAnchor.transform.rotation = Quaternion.Euler(0, 90, 0);
+                isOpen = true;
+            }
+            else if (isUnlocked && isOpen)
+            {
+                doorisOpen.Play();
+                doorAnchor.transform.rotation = Quaternion.Euler(0, 0, 0);
+                isOpen = false;
             }
             List<InventoryItem> keyItems = inventory.GetKeyItems();
             keyCount = CountDoorKeyItem(keyItems);
@@ -72,6 +80,7 @@ public class OfficeDoorScript : InteractableObject
             }
             else if (keyCount == 1)
             {
+                doorAnchor.transform.rotation = Quaternion.Euler(0, 90, 0);
                 doorisOpen.Play();
                 yesKey.TriggerDialogue();
                 keyItemInventory.RemoveKeyItem(item, 1);

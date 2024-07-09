@@ -16,11 +16,15 @@ public class CombinationLockActivateScript : InteractableObject
     [SerializeField]
     public CombinationLockScript combinationLockScript;
 
+    [SerializeField] private GameObject readableDocument;
+
     [SerializeField]
     public LayerMask newLayerMask;
 
     [SerializeField]
     private DialogueTriggerScript onPuzzleSuccess;
+
+    private bool canvasWasOpened;
 
     //refactor
     public UnityEvent onLockPuzzleCompletion;
@@ -39,15 +43,25 @@ public class CombinationLockActivateScript : InteractableObject
             Cursor.lockState = CursorLockMode.None;
 
             combinationLockScript = FindObjectOfType<CombinationLockScript>();
-            if (combinationLockScript != null)
-            {
-                combinationLockScript.onCorrectCombinationEntered.AddListener(OnCorrectCombinationEntered);
-            }
+            canvasWasOpened = true;
         }
     }
 
+    public void CheckCombinationOnClose()
+    {
+        if (canvasWasOpened && combinationLockScript != null)
+        {
+            combinationLockScript.CheckCombination();
+            if (combinationLockScript.isCorrect)
+            {
+                OnCorrectCombinationEntered();
+            }
+        }
+        canvasWasOpened = false;
+    }
     private void OnCorrectCombinationEntered()
     {
+        readableDocument.SetActive(true);
         onPuzzleSuccess.TriggerDialogue();
         combinationCanvas.SetActive(false);
         objectRenderer.material.color = Color.green;

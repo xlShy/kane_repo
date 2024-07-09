@@ -14,26 +14,32 @@ public class InterfaceOnClose : MonoBehaviour
     private DialogueTriggerScript onCloseInterface;
 
     public UnityEvent interfaceClosed;
-    private Image clockBackground;
 
-    private void Start()
-    {
-        clockBackground = GetComponent<Image>();
-    }
+    [SerializeField] private CombinationLockActivateScript combinationLockActivate;
+ 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            interfaceClosed.Invoke();
-            if (onCloseInterface != null)
-            {
-                onCloseInterface.TriggerDialogue();
-            }
-            Debug.Log("ACTIVATE");
-            onCloseInterface.TriggerDialogue();
-            gameObject.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            CloseInterface();
         }
+    }
+
+    private void CloseInterface()
+    {
+        interfaceClosed.Invoke();
+        if (onCloseInterface != null)
+        {
+            onCloseInterface.TriggerDialogue();
+        }
+        if (combinationLockActivate != null)
+        {
+            combinationLockActivate.CheckCombinationOnClose();
+        }
+
+        gameObject.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 }

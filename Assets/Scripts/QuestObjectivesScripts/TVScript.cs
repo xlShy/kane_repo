@@ -7,6 +7,7 @@ public class TVScript : InteractableObject
 {
     public GameObject tvInterface;
     private Renderer objectRenderer;
+    [SerializeField] private FuseBox fuseBoxScript;
 
     private void Start()
     {
@@ -14,9 +15,10 @@ public class TVScript : InteractableObject
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (itemInteractedCase == 2)
+        if (itemInteractedCase == 2 && fuseBoxScript.isCompleted)
         {
             tvInterface.SetActive(true);
+           
         }
     }
 

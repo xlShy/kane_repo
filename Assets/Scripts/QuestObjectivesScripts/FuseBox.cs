@@ -9,6 +9,7 @@ public class FuseBox : InteractableObject
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
     public KeyItemInventory keyItemInventory;
+    public bool isCompleted = false;
 
     private Renderer objectRenderer;
 
@@ -38,6 +39,8 @@ public class FuseBox : InteractableObject
 
     [SerializeField]
     private AudioSource fuseLoopSound;
+
+    [SerializeField] private TVScript tvScript;
 
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
@@ -93,6 +96,7 @@ public class FuseBox : InteractableObject
     }
     private void SolvePuzzle()
     {
+        isCompleted = true;
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
         successFuseDialogue.TriggerDialogue();
