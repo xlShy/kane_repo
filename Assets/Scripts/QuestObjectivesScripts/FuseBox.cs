@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class FuseBox : InteractableObject
 {
@@ -44,6 +46,7 @@ public class FuseBox : InteractableObject
 
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
+    public UnityEvent fuseBoxActivate;
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -76,6 +79,7 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 2)
         {
+            fuseBoxActivate.Invoke(); // TV Script
             keyItemInventory.RemoveKeyItem(item, 2);
             SolvePuzzle();      
             StartCoroutine(PlayFuseActivateSounds());

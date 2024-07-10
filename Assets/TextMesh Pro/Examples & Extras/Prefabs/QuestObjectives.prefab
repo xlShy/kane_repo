@@ -808,6 +808,9 @@ MonoBehaviour:
   fuseActivateSecondPhase: {fileID: 5199574861001776928}
   fuseLoopSound: {fileID: 346298288208701860}
   tvScript: {fileID: 0}
+  fuseBoxActivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &6231460650155521361
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3210,6 +3213,7 @@ MonoBehaviour:
   objCollider: {fileID: 6996239928742081672}
   objRenderer: {fileID: 4388760316148266908}
   doorAnchor: {fileID: 1429806743596468535}
+  openSpeed: 5
 --- !u!114 &7866445537216799888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4287,6 +4291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1296078501043461095, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1580656534671835015}
+    - targetCorrespondingSourceObject: {fileID: 1296078501043461095, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7630154623350830798}
   m_SourcePrefab: {fileID: 100100000, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
 --- !u!1 &3996929409546077778 stripped
 GameObject:
@@ -4313,6 +4320,7 @@ MonoBehaviour:
   mixingScript: {fileID: 0}
   tvInterface: {fileID: 7834279399339424612}
   fuseBoxScript: {fileID: 5891905975665170735}
+  tvStaticLoopSound: {fileID: 7630154623350830798}
 --- !u!65 &1580656534671835015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4334,6 +4342,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.096277826, y: 0.16652319, z: 0.7704009}
   m_Center: {x: 0.000000163894, y: 2.4164943e-17, z: -0.05957286}
+--- !u!82 &7630154623350830798
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996929409546077778}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e3861314142ae784f83690bfdd37cd46, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &4340382295404715240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1925086715329315165, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
@@ -5540,6 +5644,9 @@ MonoBehaviour:
   fuseActivateSecondPhase: {fileID: 7703622567904276142}
   fuseLoopSound: {fileID: 8419528332240547355}
   tvScript: {fileID: 7253251579723395468}
+  fuseBoxActivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &2044316645547992135
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6003,13 +6110,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4019405339207327017}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3041214430388401035}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6343051102639992546}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8775574534311522814}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3929305568480146816}
   m_SourcePrefab: {fileID: 100100000, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
 --- !u!4 &8081329646670664176 stripped
 Transform:
@@ -6021,48 +6131,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
   m_PrefabInstance: {fileID: 8623301481167992347}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &4019405339207327017
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8893895490623703882}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &3041214430388401035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6120,6 +6188,69 @@ MonoBehaviour:
   puzzleComplete:
     m_PersistentCalls:
       m_Calls: []
+--- !u!23 &8775574534311522814
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3929305568480146816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.8572966, z: 1}
+  m_Center: {x: 0, y: -0.66246074, z: 0}
 --- !u!1001 &9098737520377112323
 PrefabInstance:
   m_ObjectHideFlags: 0
