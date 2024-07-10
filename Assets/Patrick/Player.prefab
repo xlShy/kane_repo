@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 7365814222055271680}
   - component: {fileID: 3285211800220856391}
   - component: {fileID: 6883310537784295275}
+  - component: {fileID: 2784870613206086476}
   - component: {fileID: 7854700075321512501}
   - component: {fileID: 6165976200285315971}
   - component: {fileID: 4018795075872869457}
@@ -379,6 +380,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 832
   sanityScript: {fileID: 0}
+--- !u!114 &2784870613206086476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416880441292475520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3ac00cee8ff00478b892de6b090d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7854700075321512501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,16 +433,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b19552efac2dd418100631cfb1b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consumableInventory: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  consumableInventory: {fileID: 0}
   box1: {fileID: 0}
   box2: {fileID: 0}
   box3: {fileID: 0}
   keyItemsInventory: []
   keyItemInventoryScript: {fileID: 4018795075872869457}
-  consumableInventoryOpen:
-    m_PersistentCalls:
-      m_Calls: []
   isFull: 0
   gameCanvases:
   - {fileID: 0}
@@ -456,6 +466,8 @@ MonoBehaviour:
   nameText: {fileID: 0}
   amountText: {fileID: 0}
   itemPanels: []
+  keyItemIconHolder: {fileID: 0}
+  keyItemDescription: {fileID: 0}
 --- !u!114 &7477853744437300971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBattery: 100
-  batteryDrainRate: 5
+  batteryDrainRate: 0
   flickerThreshold: 25
   flickerIntensity: 20
   flickerFrequency: 0.1
