@@ -18,6 +18,7 @@ public class CanvasManager : CanvasToggler
         UICanvas.Add(consumableInventory);
         UICanvas.Add(keyItemInventory);
         UICanvas.Add(puzzleJournal);
+        UICanvas.Add(journal);
     }
     private void Update()
     {
@@ -37,6 +38,7 @@ public class CanvasManager : CanvasToggler
             if (canvas == canvas.activeSelf)
             {
                 enabledCanvas = canvas;
+                print("enabled");
                 SetCursorEnabled();
             }
         }
@@ -52,6 +54,7 @@ public class CanvasManager : CanvasToggler
         } 
         else if(enabledCanvas == null)
         {
+            print("disabled");
             SetCursorDisabled();
         }
     }

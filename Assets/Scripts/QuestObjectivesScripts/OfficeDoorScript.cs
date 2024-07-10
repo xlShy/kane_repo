@@ -39,24 +39,34 @@ public class OfficeDoorScript : InteractableObject
     private bool isOpen = false;
     private bool isUnlocked = false;
 
+    //Door Rotation
+    [SerializeField] private float openSpeed = 5f;
+    private Quaternion closedRotation;
+    private Quaternion openRotation;
+    private bool canOpen = true;
+    private bool isRotating = false;
+
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
+        closedRotation = doorAnchor.transform.rotation;
+        openRotation = Quaternion.Euler(0, 90, 0);
+
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (itemInteractedCase == 2)
+        if (itemInteractedCase == 2 && !isRotating)
         {
-            if (isUnlocked && !isOpen)
+            if (isUnlocked && !isOpen && canOpen)
             {
                 doorisOpen.Play();
-                doorAnchor.transform.rotation = Quaternion.Euler(0, 90, 0);
+                StartCoroutine(OpenDoor());
                 isOpen = true;
             }
             else if (isUnlocked && isOpen)
             {
                 doorisOpen.Play();
-                doorAnchor.transform.rotation = Quaternion.Euler(0, 0, 0);
+                StartCoroutine(CloseDoor());
                 isOpen = false;
             }
             List<InventoryItem> keyItems = inventory.GetKeyItems();
@@ -80,7 +90,6 @@ public class OfficeDoorScript : InteractableObject
             }
             else if (keyCount == 1)
             {
-                doorAnchor.transform.rotation = Quaternion.Euler(0, 90, 0);
                 doorisOpen.Play();
                 yesKey.TriggerDialogue();
                 keyItemInventory.RemoveKeyItem(item, 1);
@@ -88,7 +97,35 @@ public class OfficeDoorScript : InteractableObject
             }
         }
     }
+    private IEnumerator OpenDoor()
+    {
+        if (isRotating) yield break;
+        isRotating = true;
 
+        while (Quaternion.Angle(doorAnchor.transform.rotation, openRotation) > 0.01f)
+        {
+            doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, openRotation, Time.deltaTime * openSpeed);
+            yield return null;
+        }
+        doorAnchor.transform.rotation = openRotation;
+        isOpen = true;
+        isRotating = false;
+    }
+
+    private IEnumerator CloseDoor()
+    {
+        if (isRotating) yield break;
+        isRotating = true;
+
+        while (Quaternion.Angle(doorAnchor.transform.rotation, closedRotation) > 0.01f)
+        {
+            doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, closedRotation, Time.deltaTime * openSpeed);
+            yield return null;
+        }
+        doorAnchor.transform.rotation = closedRotation;
+        isOpen = false;
+        isRotating = false;
+    }
     private IEnumerator HideDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

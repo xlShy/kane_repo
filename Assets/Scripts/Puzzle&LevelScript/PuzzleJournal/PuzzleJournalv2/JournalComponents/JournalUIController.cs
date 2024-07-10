@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class JournalUIController : MonoBehaviour
 {
-    [SerializeField] private GameObject journalCanvas;
     [SerializeField] private GameObject currentPageDisplayed;
 
     [SerializeField] private List<Sprite> startingPages;
@@ -40,37 +39,29 @@ public class JournalUIController : MonoBehaviour
     }
     private void SetStartingJournalPage()
     {
-        //set the default page at the start of the game
        journalPages.AddRange(startingPages);
     }
     private void ChangeJournalPage(JournalContentPage journalPage)
     {
-        int pageIndex = journalPage.pageNumber - 1;  // Subtract 1 here
+        int pageIndex = journalPage.pageNumber - 1; 
 
         if (pageIndex >= 0 && pageIndex < journalPages.Count)
         {
-            // Check if there are pages to add
             if (journalPage.pages.Count > 0)
             {
-                // Replace the current page
                 journalPages[pageIndex] = journalPage.pages[0];
 
-                // If there's a second page, add or replace the next page
                 if (journalPage.pages.Count > 1)
                 {
                     if (pageIndex + 1 < journalPages.Count)
                     {
-                        // Replace the next page
                         journalPages[pageIndex + 1] = journalPage.pages[1];
                     }
                     else
                     {
-                        // Add a new page
                         journalPages.Add(journalPage.pages[1]);
                     }
                 }
-
-                // Update the display if we're on one of the changed pages
                 if (currentPage == pageIndex || currentPage == pageIndex + 1)
                 {
                     UpdateCurrentPageDisplay();
@@ -80,7 +71,6 @@ public class JournalUIController : MonoBehaviour
     }
     private void NextPage()
     {
-        //set currentPage to the next page
         if (currentPage < journalPages.Count - 1)
         {
             currentPage++;
@@ -89,7 +79,6 @@ public class JournalUIController : MonoBehaviour
     }
     private void PreviousPage()
     {
-        //set currentPage to the previous page
         if (currentPage > 0)
         {
             currentPage--;
