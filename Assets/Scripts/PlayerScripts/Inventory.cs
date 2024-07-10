@@ -195,5 +195,20 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    
+
+    public bool RemoveKeyItem(InventoryItem item)
+    {
+        if (keyItemsInventory.Remove(item))
+        {
+            keyItemInventoryScript.RemoveKeyItem(item, 1);
+            return true;
+        }
+        return false;
+    }
+
+    public InventoryItem GetItemByName(string itemName)
+    {
+        return keyItemsInventory.Find(item => item.itemName == itemName);
+    }
+
 }

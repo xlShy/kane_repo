@@ -95,4 +95,5 @@ public class KeyItemInventory : MonoBehaviour
         keyItemIconHolder.GetComponent<Image>().sprite = keyItem.inventoryItemImage;
         keyItemDescription.GetComponent<TextMeshProUGUI>().text = keyItem.itemDescription;
     }
+
 }

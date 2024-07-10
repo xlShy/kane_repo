@@ -15,6 +15,9 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
     private bool isInventoryFull;
 
+    [SerializeField]
+    public ChemicalMixingPlace mixingScript;
+
     private void OnEnable()
     {
         Inventory.onInventoryFull += InventoryFull;

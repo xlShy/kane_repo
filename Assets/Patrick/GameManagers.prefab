@@ -47,6 +47,7 @@ MonoBehaviour:
   keyItemInventory: {fileID: 0}
   consumableInventory: {fileID: 0}
   puzzleJournal: {fileID: 0}
+  journal: {fileID: 0}
   enabledCanvas: {fileID: 0}
 --- !u!1 &2244745719541819569
 GameObject:
@@ -398,6 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectsWithLights:
   - {fileID: 0}
+  - {fileID: 0}
   managedLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -408,3 +410,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedLights: []
+  chemicalEventScript: {fileID: 0}

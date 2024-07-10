@@ -14,4 +14,13 @@ public class ChemicalMixingEventTrigger : MonoBehaviour
         Debug.Log("Activated Event!");
         chemicalMixingEventInitiate.Invoke(); //LightManager
     }
+
+    public void ResetIngredients()
+    {
+        MixingIngredient[] ingredients = FindObjectsOfType<MixingIngredient>();
+        foreach (var ingredient in ingredients)
+        {
+            ingredient.ResetIngredient();
+        }
+    }
 }

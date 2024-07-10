@@ -506,6 +506,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   readableDocumentUI: {fileID: 8789582139225666972}
 --- !u!114 &2676940593365690949
 MonoBehaviour:
@@ -791,6 +792,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
@@ -3194,6 +3196,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   keyItemInventory: {fileID: 0}
   reqNumber: 1
   dialogueText: {fileID: 0}
@@ -4307,6 +4310,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   tvInterface: {fileID: 7834279399339424612}
   fuseBoxScript: {fileID: 5891905975665170735}
 --- !u!65 &1580656534671835015
@@ -4538,6 +4542,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   isPuzzleComplete: 0
   puzzle: {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
   pEventHandler: {fileID: 0}
@@ -4777,13 +4782,88 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1006779585506432426}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4714105337077610403}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2998950969673084440}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!4 &210311769801126224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
   m_PrefabInstance: {fileID: 5147275244130216779}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &693833464514096106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+  m_PrefabInstance: {fileID: 5147275244130216779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1006779585506432426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693833464514096106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01940182, y: 0.023019146, z: 0.03027498}
+  m_Center: {x: 0, y: 0.00017813686, z: 0.0036279154}
+--- !u!114 &4714105337077610403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693833464514096106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c488c2dac34a805409b8e9ac57fe2dcc, type: 2}
+  item: {fileID: 2998950969673084440}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 6343051102639992546}
+--- !u!114 &2998950969673084440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693833464514096106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23416a3214ddb54ca1aaf5c14f20618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  itemName: Baking Soda
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: A mixing Ingredient for Mixing.
+  ingredientState: 0
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eventScript: {fileID: 0}
+  mixingScript: {fileID: 6343051102639992546}
 --- !u!1001 &5267089743116883761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4949,6 +5029,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   puzzle: {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
   pEventHandler: {fileID: 0}
   combinationCanvas: {fileID: 675867482575755741}
@@ -5075,6 +5156,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   combinationLockActivate: {fileID: 476019505483191106}
 --- !u!23 &2463166906866977909
 MeshRenderer:
@@ -5194,13 +5276,88 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8338961697974975891}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8550651975191887114}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3982280696039279151}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!4 &2386806244275191760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
   m_PrefabInstance: {fileID: 7249182703150147019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3050189354741048682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+  m_PrefabInstance: {fileID: 7249182703150147019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8338961697974975891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050189354741048682}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01940182, y: 0.023019146, z: 0.03027498}
+  m_Center: {x: 0, y: 0.00017801765, z: 0.003627908}
+--- !u!114 &8550651975191887114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050189354741048682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c488c2dac34a805409b8e9ac57fe2dcc, type: 2}
+  item: {fileID: 3982280696039279151}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 6343051102639992546}
+--- !u!114 &3982280696039279151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050189354741048682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23416a3214ddb54ca1aaf5c14f20618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  itemName: Dish Soap
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: A mixing Ingredient for Mixing.
+  ingredientState: 0
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eventScript: {fileID: 0}
+  mixingScript: {fileID: 6343051102639992546}
 --- !u!1001 &8358407657360128720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5367,6 +5524,7 @@ MonoBehaviour:
   itemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  mixingScript: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
@@ -5842,13 +6000,126 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4019405339207327017}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3041214430388401035}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6343051102639992546}
   m_SourcePrefab: {fileID: 100100000, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
 --- !u!4 &8081329646670664176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
   m_PrefabInstance: {fileID: 8623301481167992347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8893895490623703882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+  m_PrefabInstance: {fileID: 8623301481167992347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4019405339207327017
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3041214430388401035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.8572966, z: 1}
+  m_Center: {x: 0, y: -0.66246074, z: 0}
+--- !u!114 &6343051102639992546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b11ad0088b314fafda5dff183ef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: 352f554a99cc1644e85ede9964acae5b, type: 2}
+  item: {fileID: 0}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 0}
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  eventScript: {fileID: 0}
+  inventory: {fileID: 0}
+  keyInventory: {fileID: 0}
+  requiredItems:
+  - Dish Soap
+  - Baking Soda
+  failItems:
+  - Salt
+  - Pepper
+  resetInteractableState:
+    m_PersistentCalls:
+      m_Calls: []
+  puzzleComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9098737520377112323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5904,8 +6175,83 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8915121697550475492}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8602443435408675338}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3645333236753927541}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
+--- !u!1 &3497893784525973410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+  m_PrefabInstance: {fileID: 9098737520377112323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8915121697550475492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497893784525973410}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01940182, y: 0.023019146, z: 0.03027498}
+  m_Center: {x: 0, y: 0.00017795805, z: 0.0036279415}
+--- !u!114 &8602443435408675338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497893784525973410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c488c2dac34a805409b8e9ac57fe2dcc, type: 2}
+  item: {fileID: 3645333236753927541}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 6343051102639992546}
+--- !u!114 &3645333236753927541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497893784525973410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23416a3214ddb54ca1aaf5c14f20618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  itemName: Pepper
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: A mixing Ingredient for Mixing.
+  ingredientState: 0
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eventScript: {fileID: 0}
+  mixingScript: {fileID: 6343051102639992546}
 --- !u!4 &4305673729574698264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
@@ -5966,8 +6312,83 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4540759887722970215}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5951842452673052974}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3574052198842279193}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
+--- !u!1 &3591023975231875697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+  m_PrefabInstance: {fileID: 9159150711608732368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4540759887722970215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591023975231875697}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01940182, y: 0.023019146, z: 0.03027498}
+  m_Center: {x: 0, y: 0.00017813686, z: 0.0036279154}
+--- !u!114 &5951842452673052974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591023975231875697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c488c2dac34a805409b8e9ac57fe2dcc, type: 2}
+  item: {fileID: 3574052198842279193}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 6343051102639992546}
+--- !u!114 &3574052198842279193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591023975231875697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23416a3214ddb54ca1aaf5c14f20618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  itemName: Salt
+  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
+  itemDescription: A mixing Ingredient for Mixing.
+  ingredientState: 0
+  newLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  eventScript: {fileID: 0}
+  mixingScript: {fileID: 6343051102639992546}
 --- !u!4 &4223868386396549323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
