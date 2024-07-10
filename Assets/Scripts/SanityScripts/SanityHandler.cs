@@ -38,6 +38,7 @@ public class SanityHandler : MonoBehaviour
         PlayerLocationChecker.OnEnterHouse -= PlayerOnHouse;
         PlayerLocationChecker.OnEnterShed -= PlayerOnShed;
         PlayerLocationChecker.OnExitOutside -= PlayerOnOutside;
+        RoomChecker.OnRoomChanged -= SetSanityDecreaseRate;
     }
     private void Update()
     {
