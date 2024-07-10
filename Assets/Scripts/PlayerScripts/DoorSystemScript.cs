@@ -21,7 +21,7 @@ public class DoorSystemScript : InteractableObject
             transform.rotation = Quaternion.Euler(0, 90, 0);
             isOpen = true;
         }
-        else
+        else 
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             isOpen = false;

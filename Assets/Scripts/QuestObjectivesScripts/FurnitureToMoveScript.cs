@@ -23,7 +23,7 @@ public class FurnitureToMoveScript : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
-            transform.localPosition = new Vector3(15, 13, 29);
+            transform.localPosition = new Vector3(15f, 14.5f, 28f);
             gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         }
 
