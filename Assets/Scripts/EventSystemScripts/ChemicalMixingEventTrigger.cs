@@ -12,6 +12,6 @@ public class ChemicalMixingEventTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Activated Event!");
-        chemicalMixingEventInitiate.Invoke();
+        chemicalMixingEventInitiate.Invoke(); //LightManager
     }
 }

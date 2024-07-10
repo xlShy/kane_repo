@@ -11,6 +11,8 @@ public class LightManager : MonoBehaviour, ISwitchable
     [SerializeField] private List<Light> managedLights;
     [SerializeField] private List<Light> selectedLights;
 
+    [SerializeField] private ChemicalMixingEventTrigger chemicalEventScript;
+
     private Coroutine flickerCoroutine;
 
     //for testing
@@ -18,6 +20,7 @@ public class LightManager : MonoBehaviour, ISwitchable
 
     private void Start()
     {
+        chemicalEventScript.chemicalMixingEventInitiate.AddListener(EnableLightFlicker);
         InitializeManagedLights();
         TurnOffAll();
     }
