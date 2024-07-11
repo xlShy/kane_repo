@@ -10,14 +10,11 @@ public class CanvasManager : CanvasToggler
     private List<GameObject> PuzzleCanvas;
     public GameObject enabledCanvas;
 
-
-
     private void Start()
     {
         UICanvas = new List<GameObject>();
         UICanvas.Add(consumableInventory);
         UICanvas.Add(keyItemInventory);
-        UICanvas.Add(puzzleJournal);
         UICanvas.Add(journal);
     }
     private void Update()

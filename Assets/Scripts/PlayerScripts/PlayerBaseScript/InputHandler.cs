@@ -13,7 +13,6 @@ public class InputHandler : MonoBehaviour
     //EVENTS
     public static event Action<bool> OnConsumableInventoryOpen;
     public static event Action<bool> OnKeyItemInventoryOpen;
-    public static event Action<bool> OnPuzzleJournalOpen;
     public static event Action<bool> OnJournalOpen;
 
     private void Update()
@@ -38,13 +37,9 @@ public class InputHandler : MonoBehaviour
         {
             OpenUI(KeyCode.B, OnKeyItemInventoryOpen);
         }
-        else if (Input.GetKeyDown(KeyCode.J))
+        else if(Input.GetKeyDown(KeyCode.J))
         {
-            OpenUI(KeyCode.J, OnPuzzleJournalOpen);
-        }
-        else if(Input.GetKeyDown(KeyCode.K))
-        {
-            OpenUI(KeyCode.K, OnJournalOpen);
+            OpenUI(KeyCode.J, OnJournalOpen);
         }
     }
 
@@ -75,11 +70,7 @@ public class InputHandler : MonoBehaviour
         {
             OnKeyItemInventoryOpen?.Invoke(false);
         }
-        else if(currentOpenedUIKey == KeyCode.J)
-        {
-            OnPuzzleJournalOpen?.Invoke(false);
-        }
-        else if (currentOpenedUIKey == KeyCode.K)
+        else if (currentOpenedUIKey == KeyCode.J)
         {
             OnJournalOpen?.Invoke(false);
         }

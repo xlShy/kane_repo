@@ -29,7 +29,9 @@ public class GrandfatherClock : InteractableObject
 
     public GameObject keyItem;
     public UnityEvent puzzleComplete;
-    public static event Action<Puzzle> OnPuzzleComplete;
+    
+    //journal event
+    public static PuzzleStatus.onCompletedEvents OnGrandfathersClockComeplete;
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -51,7 +53,6 @@ public class GrandfatherClock : InteractableObject
             }
         }
     }
-
     void ObjectiveOutline()
     {
         //this will be dedicated to outline of the objective until 1st time interact
@@ -69,17 +70,17 @@ public class GrandfatherClock : InteractableObject
             gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            //doorToOpen.SetActive(false);
-
-            //set puzzle as complete
-            pEventHandler.InteractPuzzle(puzzle);
-            OnPuzzleComplete?.Invoke(puzzle);
 
             // Remove the listener to prevent multiple invocations
             if (clockChecker != null)
             {
                 clockChecker.onPuzzleCompleted.RemoveListener(OnPuzzleCompleted);
             }
+
+            //Add puzzle to completed in the level1
+            pEventHandler.InteractPuzzle(puzzle);
+            //Add completed puzzle to journal
+            OnGrandfathersClockComeplete?.Invoke();
         }
     }
 }

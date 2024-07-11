@@ -15,11 +15,11 @@ public class JournalUIController : MonoBehaviour
     bool isOpen;
     private void OnEnable()
     {
-        TEst.OnCompleteEvent += ChangeJournalPage;
+        JournalPageHandler.OnSetJournalPage += ChangeJournalPage;
     }
     private void OnDisable()
     {
-        TEst.OnCompleteEvent -= ChangeJournalPage;
+        JournalPageHandler.OnSetJournalPage -= ChangeJournalPage;
     }
     private void Start()
     {

@@ -26,9 +26,9 @@ public class CombinationLockActivateScript : InteractableObject
 
     private bool canvasWasOpened;
 
-    //refactor
     public UnityEvent onLockPuzzleCompletion;
-    public static event Action<Puzzle> OnPuzzleComplete;
+    //journal event
+    public static PuzzleStatus.onCompletedEvents OnCombinationLockComplete;
 
     private void Start()
     {
@@ -70,8 +70,9 @@ public class CombinationLockActivateScript : InteractableObject
         Cursor.lockState = CursorLockMode.Locked;
         onLockPuzzleCompletion.Invoke();
 
-        //set puzzle as complete
+        //Add puzzle to completed in the level1
         pEventHandler.InteractPuzzle(puzzle);
-        OnPuzzleComplete?.Invoke(puzzle);
+        //Add completed puzzle to journal
+        OnCombinationLockComplete?.Invoke();
     }
 }
