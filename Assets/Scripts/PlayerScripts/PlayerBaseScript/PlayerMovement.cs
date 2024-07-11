@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        sanityScript.playerFainted.AddListener(PlayerControl);
+        //sanityScript.playerFainted.AddListener(PlayerControl);
     }
     void Update()
     {

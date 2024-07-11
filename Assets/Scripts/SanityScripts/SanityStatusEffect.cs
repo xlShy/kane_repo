@@ -55,7 +55,7 @@ public class SanityStatusEffect : MonoBehaviour
 
     public void OnDepletedSanity()
     {
-        playerFainted.Invoke();
+        //playerFainted.Invoke(); 
         foreach (GameObject canvas in canvasDisable)
         {
             if (canvas != null)
