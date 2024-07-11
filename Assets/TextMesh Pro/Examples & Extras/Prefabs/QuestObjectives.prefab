@@ -6116,10 +6116,13 @@ PrefabInstance:
       addedObject: {fileID: 6343051102639992546}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8775574534311522814}
+      addedObject: {fileID: 3929305568480146816}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3929305568480146816}
+      addedObject: {fileID: 8643048397568667142}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1776658285500354495}
   m_SourcePrefab: {fileID: 100100000, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
 --- !u!4 &8081329646670664176 stripped
 Transform:
@@ -6188,7 +6191,28 @@ MonoBehaviour:
   puzzleComplete:
     m_PersistentCalls:
       m_Calls: []
---- !u!23 &8775574534311522814
+--- !u!65 &3929305568480146816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.8572966, z: 1}
+  m_Center: {x: 0, y: -0.66246074, z: 0}
+--- !u!23 &8643048397568667142
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6230,7 +6254,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3929305568480146816
+--- !u!65 &1776658285500354495
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
