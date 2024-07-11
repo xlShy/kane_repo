@@ -7,27 +7,29 @@ using UnityEngine;
 public class JournalPageHandler : MonoBehaviour
 {
     public static event Action<JournalContentPage> OnSetJournalPage;
-    public JournalContentPage page1;
-    public JournalContentPage page2;
-    public JournalContentPage page3;
+    [Tooltip("MUST SET IN ORDER!")]
+    public List<JournalContentPage> journalContent;
+
+    public int setPage;
+
 
     private void OnEnable()
     {
-        GrandfatherClock.OnGrandfathersClockComeplete += SetPage1;
-        CombinationLockActivateScript.OnCombinationLockComplete += SetPage2;
+        GrandfatherClock.OnGrandfathersClockComeplete += SetChangingPage;
+        CombinationLockActivateScript.OnCombinationLockComplete += SetChangingPage;
     }
     private void OnDisable()
     {
-        GrandfatherClock.OnGrandfathersClockComeplete -= SetPage1;
-        CombinationLockActivateScript.OnCombinationLockComplete -= SetPage2;
+        GrandfatherClock.OnGrandfathersClockComeplete -= SetChangingPage;
+        CombinationLockActivateScript.OnCombinationLockComplete -= SetChangingPage;
     }
-    private void SetPage1()
+    private void SetChangingPage()
     {
-        OnSetJournalPage(page1);
+        setPage++;
+        SetPage();
     }
-    private void SetPage2()
+    private void SetPage()
     {
-        OnSetJournalPage(page2);
+        OnSetJournalPage(journalContent[setPage]);
     }
-
 }
