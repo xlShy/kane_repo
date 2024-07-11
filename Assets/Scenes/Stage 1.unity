@@ -229,10 +229,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1383672053226584230, guid: 1dff187e1f0d8324a945ea42d82a7c94, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7019028268436786509, guid: 1dff187e1f0d8324a945ea42d82a7c94, type: 3}
       propertyPath: playerTransform
       value: 
@@ -439,14 +435,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1447439379}
     m_Modifications:
-    - target: {fileID: 2202313475686728814, guid: 008088181c3de244894b8f959d6d1655, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202313475686728814, guid: 008088181c3de244894b8f959d6d1655, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00021603813
-      objectReference: {fileID: 0}
     - target: {fileID: 3461271914706017258, guid: 008088181c3de244894b8f959d6d1655, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -530,10 +518,6 @@ PrefabInstance:
     - target: {fileID: 6405957713309085541, guid: 008088181c3de244894b8f959d6d1655, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405957713309085541, guid: 008088181c3de244894b8f959d6d1655, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1910,21 +1894,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 346166336}
     - target: {fileID: 5706969184724633507, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: bobbingSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5706969184724633507, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: sanityScript
       value: 
       objectReference: {fileID: 919784533}
-    - target: {fileID: 5706969184724633507, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: verticalBobbingAmount
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 5706969184724633507, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: horizontalBobbingAmount
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: box1
       value: 
@@ -1961,10 +1933,6 @@ PrefabInstance:
       propertyPath: gameCanvases.Array.data[3]
       value: 
       objectReference: {fileID: 1516929156}
-    - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: gameCanvases.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6883310537784295275, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: sanityScript
       value: 
