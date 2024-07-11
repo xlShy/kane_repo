@@ -11,7 +11,7 @@ public class PlayerFlashlight : MonoBehaviour
     private float maxBattery;
 
     [SerializeField]
-    private float batteryDrainRate;
+    public float batteryDrainRate;
 
     [SerializeField]
     private float flickerThreshold;

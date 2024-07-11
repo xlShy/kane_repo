@@ -8,8 +8,8 @@ public class SanityHandler : MonoBehaviour
     private SanityStatusEffect sanityChecker;
     private PillEffect pillEffect;
 
-    [SerializeField] private float increasePercentage = 0.01f;
-    [SerializeField] private float decreasePercentage = 0.01f;
+    [SerializeField] public float increasePercentage = 0.01f;
+    [SerializeField] public float decreasePercentage = 0.01f;
     [SerializeField] private float interval = 1f;
     public float sanityValue;
 
