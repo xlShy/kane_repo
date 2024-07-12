@@ -973,6 +973,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 494004288430204394, guid: 1dff187e1f0d8324a945ea42d82a7c94, type: 3}
   m_PrefabInstance: {fileID: 61075979}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1127946112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf47cd80724f8d04799525d39f31bfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1165605060 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1877889624243655246, guid: 008088181c3de244894b8f959d6d1655, type: 3}
@@ -988,11 +999,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3651769061179658162, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1210267070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1429806743596468535, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-  m_PrefabInstance: {fileID: 3129807459506583906}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1223407404 stripped
 MonoBehaviour:
@@ -1138,6 +1144,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8207622949255965139, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
   m_PrefabInstance: {fileID: 4230698652132090527}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667517957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9683cd3b53b3e4eaf027593d6ee9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1716798330 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 758185959961032799, guid: a8e23b16da29510449b86f56731bec5d, type: 3}
@@ -1440,6 +1457,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     - target: {fileID: 2783313756227964328, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1452,10 +1473,6 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 855345246}
-    - target: {fileID: 4077336841479108888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: officeDoor
-      value: 
-      objectReference: {fileID: 1210267070}
     - target: {fileID: 4077336841479108888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1579,82 +1596,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8893895490623703882, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3129807459506583909}
-    - targetCorrespondingSourceObject: {fileID: 8893895490623703882, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3129807459506583908}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
---- !u!1 &3129807459506583907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8893895490623703882, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-  m_PrefabInstance: {fileID: 3129807459506583906}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &3129807459506583908
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3129807459506583907}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.8572966, z: 1}
-  m_Center: {x: 0, y: -0.66246074, z: 0}
---- !u!23 &3129807459506583909
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3129807459506583907}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &3589793432761451732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1683,6 +1626,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 3119313419284167644, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3640679432089914702, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_Name
       value: Gatherables
@@ -2494,6 +2441,10 @@ PrefabInstance:
       propertyPath: chemMixTriggerScript
       value: 
       objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: combinationLockActivate
+      value: 
+      objectReference: {fileID: 1127946112}
     - target: {fileID: 1089403954872058881, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.395
@@ -2538,14 +2489,30 @@ PrefabInstance:
       propertyPath: chemMixTriggerScript
       value: 
       objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1667517957}
+    - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
+    - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: keyItemInventory
+      value: 
+      objectReference: {fileID: 2085152747}
+    - target: {fileID: 3671323284596830078, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     - target: {fileID: 5274599951091675908, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: m_Name
       value: DOORTANAN 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5765702368858407719, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-      propertyPath: chemMixTriggerScript
+    - target: {fileID: 7215577224219105612, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 5435619986811776475}
+      objectReference: {fileID: 1779987973}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

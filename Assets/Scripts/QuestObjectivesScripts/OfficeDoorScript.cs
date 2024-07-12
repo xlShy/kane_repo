@@ -27,6 +27,7 @@ public class OfficeDoorScript : InteractableObject
 
     [SerializeField] private AudioSource doorIsLocked;
     [SerializeField] private AudioSource doorisOpen;
+    [SerializeField] private AudioSource doorisClosed;
 
     [SerializeField] private Collider objCollider;
     [SerializeField] private Renderer objRenderer;
@@ -59,13 +60,13 @@ public class OfficeDoorScript : InteractableObject
         {
             if (isUnlocked && !isOpen && canOpen)
             {
-                doorisOpen.Play();
+                
                 StartCoroutine(OpenDoor());
                 isOpen = true;
             }
             else if (isUnlocked && isOpen)
             {
-                doorisOpen.Play();
+
                 StartCoroutine(CloseDoor());
                 isOpen = false;
             }
@@ -101,7 +102,7 @@ public class OfficeDoorScript : InteractableObject
     {
         if (isRotating) yield break;
         isRotating = true;
-
+        doorisOpen.Play();
         while (Quaternion.Angle(doorAnchor.transform.rotation, openRotation) > 0.01f)
         {
             doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, openRotation, Time.deltaTime * openSpeed);
@@ -116,7 +117,7 @@ public class OfficeDoorScript : InteractableObject
     {
         if (isRotating) yield break;
         isRotating = true;
-
+        doorisClosed.Play();
         while (Quaternion.Angle(doorAnchor.transform.rotation, closedRotation) > 0.01f)
         {
             doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, closedRotation, Time.deltaTime * openSpeed);
