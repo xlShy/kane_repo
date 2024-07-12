@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -10,6 +11,7 @@ public class CanvasManager : CanvasToggler
     private List<GameObject> PuzzleCanvas;
     public GameObject enabledCanvas;
 
+    public static event Action<bool> OnCanvasEnabled;
     private void Start()
     {
         UICanvas = new List<GameObject>();
@@ -32,11 +34,16 @@ public class CanvasManager : CanvasToggler
     {
         foreach(GameObject canvas in UICanvas)
         {
-            if (canvas == canvas.activeSelf)
+            if (canvas.activeSelf)
             {
                 enabledCanvas = canvas;
-                print("enabled");
                 SetCursorEnabled();
+                OnCanvasEnabled?.Invoke(true);
+                return;
+            }
+            else if(!canvas.activeSelf)
+            {
+                enabledCanvas = null;
             }
         }
         if (enabledCanvas != null)
@@ -51,8 +58,8 @@ public class CanvasManager : CanvasToggler
         } 
         else if(enabledCanvas == null)
         {
-            print("disabled");
             SetCursorDisabled();
+            OnCanvasEnabled?.Invoke(false);
         }
     }
     private void SetCursorDisabled()
@@ -65,4 +72,5 @@ public class CanvasManager : CanvasToggler
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+    
 }

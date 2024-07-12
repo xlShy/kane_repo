@@ -8,9 +8,6 @@ public class CameraHandler : MonoBehaviour
     public Transform player;
     [SerializeField] private float mouseSens = 5f;
 
-    [SerializeField]
-    private InteractionHandler interactionHandler;
-
     [SerializeField] private SanityStatusEffect sanityScript;
 
     private float xRotation = 0f;
@@ -22,8 +19,16 @@ public class CameraHandler : MonoBehaviour
     private Vector3 defaultPos;
     private float timer = 0;
 
+    public bool isCanvasEnabled;
 
-    // Start is called before the first frame update
+    private void OnEnable()
+    {
+        CanvasManager.OnCanvasEnabled += isAnyCanvasOn;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.OnCanvasEnabled -= isAnyCanvasOn;
+    }
     void Start()
     {
         Cursor.visible = false;
@@ -35,7 +40,7 @@ public class CameraHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!interactionHandler.IsAnyCanvasActive())
+        if (!isCanvasEnabled)
         {
             CameraControl();
             ApplyHeadBob();
@@ -77,5 +82,9 @@ public class CameraHandler : MonoBehaviour
             timer = 0;
             transform.localPosition = Vector3.Lerp(transform.localPosition, defaultPos, Time.deltaTime * bobbingSpeed);
         }
+    }
+    public void isAnyCanvasOn(bool isOn)
+    {
+        isCanvasEnabled = isOn;
     }
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private InteractionHandler interactionHandler;
 
     public CharacterController characterController;
     public float speed = 12f;
@@ -20,13 +18,22 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private SanityStatusEffect sanityScript;
 
+    public bool isCanvasEnabled;
+    private void OnEnable()
+    {
+        CanvasManager.OnCanvasEnabled += isAnyCanvasOn;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.OnCanvasEnabled -= isAnyCanvasOn;
+    }
     private void Start()
     {
         //sanityScript.playerFainted.AddListener(PlayerControl);
     }
     void Update()
     {
-        if (!interactionHandler.IsAnyCanvasActive())
+        if (!isCanvasEnabled)
         {
             PlayerControl();
         }
@@ -48,5 +55,9 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(direction * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
+    }
+    public void isAnyCanvasOn(bool isOn)
+    {
+        isCanvasEnabled = isOn;
     }
 }

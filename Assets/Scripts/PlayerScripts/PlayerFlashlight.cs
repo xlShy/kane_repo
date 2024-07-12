@@ -26,9 +26,6 @@ public class PlayerFlashlight : MonoBehaviour
     private AudioSource toggleSwitch;
 
     [SerializeField]
-    private InteractionHandler interactionHandler;
-
-    [SerializeField]
     private GameObject flashlightDustParticles;
 
     private Image dustParticlesImage;
@@ -37,6 +34,16 @@ public class PlayerFlashlight : MonoBehaviour
     //private float dustParticleFlicker = Random.Range(0f, 1f);
     private float dustParticleFlicker;
 
+
+    public bool isCanvasEnabled;
+    private void OnEnable()
+    {
+        CanvasManager.OnCanvasEnabled += isAnyCanvasOn;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.OnCanvasEnabled -= isAnyCanvasOn;
+    }
     private void Start()
     {
         dustParticleFlicker = Random.Range(0f, 1f);
@@ -47,7 +54,7 @@ public class PlayerFlashlight : MonoBehaviour
 
     private void Update()
     {
-        if (!interactionHandler.IsAnyCanvasActive())
+        if (!isCanvasEnabled)
         {
             if (Input.GetMouseButtonUp(0))
             {
@@ -83,7 +90,6 @@ public class PlayerFlashlight : MonoBehaviour
             isFlickering = false;
         }
     }
-
     private void DrainBattery()
     {
         currentBattery -= batteryDrainRate * Time.deltaTime;
@@ -95,7 +101,6 @@ public class PlayerFlashlight : MonoBehaviour
             isFlickering = false;
         }
     }
-
     private void CheckForFlicker()
     {
         if (currentBattery <= flickerThreshold && !isFlickering)
@@ -103,7 +108,6 @@ public class PlayerFlashlight : MonoBehaviour
             StartCoroutine(FlickerLight());
         }
     }
-
     private IEnumerator FlickerLight()
     {
         isFlickering = true;
@@ -122,5 +126,9 @@ public class PlayerFlashlight : MonoBehaviour
 
         flashlight.intensity = originalIntensity;
         isFlickering = false;
+    }
+    public void isAnyCanvasOn(bool isOn)
+    {
+        isCanvasEnabled = isOn;
     }
 }

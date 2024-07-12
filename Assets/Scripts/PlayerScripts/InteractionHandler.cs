@@ -29,6 +29,17 @@ public class InteractionHandler : MonoBehaviour
     private Inventory inventory;
     public UnityEvent isInteracting;
     public UnityEvent isNotInteracting;
+
+    public bool isCanvasEnabled;
+
+    private void OnEnable()
+    {
+        CanvasManager.OnCanvasEnabled += isAnyCanvasOn;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.OnCanvasEnabled -= isAnyCanvasOn;
+    }
     private void Start()
     {
         inventory = GetComponent<Inventory>();
@@ -42,18 +53,6 @@ public class InteractionHandler : MonoBehaviour
     void Update()
     {
         Interact();
-    }
-
-    public bool IsAnyCanvasActive()
-    {
-        foreach (GameObject canvas in uiCanvas)
-        {
-            if (canvas.activeSelf)
-            {
-                return true;
-            }
-        }
-        return false;
     }
     public void Interact()
     {
@@ -98,7 +97,8 @@ public class InteractionHandler : MonoBehaviour
         {
             interactableObj = hit.collider.GetComponent<IInteractable>();
 
-            if (interactableObj != null && !IsAnyCanvasActive())
+            //if (interactableObj != null && !IsAnyCanvasActive())
+            if(interactableObj != null && !isCanvasEnabled) 
             {
                 isInteracting.Invoke();
                 interactable = interactableObj.GetInteractableConfig();
@@ -136,7 +136,10 @@ public class InteractionHandler : MonoBehaviour
             isNotInteracting.Invoke();
         }
     }
-
+    public void isAnyCanvasOn(bool isOn)
+    {
+        isCanvasEnabled = isOn;
+    }
     private void OnDrawGizmos()
     {
         if (cameraTransform != null)

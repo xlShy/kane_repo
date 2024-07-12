@@ -10,7 +10,7 @@ public class JournalPageHandler : MonoBehaviour
     [Tooltip("MUST SET IN ORDER!")]
     public List<JournalContentPage> journalContent;
 
-    public int setPage;
+    public int setPage = 0;
 
 
     private void OnEnable()
@@ -25,8 +25,8 @@ public class JournalPageHandler : MonoBehaviour
     }
     private void SetChangingPage()
     {
-        setPage++;
         SetPage();
+        setPage++;
     }
     private void SetPage()
     {
