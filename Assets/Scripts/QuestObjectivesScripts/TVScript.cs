@@ -8,14 +8,15 @@ using UnityEngine.EventSystems;
 public class TVScript : InteractableObject
 {
     public GameObject tvInterface;
-    private Renderer objectRenderer;
+    [SerializeField] public GameObject staticTVObject;
     [SerializeField] private FuseBox fuseBoxScript;
     [SerializeField] private AudioSource tvStaticLoopSound;
+    MeshRenderer meshRenderer;
 
     private void Start()
     {
+        meshRenderer = GetComponent<MeshRenderer>();
         fuseBoxScript.fuseBoxActivate.AddListener(initiateTelevision);
-        objectRenderer = GetComponent<Renderer>();
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -27,7 +28,9 @@ public class TVScript : InteractableObject
 
     private void initiateTelevision()
     {
+        staticTVObject.SetActive(true);
         tvStaticLoopSound.Play();
+        meshRenderer.enabled = !meshRenderer.enabled;
     }
     void ObjectiveOutline()
     {

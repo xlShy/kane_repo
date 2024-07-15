@@ -764,8 +764,8 @@ MonoBehaviour:
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
-  isCompleted: 0
-  reqNumber: 2
+  tvScript: {fileID: 0}
+  lightManager: {fileID: 0}
   dialogueText: {fileID: 0}
   televisionGameObject: {fileID: 0}
   successFuseDialogue: {fileID: 7457317928170181038}
@@ -775,10 +775,10 @@ MonoBehaviour:
   fuseActivate: {fileID: 6096106073131004401}
   fuseActivateSecondPhase: {fileID: 5199574861001776928}
   fuseLoopSound: {fileID: 346298288208701860}
-  tvScript: {fileID: 0}
   fuseBoxActivate:
     m_PersistentCalls:
       m_Calls: []
+  isCompleted: 0
 --- !u!82 &6231460650155521361
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4282,6 +4282,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   tvInterface: {fileID: 7834279399339424612}
+  staticTVObject: {fileID: 0}
   fuseBoxScript: {fileID: 5891905975665170735}
   tvStaticLoopSound: {fileID: 7630154623350830798}
 --- !u!65 &1580656534671835015
@@ -4871,7 +4872,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5124,7 +5125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4711830030999829310, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}
       propertyPath: m_Name
-      value: Chest with da combination lock
+      value: Combination Puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 4711830030999829310, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}
       propertyPath: m_Layer
@@ -5778,8 +5779,8 @@ MonoBehaviour:
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
-  isCompleted: 0
-  reqNumber: 2
+  tvScript: {fileID: 7253251579723395468}
+  lightManager: {fileID: 0}
   dialogueText: {fileID: 0}
   televisionGameObject: {fileID: 3996929409546077778}
   successFuseDialogue: {fileID: 8852377614301990458}
@@ -5789,10 +5790,10 @@ MonoBehaviour:
   fuseActivate: {fileID: 1834027361266694987}
   fuseActivateSecondPhase: {fileID: 7703622567904276142}
   fuseLoopSound: {fileID: 8419528332240547355}
-  tvScript: {fileID: 7253251579723395468}
   fuseBoxActivate:
     m_PersistentCalls:
       m_Calls: []
+  isCompleted: 0
 --- !u!82 &2044316645547992135
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1040,6 +1040,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6414842396438157785, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1438946960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7888957412164112252, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+  m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1447439378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,10 +1450,6 @@ PrefabInstance:
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961695}
-    - target: {fileID: 611291382116969487, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_Name
-      value: Combination Puzzle
-      objectReference: {fileID: 0}
     - target: {fileID: 1128098754795242724, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1581,6 +1582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestObjectives
       objectReference: {fileID: 0}
+    - target: {fileID: 7253251579723395468, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: staticTVObject
+      value: 
+      objectReference: {fileID: 1438946960}
     - target: {fileID: 7457317928170181038, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2128,14 +2133,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1074133755145855360, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2441481464827671972, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2513471558653630798, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8696512503627372795, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
