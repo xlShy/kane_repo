@@ -21,8 +21,6 @@ public class Inventory : MonoBehaviour
     private GameObject box1;
     [SerializeField]
     private GameObject box2;
-    [SerializeField]
-    private GameObject box3;
 
     //Player Inventories
     private List<InventoryItem> consumableItemsInventory = new List<InventoryItem>();
@@ -47,7 +45,7 @@ public class Inventory : MonoBehaviour
     {
         if (item.type == ItemType.Consumables)
         {
-            if (consumableItemsInventory.Count >= 3)
+            if (consumableItemsInventory.Count >= 2)
             {
                 isFull = true;
                 onInventoryFull?.Invoke(isFull);
@@ -150,7 +148,6 @@ public class Inventory : MonoBehaviour
     {
         InitializeBox(box1);
         InitializeBox(box2);
-        InitializeBox(box3);
     }
 
     private void InitializeBox(GameObject box)
@@ -169,7 +166,6 @@ public class Inventory : MonoBehaviour
     {
         UpdateBox(box1, consumableItemsInventory.Count > 0 ? consumableItemsInventory[0] : null);
         UpdateBox(box2, consumableItemsInventory.Count > 1 ? consumableItemsInventory[1] : null);
-        UpdateBox(box3, consumableItemsInventory.Count > 2 ? consumableItemsInventory[2] : null);
     }
     
 
