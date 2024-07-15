@@ -47,7 +47,10 @@ MonoBehaviour:
   keyItemInventory: {fileID: 0}
   consumableInventory: {fileID: 0}
   journal: {fileID: 0}
-  enabledCanvas: {fileID: 0}
+  grandFathersClock: {fileID: 0}
+  combinationLock: {fileID: 0}
+  currentEnabledCanvas: {fileID: 0}
+  isCanvasFound: 0
 --- !u!1 &104341112640658525
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +62,7 @@ GameObject:
   - component: {fileID: 1516197542264152265}
   - component: {fileID: 4544830452399231036}
   - component: {fileID: 7051231927018807549}
+  - component: {fileID: 6422621330484400919}
   m_Layer: 0
   m_Name: JournalManager
   m_TagString: Untagged
@@ -99,6 +103,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64a93a82ce4bca643bd92ea56d1078d8, type: 2}
   setPage: 0
 --- !u!114 &7051231927018807549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104341112640658525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf24a14b4f050043bf9ea9b93977bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPageDisplayed: {fileID: 0}
+  startingPages:
+  - {fileID: 21300000, guid: 515d1c3408eec4643914b7613a01ce76, type: 3}
+  - {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
+  journalPages: []
+  currentPage: 0
+--- !u!114 &6422621330484400919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -39,8 +39,8 @@ public class CombinationLockActivateScript : InteractableObject
         if (itemInteractedCase == 2)
         {
             combinationCanvas.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
 
             combinationLockScript = FindObjectOfType<CombinationLockScript>();
             canvasWasOpened = true;

@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CanvasToggler : MonoBehaviour
 {
+    [Header("Player UI Canvas")]
     [SerializeField] protected GameObject keyItemInventory;
     [SerializeField] protected GameObject consumableInventory;
     [SerializeField] protected GameObject journal;
 
+    [Header("Puzzle UI Canvas")]
+    [SerializeField] protected GameObject grandFathersClock;
+    [SerializeField] protected GameObject combinationLock;
     public void OnEnable()
     {
         InputHandler.OnConsumableInventoryOpen += SetConsumableOpen;

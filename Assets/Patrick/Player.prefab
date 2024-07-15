@@ -288,11 +288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7365814222055271680}
   mouseSens: 150
-  interactionHandler: {fileID: 7854700075321512501}
   sanityScript: {fileID: 0}
   bobbingSpeed: 10
   verticalBobbingAmount: 0.085
   horizontalBobbingAmount: 0.098
+  isCanvasEnabled: 0
 --- !u!1 &3416880441292475520
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ CharacterController:
   m_Height: 3.6
   m_Radius: 1
   m_SlopeLimit: 45
-  m_StepOffset: 0.5
+  m_StepOffset: 1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -373,7 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0fbf7fa2fad3e48a45c6beab3de4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionHandler: {fileID: 7854700075321512501}
   characterController: {fileID: 3285211800220856391}
   speed: 5
   gravity: -9.81
@@ -383,6 +382,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 832
   sanityScript: {fileID: 0}
+  isCanvasEnabled: 0
 --- !u!114 &2784870613206086476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +424,7 @@ MonoBehaviour:
   isNotInteracting:
     m_PersistentCalls:
       m_Calls: []
+  isCanvasEnabled: 0
 --- !u!114 &6165976200285315971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,9 +824,9 @@ MonoBehaviour:
   flickerIntensity: 20
   flickerFrequency: 0.1
   toggleSwitch: {fileID: 892447112354712505}
-  interactionHandler: {fileID: 7854700075321512501}
   flashlightDustParticles: {fileID: 4429114595602299456}
   currentBattery: 0
+  isCanvasEnabled: 0
 --- !u!82 &892447112354712505
 AudioSource:
   m_ObjectHideFlags: 0

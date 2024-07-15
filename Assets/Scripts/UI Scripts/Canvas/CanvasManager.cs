@@ -9,54 +9,69 @@ public class CanvasManager : CanvasToggler
 {
     private List<GameObject> UICanvas;
     private List<GameObject> PuzzleCanvas;
-    public GameObject enabledCanvas;
+    public GameObject currentEnabledCanvas;
+
+    public bool isCanvasFound;
 
     public static event Action<bool> OnCanvasEnabled;
+
+
     private void Start()
     {
         UICanvas = new List<GameObject>();
         UICanvas.Add(consumableInventory);
         UICanvas.Add(keyItemInventory);
         UICanvas.Add(journal);
+
+        PuzzleCanvas = new List<GameObject>();
+        PuzzleCanvas.Add(grandFathersClock);
+        PuzzleCanvas.Add(combinationLock);
+
+        DisableAllCanvas(UICanvas);
+        DisableAllCanvas(PuzzleCanvas);
     }
     private void Update()
     {
-        CheckEnabledCanvas();
+        isCanvasFound = false;
+
+        CheckEnabledCanvas(PuzzleCanvas);
+        if (!isCanvasFound)
+        {
+            CheckEnabledCanvas(UICanvas);
+        }
     }
-    private void DisableAllCanvas()
+    private void DisableAllCanvas(List<GameObject> canvasList)
     {
-        foreach(GameObject canvas in UICanvas)
+        foreach(GameObject canvas in canvasList)
         {
             canvas.SetActive(false);
         }
     }
-    private void CheckEnabledCanvas()
+    private void CheckEnabledCanvas(List<GameObject> canvasList)
     {
-        foreach(GameObject canvas in UICanvas)
+        currentEnabledCanvas = null;
+        foreach (GameObject canvas in canvasList)
         {
             if (canvas.activeSelf)
             {
-                enabledCanvas = canvas;
+                currentEnabledCanvas = canvas;
+                isCanvasFound = true;
                 SetCursorEnabled();
                 OnCanvasEnabled?.Invoke(true);
                 return;
             }
-            else if(!canvas.activeSelf)
-            {
-                enabledCanvas = null;
-            }
         }
-        if (enabledCanvas != null)
+        if (currentEnabledCanvas != null)
         {
-            foreach (GameObject canvas in UICanvas)
+            foreach (GameObject canvas in canvasList)
             {
-                if (canvas != enabledCanvas)
+                if (canvas != currentEnabledCanvas)
                 {
                     canvas.SetActive(false);
                 }
             }
         } 
-        else if(enabledCanvas == null)
+        else if(currentEnabledCanvas == null)
         {
             SetCursorDisabled();
             OnCanvasEnabled?.Invoke(false);

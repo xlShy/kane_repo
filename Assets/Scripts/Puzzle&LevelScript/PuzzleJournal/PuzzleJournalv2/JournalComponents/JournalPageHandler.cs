@@ -15,12 +15,12 @@ public class JournalPageHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        GrandfatherClock.OnGrandfathersClockComeplete += SetChangingPage;
+        GrandfatherClock.OnGrandfathersClockComplete += SetChangingPage;
         CombinationLockActivateScript.OnCombinationLockComplete += SetChangingPage;
     }
     private void OnDisable()
     {
-        GrandfatherClock.OnGrandfathersClockComeplete -= SetChangingPage;
+        GrandfatherClock.OnGrandfathersClockComplete -= SetChangingPage;
         CombinationLockActivateScript.OnCombinationLockComplete -= SetChangingPage;
     }
     private void SetChangingPage()
