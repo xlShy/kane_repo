@@ -1319,29 +1319,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6000962259522586584, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1848966361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 104341112640658525, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-  m_PrefabInstance: {fileID: 4614911185076699634}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1848966363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848966361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf24a14b4f050043bf9ea9b93977bce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPageDisplayed: {fileID: 1643168227}
-  startingPages:
-  - {fileID: 21300000, guid: 515d1c3408eec4643914b7613a01ce76, type: 3}
-  - {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
-  journalPages: []
-  currentPage: 0
 --- !u!114 &1904201606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1904464676975663929, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
@@ -1449,6 +1426,10 @@ PrefabInstance:
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961695}
+    - target: {fileID: 611291382116969487, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: m_Name
+      value: Combination Puzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 1128098754795242724, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1610,14 +1591,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 2311779066290444603, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 2311779066290444603, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: itemDescription
-      value: OPPOP
-      objectReference: {fileID: 0}
     - target: {fileID: 2440134231726379328, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1626,19 +1599,11 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 3119313419284167644, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3640679432089914702, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_Name
       value: Gatherables
       objectReference: {fileID: 0}
     - target: {fileID: 4154943395050250325, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 4466916610857747520, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
@@ -1686,14 +1651,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 8256048934626640342, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 8256048934626640342, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
-      propertyPath: itemDescription
-      value: YUYUY
-      objectReference: {fileID: 0}
     - target: {fileID: 9052288082376144678, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1965,10 +1922,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 104341112640658525, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: m_Name
-      value: JournalManager
-      objectReference: {fileID: 0}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: playerObject
       value: 
@@ -1998,10 +1951,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1652494270}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: canvasDisable.Array.data[5]
       value: 
       objectReference: {fileID: 1516929156}
@@ -2022,33 +1971,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 47093409}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: puzzleJournal
+      propertyPath: combinationLock
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 840691509}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: keyItemInventory
       value: 
       objectReference: {fileID: 1516929156}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: grandFathersClock
+      value: 
+      objectReference: {fileID: 2067456314}
+    - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: consumableInventory
       value: 
       objectReference: {fileID: 1779987972}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: e4ab7c7e77b00c749b277573351c9c2d, type: 2}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 60c4cc8363faa5f48b84173144a6b123, type: 2}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 64a93a82ce4bca643bd92ea56d1078d8, type: 2}
     - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: chemicalEventScript
       value: 
@@ -2117,13 +2054,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6635447930934557222, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: currentPageDisplayed
+      value: 
+      objectReference: {fileID: 1643168227}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 104341112640658525, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1848966363}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
 --- !u!1001 &4706684788166481365
 PrefabInstance:

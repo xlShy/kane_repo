@@ -15,7 +15,7 @@ public abstract class InventoryItem : MonoBehaviour
     [Tooltip("Enter the item's name")]
     public string itemName;
 
-    [Tooltip("Insert the item's icon")]
+    [Tooltip("Insert the item's icon")] 
     public Sprite inventoryItemImage;
 
     [Tooltip("Enter the item's description here if applicable")]

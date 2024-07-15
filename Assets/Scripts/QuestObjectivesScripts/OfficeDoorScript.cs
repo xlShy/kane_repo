@@ -11,6 +11,9 @@ public class OfficeDoorScript : InteractableObject
     private Renderer objectRenderer;
 
     [SerializeField]
+    private string doorId;
+
+    [SerializeField]
     public int reqNumber;
 
     [SerializeField]
@@ -37,15 +40,15 @@ public class OfficeDoorScript : InteractableObject
 
     [SerializeField]private GameObject doorAnchor;
     private int keyCount;
-    private bool isOpen = false;
-    private bool isUnlocked = false;
+    public bool isOpen = false;
+    public bool isUnlocked = false;
 
     //Door Rotation
     [SerializeField] private float openSpeed = 5f;
     private Quaternion closedRotation;
     private Quaternion openRotation;
-    private bool canOpen = true;
     private bool isRotating = false;
+    public List<InventoryItem> keyItems;
 
     private void Start()
     {
@@ -58,9 +61,9 @@ public class OfficeDoorScript : InteractableObject
     {
         if (itemInteractedCase == 2 && !isRotating)
         {
-            if (isUnlocked && !isOpen && canOpen)
+            if (isUnlocked && !isOpen)
             {
-                
+
                 StartCoroutine(OpenDoor());
                 isOpen = true;
             }
@@ -70,9 +73,12 @@ public class OfficeDoorScript : InteractableObject
                 StartCoroutine(CloseDoor());
                 isOpen = false;
             }
-            List<InventoryItem> keyItems = inventory.GetKeyItems();
-            keyCount = CountDoorKeyItem(keyItems);
-            HandleKey(keyCount);
+            else
+            {
+                keyItems = inventory.GetKeyItems();
+                HandleKey(keyItems);
+            }
+
         }
     }
     private int CountDoorKeyItem(List<InventoryItem> items)
@@ -80,16 +86,17 @@ public class OfficeDoorScript : InteractableObject
         return items.Count(item => item is DoorKeyItem);
     }
 
-    private void HandleKey(int fuseCount)
+    private void HandleKey(List<InventoryItem> keyItems)
     {
         if (!isUnlocked)
         {
-            if (keyCount == 0)
+            DoorKeyItem correctKey = keyItems.OfType<DoorKeyItem>().FirstOrDefault(k => k.doorId == this.doorId);
+            if (correctKey == null)
             {
                 doorIsLocked.Play();
                 noKey.TriggerDialogue();
             }
-            else if (keyCount == 1)
+            else
             {
                 doorisOpen.Play();
                 yesKey.TriggerDialogue();

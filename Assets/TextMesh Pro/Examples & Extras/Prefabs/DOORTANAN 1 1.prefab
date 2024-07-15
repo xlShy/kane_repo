@@ -1904,6 +1904,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  doorId: 1
   reqNumber: 1
   dialogueText: {fileID: 0}
   newLayerMask:
@@ -1917,7 +1918,10 @@ MonoBehaviour:
   objCollider: {fileID: 7187521503796877445}
   objRenderer: {fileID: 6247283746331746443}
   doorAnchor: {fileID: 6435559875139710902}
+  isOpen: 0
+  isUnlocked: 0
   openSpeed: 5
+  keyItems: []
 --- !u!23 &6247283746331746443
 MeshRenderer:
   m_ObjectHideFlags: 0

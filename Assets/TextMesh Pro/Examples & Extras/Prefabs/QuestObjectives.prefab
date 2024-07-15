@@ -3169,6 +3169,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  doorId: 2
   reqNumber: 1
   dialogueText: {fileID: 0}
   newLayerMask:
@@ -3182,7 +3183,10 @@ MonoBehaviour:
   objCollider: {fileID: 6996239928742081672}
   objRenderer: {fileID: 4388760316148266908}
   doorAnchor: {fileID: 1429806743596468535}
+  isOpen: 0
+  isUnlocked: 0
   openSpeed: 5
+  keyItems: []
 --- !u!114 &7866445537216799888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,11 +4828,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  itemName: Door Key
+  itemName: Entrance Key
   inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
   itemDescription: 'Needed for the office door.
 
 '
+  doorId: 1
   interactableScript: {fileID: 3563464968953563954}
   dialogueText: {fileID: 0}
   dialogueContent: A key, but for what...

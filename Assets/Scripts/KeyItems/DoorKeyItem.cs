@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DoorKeyItem : InventoryItem
 {
+    public string doorId;
+
     [SerializeField]
     public InteractableObject interactableScript;
 
