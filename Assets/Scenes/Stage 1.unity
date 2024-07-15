@@ -1381,6 +1381,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b19552efac2dd418100631cfb1b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2093657872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b11ad0088b314fafda5dff183ef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2286328679847662119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1470,10 +1481,26 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 2998950969673084440, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: eventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 3318099560819422385, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 3574052198842279193, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: eventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 3645333236753927541, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: eventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 3982280696039279151, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: eventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 4077336841479108888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: item
       value: 
@@ -1578,6 +1605,18 @@ PrefabInstance:
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961695}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 2085152750}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: eventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: keyInventory
+      value: 
+      objectReference: {fileID: 2085152747}
     - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2023,13 +2062,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: chemicalMixingPlaceScript
+      value: 
+      objectReference: {fileID: 2093657872}
+    - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: gameObjectsWithLights.Array.data[0]
       value: 
       objectReference: {fileID: 727495540}
-    - target: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: gameObjectsWithLights.Array.data[1]
-      value: 
-      objectReference: {fileID: 1574856023}
     - target: {fileID: 6372715338452213385, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 
@@ -2407,6 +2446,10 @@ PrefabInstance:
       propertyPath: combinationLockActivate
       value: 
       objectReference: {fileID: 1127946112}
+    - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: chemicalMixingPlaceScript
+      value: 
+      objectReference: {fileID: 2093657872}
     - target: {fileID: 1089403954872058881, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.395
@@ -2451,6 +2494,10 @@ PrefabInstance:
       propertyPath: chemMixTriggerScript
       value: 
       objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 1772001438693697844, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: chemicalMixingPlaceScript
+      value: 
+      objectReference: {fileID: 2093657872}
     - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: item
       value: 

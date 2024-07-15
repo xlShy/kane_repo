@@ -10,6 +10,7 @@ public class DoorSystemScript : InteractableObject
     [SerializeField] private ChemicalMixingEventTrigger chemMixTriggerScript;
     [SerializeField] private doorLockerScript doorLockerScript;
     [SerializeField] private CombinationLockActivateScript combinationLockActivate;
+    [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
 
     [SerializeField] private float openSpeed = 5f;
     private Quaternion closedRotation;
@@ -17,6 +18,7 @@ public class DoorSystemScript : InteractableObject
     [SerializeField] private AudioSource doorOpen;
     [SerializeField] private AudioSource doorClose;
     [SerializeField] private AudioSource doorLocked;
+    private bool isClosing = false;
 
     private void Awake()
     {
@@ -45,6 +47,11 @@ public class DoorSystemScript : InteractableObject
         if (combinationLockActivate != null)
         {
             combinationLockActivate.onLockPuzzleCompletion.AddListener(canBeMoved);
+        }
+
+        if (chemicalMixingPlaceScript != null)
+        {
+            chemicalMixingPlaceScript.puzzleComplete.AddListener(UnlockDoor);
         }
 
         closedRotation = transform.rotation;
@@ -87,22 +94,40 @@ public class DoorSystemScript : InteractableObject
 
     private IEnumerator CloseDoor()
     {
+        if (isClosing)
+        {
+            Debug.Log("DoorSystemScript: Door is already closing");
+            yield break;
+        }
+
+        isClosing = true;
         Debug.Log("DoorSystemScript: CloseDoor coroutine started");
         doorClose.Play();
+
         while (Quaternion.Angle(transform.rotation, closedRotation) > 0.01f)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, closedRotation, Time.deltaTime * openSpeed);
             yield return null;
         }
+
         transform.rotation = closedRotation;
         isOpen = false;
+        isClosing = false;
         Debug.Log("DoorSystemScript: Door closed");
     }
 
     private void LockDoor()
     {
         Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
+        StartCoroutine(CloseDoor());
         canOpen = false;
+    }
+
+    private void UnlockDoor()
+    {
+        Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
+        StartCoroutine(CloseDoor());
+        canOpen = true;
     }
 
     private void canBeMoved()

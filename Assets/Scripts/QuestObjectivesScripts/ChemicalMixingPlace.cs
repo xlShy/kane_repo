@@ -92,7 +92,6 @@ public class ChemicalMixingPlace : InteractableObject
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
         resetInteractableState.Invoke();
-        eventScript.ResetIngredients();
     }
     
     private void StartPuzzle()

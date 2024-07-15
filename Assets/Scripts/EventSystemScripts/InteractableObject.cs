@@ -17,6 +17,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
     private void OnEnable()
     {
         Inventory.onInventoryFull += InventoryFull;
+        mixingScript.resetInteractableState.AddListener(ResetPuzzle);
     }
 
     public virtual void Interact(int itemInteractedCase, Inventory inventory)
@@ -50,7 +51,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     //Debug.Log("You have interacted with an objective!");
                     break;
                 case 3:
-                    //Debug.Log("Item Picked Up");
+                    Debug.Log("Item Picked Up");
                     if (item != null)
                     {
                         inventory.AddItem(item);

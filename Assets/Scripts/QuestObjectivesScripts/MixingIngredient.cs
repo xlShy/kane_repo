@@ -22,6 +22,7 @@ public class MixingIngredient : InventoryItem
     {
         objectRenderer = GetComponent<Renderer>();
         eventScript.chemicalMixingEventInitiate.AddListener(StartPuzzle);
+        mixingScript.resetInteractableState.AddListener(ResetIngredient);
     }
 
     private void StartPuzzle()

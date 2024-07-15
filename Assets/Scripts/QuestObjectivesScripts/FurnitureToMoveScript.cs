@@ -23,9 +23,25 @@ public class FurnitureToMoveScript : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
-            transform.localPosition = new Vector3(15f, 14.5f, 28f);
+            Vector3 targetPosition = new Vector3(15f, 14.5f, 28f);
+            StartCoroutine(MoveSmoothlyCo(targetPosition, 1f));
             gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         }
 
+    }
+
+    private IEnumerator MoveSmoothlyCo(Vector3 targetPosition, float duration)
+    {
+        Vector3 startPosition = transform.localPosition;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localPosition = targetPosition;
     }
 }

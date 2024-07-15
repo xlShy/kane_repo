@@ -8,19 +8,16 @@ public class ChemicalMixingEventTrigger : MonoBehaviour
 {
 
     public UnityEvent chemicalMixingEventInitiate;
+    private bool isTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Activated Event!");
-        chemicalMixingEventInitiate.Invoke(); //LightManager
-    }
-
-    public void ResetIngredients()
-    {
-        MixingIngredient[] ingredients = FindObjectsOfType<MixingIngredient>();
-        foreach (var ingredient in ingredients)
+        if (!isTriggered)
         {
-            ingredient.ResetIngredient();
+            Debug.Log("Activated Event!");
+            chemicalMixingEventInitiate.Invoke(); //LightManager & MixingIngredients
+            isTriggered = true;
         }
+        
     }
 }
