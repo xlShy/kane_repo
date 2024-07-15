@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
-    private bool isUIOpen;
+    public bool isUIOpen;
+
     private KeyCode currentOpenedUIKey;
 
     //EVENTS
@@ -15,6 +16,14 @@ public class InputHandler : MonoBehaviour
     public static event Action<bool> OnKeyItemInventoryOpen;
     public static event Action<bool> OnJournalOpen;
 
+    private void OnEnable()
+    {
+        CanvasManager.OnCanvasEnabled += SetIsOnPuzzle;
+    }
+    private void OnDisable()
+    {
+        CanvasManager.OnCanvasEnabled -= SetIsOnPuzzle;
+    }
     private void Update()
     {
         if (!isUIOpen)
@@ -76,7 +85,10 @@ public class InputHandler : MonoBehaviour
         }
         currentOpenedUIKey = KeyCode.None;
     }
-
+    private void SetIsOnPuzzle(bool isCanvasOn)
+    {
+        isUIOpen = isCanvasOn;
+    }
     public void ClosePuzzlesCanvas()
     {
         // Implementation for closing puzzle canvas
