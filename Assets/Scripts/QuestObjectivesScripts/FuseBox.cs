@@ -8,49 +8,32 @@ using UnityEngine.Events;
 
 public class FuseBox : InteractableObject
 {
-    public Puzzle puzzle;
-    public PuzzleEventHandler pEventHandler;
-    public KeyItemInventory keyItemInventory;
-    public bool isCompleted = false;
-
-    private Renderer objectRenderer;
-
-    [SerializeField]
-    public int reqNumber;
-
-    [SerializeField]
-    private Text dialogueText;
-
-    [SerializeField] public GameObject televisionGameObject;
-
-    [SerializeField]
-    private DialogueTriggerScript successFuseDialogue;
-    [SerializeField]
-    private DialogueTriggerScript notEnoughFusesDialogue;
-    [SerializeField]
-    private DialogueTriggerScript oneFuseDialogue;
-
-    [SerializeField]
-    private AudioSource placingFuse;
-
-    [SerializeField]
-    private AudioSource fuseActivate;
-
-    [SerializeField]
-    private AudioSource fuseActivateSecondPhase;
-
-    [SerializeField]
-    private AudioSource fuseLoopSound;
-
+    [SerializeField] private Puzzle puzzle;
+    [SerializeField] private PuzzleEventHandler pEventHandler;
+    [SerializeField] private KeyItemInventory keyItemInventory;
     [SerializeField] private TVScript tvScript;
+    [SerializeField] private LightManager lightManager;
+
+    [Header("Objects")]
+    [SerializeField] private Text dialogueText;
+    [SerializeField] private GameObject televisionGameObject;
+
+    [Header("DialogueComponents")]
+    [SerializeField] private DialogueTriggerScript successFuseDialogue;
+    [SerializeField] private DialogueTriggerScript notEnoughFusesDialogue;
+    [SerializeField] private DialogueTriggerScript oneFuseDialogue;
+
+    [Header("SFX")]
+    [SerializeField] private AudioSource placingFuse;
+    [SerializeField] private AudioSource fuseActivate;
+    [SerializeField] private AudioSource fuseActivateSecondPhase;
+    [SerializeField] private AudioSource fuseLoopSound;
 
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
     public UnityEvent fuseBoxActivate;
-    private void Start()
-    {
-        objectRenderer = GetComponent<Renderer>();
-    }
+
+    public bool isCompleted = false;
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (itemInteractedCase == 2)
@@ -64,7 +47,6 @@ public class FuseBox : InteractableObject
     {
         return items.Count(item => item is FuseItem);
     }
-
     private void HandleFuses(int fuseCount)
     {
         if (fuseCount == 0)
@@ -86,7 +68,6 @@ public class FuseBox : InteractableObject
             
         }
     }
-    
     private IEnumerator PlayFuseActivateSounds()
     {
         placingFuse.Play();
@@ -104,24 +85,10 @@ public class FuseBox : InteractableObject
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
         successFuseDialogue.TriggerDialogue();
-        //RemoveFusesFromInventory(2);
+        lightManager.TurnOnAll();
 
         //set puzzle as complete
         pEventHandler.InteractPuzzle(puzzle);
-    }
-    //TO DO - edit to remove fuses per interact
-    private void RemoveFusesFromInventory(int count)
-    {
-        if (currentInventory != null)
-        {
-            List<InventoryItem> keyItems = currentInventory.GetKeyItems();
-            List<FuseItem> fusesToRemove = keyItems.OfType<FuseItem>().Take(count).ToList();
-
-            foreach (FuseItem fuse in fusesToRemove)
-            {
-                keyItems.Remove(fuse);
-            }
-        }
     }
     private IEnumerator HideDialogueAfterDelay(float delay)
     {

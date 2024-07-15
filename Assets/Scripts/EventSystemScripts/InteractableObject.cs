@@ -7,24 +7,16 @@ public class InteractableObject : MonoBehaviour, IInteractable
     public InteractableConfig interactableConfig;
     public InventoryItem item;
 
-    private Renderer objectRenderer;
-    private bool isRed = false;
-    private bool canBeInteracted = true;
-
     public UnityEvent itemPickedUp;
 
+    private bool canBeInteracted = true;
     private bool isInventoryFull;
 
-    [SerializeField]
     public ChemicalMixingPlace mixingScript;
 
     private void OnEnable()
     {
         Inventory.onInventoryFull += InventoryFull;
-    }
-    void Start()
-    {
-        objectRenderer = GetComponent<Renderer>();
     }
 
     public virtual void Interact(int itemInteractedCase, Inventory inventory)

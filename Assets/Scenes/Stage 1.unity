@@ -783,6 +783,17 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &651591077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5370398022595457380, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d89fcb52c3e514c8b2f0eef61b5a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &687961693 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1841761831635477512, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
@@ -1502,6 +1513,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lightManager
+      value: 
+      objectReference: {fileID: 651591077}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
