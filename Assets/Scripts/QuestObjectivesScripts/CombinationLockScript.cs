@@ -9,7 +9,7 @@ public class CombinationLockScript : MonoBehaviour
 {
     public Text[] digitTexts;
     private int[] digits;
-    private int[] correctCombination = { 1, 2, 3, 4 };
+    private int[] correctCombination = { 1, 9, 4, 1 };
     private Renderer objectRenderer;
     public bool isCorrect = false;
 
