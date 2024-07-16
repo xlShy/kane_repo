@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Floor Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] floorAudioClips;
+    [SerializeField] private float timeBetweenClips = 0.5f;
+    private bool isPlayingFloorAudio = false;
+
+    private Coroutine currentAudioSequence;
 
     public CharacterController characterController;
     public float speed = 12f;
@@ -15,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     private bool isGrounded;
+    private bool isMoving;
 
     [SerializeField] private SanityStatusEffect sanityScript;
 
@@ -36,6 +44,23 @@ public class PlayerMovement : MonoBehaviour
         if (!isCanvasEnabled)
         {
             PlayerControl();
+            CheckFloorContact();
+        }
+    }
+
+
+    private void CheckFloorContact()
+    {
+        // Ignore the player's own collider
+        int layerMask = ~(1 << gameObject.layer);
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 10f, layerMask))
+        {
+            if (hit.collider.CompareTag("FirstFloor"))
+            {
+                TryPlayFloorAudio();
+            }
         }
     }
 
@@ -47,11 +72,15 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        //To Do - Create InputHandler Script
+
         float xDirection = Input.GetAxisRaw("Horizontal");
         float zDirection = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = transform.right * xDirection + transform.forward * zDirection;
+
+        // Check if the player is moving
+        isMoving = direction.magnitude > 0.1f;
+
         characterController.Move(direction * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
@@ -59,5 +88,42 @@ public class PlayerMovement : MonoBehaviour
     public void isAnyCanvasOn(bool isOn)
     {
         isCanvasEnabled = isOn;
+    }
+    private void TryPlayFloorAudio()
+    {
+        if (isMoving && !isPlayingFloorAudio)
+        {
+            if (currentAudioSequence != null)
+            {
+                StopCoroutine(currentAudioSequence);
+            }
+            currentAudioSequence = StartCoroutine(PlayFloorAudioSequence());
+        }
+        else if (!isMoving && isPlayingFloorAudio)
+        {
+            StopCoroutine(currentAudioSequence);
+            audioSource.Stop();
+            isPlayingFloorAudio = false;
+        }
+    }
+    private IEnumerator PlayFloorAudioSequence()
+    {
+        isPlayingFloorAudio = true;
+        while (isMoving)
+        {
+            foreach (AudioClip clip in floorAudioClips)
+            {
+                audioSource.clip = clip;
+                audioSource.Play();
+                float elapsedTime = 0f;
+                while (elapsedTime < clip.length + timeBetweenClips && isMoving)
+                {
+                    elapsedTime += Time.deltaTime;
+                    yield return null;
+                }
+                if (!isMoving) break;
+            }
+        }
+        isPlayingFloorAudio = false;
     }
 }
