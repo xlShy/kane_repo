@@ -96,4 +96,23 @@ public class KeyItemInventory : MonoBehaviour
         keyItemDescription.GetComponent<TextMeshProUGUI>().text = keyItem.itemDescription;
     }
 
+    public void ClearAllKeyItemPanels()
+    {
+        foreach (GameObject panel in itemPanels)
+        {
+            Destroy(panel);
+        }
+        itemPanels.Clear();
+
+        // Clear the icon and description
+        if (keyItemIconHolder != null)
+        {
+            keyItemIconHolder.GetComponent<Image>().sprite = null;
+        }
+        if (keyItemDescription != null)
+        {
+            keyItemDescription.GetComponent<TextMeshProUGUI>().text = "";
+        }
+    }
+
 }

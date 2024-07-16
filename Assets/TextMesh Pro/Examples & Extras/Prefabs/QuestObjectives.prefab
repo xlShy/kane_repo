@@ -3190,12 +3190,6 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   noKey: {fileID: 7866445537216799888}
   yesKey: {fileID: 2783313756227964328}
-  doorIsLocked: {fileID: 7937184355350107502}
-  doorisOpen: {fileID: 7341655638697614782}
-  doorisClosed: {fileID: 8681707413105918180}
-  doorAnchor: {fileID: 1429806743596468535}
-  isOpen: 0
-  isUnlocked: 0
   openSpeed: 5
   keyItems: []
 --- !u!114 &1725499300470154162
@@ -3210,11 +3204,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bf400481c42d040bf663aef918bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
   isOpen: 0
   isClosing: 0
-  doorisOpen: {fileID: 0}
-  doorisClosed: {fileID: 0}
-  doorIsLocked: {fileID: 0}
+  isRotating: 0
+  doorisOpen: {fileID: 7341655638697614782}
+  doorisClosed: {fileID: 8681707413105918180}
+  doorIsLocked: {fileID: 7937184355350107502}
   doorAnchor: {fileID: 1429806743596468535}
 --- !u!114 &7866445537216799888
 MonoBehaviour:
@@ -4639,7 +4635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432068469774939713, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.046667
+      value: -8.14
       objectReference: {fileID: 0}
     - target: {fileID: 4432068469774939713, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       propertyPath: m_LocalRotation.w

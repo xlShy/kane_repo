@@ -207,4 +207,11 @@ public class Inventory : MonoBehaviour
         return keyItemsInventory.Find(item => item.itemName == itemName);
     }
 
+    public void ClearAllKeyItems()
+    {
+        keyItemsInventory.Clear();
+        keyItemInventoryScript.ClearAllKeyItemPanels();
+        // If you have any events or UI updates, trigger them here
+    }
+
 }

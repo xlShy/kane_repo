@@ -34,7 +34,7 @@ public class DoorBase : MonoBehaviour
     }
     public void CloseDoor(float closeSpeed)
     {
-        if(!isRotating)
+        if (!isRotating)
         {
             StartCoroutine(CloseDoorAnimation(closeSpeed));
         }
@@ -56,7 +56,7 @@ public class DoorBase : MonoBehaviour
     private IEnumerator OpenDoorAnimation(float openSpeed)
     {
         isRotating = true;
-        while(isRotating)
+        while (isRotating)
         {
             print("Open Door");
             doorisOpen.Play();
@@ -74,9 +74,7 @@ public class DoorBase : MonoBehaviour
     private IEnumerator CloseDoorAnimation(float openSpeed)
     {
         isRotating = true;
-        while(isRotating)
-        {
-            print("Close Door");
+           print("Close Door");
             if (isClosing)
             {
                 //Debug.Log("DoorSystemScript: Door is already closing");
@@ -87,9 +85,13 @@ public class DoorBase : MonoBehaviour
             //Debug.Log("DoorSystemScript: CloseDoor coroutine started");
             doorisClosed.Play();
 
-            while (Quaternion.Angle(doorAnchor.transform.rotation, closedRotation) > 0.01f)
+
+            var lerpValue = 0f;
+            var startRotation = doorAnchor.transform.rotation;
+            while (lerpValue < 1)
             {
-                doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, closedRotation, Time.deltaTime * openSpeed);
+                lerpValue += Time.deltaTime * openSpeed;
+                doorAnchor.transform.rotation = Quaternion.Lerp(startRotation, closedRotation, lerpValue);
                 yield return null;
             }
 
@@ -98,6 +100,6 @@ public class DoorBase : MonoBehaviour
             isClosing = false;
             //Debug.Log("DoorSystemScript: Door closed");
             isRotating = false;
-        }
+    
     }
 }

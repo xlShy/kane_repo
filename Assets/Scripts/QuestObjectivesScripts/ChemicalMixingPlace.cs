@@ -32,19 +32,15 @@ public class ChemicalMixingPlace : InteractableObject
     {
         bool hasAllRequiredItems = true;
         bool hasFailItem = false;
-        List<InventoryItem> itemsToRemove = new List<InventoryItem>();
 
         // Check for required items
         foreach (string itemName in requiredItems)
         {
             InventoryItem item = inventory.GetItemByName(itemName);
-            if (item != null)
-            {
-                itemsToRemove.Add(item);
-            }
-            else
+            if (item == null)
             {
                 hasAllRequiredItems = false;
+                break;
             }
         }
 
@@ -55,16 +51,12 @@ public class ChemicalMixingPlace : InteractableObject
             if (failItem != null)
             {
                 hasFailItem = true;
-                itemsToRemove.Add(failItem);
+                break;
             }
         }
 
-        // Remove all found items from the key item inventory
-        foreach (var item in itemsToRemove)
-        {
-            keyInventory.RemoveKeyItem(item, 1);
-            inventory.RemoveKeyItem(item);
-        }
+        // Clear the entire key item inventory
+        inventory.ClearAllKeyItems();
 
         // Check puzzle state
         if (hasAllRequiredItems && !hasFailItem)
