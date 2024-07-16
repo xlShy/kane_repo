@@ -3066,6 +3066,7 @@ GameObject:
   - component: {fileID: 4388760316148266908}
   - component: {fileID: 6996239928742081672}
   - component: {fileID: 4077336841479108888}
+  - component: {fileID: 1725499300470154162}
   - component: {fileID: 7866445537216799888}
   - component: {fileID: 2783313756227964328}
   - component: {fileID: 7937184355350107502}
@@ -3086,13 +3087,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030810288969221700}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0.10405731, y: 2.2, z: -1.272007}
   m_LocalScale: {x: 127.200714, y: 230, z: 80.69103}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5964144601658530675}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!33 &1060029544229425909
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3100,7 +3101,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030810288969221700}
-  m_Mesh: {fileID: -2411793529154364387, guid: e84af744166568741887f90395c33006, type: 3}
+  m_Mesh: {fileID: -2411793529154364387, guid: 6f2247db0bc23f340bb7f606c7a42106, type: 3}
 --- !u!23 &4388760316148266908
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3121,7 +3122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 386ce15322b4b9d419d7ad460eb15a3f, type: 2}
+  - {fileID: 2100000, guid: 2354e62d2c3fa4944bf6d77b7c3206b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3164,7 +3165,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2411793529154364387, guid: e84af744166568741887f90395c33006, type: 3}
+  m_Mesh: {fileID: -2411793529154364387, guid: 6f2247db0bc23f340bb7f606c7a42106, type: 3}
 --- !u!114 &4077336841479108888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3184,24 +3185,37 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  doorBase: {fileID: 1725499300470154162}
   doorId: 2
-  reqNumber: 1
   dialogueText: {fileID: 0}
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
   noKey: {fileID: 7866445537216799888}
   yesKey: {fileID: 2783313756227964328}
   doorIsLocked: {fileID: 7937184355350107502}
   doorisOpen: {fileID: 7341655638697614782}
   doorisClosed: {fileID: 8681707413105918180}
-  objCollider: {fileID: 6996239928742081672}
-  objRenderer: {fileID: 4388760316148266908}
   doorAnchor: {fileID: 1429806743596468535}
   isOpen: 0
   isUnlocked: 0
   openSpeed: 5
   keyItems: []
+--- !u!114 &1725499300470154162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030810288969221700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bf400481c42d040bf663aef918bb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
+  isClosing: 0
+  doorisOpen: {fileID: 0}
+  doorisClosed: {fileID: 0}
+  doorIsLocked: {fileID: 0}
+  doorAnchor: {fileID: 1429806743596468535}
 --- !u!114 &7866445537216799888
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,79 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
+
+public class KeyRequiredDoorScript : InteractableObject
+{
+    [SerializeField] private KeyItemInventory keyItemInventory;
+    [SerializeField] private DoorBase doorBase;
+
+    [SerializeField] private string doorId;
+    [SerializeField] private Text dialogueText;
+
+    [SerializeField] private DialogueTriggerScript noKey;
+    [SerializeField] private DialogueTriggerScript yesKey;
+
+    [SerializeField] private float openSpeed = 5f;
+
+    private Coroutine dialogueCoroutine;
+    private Inventory currentInventory;
+
+    private bool isUnlocked = false;
+
+    public List<InventoryItem> keyItems;
+
+    public override void Interact(int itemInteractedCase, Inventory inventory)
+    {
+        if (itemInteractedCase == 2)
+        {
+            if (isUnlocked && !doorBase.isOpen)
+            {
+                doorBase.OpenDoor(openSpeed);
+                doorBase.isOpen = true;
+            }
+            else if (isUnlocked && doorBase.isOpen)
+            {
+                doorBase.CloseDoor(openSpeed);
+                doorBase.isOpen = false;
+
+            }
+            else
+            {
+                keyItems = inventory.GetKeyItems();
+                HandleKey(keyItems);
+            }
+        }
+    }
+    private int CountDoorKeyItem(List<InventoryItem> items)
+    {
+        return items.Count(item => item is DoorKeyItem);
+    }
+
+    private void HandleKey(List<InventoryItem> keyItems)
+    {
+        if (!isUnlocked)
+        {
+            DoorKeyItem correctKey = keyItems.OfType<DoorKeyItem>().FirstOrDefault(k => k.doorId == this.doorId);
+            if (correctKey == null)
+            {
+                doorBase.doorIsLocked.Play();
+                noKey.TriggerDialogue();
+            }
+            else
+            {
+                doorBase.doorisOpen.Play();
+                yesKey.TriggerDialogue();
+                keyItemInventory.RemoveKeyItem(item, 1);
+                isUnlocked = true;
+            }
+        }
+    }
+    private IEnumerator HideDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueText.gameObject.SetActive(false);
+    }
+}

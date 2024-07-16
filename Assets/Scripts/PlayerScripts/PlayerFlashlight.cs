@@ -1,7 +1,9 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class PlayerFlashlight : MonoBehaviour
 {
@@ -33,7 +35,6 @@ public class PlayerFlashlight : MonoBehaviour
     private bool isFlickering = false;
     //private float dustParticleFlicker = Random.Range(0f, 1f);
     private float dustParticleFlicker;
-
 
     public bool isCanvasEnabled;
     private void OnEnable()
@@ -70,7 +71,6 @@ public class PlayerFlashlight : MonoBehaviour
         }
         
     }
-
     private void ToggleFlashlight()
     {
         if (!flashlight.enabled && currentBattery>0)

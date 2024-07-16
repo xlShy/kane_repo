@@ -1,7 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Cinemachine.DocumentationSortingAttribute;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
 
     public bool isGameComplete = false;
     public int iteration;
+
+    public static event Action OnCompleteLevel1;
 
     private void OnEnable()
     {
@@ -60,7 +62,7 @@ public class LevelManager : MonoBehaviour
         {
             case 1:
                 print("Proceed to level 2");
-                //Destroy(playerBlocker[iteration - 1]);
+                OnCompleteLevel1?.Invoke();
                 break;
             case 2:
                 print("Proceed to level 3");
