@@ -24,11 +24,24 @@ public class DebugController : MonoBehaviour
     public GameObject flashlightGameObject;
     public GameObject playerGameObject;  
 
+    public Button teleShed;              
+    public Button teleFrontDoor;   
+    public Button teleGate;  
+    public Button teleOffice;              
+    public Button teleKitchen;   
+    public Button teleFirstFloorStairs;  
+    public Button teleSecondFloorStairs;  
+    public Button teleMBedroom;
+    public Button teleVBedroom;   
+    public Button teleBBedroom;  
     
     private PlayerMovement playerMovement;
     private SanityHandler sanityHandler;  
 
     private PlayerFlashlight playerFlashlight;  
+
+    private Dictionary<Button, Vector3> teleportLocations;
+
 
     void Start()
     {
@@ -84,6 +97,28 @@ public class DebugController : MonoBehaviour
         if (resetSanityDrainButton != null)
         {
             resetSanityDrainButton.onClick.AddListener(ResetSanityDrain);
+        }
+
+        // Define teleport locations
+        teleportLocations = new Dictionary<Button, Vector3>
+        {
+            { teleShed, new Vector3(21.2f, 2.5f, 25.6f) }, // Replace with coordinates if needed
+            { teleFrontDoor, new Vector3(1f, 2.5f, 0.1f) },
+            { teleGate, new Vector3(39.7f, 2.5f, -0.1f) },
+            { teleOffice, new Vector3(-20f, 2.6f, 24f) },
+            { teleKitchen, new Vector3(0f, 2.6f, -16f) },
+            { teleFirstFloorStairs, new Vector3(-26f, 2.6f, -2f) },
+            { teleSecondFloorStairs, new Vector3(27f, 9.5f, -2f) },
+            { teleMBedroom, new Vector3(-1f, 9.5f, 8f) },
+            { teleVBedroom, new Vector3(-18f, 9.5f, -9f) },
+            { teleBBedroom, new Vector3(-1f, 9.5f, -9f) },
+        };
+
+        // Add listeners for teleport buttons
+        foreach (var kvp in teleportLocations)
+        {
+            Vector3 teleportPosition = kvp.Value; // Capture the position in a local variable
+            kvp.Key.onClick.AddListener(() => TeleportPlayer(teleportPosition));
         }
 
         // Ensure the canvas starts hidden
@@ -206,6 +241,14 @@ public class DebugController : MonoBehaviour
         if (sanityHandler != null)
         {
             sanityHandler.decreasePercentage = 0; // Set sanity decrease percentage to 0
+        }
+    }
+
+    private void TeleportPlayer(Vector3 position)
+    {
+        if (playerTransform != null)
+        {
+            playerTransform.position = position;
         }
     }
 
