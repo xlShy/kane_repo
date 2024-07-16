@@ -120,7 +120,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 515d1c3408eec4643914b7613a01ce76, type: 3}
   - {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
   journalPages: []
-  currentPage: 0
+  currentPage: 1
 --- !u!114 &6422621330484400919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34466da05651864fb3005e91715f5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPillActive: 1
+  isPillActive: 0
   pillDelayDuration: 0.5
   pillEffectDuration: 2
 --- !u!114 &4936673747371673390
@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 4108359295714776700}
   - component: {fileID: 258854053072693268}
   - component: {fileID: 8847387387963992137}
+  - component: {fileID: 2508184436290748819}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -492,6 +493,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2508184436290748819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507369729350834000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d5a80c9d48d0f41b899f3891b527ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityHandler: {fileID: 2593785832678190295}
+  loadScene: {fileID: 2045642504428501571}
 --- !u!1 &9128609637978092965
 GameObject:
   m_ObjectHideFlags: 0

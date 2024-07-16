@@ -64,7 +64,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
         if (dialogueCoroutine == null)
         {
-            dialogueCoroutine = StartCoroutine(ProcessDialogueQueue());
+            dialogueCoroutine = StartCoroutine(ProcessDialogueQueue()); 
         }
     }
 
