@@ -26,7 +26,7 @@ public class BathroomDoor : InteractableObject
         if (chemMixTriggerScript != null)
         {
             //washroom - chemical puzzle
-            chemMixTriggerScript.chemicalMixingEventInitiate.AddListener(doorBase.UnlockDoor);
+            chemMixTriggerScript.chemicalMixingEventInitiate.AddListener(doorBase.LockDoor);
         }
 
         if (combinationLockActivate != null)
@@ -55,6 +55,11 @@ public class BathroomDoor : InteractableObject
         {
             doorBase.CloseDoor(openSpeed);
         }
+    }
+    public void CloseDoorOnChemicalPuzzle()
+    {
+        doorBase.LockDoor();
+        doorBase.CloseDoor(openSpeed);
     }
     private void canBeMoved()
     {

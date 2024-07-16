@@ -574,6 +574,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4363477045500602218, guid: 008088181c3de244894b8f959d6d1655, type: 3}
   m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &468954706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+  m_PrefabInstance: {fileID: 6525298437781991052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73b3f944bafcbf438d03c660f464fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &474677514 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -2186,6 +2197,10 @@ PrefabInstance:
       propertyPath: currentPageDisplayed
       value: 
       objectReference: {fileID: 1643168227}
+    - target: {fileID: 8765483443422348581, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: isPillActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2363,6 +2378,34 @@ PrefabInstance:
     - target: {fileID: 1221549480557444158, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 468954706}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDoorOnChemicalPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BathroomDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854831684339372891, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
+      propertyPath: chemicalMixingEventInitiate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6358159954384430214, guid: b51778e1d0c363540bd46c43f19ad23c, type: 3}
       propertyPath: m_Name

@@ -42,14 +42,14 @@ public class DoorBase : MonoBehaviour
     public void LockDoor()
     {
         //Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
-        //StartCoroutine(CloseDoorAnimation(openSpeed));
+        StartCoroutine(CloseDoorAnimation(openSpeed));
         canOpen = false;
     }
 
     public void UnlockDoor()
     {
         //Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
-        //StartCoroutine(CloseDoorAnimation(openSpeed));
+        StartCoroutine(CloseDoorAnimation(openSpeed));
         canOpen = true;
     }
 
