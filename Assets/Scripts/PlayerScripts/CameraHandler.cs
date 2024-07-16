@@ -11,7 +11,7 @@ public class CameraHandler : MonoBehaviour
     [SerializeField] private SanityStatusEffect sanityScript;
 
     private float xRotation = 0f;
-    //private float yRotation = 0f;
+    private float yRotation = 0f;
 
     [SerializeField] private float bobbingSpeed = 14f;
     [SerializeField] private float verticalBobbingAmount = 0.05f;
@@ -57,6 +57,8 @@ public class CameraHandler : MonoBehaviour
 
         //yRotation += mouseX;
         xRotation -= mouseY;
+        yRotation += mouseX;
+
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerFlashlight : MonoBehaviour
 {
-    private Light flashlight;
+    [SerializeField] private Light flashlight;
 
     [SerializeField]
     private float maxBattery;
@@ -30,6 +30,14 @@ public class PlayerFlashlight : MonoBehaviour
     [SerializeField]
     private GameObject flashlightDustParticles;
 
+    [SerializeField] private float rotationLagSpeed = 5f;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform cameraTransform;
+
+    private Quaternion targetRotation;
+    private Vector3 laggedForward;
+    private Vector3 laggedUp;
+
     private Image dustParticlesImage;
     public float currentBattery;
     private bool isFlickering = false;
@@ -37,6 +45,8 @@ public class PlayerFlashlight : MonoBehaviour
     private float dustParticleFlicker;
 
     public bool isCanvasEnabled;
+
+    private Vector3 currentLaggedDirection;
     private void OnEnable()
     {
         CanvasManager.OnCanvasEnabled += isAnyCanvasOn;
@@ -48,9 +58,22 @@ public class PlayerFlashlight : MonoBehaviour
     private void Start()
     {
         dustParticleFlicker = Random.Range(0f, 1f);
-        flashlight = GetComponent<Light>();
         currentBattery = maxBattery;
         dustParticlesImage = flashlightDustParticles.GetComponent<Image>();
+        
+        laggedForward = transform.forward;
+        laggedUp = transform.up;
+
+        if (playerTransform == null)
+        {
+            playerTransform = transform.parent;
+        }
+        if (cameraTransform == null)
+        {
+            cameraTransform = Camera.main.transform;
+        }
+        currentLaggedDirection = transform.forward;
+
     }
 
     private void Update()
@@ -63,13 +86,27 @@ public class PlayerFlashlight : MonoBehaviour
                 toggleSwitch.Play();
             }
 
+            UpdateFlashlightRotation();
+
             if (flashlight.enabled)
             {
                 DrainBattery();
                 CheckForFlicker();
             }
         }
-        
+    }
+
+    private void UpdateFlashlightRotation()
+    {
+        // Always update rotation, even when flashlight is off
+        Vector3 targetDirection = cameraTransform.forward;
+        currentLaggedDirection = Vector3.Slerp(currentLaggedDirection, targetDirection, rotationLagSpeed * Time.deltaTime);
+
+        // Use LookRotation to create a rotation that looks in the lagged direction
+        Quaternion targetRotation = Quaternion.LookRotation(currentLaggedDirection, Vector3.up);
+
+        // Apply the rotation to the flashlight
+        transform.rotation = targetRotation;
     }
     private void ToggleFlashlight()
     {
