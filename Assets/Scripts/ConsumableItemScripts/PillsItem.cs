@@ -13,6 +13,9 @@ public class PillsItem : InventoryItem
     private AudioSource pillPickUp;
 
     [SerializeField]
+    private AudioSource pillConsume;
+
+    [SerializeField]
     private Text dialogueText;
 
     [SerializeField]
@@ -62,5 +65,6 @@ public class PillsItem : InventoryItem
     {
         Debug.Log("You have used a pill!");
         OnUsePills.Invoke(true);
+        pillConsume.Play();
     }
 }

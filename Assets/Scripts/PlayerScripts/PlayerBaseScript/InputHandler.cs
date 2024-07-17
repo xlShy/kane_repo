@@ -16,6 +16,8 @@ public class InputHandler : MonoBehaviour
     public static event Action<bool> OnKeyItemInventoryOpen;
     public static event Action<bool> OnJournalOpen;
 
+    [SerializeField] private AudioSource openAndCloseSound;
+
     private void OnEnable()
     {
         CanvasManager.OnCanvasEnabled += SetIsOnPuzzle;
@@ -41,14 +43,20 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             OpenUI(KeyCode.Tab, OnConsumableInventoryOpen);
+            openAndCloseSound.Play();
+
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
             OpenUI(KeyCode.B, OnKeyItemInventoryOpen);
+            openAndCloseSound.Play();
+
         }
         else if(Input.GetKeyDown(KeyCode.J))
         {
             OpenUI(KeyCode.J, OnJournalOpen);
+            openAndCloseSound.Play();
+
         }
     }
 
@@ -57,7 +65,9 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(currentOpenedUIKey))
         {
             CloseUI();
+            openAndCloseSound.Play();
         }
+
     }
 
     private void OpenUI(KeyCode key, Action<bool> openEvent)
