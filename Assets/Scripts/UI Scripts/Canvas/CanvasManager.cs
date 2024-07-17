@@ -52,6 +52,10 @@ public class CanvasManager : CanvasToggler
         currentEnabledCanvas = null;
         foreach (GameObject canvas in canvasList)
         {
+            if(canvas == null)
+            {
+                return;
+            }
             if (canvas.activeSelf)
             {
                 currentEnabledCanvas = canvas;

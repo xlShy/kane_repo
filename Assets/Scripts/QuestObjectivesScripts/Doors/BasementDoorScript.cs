@@ -2,23 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasementDoorScript : MonoBehaviour
+public class BasementDoorScript : InteractableObject
 {
-    private BathroomDoor doorSystemScript;
+    private DoorBase doorBase;
+    private Level1Completed level1Completed;
+
+    [SerializeField] private float openSpeed = 5f;
     private void OnEnable()
     {
         LevelManager.OnCompleteLevel1 += UnlockDoor;
     }
     private void Awake()
     {
-        doorSystemScript = GetComponent<BathroomDoor>();
+        doorBase = GetComponent<DoorBase>();
+        level1Completed = GetComponent<Level1Completed>();
     }
     private void Start()
+    {        
+        doorBase.LockDoor();
+    }
+    public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        //doorSystemScript.LockDoor();
+        if (!doorBase.isOpen && doorBase.canOpen)
+        {
+            doorBase.OpenDoor(openSpeed);
+            level1Completed.CompleteLevel1();
+        }
+        else if (!doorBase.isOpen && !doorBase.canOpen)
+        {
+            doorBase.doorIsLocked.Play();
+        }
+        else if (doorBase.isOpen)
+        {
+            doorBase.CloseDoor(openSpeed);
+        }
     }
     private void UnlockDoor()
     {
-        //doorSystemScript.UnlockDoor();
+        print("basement is open");
+        doorBase.UnlockDoor();
     }
 }
