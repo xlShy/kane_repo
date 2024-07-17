@@ -561,6 +561,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4363477045500602218, guid: 008088181c3de244894b8f959d6d1655, type: 3}
   m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &369417926 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8387797993357071968, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+  m_PrefabInstance: {fileID: 6525298437781991052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &474677514 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -870,6 +875,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9683cd3b53b3e4eaf027593d6ee9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &858545971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2414199687746574192, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+  m_PrefabInstance: {fileID: 1069602075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d89fcb52c3e514c8b2f0eef61b5a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &895023302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346840863445851838, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
+  m_PrefabInstance: {fileID: 1634221687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &919784533 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
@@ -985,6 +1006,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage1Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 2414199687746574192, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: chemicalEventScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 2414199687746574192, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: chemicalMixingPlaceScript
+      value: 
+      objectReference: {fileID: 2093657872}
+    - target: {fileID: 2414199687746574192, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: gameObjectsWithLights.Array.data[0]
+      value: 
+      objectReference: {fileID: 895023302}
     - target: {fileID: 6528030965878477678, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.635544
@@ -1543,16 +1576,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: itemDescription
-      value: 'Fit for the main door.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: inventoryItemImage
-      value: 
-      objectReference: {fileID: 21300000, guid: 1d96e6a3ed7a5474e9365b01d6de9dda, type: 3}
     - target: {fileID: 2783313756227964328, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1617,6 +1640,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lightManager
+      value: 
+      objectReference: {fileID: 858545971}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
@@ -2524,6 +2551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 200034572244723231, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: doorIsLocked
+      value: 
+      objectReference: {fileID: 369417926}
     - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: chemMixTriggerScript
       value: 

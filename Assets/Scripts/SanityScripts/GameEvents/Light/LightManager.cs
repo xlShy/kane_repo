@@ -23,6 +23,7 @@ public class LightManager : MonoBehaviour, ISwitchable
     {
         chemicalEventScript.chemicalMixingEventInitiate.AddListener(EnableLightFlicker);
         chemicalMixingPlaceScript.puzzleComplete.AddListener(DisableLightFlicker);
+
         InitializeManagedLights();
         TurnOffAll();
     }

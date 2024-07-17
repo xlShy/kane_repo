@@ -1917,7 +1917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2778712084195172504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3848,7 +3848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6884107898483256969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3961,7 +3961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interfaceObject: {fileID: 0}
+  interfaceObject: {fileID: 4348359172995631464}
   onCloseInterface: {fileID: 1373862751000603515}
   interfaceClosed:
     m_PersistentCalls:
@@ -5153,8 +5153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   itemName: Entrance Key
-  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
-  itemDescription: 'Needed for the office door.
+  inventoryItemImage: {fileID: 21300000, guid: 1d96e6a3ed7a5474e9365b01d6de9dda, type: 3}
+  itemDescription: 'Fit for the main door.
 
 '
   doorId: 1

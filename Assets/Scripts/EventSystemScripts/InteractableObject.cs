@@ -17,7 +17,10 @@ public class InteractableObject : MonoBehaviour, IInteractable
     private void OnEnable()
     {
         Inventory.onInventoryFull += InventoryFull;
-        mixingScript.resetInteractableState.AddListener(ResetPuzzle);
+        if (mixingScript != null)
+        {
+            mixingScript.resetInteractableState.AddListener(ResetPuzzle);
+        }
     }
 
     public virtual void Interact(int itemInteractedCase, Inventory inventory)
