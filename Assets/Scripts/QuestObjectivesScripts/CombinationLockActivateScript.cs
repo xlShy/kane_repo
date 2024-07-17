@@ -29,6 +29,7 @@ public class CombinationLockActivateScript : InteractableObject
     public UnityEvent onLockPuzzleCompletion;
     //journal event
     public static PuzzleStatus.onCompletedEvents OnCombinationLockComplete;
+    public bool isPuzzleComplete = false;
 
     private void Start()
     {
@@ -61,6 +62,7 @@ public class CombinationLockActivateScript : InteractableObject
     }
     private void OnCorrectCombinationEntered()
     {
+        isPuzzleComplete = true;
         readableDocument.SetActive(true);
         onPuzzleSuccess.TriggerDialogue();
         combinationCanvas.SetActive(false);

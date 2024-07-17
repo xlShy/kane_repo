@@ -328,6 +328,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   dialogueContent:
   - I guess I have to get the right code...
+  - I guess I have to get the right code...
   dialogueDuration: 3
   isRepeating: 0
 --- !u!114 &8685965103372349272
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interfaceObject: {fileID: 0}
+  interfaceObject: {fileID: 675867482575755741}
   onCloseInterface: {fileID: 1128098754795242724}
   interfaceClosed:
     m_PersistentCalls:
@@ -4358,7 +4359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interfaceObject: {fileID: 0}
+  interfaceObject: {fileID: 6689323885949704161}
   onCloseInterface: {fileID: 1041760393081750001}
   interfaceClosed:
     m_PersistentCalls:
@@ -5019,7 +5020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interfaceObject: {fileID: 0}
+  interfaceObject: {fileID: 8789582139225666972}
   onCloseInterface: {fileID: 9056457350863001857}
   interfaceClosed:
     m_PersistentCalls:
@@ -5615,6 +5616,7 @@ MonoBehaviour:
   onLockPuzzleCompletion:
     m_PersistentCalls:
       m_Calls: []
+  isPuzzleComplete: 0
 --- !u!65 &2829535861009964230
 BoxCollider:
   m_ObjectHideFlags: 0

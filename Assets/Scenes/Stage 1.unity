@@ -1274,22 +1274,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPromptCanvas (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6940918242239835815, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6940918242239835815, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6940918242239835815, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6940918242239835815, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8771438145827458093, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1575,6 +1559,10 @@ PrefabInstance:
       propertyPath: eventScript
       value: 
       objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 3200428893374409781, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1779987973}
     - target: {fileID: 3318099560819422385, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1615,10 +1603,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 5250365410401366238, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 5431916737317676389, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1631,10 +1615,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: lightManager
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 

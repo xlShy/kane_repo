@@ -7,19 +7,15 @@ public class DialogueTriggerScript : MonoBehaviour
 {
     [SerializeField]
     private Text dialogueText;
-
     [SerializeField]
     private List<string> dialogueContent;
-
     [SerializeField]
     private float dialogueDuration;
-
     [SerializeField]
     private bool isRepeating;
-
     private bool alreadyActivated = false;
-    private static Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
-    private static Coroutine dialogueCoroutine;
+    private Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
+    private Coroutine dialogueCoroutine;
     private int currentDialogueIndex = 0;
 
     private class DialogueInfo
@@ -32,12 +28,12 @@ public class DialogueTriggerScript : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.Log("I am called.");
         if (!alreadyActivated && dialogueContent.Count > 0)
         {
             EnqueueDialogue();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         TriggerDialogue();
@@ -60,37 +56,43 @@ public class DialogueTriggerScript : MonoBehaviour
             IsRepeating = isRepeating,
             Trigger = this
         };
-
         dialogueQueue.Enqueue(info);
 
         if (dialogueCoroutine == null)
         {
-            dialogueCoroutine = StartCoroutine(ProcessDialogueQueue()); 
+            Debug.Log("Starting new dialogue coroutine.");
+            dialogueCoroutine = StartCoroutine(ProcessDialogueQueue());
+        }
+        else
+        {
+            Debug.Log("Dialogue coroutine already running. Enqueueing only.");
         }
     }
 
-    private static IEnumerator ProcessDialogueQueue()
+    private IEnumerator ProcessDialogueQueue()
     {
         while (dialogueQueue.Count > 0)
         {
             DialogueInfo currentDialogue = dialogueQueue.Dequeue();
-            yield return currentDialogue.Trigger.DisplayAllDialogues(currentDialogue);
+            yield return DisplayAllDialogues(currentDialogue);
         }
         dialogueCoroutine = null;
     }
 
     private IEnumerator DisplayAllDialogues(DialogueInfo info)
     {
-        for (int i = 0; i < dialogueContent.Count; i++)
+        Debug.Log($"Starting to display dialogues. Count: {info.Content.Count}");
+        for (int i = 0; i < info.Content.Count; i++)
         {
+            Debug.Log($"Displaying dialogue {i + 1}: {info.Content[i]}");
             dialogueText.gameObject.SetActive(true);
-            dialogueText.text = dialogueContent[i];
-
-            yield return new WaitForSeconds(dialogueDuration);
+            dialogueText.text = info.Content[i];
+            Debug.Log($"Text component text set to: {dialogueText.text}");
+            yield return new WaitForSeconds(info.Duration);
             dialogueText.gameObject.SetActive(false);
         }
-
-        if (isRepeating)
+        Debug.Log("Finished displaying all dialogues");
+        if (info.IsRepeating)
         {
             alreadyActivated = false;
         }

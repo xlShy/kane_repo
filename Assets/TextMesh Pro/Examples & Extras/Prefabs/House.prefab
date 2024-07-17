@@ -85598,12 +85598,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 5997514656751849027}
+  interfaceObject: {fileID: 5997514656751849027}
   onCloseInterface: {fileID: 0}
   interfaceClosed:
     m_PersistentCalls:
       m_Calls: []
   combinationLockActivate: {fileID: 0}
+  grandfatherClock: {fileID: 0}
 --- !u!65 &8516421106687785469
 BoxCollider:
   m_ObjectHideFlags: 0

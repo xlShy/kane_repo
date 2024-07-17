@@ -29,7 +29,7 @@ public class InterfaceOnClose : MonoBehaviour
     private void CloseInterface()   
     {
         interfaceClosed.Invoke();
-        if (onCloseInterface != null && (grandfatherClock == null || !grandfatherClock.isPuzzleComplete))
+        if (onCloseInterface != null && (grandfatherClock == null || !grandfatherClock.isPuzzleComplete) && (combinationLockActivate == null || !combinationLockActivate.isPuzzleComplete))
         {
             Debug.Log("call for dialogue");
             onCloseInterface.TriggerDialogue();
