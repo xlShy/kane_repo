@@ -32,6 +32,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        Debug.Log("I am called.");
         if (!alreadyActivated && dialogueContent.Count > 0)
         {
             EnqueueDialogue();

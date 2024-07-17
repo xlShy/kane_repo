@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class InterfaceOnClose : MonoBehaviour
 {
     [SerializeField]
-    private GameObject gameObject;
+    private GameObject interfaceObject;
 
     [SerializeField]
     private DialogueTriggerScript onCloseInterface;
@@ -16,20 +16,22 @@ public class InterfaceOnClose : MonoBehaviour
     public UnityEvent interfaceClosed;
 
     [SerializeField] private CombinationLockActivateScript combinationLockActivate;
+    [SerializeField] private GrandfatherClock grandfatherClock;
  
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && interfaceObject.activeSelf)
         {
             CloseInterface();
         }
     }
 
-    private void CloseInterface()
+    private void CloseInterface()   
     {
         interfaceClosed.Invoke();
-        if (onCloseInterface != null)
+        if (onCloseInterface != null && (grandfatherClock == null || !grandfatherClock.isPuzzleComplete))
         {
+            Debug.Log("call for dialogue");
             onCloseInterface.TriggerDialogue();
         }
         if (combinationLockActivate != null)
@@ -37,7 +39,7 @@ public class InterfaceOnClose : MonoBehaviour
             combinationLockActivate.CheckCombinationOnClose();
         }
 
-        gameObject.SetActive(false);
+        interfaceObject.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         

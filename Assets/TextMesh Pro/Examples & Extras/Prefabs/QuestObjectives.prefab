@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8450454967982389235}
   - component: {fileID: 341724866842679659}
   - component: {fileID: 5008488419646140202}
-  - component: {fileID: 6065287899974066447}
   m_Layer: 5
   m_Name: CombinationLockPanel
   m_TagString: Untagged
@@ -99,24 +98,6 @@ MonoBehaviour:
   - {fileID: 3991988285756226548}
   - {fileID: 6494515101993682527}
   isCorrect: 0
---- !u!114 &6065287899974066447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675867482575755741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObject: {fileID: 675867482575755741}
-  onCloseInterface: {fileID: 1128098754795242724}
-  interfaceClosed:
-    m_PersistentCalls:
-      m_Calls: []
-  combinationLockActivate: {fileID: 476019505483191106}
 --- !u!1 &685177022639976834
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +222,7 @@ GameObject:
   - component: {fileID: 7910709036731211080}
   - component: {fileID: 4009944966873280800}
   - component: {fileID: 1128098754795242724}
+  - component: {fileID: 8685965103372349272}
   m_Layer: 5
   m_Name: CombinationCanvas
   m_TagString: Untagged
@@ -346,8 +328,27 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   dialogueContent:
   - I guess I have to get the right code...
-  dialogueDuration: 2
+  dialogueDuration: 3
   isRepeating: 0
+--- !u!114 &8685965103372349272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019960403373478890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceObject: {fileID: 0}
+  onCloseInterface: {fileID: 1128098754795242724}
+  interfaceClosed:
+    m_PersistentCalls:
+      m_Calls: []
+  combinationLockActivate: {fileID: 476019505483191106}
+  grandfatherClock: {fileID: 0}
 --- !u!1 &1429806743596468535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,8 +1711,6 @@ GameObject:
   - component: {fileID: 5872008868151653940}
   - component: {fileID: 4165712029256543465}
   - component: {fileID: 3544235737839487335}
-  - component: {fileID: 5250365410401366238}
-  - component: {fileID: 1628154643572299277}
   - component: {fileID: 6847741487301013686}
   - component: {fileID: 6244161011001130834}
   m_Layer: 0
@@ -1779,41 +1778,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5250365410401366238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303823185850639545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
-  dialogueContent:
-  - Something can be done with this clock...
-  dialogueDuration: 3
-  isRepeating: 0
---- !u!114 &1628154643572299277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303823185850639545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObject: {fileID: 4303823185850639545}
-  onCloseInterface: {fileID: 5250365410401366238}
-  interfaceClosed:
-    m_PersistentCalls:
-      m_Calls: []
-  combinationLockActivate: {fileID: 0}
 --- !u!114 &6847741487301013686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1797,7 @@ MonoBehaviour:
   minuteHandAngleTolerance: 5
   hourHandAngleTolerance: 5
   howOftenCheck: 0.5
-  closeInterfaceScript: {fileID: 1628154643572299277}
+  closeInterfaceScript: {fileID: 206077933338092702}
   onPuzzleCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -3996,12 +3960,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 7834279399339424612}
+  interfaceObject: {fileID: 0}
   onCloseInterface: {fileID: 1373862751000603515}
   interfaceClosed:
     m_PersistentCalls:
       m_Calls: []
   combinationLockActivate: {fileID: 0}
+  grandfatherClock: {fileID: 0}
 --- !u!1 &8223693161518602548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,6 +3979,8 @@ GameObject:
   - component: {fileID: 4192732047217050717}
   - component: {fileID: 8359063171714368865}
   - component: {fileID: 6620395277785796448}
+  - component: {fileID: 206077933338092702}
+  - component: {fileID: 7552794503659533553}
   m_Layer: 0
   m_Name: PuzzleCanvas
   m_TagString: Untagged
@@ -4104,6 +4071,42 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &206077933338092702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223693161518602548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceObject: {fileID: 4303823185850639545}
+  onCloseInterface: {fileID: 7552794503659533553}
+  interfaceClosed:
+    m_PersistentCalls:
+      m_Calls: []
+  combinationLockActivate: {fileID: 0}
+  grandfatherClock: {fileID: 6333681135080983005}
+--- !u!114 &7552794503659533553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223693161518602548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Something can be done with this clock...
+  dialogueDuration: 3
+  isRepeating: 0
 --- !u!1 &8789582139225666972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,12 +4358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 6689323885949704161}
+  interfaceObject: {fileID: 0}
   onCloseInterface: {fileID: 1041760393081750001}
   interfaceClosed:
     m_PersistentCalls:
       m_Calls: []
   combinationLockActivate: {fileID: 0}
+  grandfatherClock: {fileID: 0}
 --- !u!114 &1041760393081750001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5015,12 +5019,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a443271d08529a0408b8aaa925c0038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 8789582139225666972}
+  interfaceObject: {fileID: 0}
   onCloseInterface: {fileID: 9056457350863001857}
   interfaceClosed:
     m_PersistentCalls:
       m_Calls: []
   combinationLockActivate: {fileID: 476019505483191106}
+  grandfatherClock: {fileID: 0}
 --- !u!114 &9056457350863001857
 MonoBehaviour:
   m_ObjectHideFlags: 0
