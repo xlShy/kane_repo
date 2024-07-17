@@ -8,6 +8,7 @@ public class BasementDoorScript : InteractableObject
     private Level1Completed level1Completed;
 
     [SerializeField] private float openSpeed = 5f;
+    [SerializeField] private doorLockerScript doorLockerScript;
     private void OnEnable()
     {
         LevelManager.OnCompleteLevel1 += UnlockDoor;
@@ -18,8 +19,8 @@ public class BasementDoorScript : InteractableObject
         level1Completed = GetComponent<Level1Completed>();
     }
     private void Start()
-    {        
-        doorBase.LockDoor();
+    {
+        doorBase.canOpen = false;
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
