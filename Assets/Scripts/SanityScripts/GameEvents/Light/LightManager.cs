@@ -7,14 +7,17 @@ public class LightManager : MonoBehaviour, ISwitchable
 {
     [Header("Insert Light Object Parent To Flicker")]
     [SerializeField] private List<GameObject> gameObjectsWithLights;
-
     [SerializeField] private List<Light> managedLights;
     [SerializeField] private List<Light> selectedLights;
-
     [SerializeField] private ChemicalMixingEventTrigger chemicalEventScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
 
+    [Header("Audio Settings")]
+    [SerializeField] private List<AudioClip> audioSequence;
+    [SerializeField] private AudioSource audioSource;
+
     private Coroutine flickerCoroutine;
+    private Coroutine audioCoroutine;
 
     //for testing
     private bool isLightOn;
@@ -23,7 +26,6 @@ public class LightManager : MonoBehaviour, ISwitchable
     {
         chemicalEventScript.chemicalMixingEventInitiate.AddListener(EnableLightFlicker);
         chemicalMixingPlaceScript.puzzleComplete.AddListener(DisableLightFlicker);
-
         InitializeManagedLights();
         TurnOffAll();
     }
@@ -41,10 +43,10 @@ public class LightManager : MonoBehaviour, ISwitchable
             else
             {
                 DisableLightFlicker();
-                
             }
         }
     }
+
     public void Toggle(bool toggleStatus)
     {
         foreach (var light in managedLights)
@@ -52,21 +54,29 @@ public class LightManager : MonoBehaviour, ISwitchable
             light.enabled = toggleStatus;
         }
     }
+
     public void TurnOnAll()
     {
         Toggle(true);
     }
+
     public void TurnOffAll()
     {
         Toggle(false);
     }
+
     public void EnableLightFlicker()
     {
         if (flickerCoroutine == null)
         {
             flickerCoroutine = StartCoroutine(FlickerLights());
         }
+        if (audioCoroutine == null)
+        {
+            audioCoroutine = StartCoroutine(PlayAudioSequence());
+        }
     }
+
     public void DisableLightFlicker()
     {
         if (flickerCoroutine != null)
@@ -77,29 +87,35 @@ public class LightManager : MonoBehaviour, ISwitchable
             // Ensure all lights are turned on after stopping the flicker
             TurnOnAll();
         }
+        if (audioCoroutine != null)
+        {
+            StopCoroutine(audioCoroutine);
+            audioCoroutine = null;
+            audioSource.Stop();
+        }
     }
+
     private void InitializeManagedLights()
     {
         managedLights = new List<Light>();
-
         foreach (var gameObject in gameObjectsWithLights)
         {
             Light[] lights = gameObject.GetComponentsInChildren<Light>();
             managedLights.AddRange(lights);
         }
     }
+
     private void SelectLightToFlicker()
     {
         if (managedLights.Count == 0) return;
-
         int selectedLightsNumber = Random.Range(0, managedLights.Count);
         Light selectedLight = managedLights[selectedLightsNumber];
-
         if (!selectedLights.Contains(selectedLight))
         {
             selectedLights.Add(selectedLight);
         }
     }
+
     private IEnumerator FlickerLights()
     {
         while (true)
@@ -109,8 +125,20 @@ public class LightManager : MonoBehaviour, ISwitchable
             {
                 light.enabled = !light.enabled;
             }
-
             yield return new WaitForSeconds(Random.Range(0.05f, 0.2f));
+        }
+    }
+
+    private IEnumerator PlayAudioSequence()
+    {
+        while (true)
+        {
+            foreach (var clip in audioSequence)
+            {
+                audioSource.clip = clip;
+                audioSource.Play();
+                yield return new WaitForSeconds(clip.length);
+            }
         }
     }
 }
