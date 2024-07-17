@@ -226,7 +226,7 @@ public class DebugController : MonoBehaviour
     {
         if (sanityHandler != null)
         {
-            sanityHandler.decreasePercentage = sanityHandler.decreasePercentage == 0 ? 1 : 0;
+            sanityHandler.decreasePercentage = sanityHandler.decreasePercentage == 0 ? 0.01f : 0;
         }
     }
 
