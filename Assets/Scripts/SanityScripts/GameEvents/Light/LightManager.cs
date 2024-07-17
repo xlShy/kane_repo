@@ -15,6 +15,7 @@ public class LightManager : MonoBehaviour, ISwitchable
     [Header("Audio Settings")]
     [SerializeField] private List<AudioClip> audioSequence;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private float audioDelay = 0.5f; // New variable for audio delay
 
     private Coroutine flickerCoroutine;
     private Coroutine audioCoroutine;
@@ -137,7 +138,7 @@ public class LightManager : MonoBehaviour, ISwitchable
             {
                 audioSource.clip = clip;
                 audioSource.Play();
-                yield return new WaitForSeconds(clip.length);
+                yield return new WaitForSeconds(clip.length + audioDelay); // Added delay
             }
         }
     }
