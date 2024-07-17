@@ -12,6 +12,7 @@ public class CanvasToggler : MonoBehaviour
     [Header("Puzzle UI Canvas")]
     [SerializeField] protected GameObject grandFathersClock;
     [SerializeField] protected GameObject combinationLock;
+    [SerializeField] protected GameObject tvInterface;
     public void OnEnable()
     {
         InputHandler.OnConsumableInventoryOpen += SetConsumableOpen;

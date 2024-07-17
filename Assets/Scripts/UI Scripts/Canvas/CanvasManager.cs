@@ -26,6 +26,7 @@ public class CanvasManager : CanvasToggler
         PuzzleCanvas = new List<GameObject>();
         PuzzleCanvas.Add(grandFathersClock);
         PuzzleCanvas.Add(combinationLock);
+        PuzzleCanvas.Add(tvInterface);
 
         DisableAllCanvas(UICanvas);
         DisableAllCanvas(PuzzleCanvas);

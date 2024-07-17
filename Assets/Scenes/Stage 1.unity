@@ -1753,6 +1753,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+--- !u!1 &3129807459506583907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4348359172995631464, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3589793432761451732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2146,6 +2151,10 @@ PrefabInstance:
       propertyPath: journal
       value: 
       objectReference: {fileID: 47093409}
+    - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: tvInterface
+      value: 
+      objectReference: {fileID: 3129807459506583907}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: combinationLock
       value: 
