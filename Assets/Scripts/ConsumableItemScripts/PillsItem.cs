@@ -9,6 +9,8 @@ public class PillsItem : InventoryItem
     [SerializeField]
     public InteractableObject interactableScript;
 
+    [SerializeField]
+    private AudioSource pillPickUp;
 
     [SerializeField]
     private Text dialogueText;
@@ -38,6 +40,7 @@ public class PillsItem : InventoryItem
         //Debug.Log("I am called to make dialogue!");
         capsuleCollider.enabled = false;
         meshRenderer.enabled = false;
+        pillPickUp.Play();
 
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = dialogueContent;
