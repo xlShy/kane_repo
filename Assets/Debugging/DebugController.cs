@@ -18,7 +18,6 @@ public class DebugController : MonoBehaviour
     public GameObject pillPrefab;               // Reference to the pill prefab
     public Transform playerTransform;           // Reference to the player's transform
     public Button spawnPillButton;              // Reference to the spawn pill button
-    public Button resetFlashlightDrainButton;   // Reference to the reset flashlight drain button
     public Button resetSanityDrainButton;       // Reference to the reset sanity drain button
     public GameObject sanityGameObject;  
     public GameObject flashlightGameObject;
@@ -88,11 +87,6 @@ public class DebugController : MonoBehaviour
             spawnPillButton.onClick.AddListener(SpawnPillAtPlayerFeet);
         }
 
-        // Add listeners for the reset drain buttons
-        if (resetFlashlightDrainButton != null)
-        {
-            resetFlashlightDrainButton.onClick.AddListener(ResetFlashlightDrain);
-        }
 
         if (resetSanityDrainButton != null)
         {
@@ -228,19 +222,11 @@ public class DebugController : MonoBehaviour
         }
     }
 
-    private void ResetFlashlightDrain()
-    {
-        if (playerFlashlight != null)
-        {
-            playerFlashlight.batteryDrainRate = 0; // Set battery drain rate to 0
-        }
-    }
-
     private void ResetSanityDrain()
     {
         if (sanityHandler != null)
         {
-            sanityHandler.decreasePercentage = 0; // Set sanity decrease percentage to 0
+            sanityHandler.decreasePercentage = sanityHandler.decreasePercentage == 0 ? 1 : 0;
         }
     }
 
