@@ -530,10 +530,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6405957713309085541, guid: 008088181c3de244894b8f959d6d1655, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -581,10 +577,6 @@ PrefabInstance:
     - target: {fileID: 1273777867340750400, guid: 76e88e93c6136bb4f9a7674038c0e8f0, type: 3}
       propertyPath: m_Name
       value: PuzzleJournalv2Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1273777867340750400, guid: 76e88e93c6136bb4f9a7674038c0e8f0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3266138289024318145, guid: 76e88e93c6136bb4f9a7674038c0e8f0, type: 3}
       propertyPath: m_Pivot.x
@@ -1551,6 +1543,16 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: itemDescription
+      value: 'Fit for the main door.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: inventoryItemImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d96e6a3ed7a5474e9365b01d6de9dda, type: 3}
     - target: {fileID: 2783313756227964328, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1744,6 +1746,16 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 2448472378738245267, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: itemDescription
+      value: 'Fit for the office door.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448472378738245267, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: inventoryItemImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d96e6a3ed7a5474e9365b01d6de9dda, type: 3}
     - target: {fileID: 3640679432089914702, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_Name
       value: Gatherables

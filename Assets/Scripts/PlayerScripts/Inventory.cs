@@ -10,7 +10,7 @@ using Unity.VisualScripting.Antlr3.Runtime;
 
 public class Inventory : MonoBehaviour
 {
-    private bool isKeyOpen = false;
+    //private bool isKeyOpen = false;
     [SerializeField] private GameObject keyItemInventory;
 
     private bool isConsumablesOpen = false;
