@@ -20,6 +20,8 @@ public class ChemicalMixingPlace : InteractableObject
     [SerializeField] private string[] failItems = { "Salt", "Pepper" };
     [SerializeField] private InventoryItem deRustingMixture;
     [SerializeField] private GameObject deRustBucket;
+    [SerializeField] private AudioSource wrongMixture;
+    [SerializeField] private AudioSource correctMixture;
 
     public UnityEvent resetInteractableState;
     public UnityEvent puzzleComplete;
@@ -81,6 +83,7 @@ public class ChemicalMixingPlace : InteractableObject
         // Check puzzle state
         if (hasAllRequiredItems && !hasFailItem)
         {
+            correctMixture.Play();
             Debug.Log("Puzzle Solved!");
             puzzleComplete.Invoke();
             isPuzzleSolved = true;
@@ -88,6 +91,7 @@ public class ChemicalMixingPlace : InteractableObject
         }
         else
         {
+            wrongMixture.Play();
             Debug.Log("Fail!");
             if (hasFailItem)
             {
