@@ -49,6 +49,7 @@ MonoBehaviour:
   journal: {fileID: 0}
   grandFathersClock: {fileID: 0}
   combinationLock: {fileID: 0}
+  tvInterface: {fileID: 0}
   currentEnabledCanvas: {fileID: 0}
   isCanvasFound: 0
 --- !u!1 &104341112640658525
@@ -178,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ddolObjects:
   - {fileID: 6456800679941445462}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   sceneName: Stage 2
@@ -317,6 +319,7 @@ Transform:
   - {fileID: 2191817601831526522}
   - {fileID: 1516197542264152265}
   - {fileID: 6526319807885310062}
+  - {fileID: 5201045950438302365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8507369729350834000
@@ -331,7 +334,6 @@ GameObject:
   - component: {fileID: 258854053072693268}
   - component: {fileID: 8847387387963992137}
   - component: {fileID: 2508184436290748819}
-  - component: {fileID: 1672251606044509478}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -400,17 +402,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sanityHandler: {fileID: 2593785832678190295}
   loadScene: {fileID: 2045642504428501571}
---- !u!114 &1672251606044509478
-MonoBehaviour:
+  sceneObjectsLoader: {fileID: 3933173937399866479}
+  sanityStatusEffect: {fileID: 864382233524305535}
+  player: {fileID: 0}
+  playerData: {fileID: 0}
+--- !u!1001 &7236087542827114876
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6508795903779757834}
+    m_Modifications:
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.635544
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.0676327
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.080122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612213481685385119, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+      propertyPath: m_Name
+      value: LocationManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+--- !u!4 &5201045950438302365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3190357183171462113, guid: 8f238180c708d0f4e809e06133408c08, type: 3}
+  m_PrefabInstance: {fileID: 7236087542827114876}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8507369729350834000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d5a80c9d48d0f41b899f3891b527ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sanityHandler: {fileID: 2593785832678190295}
-  loadScene: {fileID: 2045642504428501571}

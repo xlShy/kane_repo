@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc54b303a743ba648a6feeaaa0055e1f, type: 3}
-  m_Name: Level1
+  m_Script: {fileID: 11500000, guid: 46c94fe46be67124c92e9f5ec32ab510, type: 3}
+  m_Name: Scene2Transition
   m_EditorClassIdentifier: 
-  puzzles:
-  - {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
-  - {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
-  isLevelCompleted: 1
+  playerPositionOnSpawn: {fileID: 7822797509319417915, guid: 67adc17fd2778b94496ff4bd5bc23e14, type: 3}
+  sanityValueOnSpawn: 1

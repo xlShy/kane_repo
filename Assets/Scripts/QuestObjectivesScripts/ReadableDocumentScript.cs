@@ -26,6 +26,6 @@ public class ReadableDocumentScript : InteractableObject
     private void initiateFlickerEvent()
     {
         initiateFlicker.Invoke();
-        //sanity drain 
+        //sanity drain disable
     }
 }
