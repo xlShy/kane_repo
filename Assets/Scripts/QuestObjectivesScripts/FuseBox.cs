@@ -36,6 +36,7 @@ public class FuseBox : InteractableObject
     public bool isCompleted = false;
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
+        //checks if item is fuse, else return
         if (itemInteractedCase == 2)
         {
             List<InventoryItem> keyItems = inventory.GetKeyItems();
