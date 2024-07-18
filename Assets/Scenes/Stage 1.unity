@@ -566,11 +566,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4363477045500602218, guid: 008088181c3de244894b8f959d6d1655, type: 3}
   m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &369417926 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8387797993357071968, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-  m_PrefabInstance: {fileID: 6525298437781991052}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &474677514 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -1109,17 +1104,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61b96763fb4f5f84ba4e07506d84a9af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1127946112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-  m_PrefabInstance: {fileID: 3129807459506583906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf47cd80724f8d04799525d39f31bfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1165605060 stripped
@@ -2660,18 +2644,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 200034572244723231, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-      propertyPath: doorIsLocked
+    - target: {fileID: 85083095922066683, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: mixingScript
       value: 
-      objectReference: {fileID: 369417926}
+      objectReference: {fileID: 2093657872}
+    - target: {fileID: 85083095922066683, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: chemMixTriggerScript
+      value: 
+      objectReference: {fileID: 5435619986811776475}
+    - target: {fileID: 85083095922066683, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: chemicalMixingPlaceScript
+      value: 
+      objectReference: {fileID: 2093657872}
+    - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: mixingScript
+      value: 
+      objectReference: {fileID: 2093657872}
     - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: chemMixTriggerScript
       value: 
       objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-      propertyPath: combinationLockActivate
+      propertyPath: readableDocumentScript
       value: 
-      objectReference: {fileID: 1127946112}
+      objectReference: {fileID: 1515857779}
     - target: {fileID: 762162376022800104, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: chemicalMixingPlaceScript
       value: 
@@ -2716,14 +2712,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1772001438693697844, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-      propertyPath: chemMixTriggerScript
-      value: 
-      objectReference: {fileID: 5435619986811776475}
-    - target: {fileID: 1772001438693697844, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
-      propertyPath: chemicalMixingPlaceScript
-      value: 
-      objectReference: {fileID: 2093657872}
     - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: item
       value: 
