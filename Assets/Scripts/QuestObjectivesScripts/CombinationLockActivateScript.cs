@@ -68,8 +68,7 @@ public class CombinationLockActivateScript : InteractableObject
         combinationCanvas.SetActive(false);
         objectRenderer.material.color = Color.green;
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+
         onLockPuzzleCompletion.Invoke();
 
         //Add puzzle to completed in the level1

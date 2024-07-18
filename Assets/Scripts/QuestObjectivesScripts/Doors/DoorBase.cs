@@ -7,7 +7,6 @@ public class DoorBase : MonoBehaviour
 {
     public bool canOpen = true;
     public bool isOpen = false;
-    public bool isClosing = false;
     public bool isRotating = false;
 
     private Quaternion closedRotation;
@@ -41,65 +40,59 @@ public class DoorBase : MonoBehaviour
     }
     public void LockDoor()
     {
-        //Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
         StartCoroutine(CloseDoorAnimation(openSpeed));
         canOpen = false;
     }
 
     public void UnlockDoor()
     {
-        //Debug.Log("DoorSystemScript: LockDoor called. Setting canOpen to false.");
         StartCoroutine(CloseDoorAnimation(openSpeed));
         canOpen = true;
     }
 
     private IEnumerator OpenDoorAnimation(float openSpeed)
     {
-        isRotating = true;
-        while (isRotating)
+        if (isRotating)
         {
-            print("Open Door");
-            doorisOpen.Play();
-            while (Quaternion.Angle(doorAnchor.transform.rotation, openRotation) > 0.01f)
-            {
-                doorAnchor.transform.rotation = Quaternion.Lerp(doorAnchor.transform.rotation, openRotation, Time.deltaTime * openSpeed);
-                yield return null;
-            }
-            doorAnchor.transform.rotation = openRotation;
-            isOpen = true;
-            isRotating = false;
+            yield break;
         }
+        isRotating = true;
+        doorisOpen.Play();
+
+        var lerpValue = 0f;
+        var startRotation = doorAnchor.transform.rotation;
+        while (lerpValue < 1)
+        {
+            lerpValue += Time.deltaTime * openSpeed;
+            doorAnchor.transform.rotation = Quaternion.Lerp(startRotation, openRotation, lerpValue);
+            yield return null;
+        }
+        doorAnchor.transform.rotation = openRotation;
+        isOpen = true;
+        isRotating = false;
     }
 
     private IEnumerator CloseDoorAnimation(float openSpeed)
     {
+        if (isRotating)
+        {
+            yield break;
+        }
         isRotating = true;
-           print("Close Door");
-            if (isClosing)
-            {
-                //Debug.Log("DoorSystemScript: Door is already closing");
-                yield break;
-            }
+        doorisClosed.Play();
 
-            isClosing = true;
-            //Debug.Log("DoorSystemScript: CloseDoor coroutine started");
-            doorisClosed.Play();
+        var lerpValue = 0f;
+        var startRotation = doorAnchor.transform.rotation;
+        while (lerpValue < 1)
+        {
+            lerpValue += Time.deltaTime * openSpeed;
+            doorAnchor.transform.rotation = Quaternion.Lerp(startRotation, closedRotation, lerpValue);
+            yield return null;
+        }
 
+        doorAnchor.transform.rotation = closedRotation;
+        isOpen = false;
+        isRotating = false;
 
-            var lerpValue = 0f;
-            var startRotation = doorAnchor.transform.rotation;
-            while (lerpValue < 1)
-            {
-                lerpValue += Time.deltaTime * openSpeed;
-                doorAnchor.transform.rotation = Quaternion.Lerp(startRotation, closedRotation, lerpValue);
-                yield return null;
-            }
-
-            doorAnchor.transform.rotation = closedRotation;
-            isOpen = false;
-            isClosing = false;
-            //Debug.Log("DoorSystemScript: Door closed");
-            isRotating = false;
-    
     }
 }
