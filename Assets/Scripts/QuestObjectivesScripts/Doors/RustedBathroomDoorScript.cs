@@ -78,11 +78,11 @@ public class RustedBathroomDoor : InteractableObject
             doorBase.CloseDoor(openSpeed);
         }
     }
-    public void CloseDoorOnChemicalPuzzle()
-    {
-        doorBase.LockDoor();
-        doorBase.CloseDoor(openSpeed);
-    }
+    //public void CloseDoorOnChemicalPuzzle()
+    //{
+    //    doorBase.LockDoor();
+    //    doorBase.CloseDoor(openSpeed);
+    //}
     private void canBeMoved()
     {
         //Debug.Log("I am called to change the state of the furniture");
