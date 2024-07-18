@@ -6,11 +6,11 @@ using UnityEngine.Events;
 
 public class FurnitureToMoveScript : InteractableObject
 {
-    [SerializeField]private CombinationLockActivateScript combinationLockActivate;
+    [SerializeField] private ReadableDocumentScript readableDocumentScript;
 
     private void Start()
     {
-        combinationLockActivate.onLockPuzzleCompletion.AddListener(canBeMoved);
+        readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
     }
 
     private void canBeMoved()

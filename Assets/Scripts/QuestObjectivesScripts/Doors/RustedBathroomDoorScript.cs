@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BathroomDoor : InteractableObject
+public class RustedBathroomDoor : InteractableObject
 {
     [SerializeField] private DoorBase doorBase;
 
@@ -13,7 +13,11 @@ public class BathroomDoor : InteractableObject
 
     [SerializeField] private float openSpeed = 5f;
 
+    [SerializeField] private AudioSource deRustingAudioClip;
+
     private bool isClosing = false;
+    private bool isPuzzleCompleted = false;
+    private bool isDeRusted = false;
 
 
     private void Start()
@@ -38,11 +42,29 @@ public class BathroomDoor : InteractableObject
         if (chemicalMixingPlaceScript != null)
         {
             //washroom - chemical puzzle
-            chemicalMixingPlaceScript.puzzleComplete.AddListener(doorBase.UnlockDoor);
+            chemicalMixingPlaceScript.puzzleComplete.AddListener(OnPuzzleComplete);
         }
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
+        if (!isPuzzleCompleted)
+        {
+            base.Interact(itemInteractedCase, inventory);
+            return;
+        }
+
+        if (!isDeRusted)
+        {
+            InventoryItem deRustingMixture = inventory.GetItemByName("De-Rusting Mixture");
+            if (deRustingMixture != null)
+            {
+                inventory.RemoveKeyItem(deRustingMixture);
+                isDeRusted = true;
+
+                deRustingAudioClip.Play();
+                doorBase.UnlockDoor();
+            }
+        }
         if (!doorBase.isOpen && doorBase.canOpen)
         {
             doorBase.OpenDoor(openSpeed);
@@ -65,5 +87,10 @@ public class BathroomDoor : InteractableObject
     {
         //Debug.Log("I am called to change the state of the furniture");
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
+    }
+
+    private void OnPuzzleComplete()
+    {
+        isPuzzleCompleted = true;
     }
 }

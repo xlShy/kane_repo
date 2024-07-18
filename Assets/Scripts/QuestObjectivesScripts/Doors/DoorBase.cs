@@ -50,6 +50,8 @@ public class DoorBase : MonoBehaviour
         canOpen = true;
     }
 
+
+
     private IEnumerator OpenDoorAnimation(float openSpeed)
     {
         if (isRotating)

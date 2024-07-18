@@ -18,9 +18,13 @@ public class ChemicalMixingPlace : InteractableObject
 
     [SerializeField] private string[] requiredItems = { "Dish Soap", "Baking Soda" };
     [SerializeField] private string[] failItems = { "Salt", "Pepper" };
+    [SerializeField] private InventoryItem deRustingMixture;
+    [SerializeField] private GameObject deRustBucket;
 
     public UnityEvent resetInteractableState;
     public UnityEvent puzzleComplete;
+
+    private bool isPuzzleSolved = false;
 
     private void Start()
     {
@@ -30,6 +34,22 @@ public class ChemicalMixingPlace : InteractableObject
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
+        if (isPuzzleSolved)
+        {
+            gameObject.SetActive(false);
+
+            if (deRustingMixture != null)
+            {
+                inventory.AddKeyItem(deRustingMixture);
+                Debug.Log("Added De-Rusting Mixture to inventory!");
+            }
+            else
+            {
+                Debug.LogError("De-Rusting Mixture item is not assigned!");
+            }
+            return;
+        }
+
         bool hasAllRequiredItems = true;
         bool hasFailItem = false;
 
@@ -62,8 +82,9 @@ public class ChemicalMixingPlace : InteractableObject
         if (hasAllRequiredItems && !hasFailItem)
         {
             Debug.Log("Puzzle Solved!");
-            gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
             puzzleComplete.Invoke();
+            isPuzzleSolved = true;
+            deRustBucket.SetActive(true);
         }
         else
         {
