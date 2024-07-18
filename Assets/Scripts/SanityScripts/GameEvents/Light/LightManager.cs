@@ -9,7 +9,7 @@ public class LightManager : MonoBehaviour, ISwitchable
     [SerializeField] private List<GameObject> gameObjectsWithLights;
     [SerializeField] private List<Light> managedLights;
     [SerializeField] private List<Light> selectedLights;
-    [SerializeField] private ChemicalMixingEventTrigger chemicalEventScript;
+    [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
 
     [Header("Audio Settings")]
@@ -25,7 +25,7 @@ public class LightManager : MonoBehaviour, ISwitchable
 
     private void Start()
     {
-        chemicalEventScript.chemicalMixingEventInitiate.AddListener(EnableLightFlicker);
+        readableDocumentScript.initiateFlicker.AddListener(EnableLightFlicker);
         chemicalMixingPlaceScript.puzzleComplete.AddListener(DisableLightFlicker);
         InitializeManagedLights();
         TurnOffAll();

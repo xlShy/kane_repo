@@ -15,7 +15,7 @@ public class ChemicalMixingEventTrigger : MonoBehaviour
         if (!isTriggered)
         {
             Debug.Log("Activated Event!");
-            chemicalMixingEventInitiate.Invoke(); //LightManager & MixingIngredients
+            chemicalMixingEventInitiate.Invoke(); //MixingIngredients
             isTriggered = true;
         }
         

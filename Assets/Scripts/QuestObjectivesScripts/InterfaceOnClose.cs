@@ -17,7 +17,7 @@ public class InterfaceOnClose : MonoBehaviour
 
     [SerializeField] private CombinationLockActivateScript combinationLockActivate;
     [SerializeField] private GrandfatherClock grandfatherClock;
- 
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && interfaceObject.activeSelf)
@@ -28,7 +28,7 @@ public class InterfaceOnClose : MonoBehaviour
 
     private void CloseInterface()   
     {
-        interfaceClosed.Invoke();
+        interfaceClosed.Invoke(); // ReadableDocumentScript
         if (onCloseInterface != null && (grandfatherClock == null || !grandfatherClock.isPuzzleComplete) && (combinationLockActivate == null || !combinationLockActivate.isPuzzleComplete))
         {
             Debug.Log("call for dialogue");

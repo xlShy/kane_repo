@@ -601,6 +601,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
@@ -3149,6 +3150,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   keyItemInventory: {fileID: 0}
   doorBase: {fileID: 1725499300470154162}
   doorId: 2
@@ -4325,6 +4327,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   blueprintUI: {fileID: 6689323885949704161}
 --- !u!65 &1558486205238489162
 BoxCollider:
@@ -4488,6 +4491,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   tvInterface: {fileID: 4348359172995631464}
   staticTVObject: {fileID: 0}
   fuseBoxScript: {fileID: 5891905975665170735}
@@ -4756,6 +4760,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   isPuzzleComplete: 0
   puzzle: {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
   pEventHandler: {fileID: 0}
@@ -5007,7 +5012,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   readableDocumentUI: {fileID: 8789582139225666972}
+  interfaceOnCloseScript: {fileID: 2072668274115883948}
+  initiateFlicker:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2072668274115883948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5188,6 +5198,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
 --- !u!82 &548686554304627385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5370,6 +5381,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2998950969673084440}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8093797565198898528}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!4 &210311769801126224 stripped
 Transform:
@@ -5420,6 +5434,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 8093797565198898528}
 --- !u!114 &2998950969673084440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5434,14 +5449,111 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   itemName: Baking Soda
-  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
-  itemDescription: A mixing Ingredient for Mixing.
+  inventoryItemImage: {fileID: 21300000, guid: 3f6f3342ceb928940ac37246c8fc1dda, type: 3}
+  itemDescription: Baking soda is a white powder (sodium bicarbonate) used as a leavening
+    agent in baking and for cleaning purposes.
   ingredientState: 0
   newLayerMask:
     serializedVersion: 2
     m_Bits: 128
   eventScript: {fileID: 0}
   mixingScript: {fileID: 6343051102639992546}
+--- !u!82 &8093797565198898528
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693833464514096106}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &5267089743116883761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5611,6 +5723,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   puzzle: {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
   pEventHandler: {fileID: 0}
   combinationCanvas: {fileID: 675867482575755741}
@@ -5765,6 +5878,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   combinationLockActivate: {fileID: 476019505483191106}
 --- !u!23 &2463166906866977909
 MeshRenderer:
@@ -5894,6 +6008,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3982280696039279151}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4913275678535823086}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!4 &2386806244275191760 stripped
 Transform:
@@ -5944,6 +6061,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 4913275678535823086}
 --- !u!114 &3982280696039279151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5958,14 +6076,111 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   itemName: Dish Soap
-  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
-  itemDescription: A mixing Ingredient for Mixing.
+  inventoryItemImage: {fileID: 21300000, guid: c9b595a3d266b034a84a1f78515f048f, type: 3}
+  itemDescription: Dish soap is a liquid detergent used for cleaning dishes, utensils,
+    and kitchen surfaces, effectively removing grease and grime.
   ingredientState: 0
   newLayerMask:
     serializedVersion: 2
     m_Bits: 128
   eventScript: {fileID: 0}
   mixingScript: {fileID: 6343051102639992546}
+--- !u!82 &4913275678535823086
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050189354741048682}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8358407657360128720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6133,6 +6348,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
@@ -6684,6 +6900,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 0}
   newLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -6694,8 +6911,8 @@ MonoBehaviour:
   - Dish Soap
   - Baking Soda
   failItems:
-  - Salt
-  - Pepper
+  - Bleach
+  - Hydrogen Peroxide
   resetInteractableState:
     m_PersistentCalls:
       m_Calls: []
@@ -6872,6 +7089,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3645333236753927541}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3597127614601845869}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!1 &3497893784525973410 stripped
 GameObject:
@@ -6917,6 +7137,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 3597127614601845869}
 --- !u!114 &3645333236753927541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6930,15 +7151,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  itemName: Pepper
-  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
-  itemDescription: A mixing Ingredient for Mixing.
+  itemName: Hydrogen Peroxide
+  inventoryItemImage: {fileID: 21300000, guid: a34f90dbb8f09244a8c3c04c2751413a, type: 3}
+  itemDescription: Hydrogen peroxide is a colorless liquid used as a disinfectant,
+    bleach, and antiseptic, decomposing into water and oxygen.
   ingredientState: 0
   newLayerMask:
     serializedVersion: 2
     m_Bits: 128
   eventScript: {fileID: 0}
   mixingScript: {fileID: 6343051102639992546}
+--- !u!82 &3597127614601845869
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497893784525973410}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &4305673729574698264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
@@ -7009,6 +7327,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3574052198842279193}
+    - targetCorrespondingSourceObject: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 151878617040520222}
   m_SourcePrefab: {fileID: 100100000, guid: a79be8294cb52554f8437495f756303a, type: 3}
 --- !u!1 &3591023975231875697 stripped
 GameObject:
@@ -7054,6 +7375,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 151878617040520222}
 --- !u!114 &3574052198842279193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7067,15 +7389,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  itemName: Salt
-  inventoryItemImage: {fileID: 21300000, guid: 8e98c2f8d88f6cf4787450769dea6843, type: 3}
-  itemDescription: A mixing Ingredient for Mixing.
+  itemName: Bleach
+  inventoryItemImage: {fileID: 21300000, guid: 864bf9e7e42d7a3458083ef83541af1a, type: 3}
+  itemDescription: Bleach is a chemical solution, often containing sodium hypochlorite,
+    used for whitening, disinfecting, and removing stains.
   ingredientState: 0
   newLayerMask:
     serializedVersion: 2
     m_Bits: 128
   eventScript: {fileID: 0}
   mixingScript: {fileID: 6343051102639992546}
+--- !u!82 &151878617040520222
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591023975231875697}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &4223868386396549323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}

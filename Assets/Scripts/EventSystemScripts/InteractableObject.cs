@@ -14,6 +14,9 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
     public ChemicalMixingPlace mixingScript;
 
+    [SerializeField]
+    private AudioSource pickUpSound;
+
     private void OnEnable()
     {
         Inventory.onInventoryFull += InventoryFull;
@@ -55,6 +58,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
                     break;
                 case 3:
                     Debug.Log("Item Picked Up");
+                    pickUpSound.Play();
                     if (item != null)
                     {
                         inventory.AddItem(item);
