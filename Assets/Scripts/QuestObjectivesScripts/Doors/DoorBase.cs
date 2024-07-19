@@ -46,12 +46,8 @@ public class DoorBase : MonoBehaviour
 
     public void UnlockDoor()
     {
-        StartCoroutine(CloseDoorAnimation(openSpeed));
         canOpen = true;
     }
-
-
-
     private IEnumerator OpenDoorAnimation(float openSpeed)
     {
         if (isRotating)

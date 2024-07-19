@@ -15,7 +15,6 @@ public class BathroomDoor : InteractableObject
 
     private bool isClosing = false;
 
-
     private void Start()
     {
         if (doorLockerScript != null)
@@ -55,11 +54,6 @@ public class BathroomDoor : InteractableObject
         {
             doorBase.CloseDoor(openSpeed);
         }
-    }
-    public void CloseDoorOnChemicalPuzzle()
-    {
-        doorBase.LockDoor();
-        doorBase.CloseDoor(openSpeed);
     }
     private void canBeMoved()
     {

@@ -29,12 +29,12 @@ public class KeyRequiredDoorScript : InteractableObject
     {
         if (itemInteractedCase == 2)
         {
-            if (isUnlocked && !doorBase.isOpen)
+            if (isUnlocked && !doorBase.isOpen && doorBase.canOpen)
             {
                 doorBase.OpenDoor(openSpeed);
                 doorBase.isOpen = true;
             }
-            else if (isUnlocked && doorBase.isOpen)
+            else if (isUnlocked && doorBase.isOpen && doorBase.canOpen)
             {
                 doorBase.CloseDoor(openSpeed);
                 doorBase.isOpen = false;

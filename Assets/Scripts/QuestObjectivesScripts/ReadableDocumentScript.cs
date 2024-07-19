@@ -17,6 +17,8 @@ public class ReadableDocumentScript : InteractableObject
     [SerializeField] private AudioSource audioSource;
 
     public static event Action OnStartOfficePuzzle;
+
+    public bool isOfficeEventStarted = false;
     private void Start()
     {
         interfaceOnCloseScript.interfaceClosed.AddListener(initiateFlickerEvent);
@@ -32,9 +34,14 @@ public class ReadableDocumentScript : InteractableObject
 
     private void initiateFlickerEvent()
     {
-        initiateFlicker.Invoke();
-        //sanity drain disable
-        OnStartOfficePuzzle?.Invoke();
+        if (!isOfficeEventStarted)
+        {
+            initiateFlicker.Invoke();
+
+            //sanity drain disable
+            OnStartOfficePuzzle?.Invoke();
+            isOfficeEventStarted = true;
+        }
     }
 
     private void PlayRandomSound()

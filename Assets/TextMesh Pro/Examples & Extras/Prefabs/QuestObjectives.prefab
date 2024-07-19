@@ -3087,6 +3087,7 @@ GameObject:
   - component: {fileID: 1060029544229425909}
   - component: {fileID: 4388760316148266908}
   - component: {fileID: 6996239928742081672}
+  - component: {fileID: 1117437731728677004}
   - component: {fileID: 4077336841479108888}
   - component: {fileID: 1725499300470154162}
   - component: {fileID: 7866445537216799888}
@@ -3188,6 +3189,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2411793529154364387, guid: 6f2247db0bc23f340bb7f606c7a42106, type: 3}
+--- !u!114 &1117437731728677004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030810288969221700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b33391169a4f740a11248de3d22be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4077336841479108888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3214,7 +3227,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   noKey: {fileID: 7866445537216799888}
   yesKey: {fileID: 2783313756227964328}
-  openSpeed: 5
+  openSpeed: 2
   keyItems: []
 --- !u!114 &1725499300470154162
 MonoBehaviour:
@@ -5190,6 +5203,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 885e35c929e04f6499616abd276cfbb2, type: 3}
   - {fileID: 8300000, guid: 48b937269d97ef142a372aaa2316f278, type: 3}
   audioSource: {fileID: 6000564640111546225}
+  isOfficeEventStarted: 0
 --- !u!114 &2072668274115883948
 MonoBehaviour:
   m_ObjectHideFlags: 0
