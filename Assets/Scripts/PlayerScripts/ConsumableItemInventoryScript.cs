@@ -8,7 +8,6 @@ public class ConsumableItemInventoryScript : MonoBehaviour
 {
     [SerializeField] private Inventory inventoryScript;
     [SerializeField] private Image[] itemSlots;
-    private bool isCursorVisible = true;
 
     private void Start()
     {

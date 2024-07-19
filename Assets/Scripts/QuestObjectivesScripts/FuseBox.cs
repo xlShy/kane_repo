@@ -35,12 +35,17 @@ public class FuseBox : InteractableObject
     private Inventory currentInventory;
     public UnityEvent fuseBoxActivate;
 
-    public bool isCompleted = false;
-    public List<InventoryItem> keyItems;
+    [HideInInspector]    
+    public bool isCompleted = false; //determines if fusebox is solved
+    private List<InventoryItem> keyItems; //stores all the fuse inside this list from the inventory
 
     //fuse count settings
     private int itemCount = 0;
     private int currentCount = 0;
+
+    [Header("Fuse Objective")]
+    [SerializeField] private GameObject fuse1;
+    [SerializeField] private GameObject fuse2;
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (itemInteractedCase == 2)
@@ -79,6 +84,12 @@ public class FuseBox : InteractableObject
             placingFuse.Play();
             oneFuseDialogue.TriggerDialogue();           
             keyItemInventory.RemoveKeyItem(requiredFuse, 1);
+
+            if (fuse1.activeSelf)
+            {
+                fuse2.SetActive(true);
+            }
+            fuse1.SetActive(true);
         }
         else if (fuseCount == 2)
         {
@@ -87,6 +98,9 @@ public class FuseBox : InteractableObject
             fuseBoxActivate.Invoke(); // TV Script
             SolvePuzzle();      
             StartCoroutine(PlayFuseActivateSounds());
+
+            fuse1.SetActive(true); 
+            fuse2.SetActive(true);
             
         }
     }

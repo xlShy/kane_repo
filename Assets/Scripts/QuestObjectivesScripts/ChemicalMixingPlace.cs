@@ -107,11 +107,11 @@ public class ChemicalMixingPlace : InteractableObject
             {
                 Debug.Log("Kulang!");
             }
-            ResetPuzzle();
+            ResetChemicalPuzzle();
         }
     }
 
-    private void ResetPuzzle()
+    private void ResetChemicalPuzzle()
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
         resetInteractableState.Invoke();

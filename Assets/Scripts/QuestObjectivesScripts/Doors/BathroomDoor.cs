@@ -13,8 +13,6 @@ public class BathroomDoor : InteractableObject
 
     [SerializeField] private float openSpeed = 5f;
 
-    private bool isClosing = false;
-
     private void Start()
     {
         if (doorLockerScript != null)

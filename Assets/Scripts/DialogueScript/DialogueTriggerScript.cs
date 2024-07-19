@@ -16,7 +16,7 @@ public class DialogueTriggerScript : MonoBehaviour
     private bool alreadyActivated = false;
     private Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
     private Coroutine dialogueCoroutine;
-    private int currentDialogueIndex = 0;
+    //private int currentDialogueIndex = 0;
 
     private class DialogueInfo
     {

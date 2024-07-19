@@ -16,7 +16,6 @@ public class RustedBathroomDoor : InteractableObject
 
     [SerializeField] private AudioSource deRustingAudioClip;
 
-    private bool isClosing = false;
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
 
