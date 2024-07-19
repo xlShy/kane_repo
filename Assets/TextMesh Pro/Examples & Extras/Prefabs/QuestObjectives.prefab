@@ -607,6 +607,7 @@ MonoBehaviour:
   keyItemInventory: {fileID: 0}
   tvScript: {fileID: 0}
   lightManager: {fileID: 0}
+  requiredFuse: {fileID: 0}
   dialogueText: {fileID: 0}
   televisionGameObject: {fileID: 0}
   successFuseDialogue: {fileID: 7457317928170181038}
@@ -620,6 +621,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isCompleted: 0
+  keyItems: []
 --- !u!82 &6231460650155521361
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2228,7 +2230,7 @@ MonoBehaviour:
   itemName: De-Rusting Mixture
   inventoryItemImage: {fileID: 21300000, guid: 437a26b3fa3d66b428ec640799d926ae, type: 3}
   itemDescription: For De-rusting, well, rusted things.
-  interactableScript: {fileID: 0}
+  interactableScript: {fileID: 6343051102639992546}
   pillPickUp: {fileID: 0}
   pillConsume: {fileID: 0}
   dialogueText: {fileID: 0}
@@ -3206,6 +3208,7 @@ MonoBehaviour:
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  requiredKey: {fileID: 0}
   doorBase: {fileID: 1725499300470154162}
   doorId: 2
   dialogueText: {fileID: 0}
@@ -6690,6 +6693,7 @@ MonoBehaviour:
   keyItemInventory: {fileID: 0}
   tvScript: {fileID: 7253251579723395468}
   lightManager: {fileID: 0}
+  requiredFuse: {fileID: 0}
   dialogueText: {fileID: 0}
   televisionGameObject: {fileID: 3996929409546077778}
   successFuseDialogue: {fileID: 8852377614301990458}
@@ -6703,6 +6707,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isCompleted: 0
+  keyItems: []
 --- !u!82 &2044316645547992135
 AudioSource:
   m_ObjectHideFlags: 0

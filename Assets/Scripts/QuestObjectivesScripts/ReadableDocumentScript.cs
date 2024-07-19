@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class ReadableDocumentScript : InteractableObject
 
     [SerializeField] private List<AudioClip> openDocumentSound;
     [SerializeField] private AudioSource audioSource;
+
+    public static event Action OnStartOfficePuzzle;
     private void Start()
     {
         interfaceOnCloseScript.interfaceClosed.AddListener(initiateFlickerEvent);
@@ -31,13 +34,14 @@ public class ReadableDocumentScript : InteractableObject
     {
         initiateFlicker.Invoke();
         //sanity drain disable
+        OnStartOfficePuzzle?.Invoke();
     }
 
     private void PlayRandomSound()
     {
         if (openDocumentSound != null && openDocumentSound.Count > 0)
         {
-            int randomIndex = Random.Range(0, openDocumentSound.Count);
+            int randomIndex = UnityEngine.Random.Range(0, openDocumentSound.Count);
             AudioClip randomClip = openDocumentSound[randomIndex];
 
             if (randomClip != null)

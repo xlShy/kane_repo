@@ -60,12 +60,12 @@ public class DialogueTriggerScript : MonoBehaviour
 
         if (dialogueCoroutine == null)
         {
-            Debug.Log("Starting new dialogue coroutine.");
+            //Debug.Log("Starting new dialogue coroutine.");
             dialogueCoroutine = StartCoroutine(ProcessDialogueQueue());
         }
         else
         {
-            Debug.Log("Dialogue coroutine already running. Enqueueing only.");
+            //Debug.Log("Dialogue coroutine already running. Enqueueing only.");
         }
     }
 
@@ -81,17 +81,17 @@ public class DialogueTriggerScript : MonoBehaviour
 
     private IEnumerator DisplayAllDialogues(DialogueInfo info)
     {
-        Debug.Log($"Starting to display dialogues. Count: {info.Content.Count}");
+        //Debug.Log($"Starting to display dialogues. Count: {info.Content.Count}");
         for (int i = 0; i < info.Content.Count; i++)
         {
-            Debug.Log($"Displaying dialogue {i + 1}: {info.Content[i]}");
+            //Debug.Log($"Displaying dialogue {i + 1}: {info.Content[i]}");
             dialogueText.gameObject.SetActive(true);
             dialogueText.text = info.Content[i];
-            Debug.Log($"Text component text set to: {dialogueText.text}");
+            //Debug.Log($"Text component text set to: {dialogueText.text}");
             yield return new WaitForSeconds(info.Duration);
             dialogueText.gameObject.SetActive(false);
         }
-        Debug.Log("Finished displaying all dialogues");
+        //Debug.Log("Finished displaying all dialogues");
         if (info.IsRepeating)
         {
             alreadyActivated = false;

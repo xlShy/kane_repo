@@ -32,6 +32,10 @@ public class SanityHandler : MonoBehaviour
         PlayerLocationChecker.OnEnterShed += PlayerOnShed;
         PlayerLocationChecker.OnExitOutside += PlayerOnOutside;
         RoomChecker.OnRoomChanged += SetSanityDecreaseRate;
+
+        //office Event
+        ReadableDocumentScript.OnStartOfficePuzzle += DisableSanity;
+        ChemicalMixingPlace.OnCompleteOfficePuzzle += EnableSanity;
     }
     private void OnDisable()
     {
@@ -39,6 +43,10 @@ public class SanityHandler : MonoBehaviour
         PlayerLocationChecker.OnEnterShed -= PlayerOnShed;
         PlayerLocationChecker.OnExitOutside -= PlayerOnOutside;
         RoomChecker.OnRoomChanged -= SetSanityDecreaseRate;
+
+        //office Event
+        ReadableDocumentScript.OnStartOfficePuzzle -= DisableSanity;
+        ChemicalMixingPlace.OnCompleteOfficePuzzle -= EnableSanity;
     }
     private void Update()
     {
@@ -96,5 +104,13 @@ public class SanityHandler : MonoBehaviour
     public void SetSanityDecreaseRate(float sanityRate)
     {
         decreasePercentage = sanityRate;
+    }
+    public void DisableSanity()
+    {
+        isSanityDecreasing = false;
+    }
+    public void EnableSanity()
+    {
+        isSanityDecreasing = true;
     }
 }

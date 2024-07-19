@@ -22,6 +22,13 @@ public class KeyItemInventory : MonoBehaviour
     [SerializeField] private GameObject keyItemIconHolder;
     [SerializeField] private GameObject keyItemDescription;
 
+    private Inventory inventoryHolder;
+
+    private void Awake()
+    {
+        inventoryHolder = GetComponent<Inventory>();
+    }
+
     public void CreateOrUpdateItemPanelBox(InventoryItem keyItem, List<InventoryItem> keyItemInventory)
     {
         bool itemFound = false;
@@ -43,10 +50,15 @@ public class KeyItemInventory : MonoBehaviour
     }
     public void RemoveKeyItem(InventoryItem keyItem, int itemCount)
     {
+        //print("delete " + keyItem.itemName + ", " + itemCount);
         foreach (GameObject panel in itemPanels)
         {
+            nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
+            amountText = panel.transform.Find(amount.name).GetComponent<TextMeshProUGUI>();
+
             if (nameText.text == keyItem.itemName)
             {
+                print(nameText.text);
                 int currentCount = int.Parse(amountText.text);
 
                 if (currentCount > itemCount)
@@ -55,8 +67,10 @@ public class KeyItemInventory : MonoBehaviour
                 }
                 else
                 {
+                    print(panel.name);
                     itemPanels.Remove(panel);
                     Destroy(panel);
+                    inventoryHolder.keyItemsInventory.Remove(keyItem);
                 }
                 return;
             }

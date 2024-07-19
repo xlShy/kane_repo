@@ -15,6 +15,7 @@ public class FuseBox : InteractableObject
     [SerializeField] private LightManager lightManager;
 
     [Header("Objects")]
+    [SerializeField] private InventoryItem requiredFuse;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject televisionGameObject;
 
@@ -29,24 +30,42 @@ public class FuseBox : InteractableObject
     [SerializeField] private AudioSource fuseActivateSecondPhase;
     [SerializeField] private AudioSource fuseLoopSound;
 
+    //events
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
     public UnityEvent fuseBoxActivate;
 
     public bool isCompleted = false;
+    public List<InventoryItem> keyItems;
+
+    //fuse count settings
+    private int itemCount = 0;
+    private int currentCount = 0;
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        //checks if item is fuse, else return
         if (itemInteractedCase == 2)
         {
-            List<InventoryItem> keyItems = inventory.GetKeyItems();
+            keyItems = inventory.GetKeyItems(requiredFuse);
+            foreach(var item in keyItems)
+            {
+                print(item.itemName);
+            }
             int fuseCount = CountFuseItems(keyItems);
             HandleFuses(fuseCount);
         }
     }
     private int CountFuseItems(List<InventoryItem> items)
     {
-        return items.Count(item => item is FuseItem);
+        if(itemCount == 0)
+        {
+            itemCount = items.Count(item => item is FuseItem);
+        }
+        else
+        {
+            currentCount = items.Count(item => item is FuseItem);
+            itemCount += currentCount;
+        }
+        return itemCount;
     }
     private void HandleFuses(int fuseCount)
     {
@@ -56,14 +75,16 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 1)
         {
+            //print("delete 1 fuse");
             placingFuse.Play();
             oneFuseDialogue.TriggerDialogue();           
-            keyItemInventory.RemoveKeyItem(item, 1);
+            keyItemInventory.RemoveKeyItem(requiredFuse, 1);
         }
         else if (fuseCount == 2)
         {
+            //print("delete 2 fuses");
+            keyItemInventory.RemoveKeyItem(requiredFuse, 2);
             fuseBoxActivate.Invoke(); // TV Script
-            keyItemInventory.RemoveKeyItem(item, 2);
             SolvePuzzle();      
             StartCoroutine(PlayFuseActivateSounds());
             
@@ -77,7 +98,7 @@ public class FuseBox : InteractableObject
 
         yield return new WaitForSeconds(fuseActivateSecondPhase.clip.length - 0.5f);
 
-        Debug.Log("Now playing sound.");
+        //Debug.Log("Now playing sound.");
         fuseLoopSound.Play();
     }
     private void SolvePuzzle()

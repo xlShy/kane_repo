@@ -10,6 +10,7 @@ public class RustedBathroomDoor : InteractableObject
     [SerializeField] private doorLockerScript doorLockerScript;
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
+    [SerializeField] private KeyItemInventory keyItemInventory;
 
     [SerializeField] private float openSpeed = 5f;
 
@@ -58,7 +59,7 @@ public class RustedBathroomDoor : InteractableObject
             InventoryItem deRustingMixture = inventory.GetItemByName("De-Rusting Mixture");
             if (deRustingMixture != null)
             {
-                inventory.RemoveKeyItem(deRustingMixture);
+                keyItemInventory.RemoveKeyItem(deRustingMixture, 1);
                 isDeRusted = true;
 
                 deRustingAudioClip.Play();

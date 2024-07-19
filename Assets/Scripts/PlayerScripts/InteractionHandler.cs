@@ -118,7 +118,7 @@ public class InteractionHandler : MonoBehaviour
                             itemInteractedCase = 1;
                             break;
                         case InteractableType.Objective:
-                            Debug.Log("This is an objective!");
+                            //Debug.Log("This is an objective!");
                             itemInteractedCase = 2;
                             break;
                         case InteractableType.PickupnoDestroy:

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class ChemicalMixingPlace : InteractableObject
 
     public UnityEvent resetInteractableState;
     public UnityEvent puzzleComplete;
+
+    public static event Action OnCompleteOfficePuzzle;
 
     private bool isPuzzleSolved = false;
 
@@ -88,6 +91,9 @@ public class ChemicalMixingPlace : InteractableObject
             puzzleComplete.Invoke();
             isPuzzleSolved = true;
             deRustBucket.SetActive(true);
+
+            //enable sanity drain on sanity handler script
+            OnCompleteOfficePuzzle?.Invoke();
         }
         else
         {

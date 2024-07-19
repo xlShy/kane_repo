@@ -377,7 +377,7 @@ Transform:
   m_GameObject: {fileID: 161733649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97999954, y: 3.99, z: -0.28999996}
+  m_LocalPosition: {x: 0.97999954, y: 4.09, z: -0.28999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1624,6 +1624,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 855345246}
     - target: {fileID: 4077336841479108888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: requiredKey
+      value: 
+      objectReference: {fileID: 855345246}
+    - target: {fileID: 4077336841479108888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
@@ -1659,6 +1663,10 @@ PrefabInstance:
       propertyPath: lightManager
       value: 
       objectReference: {fileID: 858545971}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: requiredFuse
+      value: 
+      objectReference: {fileID: 1904201606}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
@@ -2037,7 +2045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2623,6 +2631,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2093657872}
     - target: {fileID: 85083095922066683, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: keyItemInventory
+      value: 
+      objectReference: {fileID: 2085152747}
+    - target: {fileID: 85083095922066683, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: chemMixTriggerScript
       value: 
       objectReference: {fileID: 5435619986811776475}
@@ -2688,6 +2700,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: item
+      value: 
+      objectReference: {fileID: 1667517957}
+    - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: requiredKey
       value: 
       objectReference: {fileID: 1667517957}
     - target: {fileID: 3048412945879610019, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}

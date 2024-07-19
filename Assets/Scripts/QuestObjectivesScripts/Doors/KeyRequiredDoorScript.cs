@@ -7,8 +7,9 @@ using System.Linq;
 public class KeyRequiredDoorScript : InteractableObject
 {
     [SerializeField] private KeyItemInventory keyItemInventory;
-    [SerializeField] private DoorBase doorBase;
+    [SerializeField] private InventoryItem requiredKey;
 
+    [SerializeField] private DoorBase doorBase;
     [SerializeField] private string doorId;
     [SerializeField] private Text dialogueText;
 
@@ -41,7 +42,7 @@ public class KeyRequiredDoorScript : InteractableObject
             }
             else
             {
-                keyItems = inventory.GetKeyItems();
+                keyItems = inventory.GetKeyItems(requiredKey);
                 HandleKey(keyItems);
             }
         }

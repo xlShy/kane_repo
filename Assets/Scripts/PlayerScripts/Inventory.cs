@@ -40,7 +40,7 @@ public class Inventory : MonoBehaviour
         InitializeBoxes();
     }
 
-    // Adds items to player inventory
+    //Consumable Inventory
     public void AddItem(InventoryItem item)
     {
         if (item.type == ItemType.Consumables)
@@ -87,20 +87,34 @@ public class Inventory : MonoBehaviour
         }
         UpdateConsumableInventoryUI();
     }
+
+    //key item inventory
     public void AddKeyItem(InventoryItem keyItem)
     {
         keyItemsInventory.Add(keyItem);
 
         keyItemInventoryScript.CreateOrUpdateItemPanelBox(keyItem, keyItemsInventory);
     }
-
-    //TO DO - put function in a separate script
-
-    public List<InventoryItem> GetKeyItems()
+    public List<InventoryItem> GetKeyItems(InventoryItem item2Find)
     {
-        return keyItemsInventory;
+        List<InventoryItem> foundItems = new List<InventoryItem>();
+
+        for (int i = 0; i < keyItemsInventory.Count; i++)
+        {
+            if (keyItemsInventory[i].itemName == item2Find.itemName)
+            {
+                foundItems.Add(keyItemsInventory[i]);
+            }
+        }
+        
+        foreach(var items in foundItems)
+        {
+            print("has " + foundItems.Count + " items: " + items.itemName);
+        }
+        return foundItems.Count > 0 ? foundItems : null;
     }
 
+    //Consumable Item UI
     public int GetItemCount<T>() where T : InventoryItem
     {
         int count = 0;
@@ -191,17 +205,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
-    public bool RemoveKeyItem(InventoryItem item)
-    {
-        if (keyItemsInventory.Remove(item))
-        {
-            keyItemInventoryScript.RemoveKeyItem(item, 1);
-            return true;
-        }
-        return false;
-    }
-
     public InventoryItem GetItemByName(string itemName)
     {
         return keyItemsInventory.Find(item => item.itemName == itemName);

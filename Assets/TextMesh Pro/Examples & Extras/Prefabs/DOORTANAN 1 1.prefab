@@ -1034,12 +1034,12 @@ GameObject:
   m_Component:
   - component: {fileID: 305971891228375202}
   - component: {fileID: 6079147835486210903}
+  - component: {fileID: 85083095922066683}
   - component: {fileID: 6494189412514085104}
   - component: {fileID: 909479475473209651}
   - component: {fileID: 2615404210337325821}
   - component: {fileID: 1139900746388314146}
   - component: {fileID: 8016739226983319281}
-  - component: {fileID: 85083095922066683}
   m_Layer: 7
   m_Name: PBathroomDoor
   m_TagString: Untagged
@@ -1084,6 +1084,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.6364517, y: 4.588181, z: 1}
   m_Center: {x: 1.2837486, y: 2.3345191, z: 0}
+--- !u!114 &85083095922066683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663749897451469385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1859e5d3c46f47a4a8b80750ddd06707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: f4aa425fa020955409595ff5de2aa07f, type: 2}
+  item: {fileID: 0}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
+  doorBase: {fileID: 6494189412514085104}
+  chemMixTriggerScript: {fileID: 0}
+  doorLockerScript: {fileID: 909479475473209651}
+  readableDocumentScript: {fileID: 0}
+  chemicalMixingPlaceScript: {fileID: 0}
+  keyItemInventory: {fileID: 0}
+  openSpeed: 5
+  deRustingAudioClip: {fileID: 8016739226983319281}
 --- !u!114 &6494189412514085104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,32 +1433,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &85083095922066683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5663749897451469385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1859e5d3c46f47a4a8b80750ddd06707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableConfig: {fileID: 11400000, guid: f4aa425fa020955409595ff5de2aa07f, type: 2}
-  item: {fileID: 0}
-  itemPickedUp:
-    m_PersistentCalls:
-      m_Calls: []
-  mixingScript: {fileID: 0}
-  pickUpSound: {fileID: 0}
-  doorBase: {fileID: 6494189412514085104}
-  chemMixTriggerScript: {fileID: 0}
-  doorLockerScript: {fileID: 909479475473209651}
-  readableDocumentScript: {fileID: 0}
-  chemicalMixingPlaceScript: {fileID: 0}
-  openSpeed: 5
-  deRustingAudioClip: {fileID: 8016739226983319281}
 --- !u!1 &6037249408113349559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,6 +2129,7 @@ MonoBehaviour:
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
   keyItemInventory: {fileID: 0}
+  requiredKey: {fileID: 0}
   doorBase: {fileID: 200034572244723231}
   doorId: 1
   dialogueText: {fileID: 0}
