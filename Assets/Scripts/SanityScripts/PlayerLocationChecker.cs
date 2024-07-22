@@ -6,9 +6,6 @@ using UnityEngine;
 public class PlayerLocationChecker : MonoBehaviour
 {
     //To Do - move script to the game manager object
-
-    public RoomChecker roomChecker;
-
     RaycastHit hit;
     int hitLayer;
     GameObject hitRoom;
@@ -33,18 +30,14 @@ public class PlayerLocationChecker : MonoBehaviour
     }
     private void Update()
     {
-        if (houseMask == (houseMask | (1 << hitLayer)))
-        {
-            Debug.DrawRay(transform.position, Vector3.down * raycastDistance, Color.green);
-        }
-        else if (shedMask == (shedMask | (1 << hitLayer)))
-        {
-            Debug.DrawRay(transform.position, Vector3.down * raycastDistance, Color.yellow);
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, Vector3.down * raycastDistance, Color.red);
-        }
+        //if(RoomChecker.Instance != null)
+        //{
+        //    print("Not Null");
+        //}
+        //else
+        //{
+        //    print("null");
+        //}
     }
     public  void CheckPlayerOnEntryExit()
     {
@@ -54,7 +47,7 @@ public class PlayerLocationChecker : MonoBehaviour
             hitRoom = hit.collider.gameObject;
             if (houseMask == (houseMask | (1 << hitLayer)))
             {
-                roomChecker.CheckPlayerLocation(hitRoom);
+                RoomChecker.Instance.CheckPlayerLocation(hitRoom);
                 if (hasEnteredSomething)
                 {
                     return;

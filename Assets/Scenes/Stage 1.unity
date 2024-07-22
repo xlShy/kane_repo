@@ -1002,6 +1002,38 @@ PrefabInstance:
       propertyPath: gameObjectsWithLights.Array.data[0]
       value: 
       objectReference: {fileID: 895023302}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[0].Room
+      value: 
+      objectReference: {fileID: 2126964784}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[1].Room
+      value: 
+      objectReference: {fileID: 80774490}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[2].Room
+      value: 
+      objectReference: {fileID: 1796134145}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[3].Room
+      value: 
+      objectReference: {fileID: 821174543}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[4].Room
+      value: 
+      objectReference: {fileID: 1679798746}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[5].Room
+      value: 
+      objectReference: {fileID: 1654856161}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[6].Room
+      value: 
+      objectReference: {fileID: 1434949865}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[7].Room
+      value: 
+      objectReference: {fileID: 2104800645}
     - target: {fileID: 6528030965878477678, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.635544
@@ -1450,17 +1482,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1942949688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-  m_PrefabInstance: {fileID: 4614911185076699634}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652df06d16dead940965ced3c59d4a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2006575608 stripped
@@ -2126,10 +2147,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7477853744437300971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: roomChecker
-      value: 
-      objectReference: {fileID: 1942949688}
     - target: {fileID: 7854700075321512501, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: showInteractableUI
       value: 
@@ -2247,46 +2264,6 @@ PrefabInstance:
       propertyPath: ddolObjects.Array.data[4]
       value: 
       objectReference: {fileID: 5994076504277111780}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: journalContent.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 64a93a82ce4bca643bd92ea56d1078d8, type: 2}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[0].Room
-      value: 
-      objectReference: {fileID: 1796134145}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[1].Room
-      value: 
-      objectReference: {fileID: 821174543}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[2].Room
-      value: 
-      objectReference: {fileID: 1434949865}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[3].Room
-      value: 
-      objectReference: {fileID: 2104800645}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[4].Room
-      value: 
-      objectReference: {fileID: 1679798746}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[5].Room
-      value: 
-      objectReference: {fileID: 2126964784}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[6].Room
-      value: 
-      objectReference: {fileID: 80774490}
-    - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[7].Room
-      value: 
-      objectReference: {fileID: 1654856161}
     - target: {fileID: 6456800679941445462, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: m_Name
       value: GameManagers
@@ -2335,14 +2312,6 @@ PrefabInstance:
       propertyPath: currentPageDisplayed
       value: 
       objectReference: {fileID: 1643168227}
-    - target: {fileID: 6635447930934557222, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: startingPages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6635447930934557222, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: startingPages.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

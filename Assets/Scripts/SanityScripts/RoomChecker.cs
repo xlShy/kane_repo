@@ -30,12 +30,35 @@ public class SerializableDictionary<TKey, TValue>
 
 public class RoomChecker : MonoBehaviour
 {
+    private static RoomChecker _instance;
+    public static RoomChecker Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<RoomChecker>();
+            }
+            return _instance;
+        }
+    }
+
     [SerializeField] private SerializableDictionary<GameObject, float> roomSanityRates = new SerializableDictionary<GameObject, float>();
     private GameObject currentRoom;
     private float sanityRate;
 
     public static event Action<float> OnRoomChanged;
 
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        _instance = this;
+    }
     public void SetPlayerLocation(GameObject room)
     {
         currentRoom = room;
