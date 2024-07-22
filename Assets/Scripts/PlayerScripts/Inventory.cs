@@ -5,8 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using Unity.VisualScripting.Antlr3.Runtime;
 
 public class Inventory : MonoBehaviour
 {
@@ -102,11 +100,6 @@ public class Inventory : MonoBehaviour
             {
                 foundItems.Add(keyItemsInventory[i]);
             }
-        }
-        
-        foreach(var items in foundItems)
-        {
-            print("has " + foundItems.Count + " items: " + items.itemName);
         }
         return foundItems.Count > 0 ? foundItems : null;
     }

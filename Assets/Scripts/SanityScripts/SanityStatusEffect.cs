@@ -8,7 +8,7 @@ public class SanityStatusEffect : MonoBehaviour
 {
     private SanityHandler sanityHandler;
     public Transform playerObject;
-    public Transform shedSpawnPoint;
+    //public Transform shedSpawnPoint;
     public RawImage visionDarken;
     public float darkenDuration = 3f;
     public float returnDuration = 3f;

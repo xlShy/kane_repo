@@ -61,11 +61,11 @@ public class LevelManager : MonoBehaviour
         switch (iteration)
         {
             case 1:
-                print("Proceed to level 2");
+                //print("Proceed to level 2");
                 OnCompleteLevel1?.Invoke();
                 break;
             case 2:
-                print("Proceed to level 3");
+                //print("Proceed to level 3");
                 //Destroy(playerBlocker[iteration - 1]);
                 break;
             default:
@@ -75,11 +75,11 @@ public class LevelManager : MonoBehaviour
     private void OnPuzzleComplete(Puzzle puzzle)
     {
         puzzle.isPuzzleCompleted = true;
-        print("Puzzle Completed");
+        //print("Puzzle Completed");
         CheckLevelStatus();
     }
     private void OnGameComplete()
     {
-        print("Game is Finished");
+        //print("Game is Finished");
     }
 }

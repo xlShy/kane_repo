@@ -58,7 +58,6 @@ public class KeyItemInventory : MonoBehaviour
 
             if (nameText.text == keyItem.itemName)
             {
-                print(nameText.text);
                 int currentCount = int.Parse(amountText.text);
 
                 if (currentCount > itemCount)
@@ -67,7 +66,7 @@ public class KeyItemInventory : MonoBehaviour
                 }
                 else
                 {
-                    print(panel.name);
+                    //print(panel.name);
                     itemPanels.Remove(panel);
                     Destroy(panel);
                     inventoryHolder.keyItemsInventory.Remove(keyItem);

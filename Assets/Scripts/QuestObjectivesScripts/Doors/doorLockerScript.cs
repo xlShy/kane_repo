@@ -16,6 +16,6 @@ public class doorLockerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         doorLocked.Invoke();
-        Debug.Log("doorLockerScript: doorLocked event invoked");
+        //Debug.Log("doorLockerScript: doorLocked event invoked");
     }
 }

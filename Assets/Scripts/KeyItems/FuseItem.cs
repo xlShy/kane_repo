@@ -36,7 +36,7 @@ public class FuseItem : InventoryItem
     {
         gameObject.layer = LayerMask.NameToLayer("Default");
         fusePickup.Play();
-        Debug.Log("I am called to make dialogue!");
+        //Debug.Log("I am called to make dialogue!");
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = dialogueContent;
 
