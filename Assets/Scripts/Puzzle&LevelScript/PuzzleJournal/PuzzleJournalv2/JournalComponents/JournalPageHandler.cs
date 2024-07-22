@@ -17,11 +17,13 @@ public class JournalPageHandler : MonoBehaviour
     {
         GrandfatherClock.OnGrandfathersClockComplete += SetChangingPage;
         CombinationLockActivateScript.OnCombinationLockComplete += SetChangingPage;
+        ChemicalMixingPlace.OnChemicalMixingComplete += SetChangingPage;
     }
     private void OnDisable()
     {
         GrandfatherClock.OnGrandfathersClockComplete -= SetChangingPage;
         CombinationLockActivateScript.OnCombinationLockComplete -= SetChangingPage;
+        ChemicalMixingPlace.OnChemicalMixingComplete -= SetChangingPage;
     }
     private void SetChangingPage()
     {

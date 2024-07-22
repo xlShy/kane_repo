@@ -1762,6 +1762,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687961695}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 11400000, guid: a3a860cccf0038c44ab58dc4e4d4aafd, type: 2}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2085152750}
@@ -1773,6 +1777,10 @@ PrefabInstance:
       propertyPath: keyInventory
       value: 
       objectReference: {fileID: 2085152747}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: pEventHandler
+      value: 
+      objectReference: {fileID: 687961695}
     - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2239,6 +2247,14 @@ PrefabInstance:
       propertyPath: ddolObjects.Array.data[4]
       value: 
       objectReference: {fileID: 5994076504277111780}
+    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: journalContent.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544830452399231036, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: journalContent.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 64a93a82ce4bca643bd92ea56d1078d8, type: 2}
     - target: {fileID: 6105081472061270235, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 
@@ -2319,6 +2335,14 @@ PrefabInstance:
       propertyPath: currentPageDisplayed
       value: 
       objectReference: {fileID: 1643168227}
+    - target: {fileID: 6635447930934557222, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: startingPages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635447930934557222, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: startingPages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

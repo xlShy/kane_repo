@@ -16,8 +16,6 @@ public class GrandfatherClock : InteractableObject
     [SerializeField]
     public LayerMask newLayerMask;
 
-    //[SerializeField]
-    //public GameObject doorToOpen;
 
     [SerializeField]
     public ClockChecker clockChecker;

@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class ChemicalMixingPlace : InteractableObject
 {
+    public Puzzle puzzle;
+    public PuzzleEventHandler pEventHandler;
+
     private Renderer objectRenderer;
 
     [SerializeField]
@@ -26,8 +29,12 @@ public class ChemicalMixingPlace : InteractableObject
 
     public UnityEvent resetInteractableState;
     public UnityEvent puzzleComplete;
-
+    
+    //sanity event
     public static event Action OnCompleteOfficePuzzle;
+
+    //journal event
+    public static PuzzleStatus.onCompletedEvents OnChemicalMixingComplete;
 
     private bool isPuzzleSolved = false;
 
@@ -94,6 +101,10 @@ public class ChemicalMixingPlace : InteractableObject
 
             //enable sanity drain on sanity handler script
             OnCompleteOfficePuzzle?.Invoke();
+            //Add puzzle to completed in the level1
+            pEventHandler.InteractPuzzle(puzzle);
+            //Add completed puzzle to journal
+            OnChemicalMixingComplete?.Invoke();
         }
         else
         {
