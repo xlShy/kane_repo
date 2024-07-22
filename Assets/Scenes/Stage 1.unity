@@ -255,6 +255,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 460637293232986812, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &143102594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997514656751849027, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+  m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &161733649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc21420c9cdb394d8a4059e67bbd052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1742498557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789582139225666972, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+  m_PrefabInstance: {fileID: 3129807459506583906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1779987968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1795,10 +1805,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 7630154623350830798, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 28bb08c91eece404199764531cfb657f, type: 3}
     - target: {fileID: 7866445537216799888, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2189,9 +2195,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 47093409}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: television
+      value: 
+      objectReference: {fileID: 3129807459506583907}
+    - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: safeContent
+      value: 
+      objectReference: {fileID: 1742498557}
+    - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: tvInterface
       value: 
       objectReference: {fileID: 3129807459506583907}
+    - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: chemicalRecipe
+      value: 
+      objectReference: {fileID: 143102594}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: combinationLock
       value: 
@@ -2324,6 +2342,10 @@ PrefabInstance:
     - target: {fileID: 1074133755145855360, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997514656751849027, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: m_Name
+      value: RecipeCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8696512503627372795, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_Name

@@ -4313,7 +4313,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e3861314142ae784f83690bfdd37cd46, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 28bb08c91eece404199764531cfb657f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4547,6 +4547,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
+  cameraFlash: {fileID: 0}
   isPuzzleComplete: 0
   puzzle: {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
   pEventHandler: {fileID: 0}
@@ -5617,6 +5618,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
+  cameraFlash: {fileID: 0}
   puzzle: {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
   pEventHandler: {fileID: 0}
   combinationCanvas: {fileID: 675867482575755741}
@@ -6992,6 +6994,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 6343051102639992546}
   pickUpSound: {fileID: 0}
+  cameraFlash: {fileID: 0}
   puzzle: {fileID: 11400000, guid: a3a860cccf0038c44ab58dc4e4d4aafd, type: 2}
   pEventHandler: {fileID: 0}
   newLayerMask:

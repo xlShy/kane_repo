@@ -13,6 +13,12 @@ public class CanvasToggler : MonoBehaviour
     [SerializeField] protected GameObject grandFathersClock;
     [SerializeField] protected GameObject combinationLock;
     [SerializeField] protected GameObject tvInterface;
+
+    [Header("ReadableUI")]
+    [SerializeField] protected GameObject safeContent;
+    [SerializeField] protected GameObject chemicalRecipe;
+    [SerializeField] protected GameObject television;
+
     public void OnEnable()
     {
         InputHandler.OnConsumableInventoryOpen += SetConsumableOpen;
