@@ -68,7 +68,8 @@ public class SanityStatusEffect : MonoBehaviour
         if (controller != null)
         {
             controller.enabled = false;
-            playerObject.position = shedSpawnPoint.position;
+            //playerObject.position = shedSpawnPoint.position;
+            playerObject.position = ShedRespawnPoint.Instance.ShedSpawnPoint.gameObject.transform.position;
             controller.enabled = true;
         }
         ResetVision();

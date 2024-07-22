@@ -32,9 +32,6 @@ public class Inventory : MonoBehaviour
 
     public bool isFull;
 
-    [SerializeField] private List<GameObject> gameCanvases;
-
-
     private void Start()
     {
         InitializeBoxes();

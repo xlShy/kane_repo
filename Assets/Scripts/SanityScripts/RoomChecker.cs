@@ -35,10 +35,6 @@ public class RoomChecker : MonoBehaviour
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<RoomChecker>();
-            }
             return _instance;
         }
     }

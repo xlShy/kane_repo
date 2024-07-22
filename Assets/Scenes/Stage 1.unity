@@ -1034,6 +1034,14 @@ PrefabInstance:
       propertyPath: roomSanityRates.Items.Array.data[7].Room
       value: 
       objectReference: {fileID: 2104800645}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[0].SanityDecreaseRate
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: roomSanityRates.Items.Array.data[1].SanityDecreaseRate
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6528030965878477678, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.635544
