@@ -7,6 +7,8 @@ using System;
 
 public class CombinationLockActivateScript : InteractableObject
 {
+    [SerializeField] public CameraFlash cameraFlash;
+
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
 
@@ -59,6 +61,7 @@ public class CombinationLockActivateScript : InteractableObject
     }
     private void OnCorrectCombinationEntered()
     {
+        cameraFlash.TriggerFlash(1f);
         isPuzzleComplete = true;
         readableDocument.SetActive(true);
         onPuzzleSuccess.TriggerDialogue();

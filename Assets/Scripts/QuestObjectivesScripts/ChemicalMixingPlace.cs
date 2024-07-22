@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class ChemicalMixingPlace : InteractableObject
 {
+    [SerializeField] public CameraFlash cameraFlash;
+
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
 
@@ -93,6 +95,8 @@ public class ChemicalMixingPlace : InteractableObject
         // Check puzzle state
         if (hasAllRequiredItems && !hasFailItem)
         {
+            cameraFlash.TriggerFlash(1f);
+
             correctMixture.Play();
             Debug.Log("Puzzle Solved!");
             puzzleComplete.Invoke();

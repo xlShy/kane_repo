@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: c60688e16f6c73645b8ae070979a7ca2, type: 2}
+  m_Texture: {fileID: 8400000, guid: 3c7f31262033cc049acaa864d33fced4, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1566,7 +1566,7 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: c60688e16f6c73645b8ae070979a7ca2, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 3c7f31262033cc049acaa864d33fced4, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -6424,6 +6424,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
+  cameraFlash: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}

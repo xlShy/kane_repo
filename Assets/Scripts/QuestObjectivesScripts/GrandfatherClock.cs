@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class GrandfatherClock : InteractableObject
 {
+    [SerializeField] public CameraFlash cameraFlash;
     public bool isPuzzleComplete = false;
 
     public Puzzle puzzle;
@@ -59,6 +60,7 @@ public class GrandfatherClock : InteractableObject
     {
         if (!isPuzzleComplete)
         {
+            cameraFlash.TriggerFlash(1f);
             isPuzzleComplete = true;
 
             keyItem.SetActive(true);

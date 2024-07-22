@@ -1187,11 +1187,6 @@ Transform:
   - {fileID: 1064283980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1477777738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1805230603524343238, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-  m_PrefabInstance: {fileID: 3129807459506583906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1515857779 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7167754557893450510, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -1492,11 +1487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2006575608 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 612269028278354391, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-  m_PrefabInstance: {fileID: 3129807459506583906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067456314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4303823185850639545, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -1522,6 +1512,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4b19552efac2dd418100631cfb1b3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2085152754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5108158743114964628, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
+  m_PrefabInstance: {fileID: 4230698652132090527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574856023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26edf5468b784604abff6ec97c6cecbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2093657872 stripped
@@ -1611,13 +1612,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: cameraFlash
+      value: 
+      objectReference: {fileID: 2085152754}
+    - target: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961695}
-    - target: {fileID: 612269028278354391, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1041760393081750001, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1634,14 +1635,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 1678260292820011453, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1805230603524343238, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2783313756227964328, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1651,10 +1644,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 3200428893374409781, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 3318099560819422385, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
@@ -1686,26 +1675,6 @@ PrefabInstance:
       propertyPath: keyItemInventory
       value: 
       objectReference: {fileID: 2085152747}
-    - target: {fileID: 4154368768992171548, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_Name
-      value: FuseBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957424975226676035, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 4957424975226676035, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: keyItemInventory
-      value: 
-      objectReference: {fileID: 2085152747}
-    - target: {fileID: 5069564659553472925, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 5348505462522322351, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.443
-      objectReference: {fileID: 0}
     - target: {fileID: 5431916737317676389, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1715,13 +1684,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1904201606}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: fuse1
+      propertyPath: cameraFlash
       value: 
-      objectReference: {fileID: 2006575608}
-    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: fuse2
-      value: 
-      objectReference: {fileID: 1477777738}
+      objectReference: {fileID: 2085152754}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1787,17 +1752,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 855345243}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: cameraFlash
+      value: 
+      objectReference: {fileID: 2085152754}
+    - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
       objectReference: {fileID: 687961695}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: puzzle
-      value: 
-      objectReference: {fileID: 11400000, guid: a3a860cccf0038c44ab58dc4e4d4aafd, type: 2}
-    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2085152750}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: cameraFlash
+      value: 
+      objectReference: {fileID: 2085152754}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: eventScript
       value: 
@@ -1822,10 +1791,6 @@ PrefabInstance:
       propertyPath: staticTVObject
       value: 
       objectReference: {fileID: 1438946960}
-    - target: {fileID: 7457317928170181038, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 7552794503659533553, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1847,8 +1812,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1779987973}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1678260292820011453, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -2095,22 +2059,6 @@ PrefabInstance:
       propertyPath: consumableInventory
       value: 
       objectReference: {fileID: 1779987972}
-    - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: gameCanvases.Array.data[0]
-      value: 
-      objectReference: {fileID: 2067456314}
-    - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: gameCanvases.Array.data[1]
-      value: 
-      objectReference: {fileID: 840691509}
-    - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: gameCanvases.Array.data[2]
-      value: 
-      objectReference: {fileID: 25434435}
-    - target: {fileID: 6165976200285315971, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: gameCanvases.Array.data[3]
-      value: 
-      objectReference: {fileID: 1516929156}
     - target: {fileID: 6883310537784295275, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: sanityScript
       value: 

@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 public class FuseBox : InteractableObject
 {
+    [SerializeField] public CameraFlash cameraFlash;
+
     [SerializeField] private Puzzle puzzle;
     [SerializeField] private PuzzleEventHandler pEventHandler;
     [SerializeField] private KeyItemInventory keyItemInventory;
@@ -117,6 +119,7 @@ public class FuseBox : InteractableObject
     }
     private void SolvePuzzle()
     {
+        cameraFlash.TriggerFlash(1f);
         isCompleted = true;
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
