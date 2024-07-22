@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class FurnitureToMoveScript : InteractableObject
 {
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
-
+    [SerializeField] private AudioSource movingFurnitureAudio;
     private void Start()
     {
         readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
@@ -32,6 +32,7 @@ public class FurnitureToMoveScript : InteractableObject
 
     private IEnumerator MoveSmoothlyCo(Vector3 targetPosition, float duration)
     {
+        movingFurnitureAudio.Play();
         Vector3 startPosition = transform.localPosition;
         float elapsedTime = 0f;
 
