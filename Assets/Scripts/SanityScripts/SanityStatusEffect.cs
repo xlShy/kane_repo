@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SanityStatusEffect : MonoBehaviour
 {
     private SanityHandler sanityHandler;
+    [SerializeField] private CanvasManager canvasManager;
 
     public Transform playerObject;
 
@@ -20,17 +21,13 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private float threshHold2 = .3f;
     [SerializeField] private float threshHold3 = .1f;
 
-    [SerializeField]private List<GameObject> canvasDisable;
-
     public UnityEvent playerFainted;
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
     }
-
     public void CheckSanityValue(float sanityValue)
     {
-        //add speicific bvaleuar got rffect
         if (sanityValue <= 0)   
         {
             sanityHandler.isSanityDepleted = true;
@@ -53,30 +50,21 @@ public class SanityStatusEffect : MonoBehaviour
             OnHighSanity();
         }
     }
-
     public void OnDepletedSanity()
     {
-        //playerFainted.Invoke(); 
-        foreach (GameObject canvas in canvasDisable)
-        {
-            if (canvas != null)
-            {
-                canvas.SetActive(false);
-            }
-        }
+        canvasManager.DisableAllCanvas(canvasManager.UICanvas);
+        canvasManager.DisableAllCanvas(canvasManager.PuzzleCanvas);
 
         CharacterController controller = playerObject.GetComponent<CharacterController>();
         if (controller != null)
         {
             controller.enabled = false;
-            //playerObject.position = shedSpawnPoint.position;
-            playerObject.position = ShedRespawnPoint.Instance.ShedSpawnPoint.gameObject.transform.position;
+            playerObject.position = ShedRespawnPoint.Instance.ShedSpawnPoint.gameObject.transform.position; //takes the shedrespawnpoint 
             controller.enabled = true;
         }
-        ResetVision();
         sanityHandler.ResetSanity();
-    }
 
+    }
     public void OnLowSanity(float alpha)
     {
         if (visionChangeCoroutine != null)
@@ -85,7 +73,6 @@ public class SanityStatusEffect : MonoBehaviour
         }
         visionChangeCoroutine = StartCoroutine(ChangeVision(alpha, darkenDuration));
     }
-
     public void OnHighSanity()
     {
         if (visionChangeCoroutine != null)
@@ -94,7 +81,6 @@ public class SanityStatusEffect : MonoBehaviour
         }
         visionChangeCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
     }
-
     private IEnumerator ChangeVision(float targetAlpha, float duration)
     {
         float elapsedTime = 0f;
@@ -111,9 +97,9 @@ public class SanityStatusEffect : MonoBehaviour
 
         color.a = targetAlpha;
         visionDarken.color = color;
-        Debug.Log("Vision change completed. Target alpha: " + targetAlpha);
     }
 
+    //leave lng
     private void ResetVision()
     {
         if (visionChangeCoroutine != null)

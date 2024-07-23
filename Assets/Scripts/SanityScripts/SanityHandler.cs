@@ -79,13 +79,15 @@ public class SanityHandler : MonoBehaviour
     }
     private void IncreaseSanityOnInterval()
     {
+        isSanityDepleted = false;
         ChangeSanity(increasePercentage);
     }
     private void ChangeSanity(float changeAmount)
     {
         float adjustedChangeAmount = pillEffect.GetPillEffect(changeAmount); //Stores the calculated amount of the duration and effect amount of the Pill(Consumable Item)
 
-        currentInterval = isCanvasOn ? originalInterval : intervalValueOnCanvasEnabled;
+        currentInterval = isCanvasOn ? intervalValueOnCanvasEnabled : originalInterval;
+
         sanityValue += adjustedChangeAmount * currentInterval * Time.deltaTime;
         sanityValue = Mathf.Clamp01(sanityValue);
     }
@@ -104,10 +106,9 @@ public class SanityHandler : MonoBehaviour
     }
     public void ResetSanity()
     {
-        sanityValue = 1f;
         isSanityDecreasing = false;
-        isSanityIncreasing = false;
-        isSanityDepleted = false;
+        isSanityIncreasing = true;
+        isSanityDepleted = true;
     }
     public void SetSanityDecreaseRate(float sanityRate)
     {

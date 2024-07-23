@@ -53,6 +53,8 @@ MonoBehaviour:
   safeContent: {fileID: 0}
   chemicalRecipe: {fileID: 0}
   television: {fileID: 0}
+  UICanvas: []
+  PuzzleCanvas: []
   currentEnabledCanvas: {fileID: 0}
   isCanvasFound: 0
 --- !u!1 &104341112640658525
@@ -234,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c60ea0d9715324aa801d2a89be8d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increasePercentage: 0.01
+  increasePercentage: 0.2
   decreasePercentage: 0.01
-  originalInterval: 0.3
+  originalInterval: 1
   intervalValueOnCanvasEnabled: 0.1
   currentInterval: 0
   sanityValue: 0
@@ -271,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7f1759e0675604ea7e10defd0c69bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasManager: {fileID: 926579298934901709}
   playerObject: {fileID: 0}
   visionDarken: {fileID: 0}
   darkenDuration: 3
@@ -278,16 +281,6 @@ MonoBehaviour:
   threshHold1: 0.6
   threshHold2: 0.3
   threshHold3: 0.1
-  canvasDisable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playerFainted:
     m_PersistentCalls:
       m_Calls: []

@@ -28,18 +28,7 @@ public class PlayerLocationChecker : MonoBehaviour
     {
         InvokeRepeating(nameof(CheckPlayerOnEntryExit), 0f, checkInterval);
     }
-    private void Update()
-    {
-        //if(RoomChecker.Instance != null)
-        //{
-        //    print("Not Null");
-        //}
-        //else
-        //{
-        //    print("null");
-        //}
-    }
-    public  void CheckPlayerOnEntryExit()
+    public void CheckPlayerOnEntryExit()
     {
         if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistance, mask))
         {

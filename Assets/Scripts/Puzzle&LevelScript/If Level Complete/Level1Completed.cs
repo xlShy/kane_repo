@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,19 +13,32 @@ public class Level1Completed : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private SceneTransitionPlayerData playerData;
 
+    private bool isComplete = false;
+    private bool isNextScene = false;
+
+    private void Update()
+    {
+        Go2NextScene();
+    }
     public void CompleteLevel1()
     {
-        print("scene transition");
-        //create function that will make a blackout instead of using sanity value
-        //sanityHandler.sanityValue = 0.055f;
-        StartCoroutine(SetTimer2NextScene());
+        if (isComplete)
+        {
+            return;
+        }
+        sanityHandler.sanityValue = 0.055f;
+        isComplete = true;
+
     }
-    IEnumerator SetTimer2NextScene()
-    {
-        sceneObjectsLoader.Object2LoadOnScene();
-        yield return new WaitForSeconds(5f);
-        loadScene.LoadNextScene("Stage 2");
-        //player.transform.position = playerData.playerPositionOnSpawn.transform.position;
-        
+    private void Go2NextScene()
+    {   
+        if (sanityHandler.isSanityDepleted && isComplete && !isNextScene)
+        {
+            sanityHandler.isSanityDepleted = false;
+            sceneObjectsLoader.Object2LoadOnScene();
+            loadScene.LoadNextScene("Stage 2");
+            isNextScene = true; 
+        }
+        //player.transform.position = playerData.playerPositionOnSpawn.transform.position;   
     }
 }

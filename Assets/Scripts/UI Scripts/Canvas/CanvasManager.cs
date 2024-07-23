@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class CanvasManager : CanvasToggler
 {
-    private List<GameObject> UICanvas;
-    private List<GameObject> PuzzleCanvas;
+    public List<GameObject> UICanvas;
+    public List<GameObject> PuzzleCanvas;
     public GameObject currentEnabledCanvas;
 
     public bool isCanvasFound;
@@ -42,7 +42,7 @@ public class CanvasManager : CanvasToggler
             CheckEnabledCanvas(UICanvas);
         }
     }
-    private void DisableAllCanvas(List<GameObject> canvasList)
+    public void DisableAllCanvas(List<GameObject> canvasList)
     {
         foreach(GameObject canvas in canvasList)
         {

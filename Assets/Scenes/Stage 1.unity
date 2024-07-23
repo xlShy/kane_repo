@@ -1101,11 +1101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1190965417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3651769061179658162, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-  m_PrefabInstance: {fileID: 1779987968}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1223407404 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2312605012493744872, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -1266,11 +1261,6 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8083662720228047294, guid: 76e88e93c6136bb4f9a7674038c0e8f0, type: 3}
   m_PrefabInstance: {fileID: 511374667}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1652494270 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6516720701022622229, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-  m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654856161 stripped
 GameObject:
@@ -1435,7 +1425,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2816149679950842926, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802773236}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -1446,7 +1436,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7261660648607906517, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
   m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652494270}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1456,11 +1446,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9087116602498022858, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1802773236 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6000962259522586584, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
-  m_PrefabInstance: {fileID: 1779987968}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1874984282 stripped
 MonoBehaviour:
@@ -2141,38 +2126,6 @@ PrefabInstance:
       propertyPath: visionDarken
       value: 
       objectReference: {fileID: 1223407404}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[0]
-      value: 
-      objectReference: {fileID: 1190965417}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[1]
-      value: 
-      objectReference: {fileID: 1779987972}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[2]
-      value: 
-      objectReference: {fileID: 1802773236}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[3]
-      value: 
-      objectReference: {fileID: 1652494270}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[5]
-      value: 
-      objectReference: {fileID: 1516929156}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[6]
-      value: 
-      objectReference: {fileID: 25434435}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[7]
-      value: 
-      objectReference: {fileID: 2067456314}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: canvasDisable.Array.data[8]
-      value: 
-      objectReference: {fileID: 840691509}
     - target: {fileID: 926579298934901709, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: journal
       value: 
@@ -2695,6 +2648,10 @@ PrefabInstance:
       propertyPath: sanityHandler
       value: 
       objectReference: {fileID: 1356429949}
+    - target: {fileID: 7586249668805604287, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
+      propertyPath: sanityStatusEffect
+      value: 
+      objectReference: {fileID: 919784533}
     - target: {fileID: 7586249668805604287, guid: 2999d68a6bb223e46a9f0219082f1d7b, type: 3}
       propertyPath: sceneObjectsLoader
       value: 
