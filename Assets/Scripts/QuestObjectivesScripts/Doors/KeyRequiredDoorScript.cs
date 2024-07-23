@@ -54,19 +54,29 @@ public class KeyRequiredDoorScript : InteractableObject
 
     private void HandleKey(List<InventoryItem> keyItems)
     {
-        if (!isUnlocked)
+        if (keyItems == null || !isUnlocked)
         {
-            DoorKeyItem correctKey = keyItems.OfType<DoorKeyItem>().FirstOrDefault(k => k.doorId == this.doorId);
+            DoorKeyItem correctKey = keyItems?.OfType<DoorKeyItem>().FirstOrDefault(k => k.doorId == this.doorId);
             if (correctKey == null)
             {
-                doorBase.doorIsLocked.Play();
+                if (doorBase != null && doorBase.doorIsLocked != null)
+                {
+                    doorBase.doorIsLocked.Play();
+                }
                 noKey.TriggerDialogue();
             }
             else
             {
-                doorBase.doorisOpen.Play();
-                yesKey.TriggerDialogue();
-                keyItemInventory.RemoveKeyItem(item, 1);
+                if (doorBase != null && doorBase.doorisOpen != null)
+                {
+                    doorBase.doorisOpen.Play();
+                }
+                yesKey?.TriggerDialogue();
+
+                if (keyItemInventory != null)
+                {
+                    keyItemInventory.RemoveKeyItem(correctKey, 1);
+                }
                 isUnlocked = true;
             }
         }

@@ -10,13 +10,17 @@ public class SanityHandler : MonoBehaviour
 
     [SerializeField] public float increasePercentage = 0.01f;
     [SerializeField] public float decreasePercentage = 0.01f;
-    [SerializeField] private float interval = 1f;
+    [SerializeField] private float originalInterval = 1f;
+    [SerializeField] private float intervalValueOnCanvasEnabled;
+    public float currentInterval;
     public float sanityValue;
 
+    
     public bool isSanityDecreasing = false;
     public bool isSanityIncreasing = false;
     public bool isSanityDepleted = false;
 
+    public bool isCanvasOn = false;
     private void Awake()
     {
         sanityChecker = GetComponent<SanityStatusEffect>();
@@ -36,6 +40,9 @@ public class SanityHandler : MonoBehaviour
         //office Event
         ReadableDocumentScript.OnStartOfficePuzzle += DisableSanity;
         ChemicalMixingPlace.OnCompleteOfficePuzzle += EnableSanity;
+
+        //canvas is on
+        CanvasManager.OnCanvasEnabled += IsCanvasOn;
     }
     private void OnDisable()
     {
@@ -78,7 +85,8 @@ public class SanityHandler : MonoBehaviour
     {
         float adjustedChangeAmount = pillEffect.GetPillEffect(changeAmount); //Stores the calculated amount of the duration and effect amount of the Pill(Consumable Item)
 
-        sanityValue += adjustedChangeAmount * interval * Time.deltaTime;
+        currentInterval = isCanvasOn ? originalInterval : intervalValueOnCanvasEnabled;
+        sanityValue += adjustedChangeAmount * currentInterval * Time.deltaTime;
         sanityValue = Mathf.Clamp01(sanityValue);
     }
     private void PlayerOnHouse()
@@ -112,5 +120,9 @@ public class SanityHandler : MonoBehaviour
     public void EnableSanity()
     {
         isSanityDecreasing = true;
+    }
+    private void IsCanvasOn(bool isOn)
+    {
+        isCanvasOn = isOn;
     }
 }

@@ -796,11 +796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f5db4aec37f447b89d8a88fe1207c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &698506609 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 372206305952260406, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
-  m_PrefabInstance: {fileID: 5994076504277111779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 5162016286900362964, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
@@ -1039,14 +1034,6 @@ PrefabInstance:
       propertyPath: roomSanityRates.Items.Array.data[7].Room
       value: 
       objectReference: {fileID: 2104800645}
-    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[0].SanityDecreaseRate
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[1].SanityDecreaseRate
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 6528030965878477678, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.635544
@@ -2155,10 +2142,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1223407404}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: shedSpawnPoint
-      value: 
-      objectReference: {fileID: 698506609}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: canvasDisable.Array.data[0]
       value: 
       objectReference: {fileID: 1190965417}
@@ -2342,10 +2325,6 @@ PrefabInstance:
     - target: {fileID: 1074133755145855360, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5997514656751849027, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
-      propertyPath: m_Name
-      value: RecipeCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8696512503627372795, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_Name

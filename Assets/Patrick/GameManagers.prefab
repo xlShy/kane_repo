@@ -50,6 +50,9 @@ MonoBehaviour:
   grandFathersClock: {fileID: 0}
   combinationLock: {fileID: 0}
   tvInterface: {fileID: 0}
+  safeContent: {fileID: 0}
+  chemicalRecipe: {fileID: 0}
+  television: {fileID: 0}
   currentEnabledCanvas: {fileID: 0}
   isCanvasFound: 0
 --- !u!1 &104341112640658525
@@ -233,11 +236,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increasePercentage: 0.01
   decreasePercentage: 0.01
-  interval: 1
+  originalInterval: 0.3
+  intervalValueOnCanvasEnabled: 0.1
+  currentInterval: 0
   sanityValue: 0
   isSanityDecreasing: 0
   isSanityIncreasing: 0
   isSanityDepleted: 0
+  isCanvasOn: 0
 --- !u!114 &8765483443422348581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  shedSpawnPoint: {fileID: 0}
   visionDarken: {fileID: 0}
   darkenDuration: 3
   returnDuration: 3

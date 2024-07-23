@@ -15,7 +15,6 @@ public class CanvasManager : CanvasToggler
 
     public static event Action<bool> OnCanvasEnabled;
 
-
     private void Start()
     {
         UICanvas = new List<GameObject>();
@@ -31,9 +30,7 @@ public class CanvasManager : CanvasToggler
         PuzzleCanvas.Add(chemicalRecipe);
         PuzzleCanvas.Add(television);
 
-
         DisableAllCanvas(UICanvas);
-        DisableAllCanvas(PuzzleCanvas);
     }
     private void Update()
     {
@@ -86,12 +83,12 @@ public class CanvasManager : CanvasToggler
             OnCanvasEnabled?.Invoke(false);
         }
     }
-    private void SetCursorDisabled()
+    public void SetCursorDisabled()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    private void SetCursorEnabled()
+    public void SetCursorEnabled()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
