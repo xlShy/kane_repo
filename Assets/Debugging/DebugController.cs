@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,8 +17,16 @@ public class DebugController : MonoBehaviour
     public TMP_InputField speedInputField;      // Input field for speed value
 
     public GameObject pillPrefab;               // Reference to the pill prefab
+    public GameObject fusePrefab;
+    public GameObject officeKeyPrefab;
+    public GameObject frontDoorKeyPrefab;
     public Transform playerTransform;           // Reference to the player's transform
+
     public Button spawnPillButton;              // Reference to the spawn pill button
+    public Button spawnOfficeKeyButton;
+    public Button spawnFrontDoorKeyButton;
+    public Button spawnFuseButton;
+
     public Button resetSanityDrainButton;       // Reference to the reset sanity drain button
     public GameObject sanityGameObject;  
     public GameObject flashlightGameObject;
@@ -32,7 +41,9 @@ public class DebugController : MonoBehaviour
     public Button teleSecondFloorStairs;  
     public Button teleMBedroom;
     public Button teleVBedroom;   
-    public Button teleBBedroom;  
+    public Button teleBBedroom;
+    public Button teleFirstFloorBathroom;   
+    public Button teleMBathroom;  
     
     private PlayerMovement playerMovement;
     private SanityHandler sanityHandler;  
@@ -87,6 +98,21 @@ public class DebugController : MonoBehaviour
             spawnPillButton.onClick.AddListener(SpawnPillAtPlayerFeet);
         }
 
+        if (spawnFuseButton != null)
+        {
+            spawnFuseButton.onClick.AddListener(SpawnFuseAtPlayerFeet);
+        }
+
+        if (spawnOfficeKeyButton != null)
+        {
+            spawnOfficeKeyButton.onClick.AddListener(SpawnOKeyAtPlayerFeet);
+        }
+
+        if (spawnFrontDoorKeyButton != null)
+        {
+            spawnFrontDoorKeyButton.onClick.AddListener(SpawnFDKeyAtPlayerFeet);
+        }
+
 
         if (resetSanityDrainButton != null)
         {
@@ -106,6 +132,8 @@ public class DebugController : MonoBehaviour
             { teleMBedroom, new Vector3(-1f, 9.5f, 8f) },
             { teleVBedroom, new Vector3(-18f, 9.5f, -9f) },
             { teleBBedroom, new Vector3(-1f, 9.5f, -9f) },
+            { teleFirstFloorBathroom, new Vector3(-26f, 2.5f, 9f) },
+            { teleMBathroom, new Vector3(-20f, 9.5f, 18f) },
         };
 
         // Add listeners for teleport buttons
@@ -219,6 +247,31 @@ public class DebugController : MonoBehaviour
         if (pillPrefab != null && playerTransform != null)
         {
             Instantiate(pillPrefab, playerTransform.position, Quaternion.identity);
+        }
+    }
+
+    private void SpawnFuseAtPlayerFeet()
+    {
+        if (fusePrefab != null && playerTransform != null)
+        {
+            Instantiate(fusePrefab, playerTransform.position, Quaternion.identity);
+        }
+    }
+
+    private void SpawnOKeyAtPlayerFeet()
+    {
+        if (officeKeyPrefab != null && playerTransform != null)
+        {
+            GameObject spawnedKey = Instantiate(officeKeyPrefab, playerTransform.position, Quaternion.identity);
+            spawnedKey.SetActive(true); // Ensure the spawned key is visible
+        }
+    }
+
+    private void SpawnFDKeyAtPlayerFeet()
+    {
+        if (frontDoorKeyPrefab != null && playerTransform != null)
+        {
+            Instantiate(frontDoorKeyPrefab, playerTransform.position, Quaternion.identity);
         }
     }
 
