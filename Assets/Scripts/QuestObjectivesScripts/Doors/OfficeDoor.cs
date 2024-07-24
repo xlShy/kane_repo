@@ -12,12 +12,10 @@ public class OfficeDoor : MonoBehaviour
     }
     private void OnEnable()
     {
-        ReadableDocumentScript.OnStartOfficePuzzle += doorBase.LockDoor;
         ChemicalMixingPlace.OnCompleteOfficePuzzle += doorBase.UnlockDoor;
     }
     private void OnDisable()
     {
-        ReadableDocumentScript.OnStartOfficePuzzle -= doorBase.LockDoor;
         ChemicalMixingPlace.OnCompleteOfficePuzzle -= doorBase.UnlockDoor;
     }
 

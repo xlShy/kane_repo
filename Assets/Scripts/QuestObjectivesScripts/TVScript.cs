@@ -16,7 +16,6 @@ public class TVScript : InteractableObject
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        fuseBoxScript.fuseBoxActivate.AddListener(initiateTelevision);
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -25,15 +24,10 @@ public class TVScript : InteractableObject
             tvInterface.SetActive(true);
         }
     }
-
-    private void initiateTelevision()
+    public void enableTelevision()
     {
         staticTVObject.SetActive(true);
         tvStaticLoopSound.Play();
         meshRenderer.enabled = !meshRenderer.enabled;
-    }
-    void ObjectiveOutline()
-    {
-        //this will be dedicated to outline of the objective until 1st time interact
     }
 }

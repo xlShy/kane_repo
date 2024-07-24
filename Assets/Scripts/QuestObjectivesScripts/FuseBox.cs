@@ -13,8 +13,6 @@ public class FuseBox : InteractableObject
     [SerializeField] private Puzzle puzzle;
     [SerializeField] private PuzzleEventHandler pEventHandler;
     [SerializeField] private KeyItemInventory keyItemInventory;
-    [SerializeField] private TVScript tvScript;
-    [SerializeField] private LightManager lightManager;
 
     [Header("Objects")]
     [SerializeField] private InventoryItem requiredFuse;
@@ -28,14 +26,14 @@ public class FuseBox : InteractableObject
 
     [Header("SFX")]
     [SerializeField] private AudioSource placingFuse;
-    [SerializeField] private AudioSource fuseActivate;
+    [SerializeField] private AudioSource fuseActivate; 
     [SerializeField] private AudioSource fuseActivateSecondPhase;
     [SerializeField] private AudioSource fuseLoopSound;
 
     //events
     private Coroutine dialogueCoroutine;
     private Inventory currentInventory;
-    public UnityEvent fuseBoxActivate;
+    public UnityEvent fuseBoxActivate; //enables television & enables light
 
     [HideInInspector]    
     public bool isCompleted = false; //determines if fusebox is solved
@@ -53,9 +51,9 @@ public class FuseBox : InteractableObject
         if (itemInteractedCase == 2)
         {
             keyItems = inventory.GetKeyItems(requiredFuse);
-            foreach(var item in keyItems)
+            if (keyItems == null)
             {
-                print(item.itemName);
+                return;
             }
             int fuseCount = CountFuseItems(keyItems);
             HandleFuses(fuseCount);
@@ -82,7 +80,6 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 1)
         {
-            //print("delete 1 fuse");
             placingFuse.Play();
             oneFuseDialogue.TriggerDialogue();           
             keyItemInventory.RemoveKeyItem(requiredFuse, 1);
@@ -95,7 +92,6 @@ public class FuseBox : InteractableObject
         }
         else if (fuseCount == 2)
         {
-            //print("delete 2 fuses");
             keyItemInventory.RemoveKeyItem(requiredFuse, 2);
             fuseBoxActivate.Invoke(); // TV Script
             SolvePuzzle();      
@@ -124,7 +120,6 @@ public class FuseBox : InteractableObject
         gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
         televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
         successFuseDialogue.TriggerDialogue();
-        lightManager.TurnOnAll();
 
         //set puzzle as complete
         pEventHandler.InteractPuzzle(puzzle);

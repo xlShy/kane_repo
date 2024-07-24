@@ -30,13 +30,13 @@ public class RustedBathroomDoor : InteractableObject
         if (chemMixTriggerScript != null)
         {
             //washroom - chemical puzzle
-            chemMixTriggerScript.chemicalMixingEventInitiate.AddListener(doorBase.LockDoor);
+            chemMixTriggerScript.chemicalEventStart.AddListener(doorBase.LockDoor);
         }
 
         if (readableDocumentScript != null)
         {
             //office - washroom - safe puzzle
-            readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
+            //readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
         }
 
         if (chemicalMixingPlaceScript != null)
@@ -78,11 +78,10 @@ public class RustedBathroomDoor : InteractableObject
             doorBase.CloseDoor(openSpeed);
         }
     }
-    private void canBeMoved()
-    {
-        //Debug.Log("I am called to change the state of the furniture");
-        gameObject.layer = LayerMask.NameToLayer("interactableMask");
-    }
+    //public void canBeMoved()
+    //{
+    //    gameObject.layer = LayerMask.NameToLayer("interactableMask");
+    //}
 
     private void OnPuzzleComplete()
     {

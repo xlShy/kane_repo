@@ -10,10 +10,10 @@ public class FurnitureToMoveScript : InteractableObject
     [SerializeField] private AudioSource movingFurnitureAudio;
     private void Start()
     {
-        readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
+        //readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
     }
 
-    private void canBeMoved()
+    public void canBeMoved()
     {
         Debug.Log("I am called to change the state of the furniture");
         gameObject.layer = LayerMask.NameToLayer("interactableMask");

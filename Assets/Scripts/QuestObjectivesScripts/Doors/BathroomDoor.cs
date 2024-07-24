@@ -23,13 +23,13 @@ public class BathroomDoor : InteractableObject
         if (chemMixTriggerScript != null)
         {
             //washroom - chemical puzzle
-            chemMixTriggerScript.chemicalMixingEventInitiate.AddListener(doorBase.LockDoor);
+            chemMixTriggerScript.chemicalEventStart.AddListener(doorBase.LockDoor);
         }
 
         if (readableDocumentScript != null)
         {
             //office - washroom - safe puzzle
-            readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
+            readableDocumentScript.initiateOfficeEvent.AddListener(canBeMoved);
         }
 
         if (chemicalMixingPlaceScript != null)

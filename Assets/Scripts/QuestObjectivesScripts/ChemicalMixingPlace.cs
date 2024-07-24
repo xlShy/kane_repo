@@ -43,7 +43,6 @@ public class ChemicalMixingPlace : InteractableObject
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
-        eventScript.chemicalMixingEventInitiate.AddListener(StartPuzzle);
     }
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
@@ -132,7 +131,7 @@ public class ChemicalMixingPlace : InteractableObject
         resetInteractableState.Invoke();
     }
     
-    private void StartPuzzle()
+    public void StartPuzzleEvent()
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
         Debug.Log("Can mix in the place now!");

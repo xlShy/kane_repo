@@ -97,7 +97,6 @@ public class InteractionHandler : MonoBehaviour
         {
             interactableObj = hit.collider.GetComponent<IInteractable>();
 
-            //if (interactableObj != null && !IsAnyCanvasActive())
             if(interactableObj != null && !isCanvasEnabled) 
             {
                 isInteracting.Invoke();
@@ -139,16 +138,5 @@ public class InteractionHandler : MonoBehaviour
     public void isAnyCanvasOn(bool isOn)
     {
         isCanvasEnabled = isOn;
-    }
-    private void OnDrawGizmos()
-    {
-        if (cameraTransform != null)
-        {
-            // OLD INTERACTION SYSTEM
-            //Gizmos.color = Color.red;
-            //Gizmos.DrawWireSphere(interactionPoint.position, interactionRadius);
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(cameraTransform.position, cameraTransform.forward * interactionDistance);
-        }
     }
 }

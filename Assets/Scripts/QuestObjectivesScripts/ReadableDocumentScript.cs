@@ -11,12 +11,10 @@ public class ReadableDocumentScript : InteractableObject
 
     [SerializeField] private InterfaceOnClose interfaceOnCloseScript;
 
-    public UnityEvent initiateFlicker;
-
     [SerializeField] private List<AudioClip> openDocumentSound;
     [SerializeField] private AudioSource audioSource;
 
-    public static event Action OnStartOfficePuzzle;
+    public UnityEvent initiateOfficeEvent;
 
     public bool isOfficeEventStarted = false;
     private void Start()
@@ -36,10 +34,11 @@ public class ReadableDocumentScript : InteractableObject
     {
         if (!isOfficeEventStarted)
         {
-            initiateFlicker.Invoke();
+            //disables sanity
+            //locks office door
+            //sets bookshelf to be moved
+            initiateOfficeEvent.Invoke();
 
-            //sanity drain disable
-            OnStartOfficePuzzle?.Invoke();
             isOfficeEventStarted = true;
         }
     }

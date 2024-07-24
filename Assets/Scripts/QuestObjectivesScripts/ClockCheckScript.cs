@@ -37,24 +37,8 @@ public class ClockChecker : MonoBehaviour
     {
         checkTimer = howOftenCheck;
         closeInterfaceScript.interfaceClosed.AddListener(CheckHandsPosition);
-        Debug.Log("Hour Hand Target Time: " + hourHandTargetTime);
-        Debug.Log("Minute Hand Target Time: " + minuteHandTargetTime);
-        Debug.Log("Hour Hand Target Angle: " + hourHandTargetAngle);
-        Debug.Log("Minute Hand Target Angle: " + minuteHandTargetAngle);
 
     }
-
-    //void Update()
-    //{
-    //    checkTimer -= Time.deltaTime;
-
-    //    if (checkTimer <= 0f)
-    //    {
-    //        CheckHandsPosition();
-    //        checkTimer = howOftenCheck;
-    //    }
-    //}
-
     private void CheckHandsPosition()
     {
 
@@ -65,8 +49,6 @@ public class ClockChecker : MonoBehaviour
 
         }
     }
-
-
     private bool IsMinuteHandInCorrectPosition()
     {
         float currentAngle = minuteHand.GetCurrentAngle();

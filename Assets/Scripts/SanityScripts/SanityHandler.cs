@@ -38,7 +38,6 @@ public class SanityHandler : MonoBehaviour
         RoomChecker.OnRoomChanged += SetSanityDecreaseRate;
 
         //office Event
-        ReadableDocumentScript.OnStartOfficePuzzle += DisableSanity;
         ChemicalMixingPlace.OnCompleteOfficePuzzle += EnableSanity;
 
         //canvas is on
@@ -52,7 +51,6 @@ public class SanityHandler : MonoBehaviour
         RoomChecker.OnRoomChanged -= SetSanityDecreaseRate;
 
         //office Event
-        ReadableDocumentScript.OnStartOfficePuzzle -= DisableSanity;
         ChemicalMixingPlace.OnCompleteOfficePuzzle -= EnableSanity;
     }
     private void Update()

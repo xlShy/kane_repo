@@ -25,7 +25,7 @@ public class LightManager : MonoBehaviour, ISwitchable
 
     private void Start()
     {
-        readableDocumentScript.initiateFlicker.AddListener(EnableLightFlicker);
+        readableDocumentScript.initiateOfficeEvent.AddListener(EnableLightFlicker);
         chemicalMixingPlaceScript.puzzleComplete.AddListener(DisableLightFlicker);
         InitializeManagedLights();
         TurnOffAll();

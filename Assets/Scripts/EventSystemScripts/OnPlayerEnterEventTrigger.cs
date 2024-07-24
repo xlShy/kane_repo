@@ -1,23 +1,19 @@
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class ChemicalMixingEventTrigger : MonoBehaviour
+public class OnPlayerEnterEventTrigger : MonoBehaviour
 {
-    public bool onlyTriggerOnce = false;
-
-    public UnityEvent chemicalEventStart;
+    public bool onlyTriggerOnce;
+    public UnityEvent events;
     private bool isTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (onlyTriggerOnce && isTriggered)
-        {
             return;
-        }
-        Debug.Log("Activated Event!");
-        chemicalEventStart.Invoke(); //starts event
-        isTriggered = true;
 
+        Debug.Log("Activated Event!");
+        events.Invoke(); //MixingIngredients
+        isTriggered = true;
     }
 }
