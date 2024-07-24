@@ -1368,17 +1368,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5152423163159324861, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1716798330 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 758185959961032799, guid: a8e23b16da29510449b86f56731bec5d, type: 3}
-  m_PrefabInstance: {fileID: 7933519317876947055}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc21420c9cdb394d8a4059e67bbd052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1742498557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8789582139225666972, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -2309,7 +2298,7 @@ PrefabInstance:
     - target: {fileID: 7854700075321512501, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: showInteractableUI
       value: 
-      objectReference: {fileID: 1716798330}
+      objectReference: {fileID: 4614911185076699636}
     - target: {fileID: 7854700075321512501, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: uiCanvas.Array.data[0]
       value: 
@@ -2403,6 +2392,10 @@ PrefabInstance:
       propertyPath: ddolObjects.Array.data[4]
       value: 
       objectReference: {fileID: 5994076504277111780}
+    - target: {fileID: 3959628579063613917, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: interactionImage
+      value: 
+      objectReference: {fileID: 1779987974}
     - target: {fileID: 6456800679941445462, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: m_Name
       value: GameManagers
@@ -2456,6 +2449,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+--- !u!114 &4614911185076699636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3959628579063613917, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc21420c9cdb394d8a4059e67bbd052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4706684788166481365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2842,10 +2846,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 758185959961032799, guid: a8e23b16da29510449b86f56731bec5d, type: 3}
-      propertyPath: interactionImage
-      value: 
-      objectReference: {fileID: 1779987974}
     - target: {fileID: 7349396754557375480, guid: a8e23b16da29510449b86f56731bec5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

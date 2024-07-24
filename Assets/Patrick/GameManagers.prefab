@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2191817601831526522}
   - component: {fileID: 926579298934901709}
+  - component: {fileID: 3959628579063613917}
   m_Layer: 0
   m_Name: CanvasManager
   m_TagString: Untagged
@@ -53,10 +54,24 @@ MonoBehaviour:
   safeContent: {fileID: 0}
   chemicalRecipe: {fileID: 0}
   television: {fileID: 0}
+  blueprint: {fileID: 0}
   UICanvas: []
   PuzzleCanvas: []
   currentEnabledCanvas: {fileID: 0}
   isCanvasFound: 0
+--- !u!114 &3959628579063613917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63513610447101020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc21420c9cdb394d8a4059e67bbd052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionImage: {fileID: 0}
 --- !u!1 &104341112640658525
 GameObject:
   m_ObjectHideFlags: 0

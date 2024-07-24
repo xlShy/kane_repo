@@ -11,10 +11,16 @@ public class CanvasManager : CanvasToggler
     public List<GameObject> PuzzleCanvas;
     public GameObject currentEnabledCanvas;
 
+    private ShowInteractableUI interactableUI;
+
     public bool isCanvasFound;
 
     public static event Action<bool> OnCanvasEnabled;
 
+    private void Awake()
+    {
+        interactableUI = GetComponent<ShowInteractableUI>();
+    }
     private void Start()
     {
         UICanvas = new List<GameObject>();
@@ -64,6 +70,7 @@ public class CanvasManager : CanvasToggler
                 currentEnabledCanvas = canvas;
                 isCanvasFound = true;
                 SetCursorEnabled();
+                interactableUI.DisableInteractableUI();
                 OnCanvasEnabled?.Invoke(true);
                 return;
             }

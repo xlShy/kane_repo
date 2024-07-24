@@ -9,7 +9,6 @@ public class ShowInteractableUI : MonoBehaviour
     public void SetInteractionPrompt(Sprite image)
     {
         interactionImage.sprite = image;
-
     }
 
     public void EnableInteractableUI()

@@ -14,7 +14,6 @@ public class InteractionHandler : MonoBehaviour
     [Header("Interaction Settings")]
     [SerializeField] private float interactionDistance = 5f;
     [SerializeField] private LayerMask interactableMask;
-    [SerializeField] private List<GameObject> uiCanvas;
     [SerializeField] private Transform cameraTransform;
 
     // OLD INTERACTION SYSTEM 
