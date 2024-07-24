@@ -12,20 +12,7 @@ public class JournalPageHandler : MonoBehaviour
 
     public int setPage = 0;
 
-
-    private void OnEnable()
-    {
-        GrandfatherClock.OnGrandfathersClockComplete += SetChangingPage;
-        CombinationLockActivateScript.OnCombinationLockComplete += SetChangingPage;
-        ChemicalMixingPlace.OnChemicalMixingComplete += SetChangingPage;
-    }
-    private void OnDisable()
-    {
-        GrandfatherClock.OnGrandfathersClockComplete -= SetChangingPage;
-        CombinationLockActivateScript.OnCombinationLockComplete -= SetChangingPage;
-        ChemicalMixingPlace.OnChemicalMixingComplete -= SetChangingPage;
-    }
-    private void SetChangingPage()
+    public void SetChangingPage()
     {
         SetPage();
         setPage++;

@@ -153,7 +153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a816a5b668692f4e9d35cc45f8115d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cbc6d262bfe8214e8385e4af818b411, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a02e0e14fe011aa4cba3225913dfa862, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 037306abb2fa4d44f92f03ed381251c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3322,7 +3322,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1156375c15f290c4792c08ddf41bf5ad, type: 2}
     - target: {fileID: 919132149155446097, guid: 00175f51f7014804e92d943338724805, type: 3}
       propertyPath: m_Name
-      value: folder
+      value: Blueprint Folder
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 00175f51f7014804e92d943338724805, type: 3}
       propertyPath: m_Layer
@@ -3551,7 +3551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1296078501043461095, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
       propertyPath: m_Name
-      value: television (1)
+      value: Television
       objectReference: {fileID: 0}
     - target: {fileID: 1925086715329315165, guid: 50f5237e1c8abd84eb41677b2020c0ce, type: 3}
       propertyPath: m_LocalScale.y
@@ -3778,7 +3778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       propertyPath: m_Name
-      value: grapaclock
+      value: GrandFathers Clock
       objectReference: {fileID: 0}
     - target: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       propertyPath: m_Layer
@@ -3911,21 +3911,41 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
-  cameraFlash: {fileID: 0}
-  isPuzzleComplete: 0
+  keyItem: {fileID: 0}
   puzzle: {fileID: 11400000, guid: bbce36c2a40d03643827969f56a4bf7c, type: 2}
   pEventHandler: {fileID: 0}
   puzzleCanvas: {fileID: 4303823185850639545}
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
   clockChecker: {fileID: 6847741487301013686}
   onPuzzleSolve: {fileID: 6416578035728409611}
   puzzleCompleteSounds: {fileID: 3330471032807981493}
-  keyItem: {fileID: 0}
-  puzzleComplete:
+  OnCompleteGrandfathersClock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CameraFlash, Assembly-CSharp
+        m_MethodName: TriggerFlash
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
+        m_MethodName: SetChangingPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isPuzzleComplete: 0
 --- !u!82 &3330471032807981493
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4169,9 +4189,6 @@ MonoBehaviour:
   pickUpSound: {fileID: 0}
   readableDocumentUI: {fileID: 8789582139225666972}
   interfaceOnCloseScript: {fileID: 2072668274115883948}
-  initiateFlicker:
-    m_PersistentCalls:
-      m_Calls: []
   openDocumentSound:
   - {fileID: 8300000, guid: 5cf11dbb60eaaef42a58bc2d61415475, type: 3}
   - {fileID: 8300000, guid: 8be93b5a894c4d64cb17fc88967f95bd, type: 3}
@@ -4179,6 +4196,45 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 885e35c929e04f6499616abd276cfbb2, type: 3}
   - {fileID: 8300000, guid: 48b937269d97ef142a372aaa2316f278, type: 3}
   audioSource: {fileID: 6000564640111546225}
+  initiateOfficeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6839411783845153281}
+        m_TargetAssemblyTypeName: FurnitureToMoveScript, Assembly-CSharp
+        m_MethodName: canBeMoved
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SanityHandler, Assembly-CSharp
+        m_MethodName: DisableSanity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
+        m_MethodName: LockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isOfficeEventStarted: 0
 --- !u!114 &2072668274115883948
 MonoBehaviour:
@@ -4624,7 +4680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Name
-      value: chemical (3)
+      value: Baking Soda
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4710,12 +4766,6 @@ MonoBehaviour:
   inventoryItemImage: {fileID: 21300000, guid: 3f6f3342ceb928940ac37246c8fc1dda, type: 3}
   itemDescription: Baking soda is a white powder (sodium bicarbonate) used as a leavening
     agent in baking and for cleaning purposes.
-  ingredientState: 0
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  eventScript: {fileID: 0}
-  mixingScript: {fileID: 6343051102639992546}
 --- !u!82 &8093797565198898528
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4982,19 +5032,39 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
-  cameraFlash: {fileID: 0}
   puzzle: {fileID: 11400000, guid: b42527822a61ddc4494f6d972ad07adf, type: 2}
   pEventHandler: {fileID: 0}
   combinationCanvas: {fileID: 675867482575755741}
   combinationLockScript: {fileID: 5008488419646140202}
   readableDocument: {fileID: 4324448812680185826}
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
   onPuzzleSuccess: {fileID: 3200428893374409781}
-  onLockPuzzleCompletion:
+  OnCompleteCombinationLock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CameraFlash, Assembly-CSharp
+        m_MethodName: TriggerFlash
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
+        m_MethodName: SetChangingPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isPuzzleComplete: 0
 --- !u!65 &2829535861009964230
 BoxCollider:
@@ -5352,7 +5422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Name
-      value: chemical (2)
+      value: Dish Soap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5438,12 +5508,6 @@ MonoBehaviour:
   inventoryItemImage: {fileID: 21300000, guid: c9b595a3d266b034a84a1f78515f048f, type: 3}
   itemDescription: Dish soap is a liquid detergent used for cleaning dishes, utensils,
     and kitchen surfaces, effectively removing grease and grime.
-  ingredientState: 0
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  eventScript: {fileID: 0}
-  mixingScript: {fileID: 6343051102639992546}
 --- !u!82 &4913275678535823086
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5790,7 +5854,6 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
-  cameraFlash: {fileID: 0}
   puzzle: {fileID: 11400000, guid: ae216ffdf6b8b074a8ef9c3c640b9a92, type: 2}
   pEventHandler: {fileID: 0}
   keyItemInventory: {fileID: 0}
@@ -6289,7 +6352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       propertyPath: m_Name
-      value: bucket
+      value: Mixing Bucket
       objectReference: {fileID: 0}
     - target: {fileID: 7942816438788599155, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6402,9 +6465,74 @@ MonoBehaviour:
   resetInteractableState:
     m_PersistentCalls:
       m_Calls: []
-  puzzleComplete:
+  OnCompleteChemicalMixing:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SanityHandler, Assembly-CSharp
+        m_MethodName: EnableSanity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
+        m_MethodName: UnlockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
+        m_MethodName: UnlockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
+        m_MethodName: SetChangingPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CameraFlash, Assembly-CSharp
+        m_MethodName: TriggerFlash
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  chemicalIngredients:
+  - {fileID: 3497893784525973410}
+  - {fileID: 3591023975231875697}
+  - {fileID: 3050189354741048682}
+  - {fileID: 693833464514096106}
 --- !u!65 &3929305568480146816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6752,7 +6880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Name
-      value: chemical
+      value: Hydrogen Peroxide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6833,12 +6961,6 @@ MonoBehaviour:
   inventoryItemImage: {fileID: 21300000, guid: a34f90dbb8f09244a8c3c04c2751413a, type: 3}
   itemDescription: Hydrogen peroxide is a colorless liquid used as a disinfectant,
     bleach, and antiseptic, decomposing into water and oxygen.
-  ingredientState: 0
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  eventScript: {fileID: 0}
-  mixingScript: {fileID: 6343051102639992546}
 --- !u!82 &3597127614601845869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6990,7 +7112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Name
-      value: chemical (1)
+      value: Bleach
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7071,12 +7193,6 @@ MonoBehaviour:
   inventoryItemImage: {fileID: 21300000, guid: 864bf9e7e42d7a3458083ef83541af1a, type: 3}
   itemDescription: Bleach is a chemical solution, often containing sodium hypochlorite,
     used for whitening, disinfecting, and removing stains.
-  ingredientState: 0
-  newLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  eventScript: {fileID: 0}
-  mixingScript: {fileID: 6343051102639992546}
 --- !u!82 &151878617040520222
 AudioSource:
   m_ObjectHideFlags: 0

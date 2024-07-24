@@ -27,22 +27,10 @@ public class RustedBathroomDoor : InteractableObject
             //washroom - chemical puzzle
             doorLockerScript.doorLocked.AddListener(doorBase.LockDoor);
         }
-        if (chemMixTriggerScript != null)
-        {
-            //washroom - chemical puzzle
-            chemMixTriggerScript.chemicalEventStart.AddListener(doorBase.LockDoor);
-        }
-
-        if (readableDocumentScript != null)
-        {
-            //office - washroom - safe puzzle
-            //readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
-        }
-
         if (chemicalMixingPlaceScript != null)
         {
             //washroom - chemical puzzle
-            chemicalMixingPlaceScript.puzzleComplete.AddListener(OnPuzzleComplete);
+            chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(OnPuzzleComplete);
         }
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
@@ -78,11 +66,6 @@ public class RustedBathroomDoor : InteractableObject
             doorBase.CloseDoor(openSpeed);
         }
     }
-    //public void canBeMoved()
-    //{
-    //    gameObject.layer = LayerMask.NameToLayer("interactableMask");
-    //}
-
     private void OnPuzzleComplete()
     {
         isPuzzleCompleted = true;

@@ -20,12 +20,6 @@ public class BathroomDoor : InteractableObject
             //washroom - chemical puzzle
             doorLockerScript.doorLocked.AddListener(doorBase.LockDoor);
         }
-        if (chemMixTriggerScript != null)
-        {
-            //washroom - chemical puzzle
-            chemMixTriggerScript.chemicalEventStart.AddListener(doorBase.LockDoor);
-        }
-
         if (readableDocumentScript != null)
         {
             //office - washroom - safe puzzle
@@ -35,7 +29,7 @@ public class BathroomDoor : InteractableObject
         if (chemicalMixingPlaceScript != null)
         {
             //washroom - chemical puzzle
-            chemicalMixingPlaceScript.puzzleComplete.AddListener(doorBase.UnlockDoor);
+            chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(doorBase.UnlockDoor);
         }
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)

@@ -15,9 +15,9 @@ public class ChemicalMixingEventTrigger : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Activated Event!");
-        chemicalEventStart.Invoke(); //starts event
+        //locks bathroom and office2bathroom door
+        //starts the puzzle
+        chemicalEventStart.Invoke();
         isTriggered = true;
-
     }
 }

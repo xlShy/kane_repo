@@ -7,30 +7,22 @@ using System;
 
 public class CombinationLockActivateScript : InteractableObject
 {
-    [SerializeField] public CameraFlash cameraFlash;
-
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
 
     public GameObject combinationCanvas;
     private Renderer objectRenderer;
 
-    [SerializeField]
-    public CombinationLockScript combinationLockScript;
+    [SerializeField] public CombinationLockScript combinationLockScript;
 
     [SerializeField] private GameObject readableDocument;
 
-    [SerializeField]
-    public LayerMask newLayerMask;
-
-    [SerializeField]
-    private DialogueTriggerScript onPuzzleSuccess;
+    [SerializeField] private DialogueTriggerScript onPuzzleSuccess;
 
     private bool canvasWasOpened;
 
-    public UnityEvent onLockPuzzleCompletion;
-    //journal event
-    public static PuzzleStatus.onCompletedEvents OnCombinationLockComplete;
+    public UnityEvent OnCompleteCombinationLock;
+
     public bool isPuzzleComplete = false;
 
     private void Start()
@@ -61,19 +53,14 @@ public class CombinationLockActivateScript : InteractableObject
     }
     private void OnCorrectCombinationEntered()
     {
-        cameraFlash.TriggerFlash(1f);
-        isPuzzleComplete = true;
+        OnCompleteCombinationLock?.Invoke();
+        //Add puzzle to completed in the level1
+        pEventHandler.InteractPuzzle(puzzle);
+
         readableDocument.SetActive(true);
         onPuzzleSuccess.TriggerDialogue();
         combinationCanvas.SetActive(false);
         objectRenderer.material.color = Color.green;
-        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-
-        onLockPuzzleCompletion.Invoke();
-
-        //Add puzzle to completed in the level1
-        pEventHandler.InteractPuzzle(puzzle);
-        //Add completed puzzle to journal
-        OnCombinationLockComplete?.Invoke();
+        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");  
     }
 }

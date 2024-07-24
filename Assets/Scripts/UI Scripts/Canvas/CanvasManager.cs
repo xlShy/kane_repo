@@ -29,6 +29,7 @@ public class CanvasManager : CanvasToggler
         PuzzleCanvas.Add(safeContent);
         PuzzleCanvas.Add(chemicalRecipe);
         PuzzleCanvas.Add(television);
+        PuzzleCanvas.Add(blueprint);
 
         DisableAllCanvas(UICanvas);
     }

@@ -18,6 +18,7 @@ public class CanvasToggler : MonoBehaviour
     [SerializeField] protected GameObject safeContent;
     [SerializeField] protected GameObject chemicalRecipe;
     [SerializeField] protected GameObject television;
+    [SerializeField] protected GameObject blueprint;
 
     public void OnEnable()
     {

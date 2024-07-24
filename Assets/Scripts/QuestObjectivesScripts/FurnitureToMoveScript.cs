@@ -8,16 +8,7 @@ public class FurnitureToMoveScript : InteractableObject
 {
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private AudioSource movingFurnitureAudio;
-    private void Start()
-    {
-        //readableDocumentScript.initiateFlicker.AddListener(canBeMoved);
-    }
 
-    public void canBeMoved()
-    {
-        Debug.Log("I am called to change the state of the furniture");
-        gameObject.layer = LayerMask.NameToLayer("interactableMask");
-    }
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -29,7 +20,10 @@ public class FurnitureToMoveScript : InteractableObject
         }
 
     }
-
+    public void canBeMoved()
+    {
+        gameObject.layer = LayerMask.NameToLayer("interactableMask");
+    }
     private IEnumerator MoveSmoothlyCo(Vector3 targetPosition, float duration)
     {
         movingFurnitureAudio.Play();

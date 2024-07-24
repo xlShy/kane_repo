@@ -30,15 +30,11 @@ public class ChemicalMixingPlace : InteractableObject
     [SerializeField] private AudioSource correctMixture;
 
     public UnityEvent resetInteractableState;
-    public UnityEvent puzzleComplete;
+    public UnityEvent OnCompleteChemicalMixing;
     
-    //sanity event
-    public static event Action OnCompleteOfficePuzzle;
-
-    //journal event
-    public static PuzzleStatus.onCompletedEvents OnChemicalMixingComplete;
-
     private bool isPuzzleSolved = false;
+
+    [SerializeField] private List<GameObject> chemicalIngredients;
 
     private void Start()
     {
@@ -94,25 +90,17 @@ public class ChemicalMixingPlace : InteractableObject
         // Check puzzle state
         if (hasAllRequiredItems && !hasFailItem)
         {
-            cameraFlash.TriggerFlash(1f);
-
-            correctMixture.Play();
-            Debug.Log("Puzzle Solved!");
-            puzzleComplete.Invoke();
-            isPuzzleSolved = true;
-            deRustBucket.SetActive(true);
-
-            //enable sanity drain on sanity handler script
-            OnCompleteOfficePuzzle?.Invoke();
+            OnCompleteChemicalMixing.Invoke();
             //Add puzzle to completed in the level1
             pEventHandler.InteractPuzzle(puzzle);
-            //Add completed puzzle to journal
-            OnChemicalMixingComplete?.Invoke();
+
+            correctMixture.Play();
+            isPuzzleSolved = true;
+            deRustBucket.SetActive(true);      
         }
         else
         {
             wrongMixture.Play();
-            Debug.Log("Fail!");
             if (hasFailItem)
             {
                 Debug.Log("Incorrect!");
@@ -128,12 +116,18 @@ public class ChemicalMixingPlace : InteractableObject
     private void ResetChemicalPuzzle()
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
-        resetInteractableState.Invoke();
     }
     
-    public void StartPuzzleEvent()
+    public void StartChemicalEvent()
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
         Debug.Log("Can mix in the place now!");
+    }
+    public void MakeIngredientsInteractable()
+    {
+        foreach(GameObject ingredient in chemicalIngredients)
+        {
+            ingredient.layer = LayerMask.NameToLayer("interactableMask");
+        }
     }
 }

@@ -37,9 +37,6 @@ public class SanityHandler : MonoBehaviour
         PlayerLocationChecker.OnExitOutside += PlayerOnOutside;
         RoomChecker.OnRoomChanged += SetSanityDecreaseRate;
 
-        //office Event
-        ChemicalMixingPlace.OnCompleteOfficePuzzle += EnableSanity;
-
         //canvas is on
         CanvasManager.OnCanvasEnabled += IsCanvasOn;
     }
@@ -50,8 +47,8 @@ public class SanityHandler : MonoBehaviour
         PlayerLocationChecker.OnExitOutside -= PlayerOnOutside;
         RoomChecker.OnRoomChanged -= SetSanityDecreaseRate;
 
-        //office Event
-        ChemicalMixingPlace.OnCompleteOfficePuzzle -= EnableSanity;
+        //canvas is on
+        CanvasManager.OnCanvasEnabled += IsCanvasOn;
     }
     private void Update()
     {

@@ -10,13 +10,4 @@ public class OfficeDoor : MonoBehaviour
     {
         doorBase = GetComponent<DoorBase>();
     }
-    private void OnEnable()
-    {
-        ChemicalMixingPlace.OnCompleteOfficePuzzle += doorBase.UnlockDoor;
-    }
-    private void OnDisable()
-    {
-        ChemicalMixingPlace.OnCompleteOfficePuzzle -= doorBase.UnlockDoor;
-    }
-
 }
