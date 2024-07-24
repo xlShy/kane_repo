@@ -848,7 +848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &739606902
 Transform:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4822163974991620244, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
       propertyPath: m_Name
-      value: DialogueTriggers (1)
+      value: 'DialogueTriggers '
       objectReference: {fileID: 0}
     - target: {fileID: 4929295417939750551, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
       propertyPath: dialogueText
@@ -1931,14 +1931,6 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2085152750}
-    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: cameraFlash
-      value: 
-      objectReference: {fileID: 2085152754}
-    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: eventScript
-      value: 
-      objectReference: {fileID: 5435619986811776475}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: keyInventory
       value: 

@@ -7,16 +7,14 @@ using UnityEngine.UI;
 
 public class InterfaceOnClose : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject interfaceObject;
+    [SerializeField] private GameObject interfaceObject;
 
-    [SerializeField]
-    private DialogueTriggerScript onCloseInterface;
-
-    public UnityEvent interfaceClosed;
+    [SerializeField] private DialogueTriggerScript onCloseInterface;
 
     [SerializeField] private CombinationLockActivateScript combinationLockActivate;
     [SerializeField] private GrandfatherClock grandfatherClock;
+
+    public UnityEvent interfaceClosed;
 
     private void Update()
     {
@@ -25,7 +23,6 @@ public class InterfaceOnClose : MonoBehaviour
             CloseInterface();
         }
     }
-
     private void CloseInterface()   
     {
         interfaceClosed.Invoke(); // ReadableDocumentScript
@@ -38,10 +35,6 @@ public class InterfaceOnClose : MonoBehaviour
         {
             combinationLockActivate.CheckCombinationOnClose();
         }
-
         interfaceObject.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        
     }
 }

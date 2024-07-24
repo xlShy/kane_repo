@@ -6,18 +6,8 @@ using UnityEngine.Events;
 
 public class ChemicalMixingPlace : InteractableObject
 {
-    [SerializeField] public CameraFlash cameraFlash;
-
     public Puzzle puzzle;
     public PuzzleEventHandler pEventHandler;
-
-    private Renderer objectRenderer;
-
-    [SerializeField]
-    public LayerMask newLayerMask;
-
-    [SerializeField]
-    public ChemicalMixingEventTrigger eventScript;
 
     [SerializeField] public Inventory inventory;
     [SerializeField] public KeyItemInventory keyInventory;
@@ -36,11 +26,6 @@ public class ChemicalMixingPlace : InteractableObject
 
     [SerializeField] private List<GameObject> chemicalIngredients;
 
-    private void Start()
-    {
-        objectRenderer = GetComponent<Renderer>();
-    }
-
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (isPuzzleSolved)
@@ -51,10 +36,6 @@ public class ChemicalMixingPlace : InteractableObject
             {
                 inventory.AddKeyItem(deRustingMixture);
                 Debug.Log("Added De-Rusting Mixture to inventory!");
-            }
-            else
-            {
-                Debug.LogError("De-Rusting Mixture item is not assigned!");
             }
             return;
         }
@@ -103,25 +84,25 @@ public class ChemicalMixingPlace : InteractableObject
             wrongMixture.Play();
             if (hasFailItem)
             {
+                //insert dialogue
                 Debug.Log("Incorrect!");
             }
             else
             {
+                //insert dialogue
                 Debug.Log("Kulang!");
             }
             ResetChemicalPuzzle();
         }
     }
-
     private void ResetChemicalPuzzle()
     {
+        //insert dialogue
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
-    }
-    
+    } 
     public void StartChemicalEvent()
     {
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
-        Debug.Log("Can mix in the place now!");
     }
     public void MakeIngredientsInteractable()
     {
