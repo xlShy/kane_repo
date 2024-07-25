@@ -31,7 +31,6 @@ public class LightManager : MonoBehaviour, ISwitchable
     //test purposes
     private void Update()
     {
-        print(flickerCoroutine);
         if (Input.GetKeyDown(KeyCode.O))
         {
             isLightOn = !isLightOn;
@@ -136,7 +135,7 @@ public class LightManager : MonoBehaviour, ISwitchable
             {
                 light.enabled = !light.enabled;
             }
-            yield return new WaitForSeconds(Random.Range(0.05f, 0.2f));
+            yield return new WaitForSeconds(Random.Range(0.05f, 0.3f));
         }
     }
     private IEnumerator PlayAudioSequence()
