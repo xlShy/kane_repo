@@ -34,6 +34,7 @@ public class ReadableDocumentScript : InteractableObject
     {
         if (!isOfficeEventStarted)
         {
+            //enables light flicker
             //disables sanity
             //locks office door
             //sets bookshelf to be moved

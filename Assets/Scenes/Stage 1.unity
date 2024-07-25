@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 161733649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97999954, y: 4.09, z: -0.28999996}
+  m_LocalPosition: {x: 20.08, y: 4.09, z: -4.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -848,7 +848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &739606902
 Transform:
   m_ObjectHideFlags: 0
@@ -1333,7 +1333,8 @@ PrefabInstance:
       value: Lighting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1355337998836929480, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1a9fa3c76218f469d51b45f22c55df, type: 3}
@@ -1946,19 +1947,23 @@ PrefabInstance:
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1351783700}
+      objectReference: {fileID: 596482459}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1083830683}
+      objectReference: {fileID: 2085152754}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 596482459}
+      objectReference: {fileID: 858545971}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 2085152754}
+      objectReference: {fileID: 1083830683}
+    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 1351783700}
     - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1973,6 +1978,10 @@ PrefabInstance:
       objectReference: {fileID: 1356429949}
     - target: {fileID: 7167754557893450510, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: initiateOfficeEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 858545971}
+    - target: {fileID: 7167754557893450510, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: initiateOfficeEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1351783700}
     - target: {fileID: 7253251579723395468, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -2249,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 919784533}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.97999954
+      value: 20.08
       objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2257,7 +2266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.28999996
+      value: -4.68
       objectReference: {fileID: 0}
     - target: {fileID: 7365814222055271680, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_LocalRotation.w

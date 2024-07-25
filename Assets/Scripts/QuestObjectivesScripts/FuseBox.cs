@@ -91,14 +91,22 @@ public class FuseBox : InteractableObject
         else if (fuseCount == 2)
         {
             keyItemInventory.RemoveKeyItem(requiredFuse, 2);
-            fuseBoxActivate.Invoke(); // TV Script
             SolvePuzzle();      
             StartCoroutine(PlayFuseActivateSounds());
 
             fuse1.SetActive(true); 
             fuse2.SetActive(true);
-            
         }
+    }
+    private void SolvePuzzle()
+    {
+        fuseBoxActivate.Invoke(); // TV Script
+        pEventHandler.InteractPuzzle(puzzle); //set puzzle as complete
+
+        isCompleted = true;
+        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
+        televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
+        successFuseDialogue.TriggerDialogue();
     }
     private IEnumerator PlayFuseActivateSounds()
     {
@@ -110,16 +118,6 @@ public class FuseBox : InteractableObject
 
         //Debug.Log("Now playing sound.");
         fuseLoopSound.Play();
-    }
-    private void SolvePuzzle()
-    {
-        isCompleted = true;
-        gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
-        televisionGameObject.layer = LayerMask.NameToLayer("interactableMask");
-        successFuseDialogue.TriggerDialogue();
-
-        //set puzzle as complete
-        pEventHandler.InteractPuzzle(puzzle);
     }
     private IEnumerator HideDialogueAfterDelay(float delay)
     {

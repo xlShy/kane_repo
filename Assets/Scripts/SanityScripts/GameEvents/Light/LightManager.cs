@@ -25,14 +25,13 @@ public class LightManager : MonoBehaviour, ISwitchable
 
     private void Start()
     {
-        readableDocumentScript.initiateOfficeEvent.AddListener(EnableLightFlicker);
-        chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(DisableLightFlicker);
         InitializeManagedLights();
         TurnOffAll();
     }
-
+    //test purposes
     private void Update()
     {
+        print(flickerCoroutine);
         if (Input.GetKeyDown(KeyCode.O))
         {
             isLightOn = !isLightOn;
@@ -47,7 +46,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             }
         }
     }
-
     public void Toggle(bool toggleStatus)
     {
         foreach (var light in managedLights)
@@ -55,7 +53,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             light.enabled = toggleStatus;
         }
     }
-
     public void TurnOnAll()
     {
         Toggle(true);
@@ -77,7 +74,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             audioCoroutine = StartCoroutine(PlayAudioSequence());
         }
     }
-
     public void DisableLightFlicker()
     {
         if (flickerCoroutine != null)
@@ -95,7 +91,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             audioSource.Stop();
         }
     }
-
     private void InitializeManagedLights()
     {
         managedLights = new List<Light>();
@@ -105,7 +100,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             managedLights.AddRange(lights);
         }
     }
-
     private void SelectLightToFlicker()
     {
         if (managedLights.Count == 0) return;
@@ -116,7 +110,23 @@ public class LightManager : MonoBehaviour, ISwitchable
             selectedLights.Add(selectedLight);
         }
     }
+    public void EnableGenerator()
+    {
+        StartCoroutine(GeneratorLights());
+    }
+    private IEnumerator GeneratorLights()
+    {
+        if (flickerCoroutine == null && audioCoroutine == null)
+        {
+            flickerCoroutine = StartCoroutine(FlickerLights());
+            audioCoroutine = StartCoroutine(PlayAudioSequence());
+        }
 
+        yield return new WaitForSeconds(3f);
+
+        DisableLightFlicker();
+        TurnOnAll();
+    }
     private IEnumerator FlickerLights()
     {
         while (true)
@@ -129,7 +139,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             yield return new WaitForSeconds(Random.Range(0.05f, 0.2f));
         }
     }
-
     private IEnumerator PlayAudioSequence()
     {
         while (true)
