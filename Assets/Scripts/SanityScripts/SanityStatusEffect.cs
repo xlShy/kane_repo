@@ -38,17 +38,20 @@ public class SanityStatusEffect : MonoBehaviour
         else if (sanityValue <= threshHold3)
         {
             //OnLowSanity(.97f);
-            postProcessing.StartSanityEffect(0.2f, 0.4f);
+            //print("is high");
+            postProcessing.StartSanityEffect(0.7f, 0.9f);
         }
         else if (sanityValue <= threshHold2)
         {
             //OnLowSanity(.90f);
+            //print("is mid");
             postProcessing.StartSanityEffect(0.4f, 0.7f);
         }
         else if (sanityValue <= threshHold1)
         {
             //OnLowSanity(.65f);
-            postProcessing.StartSanityEffect(0.7f, 0.9f);
+            //print("is low");
+            postProcessing.StartSanityEffect(0.0f, 0.4f);
         }
         else
         {

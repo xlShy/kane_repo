@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &6868256783380005740
 Transform:
@@ -46,7 +46,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &7050655784855575693
 Transform:
@@ -177,7 +177,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 16
   m_IsActive: 1
 --- !u!4 &407597767872840393
 Transform:
@@ -234,7 +234,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &5666082024793885826
 Transform:
@@ -304,7 +304,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &2574647764073105958
 Transform:
@@ -387,7 +387,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &764750287109000979
 Transform:
@@ -421,7 +421,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 16
   m_IsActive: 1
 --- !u!4 &887224922840215803
 Transform:
@@ -516,9 +516,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -581,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
       propertyPath: m_Name
       value: metal scrap1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -703,6 +723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -803,9 +827,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -877,9 +917,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -946,6 +1002,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1047,9 +1107,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1121,9 +1197,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1202,6 +1294,10 @@ PrefabInstance:
     - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
       propertyPath: m_Name
       value: Stone_ver1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1298,6 +1394,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1399,6 +1499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1499,9 +1603,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1580,6 +1700,10 @@ PrefabInstance:
     - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
       propertyPath: m_Name
       value: Stone_ver1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1676,6 +1800,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1777,6 +1905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1877,6 +2009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1969,6 +2105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2060,6 +2200,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2161,6 +2305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8035342542830305296, guid: 5aac52ac3d58cf24c849e5eb7c6fd0b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2257,6 +2405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2308,6 +2460,10 @@ PrefabInstance:
     - target: {fileID: 8219526537055043670, guid: 4899b976942c22d48a8026aae65abd23, type: 3}
       propertyPath: m_Name
       value: StoneSet_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219526537055043670, guid: 4899b976942c22d48a8026aae65abd23, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8744389015079246572, guid: 4899b976942c22d48a8026aae65abd23, type: 3}
       propertyPath: m_LocalScale.x
@@ -2427,9 +2583,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2452,6 +2624,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -2597,6 +2773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2693,6 +2873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2744,6 +2928,10 @@ PrefabInstance:
     - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_Name
       value: Stone_ver5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3155348777658522179, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -2897,6 +3085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver7 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8035342542830305296, guid: 5aac52ac3d58cf24c849e5eb7c6fd0b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2997,6 +3189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3088,6 +3284,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3189,9 +3389,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3263,9 +3479,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3288,6 +3520,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -3429,6 +3665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3480,6 +3720,10 @@ PrefabInstance:
     - target: {fileID: 5998382240049564952, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
       propertyPath: m_Name
       value: Stone_ver2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998382240049564952, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6374098091302901666, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
       propertyPath: m_LocalScale.x
@@ -3637,9 +3881,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3741,9 +4001,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3815,9 +4091,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3897,6 +4189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver8
       objectReference: {fileID: 0}
+    - target: {fileID: 9133143068279053563, guid: 019da69726b8f1942a1465f61648ade7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3948,6 +4244,10 @@ PrefabInstance:
     - target: {fileID: 4911878500047677162, guid: 00188f7de652d284f9cf25157ee94bee, type: 3}
       propertyPath: m_Name
       value: StoneSet_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911878500047677162, guid: 00188f7de652d284f9cf25157ee94bee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5720046327569071184, guid: 00188f7de652d284f9cf25157ee94bee, type: 3}
       propertyPath: m_LocalScale.x
@@ -4056,6 +4356,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -4201,9 +4505,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4270,6 +4590,10 @@ PrefabInstance:
     - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
       propertyPath: m_Name
       value: metal scrap1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4363,6 +4687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4455,6 +4783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4506,6 +4838,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -4647,6 +4983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4755,6 +5095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate_Left
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3209f89de00e3e644bbae26327594d9d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4820,6 +5164,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4916,6 +5264,10 @@ PrefabInstance:
     - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
       propertyPath: m_Name
       value: metal scrap1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5017,9 +5369,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5086,6 +5454,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5191,6 +5563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver7 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8035342542830305296, guid: 5aac52ac3d58cf24c849e5eb7c6fd0b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5290,6 +5666,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5391,9 +5771,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5416,6 +5812,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.x
@@ -5531,9 +5931,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5556,6 +5972,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -5701,9 +6121,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5766,6 +6202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5862,6 +6302,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5963,9 +6407,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6032,6 +6492,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6124,6 +6588,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6225,9 +6693,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6290,6 +6774,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6383,6 +6871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6475,6 +6967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: car
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 368a9230b8807314bb31afd921addb87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6496,6 +6992,10 @@ PrefabInstance:
     - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_Name
       value: Stone_ver5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3155348777658522179, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -6653,9 +7153,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6722,6 +7238,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6823,6 +7343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6915,6 +7439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6966,6 +7494,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.x
@@ -7089,6 +7621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9133143068279053563, guid: 019da69726b8f1942a1465f61648ade7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7189,9 +7725,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7270,6 +7822,10 @@ PrefabInstance:
     - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
       propertyPath: m_Name
       value: Stone_ver1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7363,6 +7919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7414,6 +7974,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -7559,9 +8123,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7584,6 +8164,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.x
@@ -7699,9 +8283,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7724,6 +8324,10 @@ PrefabInstance:
     - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_Name
       value: metal scrap5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336056861747403135, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6675991103966086085, guid: b11770fde2b1568429c47b1c77c7a86b, type: 3}
       propertyPath: m_LocalScale.z
@@ -7877,6 +8481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver8 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9133143068279053563, guid: 019da69726b8f1942a1465f61648ade7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7928,6 +8536,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.z
@@ -8065,6 +8677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8165,9 +8781,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8239,9 +8871,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8264,6 +8912,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.x
@@ -8413,6 +9065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8504,6 +9160,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8609,6 +9269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8709,6 +9373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8805,6 +9473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61deb0cb39bc047429e2aaa6525c26b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8855,6 +9527,10 @@ PrefabInstance:
     - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_Name
       value: Stone_ver5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3155348777658522179, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -9008,6 +9684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9108,9 +9788,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9174,6 +9870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9225,6 +9925,10 @@ PrefabInstance:
     - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_Name
       value: metal scrap2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 557355809664459502, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 934479929410369620, guid: 7c1e704bef841264192c2004b0b1dcbb, type: 3}
       propertyPath: m_LocalScale.x
@@ -9348,6 +10052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate_right
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5e6b6abf835c05c4291c5fc7dda8f4c5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9418,9 +10126,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9499,6 +10223,10 @@ PrefabInstance:
     - target: {fileID: 9133143068279053563, guid: 019da69726b8f1942a1465f61648ade7, type: 3}
       propertyPath: m_Name
       value: Stone_ver8 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133143068279053563, guid: 019da69726b8f1942a1465f61648ade7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9595,6 +10323,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 61deb0cb39bc047429e2aaa6525c26b0, type: 3}
       propertyPath: m_Name
       value: Pillar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61deb0cb39bc047429e2aaa6525c26b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9695,9 +10427,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9776,6 +10524,10 @@ PrefabInstance:
     - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
       propertyPath: m_Name
       value: Stone_ver1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9877,9 +10629,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9972,6 +10740,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10073,9 +10845,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10147,9 +10935,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10229,6 +11033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10280,6 +11088,10 @@ PrefabInstance:
     - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_Name
       value: Stone_ver5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342395527036715257, guid: a67c85b554951a7479264a20774783b6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3155348777658522179, guid: a67c85b554951a7479264a20774783b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -10421,6 +11233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10521,9 +11337,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10590,6 +11422,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10699,6 +11535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10799,9 +11639,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10868,6 +11724,10 @@ PrefabInstance:
     - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
       propertyPath: m_Name
       value: metal scrap1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305718891298321574, guid: cd8e70209258f4e45b6eade6b35123a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10973,6 +11833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11073,9 +11937,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11177,9 +12057,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11242,6 +12138,10 @@ PrefabInstance:
     - target: {fileID: 6749549662473076586, guid: 2a1335d2a5e63ac4cac4d8328316f6bf, type: 3}
       propertyPath: m_Name
       value: metal scrap6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749549662473076586, guid: 2a1335d2a5e63ac4cac4d8328316f6bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11338,6 +12238,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11439,9 +12343,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11512,6 +12432,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bd9a66e156ea5074691e390845c85a8c, type: 3}
       propertyPath: m_Name
       value: Gate_Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd9a66e156ea5074691e390845c85a8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11592,6 +12516,10 @@ PrefabInstance:
     - target: {fileID: 8035342542830305296, guid: 5aac52ac3d58cf24c849e5eb7c6fd0b0, type: 3}
       propertyPath: m_Name
       value: Stone_ver7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035342542830305296, guid: 5aac52ac3d58cf24c849e5eb7c6fd0b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11692,6 +12620,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11801,6 +12733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_ver1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2922721109414996809, guid: cc5aa78e5efb6824494cd56951582e44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11893,6 +12829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11984,6 +12924,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12080,6 +13024,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12181,9 +13129,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12246,6 +13210,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12347,9 +13315,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12413,6 +13397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12464,6 +13452,10 @@ PrefabInstance:
     - target: {fileID: 5998382240049564952, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
       propertyPath: m_Name
       value: Stone_ver2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998382240049564952, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6374098091302901666, guid: 3d13a81a911185f41870aacf23bd4aea, type: 3}
       propertyPath: m_LocalScale.x
@@ -12621,9 +13613,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116534867188622962, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923556764100239903, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881389271361129260, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317694343643112827, guid: 4b0d68c3bff3d5b49a642716cf03cf67, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12686,6 +13694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
       propertyPath: m_Name
       value: Fence_ver1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12783,6 +13795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver2 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12874,6 +13890,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12970,6 +13990,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13071,6 +14095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_ver1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2ce0a37811bfd243b197c6619f5728c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13162,6 +14190,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
       propertyPath: m_Name
       value: Fence_ver2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc41ab22aede3e4fbf1de7db51e4dea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
