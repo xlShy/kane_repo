@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SanityStatusEffect : MonoBehaviour
 {
     private SanityHandler sanityHandler;
+    private SanityPostProcessing postProcessing;
     [SerializeField] private CanvasManager canvasManager;
 
     public Transform playerObject;
@@ -25,6 +26,7 @@ public class SanityStatusEffect : MonoBehaviour
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
+        postProcessing = GetComponent<SanityPostProcessing>();
     }
     public void CheckSanityValue(float sanityValue)
     {
@@ -35,15 +37,18 @@ public class SanityStatusEffect : MonoBehaviour
         }
         else if (sanityValue <= threshHold3)
         {
-            OnLowSanity(.97f);
+            //OnLowSanity(.97f);
+            postProcessing.StartSanityEffect(0.2f, 0.4f);
         }
         else if (sanityValue <= threshHold2)
         {
-            OnLowSanity(.90f);
+            //OnLowSanity(.90f);
+            postProcessing.StartSanityEffect(0.4f, 0.7f);
         }
         else if (sanityValue <= threshHold1)
         {
-            OnLowSanity(.65f);
+            //OnLowSanity(.65f);
+            postProcessing.StartSanityEffect(0.7f, 0.9f);
         }
         else
         {
