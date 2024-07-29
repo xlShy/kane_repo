@@ -877,6 +877,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1200540895885742158, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: lights2Initialize.Array.data[0]
+      value: 
+      objectReference: {fileID: 5994076504277111781}
+    - target: {fileID: 1200540895885742158, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+      propertyPath: lights2Initialize.Array.data[1]
+      value: 
+      objectReference: {fileID: 4706684788166481366}
     - target: {fileID: 1802336281736468624, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_Name
       value: Stage1Managers
@@ -889,10 +897,6 @@ PrefabInstance:
       propertyPath: chemicalMixingPlaceScript
       value: 
       objectReference: {fileID: 2093657872}
-    - target: {fileID: 2414199687746574192, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
-      propertyPath: gameObjectsWithLights.Array.data[0]
-      value: 
-      objectReference: {fileID: 6346840861824229577}
     - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 
@@ -1312,6 +1316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1785103277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5143808668363066360, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+  m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796134145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9087116602498022858, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -1339,6 +1348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830ca833609efa4d8797744ab31526a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1927819106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2084338442811740991, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+  m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067456314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4303823185850639545, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -3176,6 +3190,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 4974661315470717053, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lights2Initialize.Array.data[0]
+      value: 
+      objectReference: {fileID: 1927819106}
+    - target: {fileID: 4974661315470717053, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lights2Initialize.Array.data[1]
+      value: 
+      objectReference: {fileID: 1785103277}
     - target: {fileID: 5431916737317676389, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -3202,6 +3224,10 @@ PrefabInstance:
       objectReference: {fileID: 2085152747}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: fuseBoxActivate.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 858545971}
+    - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: fuseBoxActivate.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 858545971}
     - target: {fileID: 5970510201127824053, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -3275,27 +3301,27 @@ PrefabInstance:
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1356429949}
+      objectReference: {fileID: 1083830683}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 596482459}
+      objectReference: {fileID: 1351783700}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2085152754}
+      objectReference: {fileID: 858545971}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 858545971}
+      objectReference: {fileID: 1356429949}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1083830683}
+      objectReference: {fileID: 2085152754}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 1351783700}
+      objectReference: {fileID: 596482459}
     - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -3316,10 +3342,22 @@ PrefabInstance:
       propertyPath: initiateOfficeEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1351783700}
+    - target: {fileID: 7167754557893450510, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: initiateOfficeEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 858545971}
     - target: {fileID: 7253251579723395468, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: staticTVObject
       value: 
       objectReference: {fileID: 1438946960}
+    - target: {fileID: 7489423688980335813, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lights2Initialize.Array.data[0]
+      value: 
+      objectReference: {fileID: 4706684788166481366}
+    - target: {fileID: 7489423688980335813, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: lights2Initialize.Array.data[1]
+      value: 
+      objectReference: {fileID: 5994076504277111781}
     - target: {fileID: 7552794503659533553, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -3662,22 +3700,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2986731453954991743, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: m_AdditionalLightsShadowResolutionTier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3161013309600020482, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3161013309600020482, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208005938202247008, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3416880441292475520, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3778,10 +3800,6 @@ PrefabInstance:
       propertyPath: showInteractableUI
       value: 
       objectReference: {fileID: 4614911185076699636}
-    - target: {fileID: 8207622949255965139, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3988,6 +4006,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+--- !u!1 &4706684788166481366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4669408982959841719, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+  m_PrefabInstance: {fileID: 4706684788166481365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4894742818126121805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,7 +4078,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4065,7 +4088,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 90
 --- !u!1 &5264812648564278077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,6 +4377,11 @@ PrefabInstance:
 --- !u!1 &5994076504277111780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2372158762076461553, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+  m_PrefabInstance: {fileID: 5994076504277111779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5994076504277111781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6416610839159866062, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
   m_PrefabInstance: {fileID: 5994076504277111779}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6066660873498917267

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static LightManager;
 
 public class LightManager : MonoBehaviour, ISwitchable
 {
     [Header("Insert Light Object Parent To Flicker")]
-    [SerializeField] private List<GameObject> gameObjectsWithLights;
+    //[SerializeField] private List<GameObject> gameObjectsWithLights;
     [SerializeField] private List<Light> managedLights;
     [SerializeField] private List<Light> selectedLights;
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
@@ -20,13 +21,14 @@ public class LightManager : MonoBehaviour, ISwitchable
     private Coroutine flickerCoroutine;
     private Coroutine audioCoroutine;
 
+    public UnityEvent OnDisableLightsOnStart;
     //for testing
     private bool isLightOn;
 
     private void Start()
     {
-        InitializeManagedLights();
-        TurnOffAll();
+        //InitializeManagedLights();
+        OnDisableLightsOnStart?.Invoke();
     }
     //test purposes
     private void Update()
@@ -50,11 +52,29 @@ public class LightManager : MonoBehaviour, ISwitchable
         foreach (var light in managedLights)
         {
             light.enabled = toggleStatus;
+
+            if (toggleStatus)
+            {
+                MeshRenderer renderer = light.GetComponentInParent<MeshRenderer>();
+                if (renderer != null)
+                {
+                    renderer.material.EnableKeyword("_EMISSION");
+                }
+            }
+            else if (!toggleStatus)
+            {
+                MeshRenderer renderer = light.GetComponentInParent<MeshRenderer>();
+                if (renderer != null)
+                {
+                    renderer.material.DisableKeyword("_EMISSION");
+                }
+            }
         }
     }
     public void TurnOnAll()
     {
         Toggle(true);
+
     }
 
     public void TurnOffAll()
@@ -93,10 +113,10 @@ public class LightManager : MonoBehaviour, ISwitchable
             audioSource.Stop();
         }
     }
-    private void InitializeManagedLights()
+    public void InitializeManagedLights(LightDataStorer gameObjectsWithLights)
     {
         managedLights = new List<Light>();
-        foreach (var gameObject in gameObjectsWithLights)
+        foreach (var gameObject in gameObjectsWithLights.lights2Initialize)
         {
             Light[] lights = gameObject.GetComponentsInChildren<Light>();
             managedLights.AddRange(lights);
@@ -132,6 +152,22 @@ public class LightManager : MonoBehaviour, ISwitchable
             foreach (var light in selectedLights)
             {
                 light.enabled = !light.enabled;
+                MeshRenderer renderer = light.GetComponentInParent<MeshRenderer>();
+                if (light.enabled)
+                {
+                    
+                    if (renderer != null)
+                    {
+                        renderer.material.EnableKeyword("_EMISSION");
+                    }
+                }
+                else if (!light.enabled)
+                {
+                    if (renderer != null)
+                    {
+                        renderer.material.DisableKeyword("_EMISSION");
+                    }
+                }
             }
             yield return new WaitForSeconds(Random.Range(0.05f, 0.3f));
         }

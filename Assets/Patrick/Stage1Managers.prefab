@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1659006497929134796}
   - component: {fileID: 2414199687746574192}
   - component: {fileID: 2273538056884089972}
+  - component: {fileID: 1200540895885742158}
   m_Layer: 0
   m_Name: LightManager
   m_TagString: Untagged
@@ -45,8 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d89fcb52c3e514c8b2f0eef61b5a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectsWithLights:
-  - {fileID: 0}
   managedLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -67,6 +66,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e3d79262e3282a94cb8333d59f15e57b, type: 3}
   audioSource: {fileID: 2273538056884089972}
   audioDelay: 0.1
+  OnDisableLightsOnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2414199687746574192}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: InitializeManagedLights
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1200540895885742158}
+          m_ObjectArgumentAssemblyTypeName: LightDataStorer, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2414199687746574192}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: TurnOffAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &2273538056884089972
 AudioSource:
   m_ObjectHideFlags: 0
@@ -163,6 +189,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1200540895885742158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560742766371754929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637858ffa570a3747a41a5de5d96e693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights2Initialize:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1802336281736468624
 GameObject:
   m_ObjectHideFlags: 0

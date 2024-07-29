@@ -4380,6 +4380,9 @@ PrefabInstance:
       addedObject: {fileID: 2072668274115883948}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 00175f51f7014804e92d943338724805, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 4974661315470717053}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 00175f51f7014804e92d943338724805, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 9056457350863001857}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 00175f51f7014804e92d943338724805, type: 3}
       insertIndex: -1
@@ -4473,11 +4476,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
-        m_MethodName: EnableLightFlicker
-        m_Mode: 1
+        m_MethodName: InitializeManagedLights
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4974661315470717053}
+          m_ObjectArgumentAssemblyTypeName: LightDataStorer, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 2
           m_StringArgument: 
@@ -4489,6 +4492,18 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: EnableLightFlicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a743b15f5df191b40b2b2b9a2c26a6e8, type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 2
@@ -4515,6 +4530,21 @@ MonoBehaviour:
   interfaceClosed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4974661315470717053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324448812680185826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637858ffa570a3747a41a5de5d96e693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights2Initialize:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &9056457350863001857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6048,6 +6078,9 @@ PrefabInstance:
       addedObject: {fileID: 5891905975665170735}
     - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7489423688980335813}
+    - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2044316645547992135}
     - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
       insertIndex: -1
@@ -6172,10 +6205,22 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: InitializeManagedLights
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7489423688980335813}
+          m_ObjectArgumentAssemblyTypeName: LightDataStorer, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
         m_MethodName: EnableGenerator
         m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 7489423688980335813}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6185,6 +6230,21 @@ MonoBehaviour:
   isCompleted: 0
   fuse1: {fileID: 612269028278354391}
   fuse2: {fileID: 1805230603524343238}
+--- !u!114 &7489423688980335813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154368768992171548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637858ffa570a3747a41a5de5d96e693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights2Initialize:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!82 &2044316645547992135
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6750,8 +6810,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SanityHandler, Assembly-CSharp
-        m_MethodName: EnableSanity
+        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
+        m_MethodName: UnlockDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6762,8 +6822,32 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
-        m_MethodName: SetChangingPage
+        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
+        m_MethodName: UnlockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
+        m_MethodName: DisableLightFlicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SanityHandler, Assembly-CSharp
+        m_MethodName: EnableSanity
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6786,32 +6870,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LightManager, Assembly-CSharp
-        m_MethodName: DisableLightFlicker
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
-        m_MethodName: UnlockDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DoorBase, Assembly-CSharp
-        m_MethodName: UnlockDoor
+        m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
+        m_MethodName: SetChangingPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
