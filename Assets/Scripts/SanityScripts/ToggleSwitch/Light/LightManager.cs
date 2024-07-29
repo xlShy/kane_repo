@@ -61,7 +61,10 @@ public class LightManager : MonoBehaviour, ISwitchable
     {
         Toggle(false);
     }
-
+    public void EnableGenerator()
+    {
+        StartCoroutine(GeneratorLights());
+    }
     public void EnableLightFlicker()
     {
         if (flickerCoroutine == null)
@@ -109,16 +112,11 @@ public class LightManager : MonoBehaviour, ISwitchable
             selectedLights.Add(selectedLight);
         }
     }
-    public void EnableGenerator()
-    {
-        StartCoroutine(GeneratorLights());
-    }
     private IEnumerator GeneratorLights()
     {
         if (flickerCoroutine == null && audioCoroutine == null)
         {
             flickerCoroutine = StartCoroutine(FlickerLights());
-            audioCoroutine = StartCoroutine(PlayAudioSequence());
         }
 
         yield return new WaitForSeconds(3f);

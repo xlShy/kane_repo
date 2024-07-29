@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.056804594}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.03786961}
   gain:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0.018935345}
 --- !u!114 &-8977611669880323806
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -62,34 +62,6 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 0
     m_Value: 1000
---- !u!114 &-7475965701668267513
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: 
-  active: 0
-  color:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-  center:
-    m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.5}
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.3
-  smoothness:
-    m_OverrideState: 1
-    m_Value: 0.2
-  rounded:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &-6458719259142470121
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -124,52 +96,6 @@ MonoBehaviour:
   highlightsEnd:
     m_OverrideState: 0
     m_Value: 1
---- !u!114 &-5492560821364484237
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 1
-  gaussianStart:
-    m_OverrideState: 1
-    m_Value: 10
-  gaussianEnd:
-    m_OverrideState: 1
-    m_Value: 200
-  gaussianMaxRadius:
-    m_OverrideState: 1
-    m_Value: 1
-  highQualitySampling:
-    m_OverrideState: 0
-    m_Value: 0
-  focusDistance:
-    m_OverrideState: 0
-    m_Value: 10
-  aperture:
-    m_OverrideState: 0
-    m_Value: 5.6
-  focalLength:
-    m_OverrideState: 0
-    m_Value: 50
-  bladeCount:
-    m_OverrideState: 0
-    m_Value: 5
-  bladeCurvature:
-    m_OverrideState: 0
-    m_Value: 1
-  bladeRotation:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &-2703028817459617084
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -205,15 +131,13 @@ MonoBehaviour:
   m_Name: AreaPP Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 4271205009855630973}
   - {fileID: 7425024856687821285}
-  - {fileID: -7475965701668267513}
   - {fileID: -8977611669880323806}
   - {fileID: -2703028817459617084}
-  - {fileID: -5492560821364484237}
   - {fileID: -8982298191640308787}
   - {fileID: -6458719259142470121}
---- !u!114 &4271205009855630973
+  - {fileID: 1438057787593738870}
+--- !u!114 &1438057787593738870
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,21 +155,21 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.8
   intensity:
     m_OverrideState: 1
     m_Value: 3
   scatter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.7
   clamp:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 65472
   tint:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   downscale:
     m_OverrideState: 0
@@ -259,7 +183,7 @@ MonoBehaviour:
     dimension: 1
   dirtIntensity:
     m_OverrideState: 0
-    m_Value: 1.32
+    m_Value: 0
 --- !u!114 &7425024856687821285
 MonoBehaviour:
   m_ObjectHideFlags: 3
