@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
@@ -207,4 +208,80 @@ public class Inventory : MonoBehaviour
         // If you have any events or UI updates, trigger them here
     }
 
+    public InventoryItem GetKeyItem(string itemName)
+    {
+        return keyItemsInventory.Find(item => item.itemName == itemName);
+    }
+
+    public void UpdateKeyItem(string oldItemName, string newItemName)
+    {
+        InventoryItem item = GetKeyItem(oldItemName);
+        if (item != null)
+        {
+            item.itemName = newItemName;
+            keyItemInventoryScript.UpdateItemPanelBox(item);
+        }
+    }
+
+    public bool HasEmptyMug()
+    {
+        return GetKeyItem("Mug") != null;
+    }
+
+    public bool HasFilledMug()
+    {
+        return keyItemsInventory.Any(item => item.itemName.StartsWith("Mug with"));
+    }
+
+    public InventoryItem GetFilledMugItem()
+    {
+        return keyItemsInventory.Find(item => item.itemName.StartsWith("Mug with"));
+    }
+
+    public void RemoveFilledMug()
+    {
+        InventoryItem filledMug = GetFilledMugItem();
+        if (filledMug != null)
+        {
+            keyItemsInventory.Remove(filledMug);
+            keyItemInventoryScript.UpdateItemPanelBox(filledMug);
+        }
+    }
+    public void AddIngredientToMug(InventoryItem ingredient)
+    {
+        InventoryItem mug = GetKeyItem("Mug");
+        if (mug != null)
+        {
+            Debug.Log("Adding item to inventory!");
+            mug.itemName = $"Mug with {ingredient.itemName}";
+            mug.itemDescription = $"A mug containing {ingredient.itemName}. {ingredient.itemDescription}";
+            keyItemInventoryScript.UpdateItemPanelBox(mug);
+
+            keyItemsInventory.Remove(mug);
+            keyItemsInventory.Add(mug);
+        }
+    }
+
+    public void RemoveFilledMugAndAddEmpty(InventoryItem emptyMug)
+    {
+        InventoryItem filledMug = GetFilledMugItem();
+        if (filledMug != null)
+        {
+            keyItemsInventory.Remove(filledMug);
+            keyItemInventoryScript.UpdateItemPanelBox(filledMug);
+
+            keyItemsInventory.Add(emptyMug);
+            keyItemInventoryScript.UpdateItemPanelBox(emptyMug);
+        }
+    }
+
+    public void UpdateKeyItem(InventoryItem updatedItem)
+    {
+        int index = keyItemsInventory.FindIndex(item => item.itemName.StartsWith("Mug"));
+        if (index != -1)
+        {
+            keyItemsInventory[index] = updatedItem;
+            keyItemInventoryScript.UpdateItemPanelBox(updatedItem);
+        }
+    }
 }

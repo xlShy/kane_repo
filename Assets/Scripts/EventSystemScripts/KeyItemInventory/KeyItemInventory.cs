@@ -50,7 +50,6 @@ public class KeyItemInventory : MonoBehaviour
     }
     public void RemoveKeyItem(InventoryItem keyItem, int itemCount)
     {
-        //print("delete " + keyItem.itemName + ", " + itemCount);
         foreach (GameObject panel in itemPanels)
         {
             nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
@@ -66,7 +65,6 @@ public class KeyItemInventory : MonoBehaviour
                 }
                 else
                 {
-                    //print(panel.name);
                     itemPanels.Remove(panel);
                     Destroy(panel);
                     inventoryHolder.keyItemsInventory.Remove(keyItem);
@@ -127,5 +125,27 @@ public class KeyItemInventory : MonoBehaviour
             keyItemDescription.GetComponent<TextMeshProUGUI>().text = "";
         }
     }
+
+    public void UpdateItemPanelBox(InventoryItem keyItem)
+    {
+        foreach (GameObject panel in itemPanels)
+        {
+            TextMeshProUGUI nameText = panel.transform.Find(itemName.name).GetComponent<TextMeshProUGUI>();
+            if (nameText.text.StartsWith("Mug") && keyItem.itemName.StartsWith("Mug"))
+            {
+                nameText.text = keyItem.itemName;
+                KeyItemBox keyItemBox = panel.GetComponent<KeyItemBox>();
+                if (keyItemBox != null)
+                {
+                    keyItemBox.SetKeyItemData(keyItem, this);
+                }
+                return;
+            }
+        }
+
+        // If we didn't find a matching panel, create a new one
+        InstantiateItemBoxPanel(keyItem);
+    }
+
 
 }

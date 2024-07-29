@@ -13,12 +13,11 @@ public class ChemicalMixingPlace : InteractableObject
     [SerializeField] public KeyItemInventory keyInventory;
 
     [SerializeField] private string[] requiredItems = { "Dish Soap", "Baking Soda" };
-    [SerializeField] private string[] failItems = { "Salt", "Pepper" };
     [SerializeField] private InventoryItem deRustingMixture;
     [SerializeField] private GameObject deRustBucket;
     [SerializeField] private AudioSource wrongMixture;
     [SerializeField] private AudioSource correctMixture;
-
+    [SerializeField] private InventoryItem emptyMug;
     public UnityEvent resetInteractableState;
     public UnityEvent OnCompleteChemicalMixing;
     
@@ -26,12 +25,13 @@ public class ChemicalMixingPlace : InteractableObject
 
     [SerializeField] private List<GameObject> chemicalIngredients;
 
+    private List<string> currentMixture = new List<string>();
+
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (isPuzzleSolved)
         {
             gameObject.SetActive(false);
-
             if (deRustingMixture != null)
             {
                 inventory.AddKeyItem(deRustingMixture);
@@ -40,64 +40,62 @@ public class ChemicalMixingPlace : InteractableObject
             return;
         }
 
-        bool hasAllRequiredItems = true;
-        bool hasFailItem = false;
-
-        // Check for required items
-        foreach (string itemName in requiredItems)
+        if (inventory.HasFilledMug())
         {
-            InventoryItem item = inventory.GetItemByName(itemName);
-            if (item == null)
-            {
-                hasAllRequiredItems = false;
-                break;
-            }
+            InventoryItem mugItem = inventory.GetFilledMugItem();
+            string ingredientName = mugItem.itemName.Replace("Mug with ", "");
+            currentMixture.Add(ingredientName);
+
+            mugItem.itemName = "Mug";
+            mugItem.itemDescription = "An empty mug.";
+            inventory.UpdateKeyItem(mugItem);
+
+            Debug.Log($"Added {ingredientName} to the mixture. Current mixture: {string.Join(", ", currentMixture)}");
+            Debug.Log("Mug is now empty.");
         }
 
-        // Check for fail items
-        foreach (string failItemName in failItems)
+        else if (inventory.HasEmptyMug())
         {
-            InventoryItem failItem = inventory.GetItemByName(failItemName);
-            if (failItem != null)
+            bool isCorrectMixture = CheckMixture();
+            if (isCorrectMixture)
             {
-                hasFailItem = true;
-                break;
-            }
-        }
-
-        // Clear the entire key item inventory
-        inventory.ClearAllKeyItems();
-
-        // Check puzzle state
-        if (hasAllRequiredItems && !hasFailItem)
-        {
-            OnCompleteChemicalMixing.Invoke();
-            //Add puzzle to completed in the level1
-            pEventHandler.InteractPuzzle(puzzle);
-
-            correctMixture.Play();
-            isPuzzleSolved = true;
-            deRustBucket.SetActive(true);      
-        }
-        else
-        {
-            wrongMixture.Play();
-            if (hasFailItem)
-            {
-                //insert dialogue
-                Debug.Log("Incorrect!");
+                OnCompleteChemicalMixing.Invoke();
+                pEventHandler.InteractPuzzle(puzzle);
+                correctMixture.Play();
+                isPuzzleSolved = true;
+                deRustBucket.SetActive(true);
+                Debug.Log("Correct mixture!");
             }
             else
             {
-                //insert dialogue
-                Debug.Log("Kulang!");
+                wrongMixture.Play();
+                Debug.Log("Incorrect mixture");
             }
-            ResetChemicalPuzzle();
+            currentMixture.Clear();
         }
+        else
+        {
+            Debug.Log("You need a mug to interact with the mixing bucket!");
+        }
+    }
+
+
+    private bool CheckMixture()
+    {
+        if (currentMixture.Count != requiredItems.Length)
+            return false;
+
+        foreach (string item in requiredItems)
+        {
+            if (!currentMixture.Contains(item))
+                return false;
+        }
+
+        return true;
     }
     private void ResetChemicalPuzzle()
     {
-        //insert dialogue
+        currentMixture.Clear();
         gameObject.layer = LayerMask.NameToLayer("interactableMask");
     } 
     public void StartChemicalEvent()
@@ -110,5 +108,11 @@ public class ChemicalMixingPlace : InteractableObject
         {
             ingredient.layer = LayerMask.NameToLayer("interactableMask");
         }
+    }
+
+    public void DrainMixture()
+    {
+        currentMixture.Clear();
+        Debug.Log("Mixing bucket has been drained.");
     }
 }

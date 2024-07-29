@@ -25,13 +25,11 @@ public class InteractableObject : MonoBehaviour, IInteractable
     {
         switch (itemInteractedCase)
         {
-            case 0:
-                //Debug.Log("Item Interacted With");
-                break;
             case 1:
-
+                Debug.Log("Case 1 is called");
                 if (item.type == ItemType.Consumables)
                 {
+                    Debug.Log("This is a consumable");
                     if (!isInventoryFull)
                     {
                         itemPickedUp.Invoke();
@@ -48,16 +46,42 @@ public class InteractableObject : MonoBehaviour, IInteractable
                 //Debug.Log("You have interacted with an objective!");
                 break;
             case 3:
-                Debug.Log("Item Picked Up");
-                pickUpSound.Play();
-                if (item != null)
+                Debug.Log("Case 3: Handling Chemical Ingredient");
+                if (IsChemicalIngredient(item))
                 {
-                    inventory.AddItem(item);
+                    HandleIngredientInteraction(inventory);
+                }
+                else
+                {
+                    HandleGeneralItemPickup(inventory);
                 }
                 break;
         }
     }
+    private bool IsChemicalIngredient(InventoryItem item)
+    {
+        bool isChemical = gameObject.CompareTag("Chemical");
+        Debug.Log($"Is Chemical Ingredient: {isChemical}");
+        return isChemical;
+    }
 
+    private void HandleGeneralItemPickup(Inventory inventory)
+    {
+        Debug.Log("Item Picked Up");
+        PlayPickupSound();
+        if (item!= null)
+        {
+            inventory.AddItem(item);
+        }
+    }
+
+    private void PlayPickupSound()
+    {
+        if (pickUpSound != null)
+        {
+            pickUpSound.Play();
+        }
+    }
     public InteractableConfig GetInteractableConfig()
     {
         return interactableConfig;
@@ -66,5 +90,25 @@ public class InteractableObject : MonoBehaviour, IInteractable
     private void InventoryFull(bool isFull)
     {
         isInventoryFull = isFull;
+    }
+
+    private void HandleIngredientInteraction(Inventory inventory)
+    {
+        Debug.Log("Handling Ingredient Interaction now.");
+        if (inventory.HasEmptyMug())
+        {
+            inventory.AddIngredientToMug(item);
+            itemPickedUp.Invoke();
+            PlayPickupSound();
+            Debug.Log($"Added {item.itemName} to Mug");
+        }
+        else if (inventory.HasFilledMug())
+        {
+            Debug.Log("Mug already contains an ingredient");
+        }
+        else
+        {
+            Debug.Log("You need a Mug to interact with ingredients");
+        }
     }
 }
