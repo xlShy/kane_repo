@@ -284,4 +284,30 @@ public class Inventory : MonoBehaviour
             keyItemInventoryScript.UpdateItemPanelBox(updatedItem);
         }
     }
+
+    public void ConvertFilledMugToEmpty(InventoryItem filledMug)
+    {
+        int index = keyItemsInventory.IndexOf(filledMug);
+        if (index != -1)
+        {
+            filledMug.itemName = "Mug";
+            filledMug.itemDescription = "An empty mug.";
+            filledMug.isCorrectMixture = false;
+
+            keyItemInventoryScript.UpdateItemPanelBox(filledMug);
+        }
+    }
+
+    public void ResetMugToEmpty(InventoryItem filledMug)
+    {
+        int index = keyItemsInventory.IndexOf(filledMug);
+        if (index != -1)
+        {
+            filledMug.itemName = "Mug";
+            filledMug.itemDescription = "An empty mug.";
+            filledMug.isCorrectMixture = false;
+
+            keyItemInventoryScript.UpdateItemPanelBox(filledMug);
+        }
+    }
 }

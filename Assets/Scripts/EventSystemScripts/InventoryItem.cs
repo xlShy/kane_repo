@@ -22,6 +22,8 @@ public abstract class InventoryItem : MonoBehaviour
     [TextArea (3,10)]
     public string itemDescription;
 
+    public bool isCorrectMixture { get; set; }
+
     public abstract void Use();
 }
 

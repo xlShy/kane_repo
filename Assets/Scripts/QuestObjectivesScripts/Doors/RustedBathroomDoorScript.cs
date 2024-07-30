@@ -35,24 +35,40 @@ public class RustedBathroomDoor : InteractableObject
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
+        Debug.Log("I am being activated.");
+        Debug.Log($"isPuzzleCompleted: {isPuzzleCompleted}, isDeRusted: {isDeRusted}");
+
         if (!isPuzzleCompleted)
         {
             base.Interact(itemInteractedCase, inventory);
-            return;
         }
 
         if (!isDeRusted)
         {
-            InventoryItem deRustingMixture = inventory.GetItemByName("De-Rusting Mixture");
-            if (deRustingMixture != null)
+            Debug.Log("The derust event is being called!");
+            InventoryItem mugWithMixture = inventory.GetKeyItem("Mug with Mixture");
+            if (mugWithMixture != null)
             {
-                keyItemInventory.RemoveKeyItem(deRustingMixture, 1);
-                isDeRusted = true;
-
-                deRustingAudioClip.Play();
-                doorBase.UnlockDoor();
+                if (mugWithMixture.isCorrectMixture)
+                {
+                    inventory.ConvertFilledMugToEmpty(mugWithMixture);
+                    isDeRusted = true;
+                    deRustingAudioClip.Play();
+                    doorBase.UnlockDoor();
+                    Debug.Log("Door has been de-rusted and unlocked!");
+                }
+                else
+                {
+                    inventory.ResetMugToEmpty(mugWithMixture);
+                    Debug.Log("The mixture is incorrect. The mug has been emptied.");
+                }
+            }
+            else
+            {
+                Debug.Log("You need a mixture to de-rust this door.");
             }
         }
+
         if (!doorBase.isOpen && doorBase.canOpen)
         {
             doorBase.OpenDoor(openSpeed);
