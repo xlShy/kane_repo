@@ -414,6 +414,7 @@ MonoBehaviour:
   - I guess I have to get the right code...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &8685965103372349272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,8 +1283,8 @@ Transform:
   m_GameObject: {fileID: 3950547318776584046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.458309, y: 14.344544, z: 21.900751}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 15.355, y: 14.35, z: 21.968}
+  m_LocalScale: {x: 0.043105748, y: 0.043105748, z: 0.043105748}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3297914937818320742}
@@ -1295,7 +1296,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3950547318776584046}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4795147833222524452, guid: f151af75058d21e458c37c4c1f4aebf1, type: 3}
 --- !u!23 &6616767382683341420
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1316,7 +1317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 441af37a864c6c64d9731484050ac825, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1357,8 +1358,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 8.055913, y: 9.099958, z: 7.9594235}
+  m_Center: {x: 1.2599978, y: 0.91799533, z: -0.04827261}
 --- !u!114 &8660692627572945830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2689,6 +2690,7 @@ Transform:
   - {fileID: 1650755204995386356}
   - {fileID: 4305673729574698264}
   - {fileID: 4223868386396549323}
+  - {fileID: 6691924093592007398}
   - {fileID: 2386806244275191760}
   - {fileID: 210311769801126224}
   - {fileID: 2685295360026005240}
@@ -3243,6 +3245,7 @@ MonoBehaviour:
   - Maybe this TV means something...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &4825905351151081477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,6 +3405,7 @@ MonoBehaviour:
   - Something can be done with this clock...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!1 &8789582139225666972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,6 +3692,7 @@ MonoBehaviour:
   - A blueprint, huh.
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!82 &7683482588387116370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4140,6 +4145,7 @@ MonoBehaviour:
   - I somehow solved the clock!
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &6333681135080983005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4562,6 +4568,7 @@ MonoBehaviour:
   - Huh....
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!82 &6000564640111546225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4938,7 +4945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.2
+      value: 21.965
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4975,6 +4982,10 @@ PrefabInstance:
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Name
       value: Baking Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5678535880309932193, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_TagString
@@ -5311,6 +5322,7 @@ MonoBehaviour:
   - I cracked the code!
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &476019505483191106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5670,6 +5682,274 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &6581101544267093261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3297914937818320742}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.901161
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.367034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.021336
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.85626715
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5165333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 62.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1439730007547781893, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6438e73d5c184cc4f96dbe35bba504ff, type: 2}
+    - target: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_Name
+      value: Baking Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6438e73d5c184cc4f96dbe35bba504ff, type: 2}
+    - target: {fileID: 3316992658331686828, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666261585234168772, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666261585234168772, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0700016
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2296933843501959347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7890788056562904194}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4064375587129197567}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6941710343548338163}
+  m_SourcePrefab: {fileID: 100100000, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+--- !u!1 &6311140863306999900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+  m_PrefabInstance: {fileID: 6581101544267093261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2296933843501959347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311140863306999900}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.1615303, z: 1.2034389}
+  m_Center: {x: -0.000000005618071, y: 1.024684, z: 0.101719275}
+--- !u!114 &7890788056562904194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311140863306999900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e263a227cb5f44f99fe408f133c7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableConfig: {fileID: 11400000, guid: c488c2dac34a805409b8e9ac57fe2dcc, type: 2}
+  item: {fileID: 2998950969673084440}
+  itemPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 6343051102639992546}
+  pickUpSound: {fileID: 8093797565198898528}
+--- !u!114 &4064375587129197567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311140863306999900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23416a3214ddb54ca1aaf5c14f20618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  itemName: Baking Soda
+  inventoryItemImage: {fileID: 21300000, guid: 3f6f3342ceb928940ac37246c8fc1dda, type: 3}
+  itemDescription: Baking soda is a white powder (sodium bicarbonate) used as a leavening
+    agent in baking and for cleaning purposes.
+--- !u!82 &6941710343548338163
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311140863306999900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &6691924093592007398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9257da56072406e429a9a42be07c5bd1, type: 3}
+  m_PrefabInstance: {fileID: 6581101544267093261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7249182703150147019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5704,27 +5984,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.44585943
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071069
+      value: -0.44585943
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.5488255
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.5488255
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -101.82
       objectReference: {fileID: 0}
     - target: {fileID: 5009664012894296603, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5738,6 +6018,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Chemical
       objectReference: {fileID: 0}
+    - target: {fileID: 6183101698286854516, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84ca0236804f3264ab7b5e8c0a608a7a, type: 2}
     - target: {fileID: 8226455245732992446, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6122,6 +6406,7 @@ MonoBehaviour:
   - That's one, still won't turn on though...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &8258944374557843499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6139,6 +6424,7 @@ MonoBehaviour:
   - I think I need something before I can activate this....
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &8852377614301990458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6156,6 +6442,7 @@ MonoBehaviour:
   - Got the fuse working! Lets go!
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &5891905975665170735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6664,7 +6951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.336393
+      value: 13.346
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6797,6 +7084,7 @@ MonoBehaviour:
   keyInventory: {fileID: 0}
   requiredItems:
   - Dish Soap
+  - Baking Soda
   - Baking Soda
   deRustingMixture: {fileID: 6631848579075583549}
   deRustBucket: {fileID: 7211365684314877441}
@@ -7240,6 +7528,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Chemical
       objectReference: {fileID: 0}
+    - target: {fileID: 6183101698286854516, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cff0fd677424b0049988c76debf1c84e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7488,6 +7780,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Chemical
       objectReference: {fileID: 0}
+    - target: {fileID: 6183101698286854516, guid: a79be8294cb52554f8437495f756303a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2272146b681948541b90059ed8b92544, type: 2}
     - target: {fileID: 8226455245732992446, guid: a79be8294cb52554f8437495f756303a, type: 3}
       propertyPath: m_Mesh
       value: 

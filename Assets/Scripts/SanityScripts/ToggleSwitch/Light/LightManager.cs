@@ -39,7 +39,6 @@ public class LightManager : MonoBehaviour, ISwitchable
             if (isLightOn)
             {
                 EnableLightFlicker();
-                print("enable flicker");
             }
             else
             {

@@ -13,7 +13,7 @@ public class DialogueTriggerScript : MonoBehaviour
     private float dialogueDuration;
     [SerializeField]
     private bool isRepeating;
-    private bool alreadyActivated = false;
+    public bool alreadyActivated = false;
     private Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
     private Coroutine dialogueCoroutine;
     //private int currentDialogueIndex = 0;
