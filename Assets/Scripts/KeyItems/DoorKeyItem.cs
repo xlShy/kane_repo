@@ -28,6 +28,8 @@ public class DoorKeyItem : InventoryItem
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
 
+    public AudioSource keyDropOnClock;
+
     private void Start()
     {
         interactableScript.itemPickedUp.AddListener(uponItemPickup);
@@ -61,6 +63,10 @@ public class DoorKeyItem : InventoryItem
     public override void Use()
     {
         Debug.Log("Placed for the sake of placing");
+    }
+    public void PlayKeyDropAudio()
+    {
+        keyDropOnClock.Play();
     }
 }
 

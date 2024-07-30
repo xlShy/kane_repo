@@ -45,6 +45,8 @@ public class GrandfatherClock : InteractableObject
             pEventHandler.InteractPuzzle(puzzle);
 
             keyItem.SetActive(true);
+            
+            keyItem.GetComponent<DoorKeyItem>().PlayKeyDropAudio();
             puzzleCompleteSounds.Play();
             onPuzzleSolve.TriggerDialogue();
             gameObject.layer = LayerMask.NameToLayer("solvedPuzzle");
