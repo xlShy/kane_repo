@@ -17,7 +17,9 @@ public class SanityPostProcessing : MonoBehaviour
     [Header("Breathing Vignette Settings")]
 
     [SerializeField] private float breathingSpeed = 2f;
-    private bool isBreathing = false;
+    public bool isBreathing = false;
+
+    Coroutine vignetteCoroutine;
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class SanityPostProcessing : MonoBehaviour
     }
     private void Update()
     {
-        
+        print(vignette.intensity.value);
     }
     public void MainPostProcess()
     {
@@ -38,27 +40,31 @@ public class SanityPostProcessing : MonoBehaviour
     }
     public void StartSanityEffect(float minIntensity, float maxIntensity)
     {
-        if (!isBreathing)
+        if (vignetteCoroutine != null)
         {
-            StartCoroutine(BreathingVignetteCoroutine(minIntensity, maxIntensity));
+            StopCoroutine(vignetteCoroutine);
         }
+        vignetteCoroutine = StartCoroutine(BreathingVignetteCoroutine(minIntensity, maxIntensity));
     }
     public void StopBreathingVignette()
     {
-        isBreathing = false;
+        if (vignetteCoroutine != null)
+        {
+            StopCoroutine(vignetteCoroutine);
+            vignetteCoroutine = null;
+        }
+        // Reset the vignette intensity to 0 or any default value
+        vignette.intensity.value = 0f;
     }
 
     private IEnumerator BreathingVignetteCoroutine(float minIntensity, float maxIntensity)
     {
-        isBreathing = true;
         float time = 0f;
-
-        while (isBreathing)
+        while (true)  // Remove the isBreathing check
         {
             time += Time.deltaTime * breathingSpeed;
             float intensity = Mathf.Lerp(minIntensity, maxIntensity, (Mathf.Sin(time) + 1) / 2);
             vignette.intensity.value = intensity;
-
             yield return null;
         }
     }

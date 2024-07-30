@@ -22,6 +22,10 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private float threshHold2 = .3f;
     [SerializeField] private float threshHold3 = .1f;
 
+    [SerializeField] private bool threshold1Triggered = false;
+    [SerializeField] private bool threshold2Triggered = false;
+    [SerializeField] private bool threshold3Triggered = false;
+
     public UnityEvent playerFainted;
     private void Awake()
     {
@@ -30,34 +34,43 @@ public class SanityStatusEffect : MonoBehaviour
     }
     public void CheckSanityValue(float sanityValue)
     {
-        if (sanityValue <= 0)   
+        if (sanityValue <= 0)
         {
             sanityHandler.isSanityDepleted = true;
             OnDepletedSanity();
         }
         else if (sanityValue <= threshHold3)
         {
-            //OnLowSanity(.97f);
-            //print("is high");
             postProcessing.StartSanityEffect(0.7f, 0.9f);
+            threshold3Triggered = true;
+            threshold2Triggered = false;
+            threshold1Triggered = false;
         }
         else if (sanityValue <= threshHold2)
         {
-            //OnLowSanity(.90f);
-            //print("is mid");
             postProcessing.StartSanityEffect(0.4f, 0.7f);
+            threshold2Triggered = true;
+            threshold1Triggered = false;
         }
         else if (sanityValue <= threshHold1)
         {
-            //OnLowSanity(.65f);
-            //print("is low");
             postProcessing.StartSanityEffect(0.0f, 0.4f);
+            threshold1Triggered = true;
         }
         else
         {
+            postProcessing.StopBreathingVignette();
             OnHighSanity();
+            ResetThresholds();
         }
     }
+    private void ResetThresholds()
+    {
+        threshold1Triggered = false;
+        threshold2Triggered = false;
+        threshold3Triggered = false;
+    }
+
     public void OnDepletedSanity()
     {
         canvasManager.DisableAllCanvas(canvasManager.UICanvas);

@@ -3814,6 +3814,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: threshHold1
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: threshHold2
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: threshHold3
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 511383847}
