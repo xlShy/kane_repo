@@ -1460,7 +1460,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3210,7 +3210,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -12816,9 +12816,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - jkos
-  dialogueDuration: 3
-  isRepeating: 0
+  - Boarded up. At least the bigger wildlife won't kill me in here.
+  dialogueDuration: 4
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &4727718779698863991
 BoxCollider:
@@ -16369,8 +16369,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Beijing Corn
-  dialogueDuration: 3
+  - Various books. I can make out accounting books amongst other things.
+  dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
 --- !u!65 &8273992584733021591
@@ -19234,9 +19234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - JOE
+  - Strange picture. Must be a nice fella.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &2047727472201800980
 BoxCollider:
@@ -19510,7 +19510,7 @@ MonoBehaviour:
       m_Calls: []
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1138602982480732714}
 --- !u!114 &1138602982480732714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19525,8 +19525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Pamilya ni Hero
-  dialogueDuration: 3
+  - I can vaguely make out 4 people. But I can't see their faces...
+  dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
 --- !u!65 &6323394107059047683
@@ -25291,9 +25291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Nago
+  - Scraps. People must've squatted here.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &5012206002792177949
 BoxCollider:
@@ -30752,9 +30752,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - GBOOKS
-  dialogueDuration: 3
-  isRepeating: 0
+  - More books. Unrecognizable from the damage.
+  dialogueDuration: 4
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!64 &5306875134188833544
 MeshCollider:
@@ -52327,8 +52327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Ga binaho di imo tae Steven o!
-  dialogueDuration: 3
+  - Ergh...the stench...
+  dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
 --- !u!65 &7751173903479431498
@@ -59060,8 +59060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Winnie the Pooh
-  dialogueDuration: 3
+  - Not books for reading, but books for record keeping.
+  dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
 --- !u!65 &3874752332562707397
@@ -66031,9 +66031,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - ari si mijares
+  - The picture is too damaged to make out who this is.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &1459785731017966018
 BoxCollider:
@@ -81060,9 +81060,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Codes sa OF ni Steven ari di
+  - There is no way I'm opening that.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &6200585112681027945
 BoxCollider:
@@ -81727,9 +81727,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Si Steven mani
+  - I can't quite make out who this is.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &8163366709576142190
 BoxCollider:
@@ -82047,9 +82047,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Tuon ta Rizal
+  - Books. Aged and damaged from wear.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!64 &601604337185400847
 MeshCollider:
@@ -86253,8 +86253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Wla bilin camel
-  dialogueDuration: 3
+  - Ashtray. People loved to smoke back then.
+  dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
 --- !u!65 &2041008465101694997
@@ -89651,9 +89651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Whiteface, racist mani uy
+  - Damaged beyond recognition.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &6582429537350079718
 BoxCollider:
@@ -94436,9 +94436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Ginago
+  - What's this table doing here? It's way too heavy...
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &4763310766600574547
 BoxCollider:
@@ -95309,9 +95309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Pabukot ang gago ya o
-  dialogueDuration: 3
-  isRepeating: 0
+  - Windows are boarded up. To protect from the elements? Or something else...
+  dialogueDuration: 4
+  isRepeating: 1
   alreadyActivated: 0
 --- !u!65 &2582882522689251957
 BoxCollider:

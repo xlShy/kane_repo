@@ -17,7 +17,6 @@ public class SanityPostProcessing : MonoBehaviour
     [Header("Breathing Vignette Settings")]
 
     [SerializeField] private float breathingSpeed = 2f;
-    public bool isBreathing = false;
 
     Coroutine vignetteCoroutine;
 
@@ -59,12 +58,14 @@ public class SanityPostProcessing : MonoBehaviour
 
     private IEnumerator BreathingVignetteCoroutine(float minIntensity, float maxIntensity)
     {
-        float time = 0f;
-        while (true)  // Remove the isBreathing check
+        Debug.Log("ISCALLED");
+        float t = 0f;
+        while (true)
         {
-            time += Time.deltaTime * breathingSpeed;
-            float intensity = Mathf.Lerp(minIntensity, maxIntensity, (Mathf.Sin(time) + 1) / 2);
-            vignette.intensity.value = intensity;
+            t += Time.deltaTime * breathingSpeed;
+            float normalizedT = (Mathf.Sin(t * Mathf.PI) + 1f) / 2f;
+            float currentIntensity = Mathf.Lerp(minIntensity, maxIntensity, normalizedT);
+            vignette.intensity.Override(currentIntensity);
             yield return null;
         }
     }

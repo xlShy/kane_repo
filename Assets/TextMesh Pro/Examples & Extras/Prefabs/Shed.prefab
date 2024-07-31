@@ -79,12 +79,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -604,9 +604,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - How WW3 Started
+  - Maintenance records.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &8302812150823911484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -749,9 +750,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Box
+  - Toolbox. There's nothing left in here other than tape.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &7891873337666007116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1681,9 +1683,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Rublox
+  - Hammer. Just some surface rust, otherwise it's in good condition.
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &7096685708032139953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1830,9 +1833,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Story of an Omani Shooting a Korean Man
+  - House repair guides?
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &3886322486607304406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2435,9 +2439,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - A Tale of An Black-Hating Omani
+  - DIY books...
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &8648454612234562371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2584,9 +2589,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - How two Filipinos became the witnesses of a Korean Murder
+  - Hardbound instruction manuals...
   dialogueDuration: 3
-  isRepeating: 0
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!65 &3352971121790587963
 BoxCollider:
   m_ObjectHideFlags: 0

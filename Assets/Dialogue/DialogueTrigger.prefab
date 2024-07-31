@@ -52,7 +52,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.19, y: 0.67, z: 2.73}
+  m_Size: {x: 1.42, y: 1.24, z: 3.07}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8501769864286034698
 MonoBehaviour:
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - A garden shed. It somehow feels safe in here.
-  dialogueDuration: 2
+  - The office. Did someone have a fight in here?
+  dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
