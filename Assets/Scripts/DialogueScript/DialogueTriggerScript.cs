@@ -32,6 +32,10 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             EnqueueDialogue();
         }
+        if (!isRepeating)
+        {
+            alreadyActivated = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

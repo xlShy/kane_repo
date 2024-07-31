@@ -109,8 +109,11 @@ public class PlayerMovement : MonoBehaviour
     public void isAnyCanvasOn(bool isOn)
     {
         isCanvasEnabled = isOn;
+        if (isOn)
+        {
+            StopAllAudio();
+        }
     }
-
     private void TryPlayFloorAudio()
     {
         if (isMoving && !isPlayingFloorAudio)
@@ -187,5 +190,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         isPlayingDirtAudio = false;
+    }
+    private void StopAllAudio()
+    {
+        // Stop floor audio
+        if (isPlayingFloorAudio)
+        {
+            StopCoroutine(currentAudioSequence);
+            audioSource.Stop();
+            isPlayingFloorAudio = false;
+        }
+
+        // Stop dirt audio
+        if (isPlayingDirtAudio)
+        {
+            StopCoroutine(currentDirtAudioSequence);
+            dirtAudioSource.Stop();
+            isPlayingDirtAudio = false;
+        }
     }
 }
