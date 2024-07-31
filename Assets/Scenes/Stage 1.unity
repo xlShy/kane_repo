@@ -1133,6 +1133,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bf400481c42d040bf663aef918bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1569738810 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8624614287687024662, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+  m_PrefabInstance: {fileID: 1505327738856034357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1569738811 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6886556350960080217, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+  m_PrefabInstance: {fileID: 1505327738856034357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1574856023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3416880441292475520, guid: 3b783cd5197fa47479a66e34fb5d39fd, type: 3}
@@ -1498,6 +1508,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463722387403639103, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: canOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463722387403639103, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: doorIsLocked
+      value: 
+      objectReference: {fileID: 1569738811}
+    - target: {fileID: 463722387403639103, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: doorisClosed
+      value: 
+      objectReference: {fileID: 1569738810}
     - target: {fileID: 867586574461684927, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1538,6 +1560,10 @@ PrefabInstance:
       propertyPath: chemicalMixingPlaceScript
       value: 
       objectReference: {fileID: 2093657872}
+    - target: {fileID: 2171858151281447281, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3256947214231966367, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: m_Name
       value: Level1Doors
@@ -1630,10 +1656,18 @@ PrefabInstance:
       propertyPath: chemicalMixingPlaceScript
       value: 
       objectReference: {fileID: 2093657872}
+    - target: {fileID: 6886556350960080217, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8079345010795681661, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 8624614287687024662, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3572,6 +3606,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1261663722687838448, guid: 64dbc336ab1be934a9d598ff36789533, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866183967604060360, guid: 64dbc336ab1be934a9d598ff36789533, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7516063113150223832, guid: 64dbc336ab1be934a9d598ff36789533, type: 3}
       propertyPath: m_Name
       value: NewPP
@@ -3710,6 +3752,10 @@ PrefabInstance:
       propertyPath: visionDarken
       value: 
       objectReference: {fileID: 1223407404}
+    - target: {fileID: 907859345274863793, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: disable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 907859345274863793, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: postProcessingVolume
       value: 
@@ -3926,6 +3972,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 3362811444843596353, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3722847262028116307, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: dialogueText
       value: 
@@ -3934,6 +3984,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 5456759270098900370, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5479261615805451804, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: dialogueText
       value: 
@@ -4241,10 +4295,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98281787590493316, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98281787590493316, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 500450137395641742, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 617254216268029867, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2506983060500602541, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
       propertyPath: m_Name
       value: Shed
@@ -4569,6 +4635,18 @@ PrefabInstance:
     - target: {fileID: 1237299522271422852, guid: 5a341b31068cc164bb8d73bc3cf54299, type: 3}
       propertyPath: m_Name
       value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370691023657191879, guid: 5a341b31068cc164bb8d73bc3cf54299, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163957109400640487, guid: 5a341b31068cc164bb8d73bc3cf54299, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421105726135155620, guid: 5a341b31068cc164bb8d73bc3cf54299, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7050655784855575693, guid: 5a341b31068cc164bb8d73bc3cf54299, type: 3}
       propertyPath: m_LocalPosition.x

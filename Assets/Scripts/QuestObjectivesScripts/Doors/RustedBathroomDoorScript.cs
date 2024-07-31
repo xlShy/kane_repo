@@ -22,10 +22,11 @@ public class RustedBathroomDoor : InteractableObject
 
     private void Start()
     {
+        //doorBase.LockDoor();
         if (doorLockerScript != null)
         {
             //washroom - chemical puzzle
-            doorLockerScript.doorLocked.AddListener(doorBase.LockDoor);
+            //doorLockerScript.doorLocked.AddListener(doorBase.LockDoor);
         }
         if (chemicalMixingPlaceScript != null)
         {
