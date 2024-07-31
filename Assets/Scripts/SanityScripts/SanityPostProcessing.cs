@@ -16,7 +16,7 @@ public class SanityPostProcessing : MonoBehaviour
 
     [Header("Breathing Vignette Settings")]
 
-    [SerializeField] private float breathingSpeed = 2f;
+    [SerializeField] private float breathingCycleDuration = 2f;
 
     Coroutine vignetteCoroutine;
 
@@ -26,7 +26,7 @@ public class SanityPostProcessing : MonoBehaviour
     }
     private void Update()
     {
-        print(vignette.intensity.value);
+        //print(vignette.intensity.value);
     }
     public void MainPostProcess()
     {
@@ -58,14 +58,26 @@ public class SanityPostProcessing : MonoBehaviour
 
     private IEnumerator BreathingVignetteCoroutine(float minIntensity, float maxIntensity)
     {
-        Debug.Log("ISCALLED");
-        float t = 0f;
+        Debug.Log("Breathing Vignette Started");
+        float elapsedTime = 0f;
+
         while (true)
         {
-            t += Time.deltaTime * breathingSpeed;
-            float normalizedT = (Mathf.Sin(t * Mathf.PI) + 1f) / 2f;
-            float currentIntensity = Mathf.Lerp(minIntensity, maxIntensity, normalizedT);
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / breathingCycleDuration;
+
+            // Use a sine wave to create a smooth breathing effect
+            float breathingProgress = Mathf.Sin(t * Mathf.PI * 2) * 0.5f + 0.5f;
+            float currentIntensity = Mathf.Lerp(minIntensity, maxIntensity, breathingProgress);
+
             vignette.intensity.Override(currentIntensity);
+
+            // Reset elapsed time when a full cycle is complete
+            if (elapsedTime >= breathingCycleDuration)
+            {
+                elapsedTime = 0f;
+            }
+
             yield return null;
         }
     }

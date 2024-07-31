@@ -41,6 +41,9 @@ public class SanityStatusEffect : MonoBehaviour
         }
         else if (sanityValue <= threshHold3)
         {
+            if (threshold3Triggered)
+                return;
+            print("once");
             postProcessing.StartSanityEffect(0.7f, 0.9f);
             threshold3Triggered = true;
             threshold2Triggered = false;
@@ -48,12 +51,18 @@ public class SanityStatusEffect : MonoBehaviour
         }
         else if (sanityValue <= threshHold2)
         {
+            if (threshold2Triggered)
+                return;
+            print("once");
             postProcessing.StartSanityEffect(0.4f, 0.7f);
             threshold2Triggered = true;
             threshold1Triggered = false;
         }
         else if (sanityValue <= threshHold1)
         {
+            if (threshold1Triggered)
+                return;
+            print("once");
             postProcessing.StartSanityEffect(0.0f, 0.4f);
             threshold1Triggered = true;
         }
