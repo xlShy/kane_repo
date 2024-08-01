@@ -1018,8 +1018,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 25
-  m_Range: 7.5
-  m_SpotAngle: 117.318565
+  m_Range: 7.57635
+  m_SpotAngle: 158.53104
   m_InnerSpotAngle: 63.220196
   m_CookieSize: 0
   m_Shadows:
@@ -9707,6 +9707,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4328418263195834182, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328418263195834182, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.228
       objectReference: {fileID: 0}
@@ -9729,6 +9733,10 @@ PrefabInstance:
     - target: {fileID: 5007464692865364073, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
       propertyPath: m_LocalScale.z
       value: 45.60319
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007464692865364073, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0699997
       objectReference: {fileID: 0}
     - target: {fileID: 5007464692865364073, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13011,6 +13019,10 @@ PrefabInstance:
     - target: {fileID: 1458240757930237929, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
       propertyPath: m_Name
       value: Washroom Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458240757930237929, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1458240757930237929, guid: ba13382e62414e14ca5aab2ec4502c06, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19525,7 +19537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - I can vaguely make out 4 people. But I can't see their faces...
+  - The Kane family?  But I don't recognize these faces...
   dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0
@@ -27250,7 +27262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Gwa gwa man sa balay
+  - Strange...Why did they even board up a window?
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
@@ -30708,7 +30720,7 @@ PrefabInstance:
       addedObject: {fileID: 4789946606888691175}
     - targetCorrespondingSourceObject: {fileID: 4589956801652785596, guid: 4ef0aad45a541e14ea1fc7e8164c8a64, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5306875134188833544}
+      addedObject: {fileID: 7996015586179503474}
     - targetCorrespondingSourceObject: {fileID: 3375682740928371536, guid: 4ef0aad45a541e14ea1fc7e8164c8a64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1733311598581283054}
@@ -30752,12 +30764,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - More books. Unrecognizable from the damage.
+  - Such precious books unrecognizable from the damage.
   dialogueDuration: 4
   isRepeating: 1
   alreadyActivated: 0
---- !u!64 &5306875134188833544
-MeshCollider:
+--- !u!65 &7996015586179503474
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -30774,10 +30786,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 3.830639, y: 4.698859, z: 1.286047}
+  m_Center: {x: -0.011893272, y: 0.06541395, z: 0.1573267}
 --- !u!4 &3098656796516316072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3817114907801246470, guid: 4ef0aad45a541e14ea1fc7e8164c8a64, type: 3}
@@ -52350,8 +52361,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3964796, y: 10.77, z: 3.8539586}
-  m_Center: {x: -0.09343233, y: 0.23249233, z: 0.08259346}
+  m_Size: {x: 2.3964796, y: 4.7772145, z: 3.8539422}
+  m_Center: {x: -0.09343228, y: 0.3965337, z: 0.08259333}
 --- !u!1001 &4470411545980955381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81060,7 +81071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - There is no way I'm opening that.
+  - A foul smell comes from here. I'll keep it closed.
   dialogueDuration: 3
   isRepeating: 1
   alreadyActivated: 0
@@ -82047,7 +82058,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Books. Aged and damaged from wear.
+  - Mr. Kane must have been quite a collector. Lots of books... aged and damaged
+    from wear.
   dialogueDuration: 3
   isRepeating: 1
   alreadyActivated: 0
@@ -86253,7 +86265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 0}
   dialogueContent:
-  - Ashtray. People loved to smoke back then.
+  - An ashtray. Mr. Kane must have liked to smoke in his office.
   dialogueDuration: 4
   isRepeating: 0
   alreadyActivated: 0

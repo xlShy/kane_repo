@@ -136,8 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPageDisplayed: {fileID: 0}
   startingPages:
-  - {fileID: 21300000, guid: 515d1c3408eec4643914b7613a01ce76, type: 3}
-  - {fileID: 21300000, guid: 44bbf08b06b525b408cd5c0f5b4ec20d, type: 3}
+  - {fileID: 21300000, guid: 7675061f42bd8194c88cbf13cec05db5, type: 3}
+  - {fileID: 21300000, guid: 5d63065f961321f49a2293f23dac9a13, type: 3}
   journalPages: []
   currentPage: 0
 --- !u!1 &2072206739278680195
@@ -318,7 +318,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 0}
   disable: 0
   sanityProfile: {fileID: 11400000, guid: f8e4e9ab79d405a4b90887e05ca54414, type: 2}
-  breathingSpeed: 1
+  breathingCycleDuration: 2
 --- !u!1 &6456800679941445462
 GameObject:
   m_ObjectHideFlags: 0

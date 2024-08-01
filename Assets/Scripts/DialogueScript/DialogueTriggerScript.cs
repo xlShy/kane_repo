@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class DialogueTriggerScript : MonoBehaviour
 {
-    [SerializeField]
-    private Text dialogueText;
-    [SerializeField]
-    private List<string> dialogueContent;
-    [SerializeField]
-    private float dialogueDuration;
-    [SerializeField]
-    private bool isRepeating;
+    [SerializeField]  private Text dialogueText;
+    
+    [TextArea(5,7)]
+    [SerializeField] private List<string> dialogueContent;
+
+    [SerializeField]  private float dialogueDuration;
+
+    [SerializeField]  private bool isRepeating;
+
     public bool alreadyActivated = false;
     private Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
     private Coroutine dialogueCoroutine;

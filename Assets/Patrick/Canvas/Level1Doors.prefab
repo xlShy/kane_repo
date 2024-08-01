@@ -414,6 +414,7 @@ MonoBehaviour:
   - It's locked... I think I need a key...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &8079345010795681661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +432,7 @@ MonoBehaviour:
   - There we go...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!23 &8381825875198921272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1252,6 +1254,7 @@ MonoBehaviour:
   - It's locked, I need something...
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!114 &1425972938123812943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,6 +1272,7 @@ MonoBehaviour:
   - There we go.
   dialogueDuration: 3
   isRepeating: 0
+  alreadyActivated: 0
 --- !u!82 &785287608613975656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3071,12 +3075,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bf400481c42d040bf663aef918bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canOpen: 1
+  canOpen: 0
   isOpen: 0
   isRotating: 0
   doorisOpen: {fileID: 2171858151281447281}
-  doorisClosed: {fileID: 6886556350960080217}
-  doorIsLocked: {fileID: 8624614287687024662}
+  doorisClosed: {fileID: 8624614287687024662}
+  doorIsLocked: {fileID: 6886556350960080217}
   doorAnchor: {fileID: 8169815098928071519}
 --- !u!114 &1784775720958514952
 MonoBehaviour:
