@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DoorBase : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class DoorBase : MonoBehaviour
     [SerializeField] private GameObject doorAnchor;
     private float openSpeed = 5f;
 
+    public UnityEvent OnDoorOpenEvent;
+
     private void Start()
     {
         closedRotation = doorAnchor.transform.rotation;
@@ -29,6 +32,10 @@ public class DoorBase : MonoBehaviour
         if (!isRotating)
         {
             StartCoroutine(OpenDoorAnimation(openSpeed));
+            if(OnDoorOpenEvent != null)
+            {
+                OnDoorOpenEvent?.Invoke();
+            }
         }
     }
     public void CloseDoor(float closeSpeed)
