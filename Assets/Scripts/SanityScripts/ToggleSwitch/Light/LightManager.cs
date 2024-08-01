@@ -25,6 +25,9 @@ public class LightManager : MonoBehaviour, ISwitchable
     //for testing
     private bool isLightOn;
 
+    private float randCount;
+    private float randDuration;
+    private bool isLightFlickerOn;
     private void Start()
     {
         //InitializeManagedLights();
@@ -145,6 +148,7 @@ public class LightManager : MonoBehaviour, ISwitchable
     }
     private IEnumerator FlickerLights()
     {
+        
         while (true)
         {
             SelectLightToFlicker();
@@ -158,6 +162,15 @@ public class LightManager : MonoBehaviour, ISwitchable
                     if (renderer != null)
                     {
                         renderer.material.EnableKeyword("_EMISSION");
+                        isLightFlickerOn = true;
+                        randCount++;
+
+                        if (randCount >= Random.Range(3, 5) && isLightFlickerOn)
+                        {
+                            yield return new WaitForSeconds(Random.Range(.5f, 1f));
+                            randCount = 0;
+                        }
+
                     }
                 }
                 else if (!light.enabled)
@@ -165,10 +178,15 @@ public class LightManager : MonoBehaviour, ISwitchable
                     if (renderer != null)
                     {
                         renderer.material.DisableKeyword("_EMISSION");
+                        isLightFlickerOn = false;
+                        
                     }
                 }
             }
+            
             yield return new WaitForSeconds(Random.Range(0.05f, 0.3f));
+
+           
         }
     }
     private IEnumerator PlayAudioSequence()

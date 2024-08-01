@@ -58,7 +58,6 @@ public class SanityPostProcessing : MonoBehaviour
 
     private IEnumerator BreathingVignetteCoroutine(float minIntensity, float maxIntensity)
     {
-        Debug.Log("Breathing Vignette Started");
         float elapsedTime = 0f;
 
         while (true)
