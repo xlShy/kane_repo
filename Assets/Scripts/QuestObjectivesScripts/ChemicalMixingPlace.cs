@@ -31,17 +31,6 @@ public class ChemicalMixingPlace : InteractableObject
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
-        if (isPuzzleSolved)
-        {
-            gameObject.SetActive(false);
-            if (deRustingMixture != null)
-            {
-                inventory.AddKeyItem(deRustingMixture);
-                Debug.Log("Added De-Rusting Mixture to inventory!");
-            }
-            return;
-        }
-
         if (inventory.HasFilledMug())
         {
             InventoryItem mugItem = inventory.GetFilledMugItem();
@@ -52,12 +41,11 @@ public class ChemicalMixingPlace : InteractableObject
             mugItem.itemDescription = "An empty mug.";
             inventory.UpdateKeyItem(mugItem);
 
-            Debug.Log($"Added {ingredientName} to the mixture. Current mixture: {string.Join(", ", currentMixture)}");
+            Debug.Log($"Added {ingredientName} to the mixture. Current mixture: {string.Join(". ", currentMixture)}");
             Debug.Log("Mug is now empty.");
 
             UpdateBucketContentsIndicator();
         }
-
         else if (inventory.HasEmptyMug())
         {
             if (currentMixture.Count > 0)
@@ -76,17 +64,13 @@ public class ChemicalMixingPlace : InteractableObject
 
                     if (isCorrectMixture)
                     {
-                        OnCompleteChemicalMixing.Invoke();
-                        pEventHandler.InteractPuzzle(puzzle);
                         correctMixture.Play();
-                        isPuzzleSolved = true;
-                        deRustBucket.SetActive(true);
                         Debug.Log("Correct Mixture Collected!");
                     }
                     else
                     {
                         wrongMixture.Play();
-                        Debug.Log("Incorrect mixture collected");
+                        Debug.Log("Incorrect mixture collected!");
                     }
 
                     currentMixture.Clear();
@@ -102,6 +86,7 @@ public class ChemicalMixingPlace : InteractableObject
         {
             Debug.Log("You need a mug to interact with the mixing bucket!");
         }
+
     }
 
 

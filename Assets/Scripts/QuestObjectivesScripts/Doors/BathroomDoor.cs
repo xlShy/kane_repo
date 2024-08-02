@@ -1,18 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class BathroomDoor : InteractableObject
 {
     [SerializeField] private DoorBase doorBase;
-
     [SerializeField] private ChemicalMixingEventTrigger chemMixTriggerScript;
     [SerializeField] private doorLockerScript doorLockerScript;
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
-
     [SerializeField] private float openSpeed = 5f;
-
     private void Start()
     {
         if (doorLockerScript != null)
@@ -25,7 +21,6 @@ public class BathroomDoor : InteractableObject
             //office - washroom - safe puzzle
             readableDocumentScript.initiateOfficeEvent.AddListener(canBeMoved);
         }
-
         if (chemicalMixingPlaceScript != null)
         {
             //washroom - chemical puzzle
