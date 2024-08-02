@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.Events;
 
 public class KeyRequiredDoorScript : InteractableObject
 {
@@ -24,6 +25,8 @@ public class KeyRequiredDoorScript : InteractableObject
     private bool isUnlocked = false;
 
     public List<InventoryItem> keyItems;
+
+    public UnityEvent OnTriggerAudioDialogue;
 
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -64,6 +67,7 @@ public class KeyRequiredDoorScript : InteractableObject
                     doorBase.doorIsLocked.Play();
                 }
                 noKey.TriggerDialogue();
+                OnTriggerAudioDialogue?.Invoke();
             }
             else
             {

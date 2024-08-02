@@ -415,6 +415,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8685965103372349272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,6 +3332,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4825905351151081477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3489,6 +3495,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8789582139225666972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +3841,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 885e35c929e04f6499616abd276cfbb2, type: 3}
   - {fileID: 8300000, guid: 48b937269d97ef142a372aaa2316f278, type: 3}
   audioSource: {fileID: 7683482588387116370}
+  OnTriggerAudioDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1558486205238489162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3890,6 +3902,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &7683482588387116370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4343,6 +4358,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6333681135080983005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4779,6 +4797,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &6000564640111546225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4959,7 +4980,13 @@ PrefabInstance:
       addedObject: {fileID: 3563464968953563954}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8306344115985269229}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 548686554304627385}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7329704334758741031}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2878063883970920588}
@@ -4995,7 +5022,7 @@ MonoBehaviour:
   doorId: 1
   interactableScript: {fileID: 3563464968953563954}
   dialogueText: {fileID: 0}
-  dialogueContent: Keys? I hope they're for the front door...
+  dialogueContent: I hope this is the key for the front door.
   dialogueDuration: 3
   fusePickup: {fileID: 548686554304627385}
   newLayerMask:
@@ -5018,9 +5045,35 @@ MonoBehaviour:
   item: {fileID: 1430177801737104772}
   itemPickedUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8306344115985269229}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7329704334758741031}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
+--- !u!114 &8306344115985269229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280233845622992722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayOnce: 1
+  isAudioPlayed: 0
 --- !u!82 &548686554304627385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5032,6 +5085,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e93ff8bcbf00ec44381a86bdcd882e00, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &7329704334758741031
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280233845622992722}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 86a66b2bc9e556d488536cfe88e16011, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5557,6 +5706,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &476019505483191106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6373,6 +6525,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8258944374557843499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6391,6 +6546,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8852377614301990458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6409,6 +6567,9 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5891905975665170735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6475,6 +6636,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 7489423688980335813}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TriggerDialogueEnabler, Assembly-CSharp
+        m_MethodName: EnableTriggerDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TriggerDialogueEnabler, Assembly-CSharp
+        m_MethodName: DisableTriggerDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueTriggerScript : MonoBehaviour
@@ -19,6 +20,7 @@ public class DialogueTriggerScript : MonoBehaviour
     private Coroutine dialogueCoroutine;
     //private int currentDialogueIndex = 0;
 
+    public UnityEvent OnTriggerDialogueAudio;
     private class DialogueInfo
     {
         public List<string> Content;
@@ -41,6 +43,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        OnTriggerDialogueAudio?.Invoke();
         TriggerDialogue();
     }
 

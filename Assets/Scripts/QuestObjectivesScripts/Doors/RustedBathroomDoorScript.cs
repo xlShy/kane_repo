@@ -26,8 +26,6 @@ public class RustedBathroomDoor : InteractableObject
         {
             chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(OnPuzzleComplete);
         }
-
-        doorBase.LockDoor();
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {

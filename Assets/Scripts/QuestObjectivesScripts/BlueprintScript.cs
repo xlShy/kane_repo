@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BlueprintScript : InteractableObject
 {
     [SerializeField] private GameObject blueprintUI;
     [SerializeField] private List<AudioClip> openDocumentSound;
     [SerializeField] private AudioSource audioSource;
+
+    public UnityEvent OnTriggerAudioDialogue;
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (itemInteractedCase == 2)
         {
+            OnTriggerAudioDialogue?.Invoke();
             blueprintUI.SetActive(true);
             PlayRandomSound();
         }
