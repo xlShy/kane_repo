@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class RustedBathroomDoor : InteractableObject
 {
@@ -19,6 +20,8 @@ public class RustedBathroomDoor : InteractableObject
 
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
+
+    public UnityEvent doorUnrusted;
 
     private void Start()
     {
@@ -58,11 +61,8 @@ public class RustedBathroomDoor : InteractableObject
                     {
                         pEventHandler.InteractPuzzle(puzzle);
                     }
-                    if (deRustBucket != null)
-                    {
-                        deRustBucket.SetActive(true);
-                    }
                     Debug.Log("Door has been de-rusted and unlocked!");
+                    doorUnrusted.Invoke();
                 }
                 else
                 {

@@ -1674,6 +1674,10 @@ PrefabInstance:
       propertyPath: chemicalMixingPlaceScript
       value: 
       objectReference: {fileID: 2093657872}
+    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 596482459}
     - target: {fileID: 8079345010795681661, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2038,10 +2042,6 @@ PrefabInstance:
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 2085152754}
-    - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[5].m_Target
-      value: 
-      objectReference: {fileID: 596482459}
     - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
