@@ -9,6 +9,7 @@ public class BathroomDoor : InteractableObject
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
     [SerializeField] private float openSpeed = 5f;
+    [SerializeField] private DialogueTriggerScript dialogueTrigger;
     private void Start()
     {
         if (doorLockerScript != null)
@@ -26,6 +27,10 @@ public class BathroomDoor : InteractableObject
             //washroom - chemical puzzle
             chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(doorBase.UnlockDoor);
         }
+        if (dialogueTrigger == null)
+        {
+            dialogueTrigger = GetComponent<DialogueTriggerScript>();
+        }
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -36,6 +41,11 @@ public class BathroomDoor : InteractableObject
         else if (!doorBase.isOpen && !doorBase.canOpen)
         {
             doorBase.doorIsLocked.Play();
+
+            if (dialogueTrigger != null)
+            {
+                dialogueTrigger.TriggerDialogue();
+            }
         }
         else if (doorBase.isOpen)
         {

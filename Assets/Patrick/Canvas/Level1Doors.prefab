@@ -620,6 +620,7 @@ GameObject:
   - component: {fileID: 929864155565801471}
   - component: {fileID: 3953633691867578396}
   - component: {fileID: 1138169093623537923}
+  - component: {fileID: 2894466692311260024}
   m_Layer: 0
   m_Name: POffice2BathroomDoor
   m_TagString: Untagged
@@ -689,6 +690,7 @@ MonoBehaviour:
   readableDocumentScript: {fileID: 0}
   chemicalMixingPlaceScript: {fileID: 0}
   openSpeed: 2
+  dialogueTrigger: {fileID: 0}
 --- !u!114 &7075642968284291483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +1001,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2894466692311260024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604797912932397913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - The door won't open, should I be doing something here?
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!1 &1156062212796834901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,6 +3036,8 @@ GameObject:
   - component: {fileID: 2171858151281447281}
   - component: {fileID: 8624614287687024662}
   - component: {fileID: 6886556350960080217}
+  - component: {fileID: 1008352983310045475}
+  - component: {fileID: 6367607182814448590}
   m_Layer: 7
   m_Name: PBathroomDoor
   m_TagString: Untagged
@@ -3087,6 +3109,10 @@ MonoBehaviour:
   keyItemInventory: {fileID: 0}
   openSpeed: 2
   deRustingAudioClip: {fileID: 6886556350960080217}
+  splashMixtureAudio: {fileID: 1008352983310045475}
+  deRustBucket: {fileID: 0}
+  pEventHandler: {fileID: 0}
+  puzzle: {fileID: 11400000, guid: a3a860cccf0038c44ab58dc4e4d4aafd, type: 2}
 --- !u!114 &463722387403639103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3412,6 +3438,122 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1008352983310045475
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169815098928071519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c665e49c9c018c841bb84b900a308917, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6367607182814448590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169815098928071519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - This one won't budge either...
+  - I think it has to do with the fact that it's rusted.
+  - Maybe if I can de-rust the hinges it will move.
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
 --- !u!1 &8496411444243223371
 GameObject:
   m_ObjectHideFlags: 0

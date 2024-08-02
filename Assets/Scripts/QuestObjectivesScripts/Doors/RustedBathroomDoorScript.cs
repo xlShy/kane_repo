@@ -5,34 +5,29 @@ using UnityEngine.UI;
 public class RustedBathroomDoor : InteractableObject
 {
     [SerializeField] private DoorBase doorBase;
-
     [SerializeField] private ChemicalMixingEventTrigger chemMixTriggerScript;
     [SerializeField] private doorLockerScript doorLockerScript;
     [SerializeField] private ReadableDocumentScript readableDocumentScript;
     [SerializeField] private ChemicalMixingPlace chemicalMixingPlaceScript;
     [SerializeField] private KeyItemInventory keyItemInventory;
-
     [SerializeField] private float openSpeed = 5f;
-
     [SerializeField] private AudioSource deRustingAudioClip;
+    [SerializeField] private AudioSource splashMixtureAudio;
+    [SerializeField] private GameObject deRustBucket;
+    [SerializeField] private PuzzleEventHandler pEventHandler;
+    [SerializeField] private Puzzle puzzle;
 
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
 
-
     private void Start()
     {
-        //doorBase.LockDoor();
-        if (doorLockerScript != null)
-        {
-            //washroom - chemical puzzle
-            //doorLockerScript.doorLocked.AddListener(doorBase.LockDoor);
-        }
         if (chemicalMixingPlaceScript != null)
         {
-            //washroom - chemical puzzle
             chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(OnPuzzleComplete);
         }
+
+        doorBase.LockDoor();
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
@@ -50,12 +45,25 @@ public class RustedBathroomDoor : InteractableObject
             InventoryItem mugWithMixture = inventory.GetKeyItem("Mug with Mixture");
             if (mugWithMixture != null)
             {
+                if (splashMixtureAudio != null)
+                {
+                    splashMixtureAudio.Play();
+                }
+
                 if (mugWithMixture.isCorrectMixture)
                 {
                     inventory.ConvertFilledMugToEmpty(mugWithMixture);
                     isDeRusted = true;
                     deRustingAudioClip.Play();
                     doorBase.UnlockDoor();
+                    if (pEventHandler != null && puzzle != null)
+                    {
+                        pEventHandler.InteractPuzzle(puzzle);
+                    }
+                    if (deRustBucket != null)
+                    {
+                        deRustBucket.SetActive(true);
+                    }
                     Debug.Log("Door has been de-rusted and unlocked!");
                 }
                 else
@@ -64,12 +72,15 @@ public class RustedBathroomDoor : InteractableObject
                     Debug.Log("The mixture is incorrect. The mug has been emptied.");
                 }
             }
-            else
-            {
-                Debug.Log("You need a mixture to de-rust this door.");
-            }
         }
+        else
+        {
+            TryOpenCloseDoor();
+        }
+    }
 
+    private void TryOpenCloseDoor()
+    {
         if (!doorBase.isOpen && doorBase.canOpen)
         {
             doorBase.OpenDoor(openSpeed);
@@ -83,6 +94,7 @@ public class RustedBathroomDoor : InteractableObject
             doorBase.CloseDoor(openSpeed);
         }
     }
+
     private void OnPuzzleComplete()
     {
         isPuzzleCompleted = true;
