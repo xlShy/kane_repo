@@ -26,9 +26,18 @@ public class ChemicalMixingPlace : InteractableObject
     private bool isPuzzleSolved = false;
 
     [SerializeField] private List<GameObject> chemicalIngredients;
+    [SerializeField] private DialogueTriggerScript dialogueTrigger;
+    [SerializeField] private DialogueTriggerScript needMugDialogueTrigger;
 
     private List<string> currentMixture = new List<string>();
 
+    private void Start()
+    {
+        if (dialogueTrigger == null)
+        {
+            dialogueTrigger = GetComponent<DialogueTriggerScript>();
+        }
+    }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (inventory.HasFilledMug())
@@ -45,6 +54,8 @@ public class ChemicalMixingPlace : InteractableObject
             Debug.Log("Mug is now empty.");
 
             UpdateBucketContentsIndicator();
+
+            TriggerIngredientAddedDialogue();
         }
         else if (inventory.HasEmptyMug())
         {
@@ -85,6 +96,7 @@ public class ChemicalMixingPlace : InteractableObject
         else
         {
             Debug.Log("You need a mug to interact with the mixing bucket!");
+            needMugDialogueTrigger.TriggerDialogue();
         }
 
     }
@@ -161,6 +173,18 @@ public class ChemicalMixingPlace : InteractableObject
         if (bucketContentsIndicator != null)
         {
             bucketContentsIndicator.SetActive(currentMixture.Count > 0);
+        }
+    }
+
+    private void TriggerIngredientAddedDialogue()
+    {
+        if (dialogueTrigger != null)
+        {
+            dialogueTrigger.TriggerDialogue();
+        }
+        else
+        {
+            Debug.Log("Dialogue not assigned.");
         }
     }
 }

@@ -7186,6 +7186,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8098671483650790294}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4253764363219510383}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4326943556037353656}
   m_SourcePrefab: {fileID: 100100000, guid: dcf1567811c6ecd489bb29709f2f34c8, type: 3}
 --- !u!4 &8081329646670664176 stripped
 Transform:
@@ -7322,6 +7328,8 @@ MonoBehaviour:
   - {fileID: 3591023975231875697}
   - {fileID: 3050189354741048682}
   - {fileID: 693833464514096106}
+  dialogueTrigger: {fileID: 4253764363219510383}
+  needMugDialogueTrigger: {fileID: 4326943556037353656}
 --- !u!65 &3929305568480146816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7619,6 +7627,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4253764363219510383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - I guess this'll be where I mix the ingredients.
+  dialogueDuration: 3
+  isRepeating: 0
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4326943556037353656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893895490623703882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Can't pick up the mixture with just my bare hands, I need something.
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9098737520377112323
 PrefabInstance:
   m_ObjectHideFlags: 0

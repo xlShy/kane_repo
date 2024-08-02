@@ -96125,6 +96125,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d051c42d1be51642886cf5ad3978245, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2503575734272064247}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d051c42d1be51642886cf5ad3978245, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8114008302133153950}
   m_SourcePrefab: {fileID: 100100000, guid: 3d051c42d1be51642886cf5ad3978245, type: 3}
 --- !u!1 &8112142670981054868 stripped
 GameObject:
@@ -96200,7 +96203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceObject: {fileID: 5997514656751849027}
-  onCloseInterface: {fileID: 0}
+  onCloseInterface: {fileID: 8114008302133153950}
   combinationLockActivate: {fileID: 0}
   grandfatherClock: {fileID: 0}
   interfaceClosed:
@@ -96419,6 +96422,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8114008302133153950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112142670981054868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Instructions... for a derusting mixture..?
+  dialogueDuration: 3
+  isRepeating: 0
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &8926079949281762094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d051c42d1be51642886cf5ad3978245, type: 3}

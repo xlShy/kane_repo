@@ -17,6 +17,7 @@ public class RustedBathroomDoor : InteractableObject
     [SerializeField] private GameObject deRustBucket;
     [SerializeField] private PuzzleEventHandler pEventHandler;
     [SerializeField] private Puzzle puzzle;
+    [SerializeField] private DialogueTriggerScript dialogueTrigger;
 
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
@@ -28,6 +29,11 @@ public class RustedBathroomDoor : InteractableObject
         if (chemicalMixingPlaceScript != null)
         {
             chemicalMixingPlaceScript.OnCompleteChemicalMixing.AddListener(OnPuzzleComplete);
+        }
+
+        if (dialogueTrigger == null)
+        {
+            dialogueTrigger = GetComponent<DialogueTriggerScript>();
         }
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
@@ -42,7 +48,7 @@ public class RustedBathroomDoor : InteractableObject
 
         if (!isDeRusted)
         {
-            Debug.Log("The derust event is being called!");
+            Debug.Log("The derust event is being called");
             InventoryItem mugWithMixture = inventory.GetKeyItem("Mug with Mixture");
             if (mugWithMixture != null)
             {
@@ -50,7 +56,6 @@ public class RustedBathroomDoor : InteractableObject
                 {
                     splashMixtureAudio.Play();
                 }
-
                 if (mugWithMixture.isCorrectMixture)
                 {
                     inventory.ConvertFilledMugToEmpty(mugWithMixture);
@@ -61,7 +66,7 @@ public class RustedBathroomDoor : InteractableObject
                     {
                         pEventHandler.InteractPuzzle(puzzle);
                     }
-                    Debug.Log("Door has been de-rusted and unlocked!");
+                    Debug.Log("Door has been de-rusted and unlcoked!");
                     doorUnrusted.Invoke();
                 }
                 else
@@ -70,10 +75,10 @@ public class RustedBathroomDoor : InteractableObject
                     Debug.Log("The mixture is incorrect. The mug has been emptied.");
                 }
             }
-        }
-        else
-        {
-            TryOpenCloseDoor();
+            else
+            {
+                TryOpenCloseDoor();
+            }
         }
     }
 
@@ -86,6 +91,7 @@ public class RustedBathroomDoor : InteractableObject
         else if (!doorBase.isOpen && !doorBase.canOpen)
         {
             doorBase.doorIsLocked.Play();
+            TriggerLockedDoorDialogue();
         }
         else if (doorBase.isOpen)
         {
@@ -93,6 +99,17 @@ public class RustedBathroomDoor : InteractableObject
         }
     }
 
+    private void TriggerLockedDoorDialogue()
+    {
+        if (dialogueTrigger != null)
+        {
+            dialogueTrigger.TriggerDialogue();
+        }
+        else
+        {
+            Debug.Log("Not assigned.");
+        }
+    }
     private void OnPuzzleComplete()
     {
         isPuzzleCompleted = true;
