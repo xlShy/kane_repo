@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 2082421611807803006}
   - component: {fileID: 6623887731914910252}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: HeadLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,12 +1497,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8207622949255965139}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 25
+  m_Intensity: 30
   m_Range: 50
   m_SpotAngle: 70
   m_InnerSpotAngle: 1
