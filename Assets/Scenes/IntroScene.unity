@@ -372,7 +372,6 @@ GameObject:
   - component: {fileID: 639778222}
   - component: {fileID: 639778221}
   - component: {fileID: 639778220}
-  - component: {fileID: 639778223}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -394,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 639778221}
   videoPlayer: {fileID: 663325545}
+  scene2Load: Stage 1
   OnStartVideo:
     m_PersistentCalls:
       m_Calls:
@@ -438,22 +438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &639778223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639778219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bcfaa0ba20ea984e89d21700a2a6487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneFader: {fileID: 0}
-  OnStartMenu:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &663325543
 GameObject:
   m_ObjectHideFlags: 0

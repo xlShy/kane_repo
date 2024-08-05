@@ -8,6 +8,6 @@ public class GateClosing : MonoBehaviour
 
     private void Start()
     {
-        //doorBase.LockDoor();
+        //doorBase.CloseDoor(3);
     }
 }
