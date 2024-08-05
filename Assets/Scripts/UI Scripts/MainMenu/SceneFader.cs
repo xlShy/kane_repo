@@ -10,15 +10,23 @@ public class SceneFader : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FadeIn());
+        StartCoroutine(FadeInTimer());
     }
 
     public void FadeToScene(string sceneName)
     {
-        StartCoroutine(FadeOut(sceneName));
+        StartCoroutine(FadeOutTimer());
+        SceneManager.LoadScene(sceneName);
     }
-
-    IEnumerator FadeIn()
+    public void FadeIn()
+    {
+        StartCoroutine(FadeInTimer());
+    }
+    public void FadeOut()
+    {
+        StartCoroutine(FadeOutTimer());
+    }
+    public IEnumerator FadeInTimer()
     {
         float alpha = fadeOutUIImage.color.a;
         while (alpha > 0)
@@ -30,7 +38,7 @@ public class SceneFader : MonoBehaviour
         fadeOutUIImage.gameObject.SetActive(false);
     }
 
-    IEnumerator FadeOut(string sceneName)
+    public IEnumerator FadeOutTimer()
     {
         fadeOutUIImage.gameObject.SetActive(true);
         float alpha = fadeOutUIImage.color.a;
@@ -40,7 +48,6 @@ public class SceneFader : MonoBehaviour
             SetColorAlpha(alpha);
             yield return null;
         }
-        SceneManager.LoadScene(sceneName);
     }
 
     void SetColorAlpha(float alpha)
