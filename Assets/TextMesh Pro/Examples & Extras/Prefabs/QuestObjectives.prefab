@@ -2150,6 +2150,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   dialogueContent: 
   dialogueDuration: 0
+  pillConsumeDialogue: {fileID: 0}
 --- !u!1 &6671669124767878332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,10 +3609,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5970510201127824053}
     m_Modifications:
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.918
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7726618
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6221343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.09834671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.07918716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -71.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -50.493
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597609856182173246, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 48.919
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440134231726379328, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: pillConsumeDialogue
+      value: 
+      objectReference: {fileID: 8916508988361686853}
     - target: {fileID: 3640679432089914702, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_Name
       value: Gatherables
       objectReference: {fileID: 0}
+    - target: {fileID: 4154943395050250325, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: pillConsumeDialogue
+      value: 
+      objectReference: {fileID: 3166539523973743341}
     - target: {fileID: 4591074944999769360, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.363655
@@ -3656,6 +3705,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.54
       objectReference: {fileID: 0}
+    - target: {fileID: 8008313000623107801, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      propertyPath: pillConsumeDialogue
+      value: 
+      objectReference: {fileID: 8489677109158231200}
     - target: {fileID: 8173933742707886469, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.643
@@ -3691,8 +3744,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6786480890572456593, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8489677109158231200}
+    - targetCorrespondingSourceObject: {fileID: 2116701855858222212, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3166539523973743341}
+    - targetCorrespondingSourceObject: {fileID: 8801289051716883263, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8916508988361686853}
   m_SourcePrefab: {fileID: 100100000, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+--- !u!1 &1279983574845968458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2116701855858222212, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+  m_PrefabInstance: {fileID: 910680779750749390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3166539523973743341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279983574845968458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Alright, I feel so much better now.
+  - This eases my sanity, I can keep on going.
+  - Thank god these are around...
+  - I need to find myself more of these, it really helps.
+  - Alright... Alright... I'm feeling fine now...
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1643083584572518391 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1904464676975663929, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
@@ -3714,6 +3806,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4591074944999769360, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
   m_PrefabInstance: {fileID: 910680779750749390}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5948427390137792095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786480890572456593, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+  m_PrefabInstance: {fileID: 910680779750749390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8489677109158231200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948427390137792095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Alright, I feel so much better now.
+  - This eases my sanity, I can keep on going.
+  - Thank god these are around...
+  - I need to find myself more of these, it really helps.
+  - Alright... Alright... I'm feeling fine now...
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &8540820073203312625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8801289051716883263, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
+  m_PrefabInstance: {fileID: 910680779750749390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8916508988361686853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540820073203312625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  dialogueContent:
+  - Alright, I feel so much better now.
+  - This eases my sanity, I can keep on going.
+  - Thank god these are around...
+  - I need to find myself more of these, it really helps.
+  - Alright... Alright... I'm feeling fine now...
+  dialogueDuration: 3
+  isRepeating: 1
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1023203384411342055
 PrefabInstance:
   m_ObjectHideFlags: 0

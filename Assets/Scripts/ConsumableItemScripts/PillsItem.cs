@@ -24,6 +24,9 @@ public class PillsItem : InventoryItem
     [SerializeField]
     private float dialogueDuration;
 
+    [SerializeField]
+    private DialogueTriggerScript pillConsumeDialogue;
+
     private Coroutine dialogueCoroutine;
     private MeshRenderer meshRenderer;
     private CapsuleCollider capsuleCollider;
@@ -64,6 +67,7 @@ public class PillsItem : InventoryItem
     public override void Use()
     {
         Debug.Log("You have used a pill!");
+        pillConsumeDialogue.TriggerRandomDialogue();
         OnUsePills.Invoke(true);
         pillConsume.Play();
     }
