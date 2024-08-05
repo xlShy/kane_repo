@@ -29,6 +29,8 @@ public class ChemicalMixingPlace : InteractableObject
     [SerializeField] private DialogueTriggerScript dialogueTrigger;
     [SerializeField] private DialogueTriggerScript needMugDialogueTrigger;
 
+    [SerializeField] private AudioSource puttingIngredientsAudio;
+
     private List<string> currentMixture = new List<string>();
 
     private void Start()
@@ -52,6 +54,8 @@ public class ChemicalMixingPlace : InteractableObject
 
             Debug.Log($"Added {ingredientName} to the mixture. Current mixture: {string.Join(". ", currentMixture)}");
             Debug.Log("Mug is now empty.");
+
+            puttingIngredientsAudio.Play();
 
             UpdateBucketContentsIndicator();
 
