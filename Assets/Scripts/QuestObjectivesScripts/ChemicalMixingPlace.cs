@@ -28,6 +28,11 @@ public class ChemicalMixingPlace : InteractableObject
     [SerializeField] private List<GameObject> chemicalIngredients;
     [SerializeField] private DialogueTriggerScript dialogueTrigger;
     [SerializeField] private DialogueTriggerScript needMugDialogueTrigger;
+    [SerializeField] private DialogueTriggerScript putIngredientsTrigger;
+    [SerializeField] private DialogueTriggerScript pouringIngredientsTrigger;
+    [SerializeField] private DialogueTriggerScript incorrectMixtureDialogueTrigger;
+    [SerializeField] private DialogueTriggerScript correctMixtureDialogueTrigger;
+
 
     [SerializeField] private AudioSource puttingIngredientsAudio;
 
@@ -55,6 +60,7 @@ public class ChemicalMixingPlace : InteractableObject
             Debug.Log($"Added {ingredientName} to the mixture. Current mixture: {string.Join(". ", currentMixture)}");
             Debug.Log("Mug is now empty.");
 
+            pouringIngredientsTrigger.TriggerRandomDialogue();
             puttingIngredientsAudio.Play();
 
             UpdateBucketContentsIndicator();
@@ -80,11 +86,13 @@ public class ChemicalMixingPlace : InteractableObject
                     if (isCorrectMixture)
                     {
                         correctMixture.Play();
+                        correctMixtureDialogueTrigger.TriggerRandomDialogue();
                         Debug.Log("Correct Mixture Collected!");
                     }
                     else
                     {
                         wrongMixture.Play();
+                        incorrectMixtureDialogueTrigger.TriggerRandomDialogue();
                         Debug.Log("Incorrect mixture collected!");
                     }
 
@@ -95,6 +103,7 @@ public class ChemicalMixingPlace : InteractableObject
             else
             {
                 Debug.Log("The bucket is empty. Add ingredients first!");
+                putIngredientsTrigger.TriggerDialogue();
             }
         }
         else

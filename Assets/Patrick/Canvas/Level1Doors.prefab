@@ -552,7 +552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - Dammit! It's locked, the sender didn't give me any keys, there must be some spares
     lying around.
@@ -574,7 +573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - There we go...
   dialogueDuration: 3
@@ -1162,7 +1160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - The door won't open, should I be doing something here?
   dialogueDuration: 3
@@ -1445,7 +1442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - It's locked, I need something...
   dialogueDuration: 3
@@ -1466,7 +1462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - There we go.
   dialogueDuration: 3
@@ -3199,6 +3194,8 @@ GameObject:
   - component: {fileID: 6886556350960080217}
   - component: {fileID: 1008352983310045475}
   - component: {fileID: 6367607182814448590}
+  - component: {fileID: 9069842452521224880}
+  - component: {fileID: 1023101231532987615}
   m_Layer: 7
   m_Name: PBathroomDoor
   m_TagString: Untagged
@@ -3274,6 +3271,9 @@ MonoBehaviour:
   deRustBucket: {fileID: 0}
   pEventHandler: {fileID: 0}
   puzzle: {fileID: 11400000, guid: a3a860cccf0038c44ab58dc4e4d4aafd, type: 2}
+  dialogueTrigger: {fileID: 0}
+  doorDerustedDialogueTrigger: {fileID: 9069842452521224880}
+  doorStillRustedDialogueTrigger: {fileID: 1023101231532987615}
   doorUnrusted:
     m_PersistentCalls:
       m_Calls:
@@ -3722,13 +3722,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
   dialogueContent:
   - This one won't budge either...
   - I think it has to do with the fact that it's rusted.
   - Maybe if I can de-rust the hinges it will move.
   dialogueDuration: 3
   isRepeating: 1
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9069842452521224880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169815098928071519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContent:
+  - Finally got the door open!
+  dialogueDuration: 3
+  isRepeating: 0
+  alreadyActivated: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1023101231532987615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169815098928071519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContent:
+  - It still won't open, maybe the mixture was wrong...
+  dialogueDuration: 3
+  isRepeating: 0
   alreadyActivated: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:

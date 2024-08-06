@@ -18,6 +18,8 @@ public class RustedBathroomDoor : InteractableObject
     [SerializeField] private PuzzleEventHandler pEventHandler;
     [SerializeField] private Puzzle puzzle;
     [SerializeField] private DialogueTriggerScript dialogueTrigger;
+    [SerializeField] private DialogueTriggerScript doorDerustedDialogueTrigger;
+    [SerializeField] private DialogueTriggerScript doorStillRustedDialogueTrigger;
 
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
@@ -46,6 +48,11 @@ public class RustedBathroomDoor : InteractableObject
             base.Interact(itemInteractedCase, inventory);
         }
 
+        if (isDeRusted)
+        {
+            TryOpenCloseDoor();
+        }
+
         if (!isDeRusted)
         {
             Debug.Log("The derust event is being called");
@@ -60,6 +67,7 @@ public class RustedBathroomDoor : InteractableObject
                 {
                     inventory.ConvertFilledMugToEmpty(mugWithMixture);
                     isDeRusted = true;
+                    isPuzzleCompleted = true;
                     deRustingAudioClip.Play();
                     doorBase.UnlockDoor();
                     if (pEventHandler != null && puzzle != null)
@@ -68,16 +76,14 @@ public class RustedBathroomDoor : InteractableObject
                     }
                     Debug.Log("Door has been de-rusted and unlcoked!");
                     doorUnrusted.Invoke();
+                    doorDerustedDialogueTrigger.TriggerDialogue();
                 }
                 else
                 {
                     inventory.ResetMugToEmpty(mugWithMixture);
                     Debug.Log("The mixture is incorrect. The mug has been emptied.");
+                    doorStillRustedDialogueTrigger.TriggerDialogue();
                 }
-            }
-            else
-            {
-                TryOpenCloseDoor();
             }
         }
     }
@@ -113,5 +119,6 @@ public class RustedBathroomDoor : InteractableObject
     private void OnPuzzleComplete()
     {
         isPuzzleCompleted = true;
+        Debug.Log("Chemical Mixing Puzzle Completion!");
     }
 }
