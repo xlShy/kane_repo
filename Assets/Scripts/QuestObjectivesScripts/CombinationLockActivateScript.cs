@@ -19,6 +19,8 @@ public class CombinationLockActivateScript : InteractableObject
 
     [SerializeField] private DialogueTriggerScript onPuzzleSuccess;
 
+    [SerializeField] private AudioSource journalUpdatedWritingAudio;
+
     private bool canvasWasOpened;
 
     public UnityEvent OnCompleteCombinationLock;
@@ -57,6 +59,7 @@ public class CombinationLockActivateScript : InteractableObject
         //Add puzzle to completed in the level1
         pEventHandler.InteractPuzzle(puzzle);
 
+        journalUpdatedWritingAudio.Play();
         readableDocument.SetActive(true);
         onPuzzleSuccess.TriggerDialogue();
         combinationCanvas.SetActive(false);

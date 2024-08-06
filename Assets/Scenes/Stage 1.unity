@@ -747,6 +747,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 675867482575755741, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
   m_PrefabInstance: {fileID: 3129807459506583906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &851053277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2027063785015213334, guid: 3c8d816694a07db4eaadea7739159755, type: 3}
+  m_PrefabInstance: {fileID: 1779987968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7d34fa75bed494187d1ede80407559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &855345243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2875940197166157586, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -1851,6 +1862,10 @@ PrefabInstance:
       propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 2085152754}
+    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 851053277}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2027,31 +2042,15 @@ PrefabInstance:
       propertyPath: OnCompleteCombinationLock.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 596482459}
-    - target: {fileID: 1041760393081750001, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
+    - target: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnCompleteCombinationLock.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 1128098754795242724, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 1373862751000603515, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
+      objectReference: {fileID: 851053277}
     - target: {fileID: 1430177801737104772, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
     - target: {fileID: 1643083584572518391, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 3166539523973743341, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 3200428893374409781, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
@@ -2071,14 +2070,6 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
-    - target: {fileID: 4253764363219510383, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 4326943556037353656, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 4974661315470717053, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: lights2Initialize.Array.data[0]
       value: 
@@ -2091,10 +2082,6 @@ PrefabInstance:
       propertyPath: lights2Initialize.Array.data[2]
       value: 
       objectReference: {fileID: 2034527606}
-    - target: {fileID: 5431916737317676389, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 5891905975665170735, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2188,6 +2175,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1180527248}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 851053277}
+    - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1174190873}
@@ -2223,10 +2214,6 @@ PrefabInstance:
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 2085152754}
-    - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 6819069457946620284, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: m_Name
       value: QuestObjectives
@@ -2263,31 +2250,7 @@ PrefabInstance:
       propertyPath: lights2Initialize.Array.data[1]
       value: 
       objectReference: {fileID: 5994076504277111781}
-    - target: {fileID: 7552794503659533553, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
     - target: {fileID: 8143444175188755432, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 8258944374557843499, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 8489677109158231200, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 8852377614301990458, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 8916508988361686853, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    - target: {fileID: 9056457350863001857, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}

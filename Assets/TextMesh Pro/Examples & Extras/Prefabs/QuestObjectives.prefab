@@ -4453,6 +4453,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3330471032807981493}
+    - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1399225767707950338}
   m_SourcePrefab: {fileID: 100100000, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
 --- !u!4 &1650755204995386356 stripped
 Transform:
@@ -4531,6 +4534,7 @@ MonoBehaviour:
   clockChecker: {fileID: 6847741487301013686}
   onPuzzleSolve: {fileID: 6416578035728409611}
   puzzleCompleteSounds: {fileID: 3330471032807981493}
+  journalUpdatedSounds: {fileID: 1399225767707950338}
   OnCompleteGrandfathersClock:
     m_PersistentCalls:
       m_Calls:
@@ -4570,6 +4574,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalUpdatedPromptScript, Assembly-CSharp
+        m_MethodName: ShowPrompt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isPuzzleComplete: 0
 --- !u!82 &3330471032807981493
 AudioSource:
@@ -4582,6 +4598,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8322170015787508295, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3c3660632a61f694a9fa783295abd2a0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1399225767707950338
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135684447244177742}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0a068dce608609c49b54655f7211896e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5779,6 +5891,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4711830030999829310, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2829535861009964230}
+    - targetCorrespondingSourceObject: {fileID: 4711830030999829310, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5505391406741017919}
     - targetCorrespondingSourceObject: {fileID: 4587277550885341283, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6211622592505921159}
@@ -5880,6 +5995,7 @@ MonoBehaviour:
   combinationLockScript: {fileID: 5008488419646140202}
   readableDocument: {fileID: 4324448812680185826}
   onPuzzleSuccess: {fileID: 3200428893374409781}
+  journalUpdatedWritingAudio: {fileID: 5505391406741017919}
   OnCompleteCombinationLock:
     m_PersistentCalls:
       m_Calls:
@@ -5898,6 +6014,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: JournalPageHandler, Assembly-CSharp
         m_MethodName: SetChangingPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalUpdatedPromptScript, Assembly-CSharp
+        m_MethodName: ShowPrompt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5929,6 +6057,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0239235, y: 1.2283074, z: 1.771869}
   m_Center: {x: 0.4993201, y: 0.5645332, z: 0.025702596}
+--- !u!82 &5505391406741017919
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611291382116969487}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0a068dce608609c49b54655f7211896e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8552685989241347922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4587277550885341283, guid: 423146c33f39c594481fa1c2d0d1e10d, type: 3}

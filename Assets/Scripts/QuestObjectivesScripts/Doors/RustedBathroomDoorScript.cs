@@ -20,6 +20,7 @@ public class RustedBathroomDoor : InteractableObject
     [SerializeField] private DialogueTriggerScript dialogueTrigger;
     [SerializeField] private DialogueTriggerScript doorDerustedDialogueTrigger;
     [SerializeField] private DialogueTriggerScript doorStillRustedDialogueTrigger;
+    [SerializeField] private AudioSource journalUpdatedWritingAudio;
 
     private bool isPuzzleCompleted = false;
     private bool isDeRusted = false;
@@ -62,6 +63,7 @@ public class RustedBathroomDoor : InteractableObject
                 inventory.ConvertFilledMugToEmpty(mugWithMixture);
                 isDeRusted = true;
                 isPuzzleCompleted = true;
+                journalUpdatedWritingAudio.Play();
                 deRustingAudioClip.Play();
                 doorBase.UnlockDoor();
                 if (pEventHandler != null && puzzle != null)

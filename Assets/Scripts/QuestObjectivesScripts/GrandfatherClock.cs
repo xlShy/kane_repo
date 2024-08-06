@@ -17,6 +17,7 @@ public class GrandfatherClock : InteractableObject
     [SerializeField] private DialogueTriggerScript onPuzzleSolve;
 
     [SerializeField] private AudioSource puzzleCompleteSounds;
+    [SerializeField] private AudioSource journalUpdatedSounds;
 
     public UnityEvent OnCompleteGrandfathersClock;
 
@@ -40,6 +41,7 @@ public class GrandfatherClock : InteractableObject
         if (!isPuzzleComplete)
         {
             isPuzzleComplete = true;
+            journalUpdatedSounds.Play();
             OnCompleteGrandfathersClock?.Invoke();
             //Add puzzle to completed in the level1
             pEventHandler.InteractPuzzle(puzzle);
