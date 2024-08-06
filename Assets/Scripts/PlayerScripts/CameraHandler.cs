@@ -31,7 +31,7 @@ public class CameraHandler : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        sanityScript.playerFainted.AddListener(CameraControl);
+        //sanityScript.playerFainted.AddListener(CameraControl);
         defaultPos = transform.localPosition;
     }
 

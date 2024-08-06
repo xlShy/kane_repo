@@ -26,7 +26,7 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private bool threshold2Triggered = false;
     [SerializeField] private bool threshold3Triggered = false;
 
-    public UnityEvent playerFainted;
+    public UnityEvent OnPlayerFaint;
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
@@ -37,6 +37,7 @@ public class SanityStatusEffect : MonoBehaviour
         if (sanityValue <= 0)
         {
             sanityHandler.isSanityDepleted = true;
+            OnPlayerFaint.Invoke();
             OnDepletedSanity();
         }
         else if (sanityValue <= threshHold3)
@@ -66,7 +67,7 @@ public class SanityStatusEffect : MonoBehaviour
         else
         {
             postProcessing.StopBreathingVignette();
-            OnHighSanity();
+            //OnHighSanity();
             ResetThresholds();
         }
     }
@@ -90,51 +91,51 @@ public class SanityStatusEffect : MonoBehaviour
             controller.enabled = true;
         }
         sanityHandler.ResetSanity();
+    }
+    
+    //public void OnLowSanity(float alpha)
+    //{
+    //    if (visionChangeCoroutine != null)
+    //    {
+    //        StopCoroutine(visionChangeCoroutine);
+    //    }
+    //    visionChangeCoroutine = StartCoroutine(ChangeVision(alpha, darkenDuration));
+    //}
+    //public void OnHighSanity()
+    //{
+    //    if (visionChangeCoroutine != null)
+    //    {
+    //        StopCoroutine(visionChangeCoroutine);
+    //    }
+    //    visionChangeCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
+    //}
+    //private IEnumerator ChangeVision(float targetAlpha, float duration)
+    //{
+    //    float elapsedTime = 0f;
+    //    Color color = visionDarken.color;
+    //    float startAlpha = color.a;
 
-    }
-    public void OnLowSanity(float alpha)
-    {
-        if (visionChangeCoroutine != null)
-        {
-            StopCoroutine(visionChangeCoroutine);
-        }
-        visionChangeCoroutine = StartCoroutine(ChangeVision(alpha, darkenDuration));
-    }
-    public void OnHighSanity()
-    {
-        if (visionChangeCoroutine != null)
-        {
-            StopCoroutine(visionChangeCoroutine);
-        }
-        visionChangeCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
-    }
-    private IEnumerator ChangeVision(float targetAlpha, float duration)
-    {
-        float elapsedTime = 0f;
-        Color color = visionDarken.color;
-        float startAlpha = color.a;
+    //    while (elapsedTime < duration)
+    //    {
+    //        elapsedTime += Time.deltaTime;
+    //        color.a = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
+    //        visionDarken.color = color;
+    //        yield return null;
+    //    }
 
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
-            visionDarken.color = color;
-            yield return null;
-        }
+    //    color.a = targetAlpha;
+    //    visionDarken.color = color;
+    //}
 
-        color.a = targetAlpha;
-        visionDarken.color = color;
-    }
-
-    //leave lng
-    private void ResetVision()
-    {
-        if (visionChangeCoroutine != null)
-        {
-            StopCoroutine(visionChangeCoroutine);
-        }
-        Color color = visionDarken.color;
-        color.a = 0f;
-        visionDarken.color = color;
-    }
+    ////leave lng
+    //private void ResetVision()
+    //{
+    //    if (visionChangeCoroutine != null)
+    //    {
+    //        StopCoroutine(visionChangeCoroutine);
+    //    }
+    //    Color color = visionDarken.color;
+    //    color.a = 0f;
+    //    visionDarken.color = color;
+    //}
 }
