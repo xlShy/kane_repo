@@ -48,43 +48,44 @@ public class RustedBathroomDoor : InteractableObject
             base.Interact(itemInteractedCase, inventory);
         }
 
-        if (isDeRusted)
+        InventoryItem mugWithMixture = inventory.GetKeyItem("Mug with Mixture");
+
+        if (mugWithMixture != null && !isDeRusted)
+        {
+            Debug.Log("The derust event is beiong called!");
+            if (splashMixtureAudio != null)
+            {
+                splashMixtureAudio.Play();
+            }
+            if (mugWithMixture.isCorrectMixture)
+            {
+                inventory.ConvertFilledMugToEmpty(mugWithMixture);
+                isDeRusted = true;
+                isPuzzleCompleted = true;
+                deRustingAudioClip.Play();
+                doorBase.UnlockDoor();
+                if (pEventHandler != null && puzzle != null)
+                {
+                    pEventHandler.InteractPuzzle(puzzle);
+                }
+                Debug.Log("Door has been de-rusted and unlocked!");
+                doorUnrusted.Invoke();
+                doorDerustedDialogueTrigger.TriggerDialogue();
+            }
+            else
+            {
+                inventory.ResetMugToEmpty(mugWithMixture);
+                Debug.Log("The mixture is incorrect. The mug has been emptied.");
+                doorStillRustedDialogueTrigger.TriggerDialogue();
+            }
+        }
+        else if (isDeRusted)
         {
             TryOpenCloseDoor();
         }
-
-        if (!isDeRusted)
+        else if (!doorBase.canOpen)
         {
-            Debug.Log("The derust event is being called");
-            InventoryItem mugWithMixture = inventory.GetKeyItem("Mug with Mixture");
-            if (mugWithMixture != null)
-            {
-                if (splashMixtureAudio != null)
-                {
-                    splashMixtureAudio.Play();
-                }
-                if (mugWithMixture.isCorrectMixture)
-                {
-                    inventory.ConvertFilledMugToEmpty(mugWithMixture);
-                    isDeRusted = true;
-                    isPuzzleCompleted = true;
-                    deRustingAudioClip.Play();
-                    doorBase.UnlockDoor();
-                    if (pEventHandler != null && puzzle != null)
-                    {
-                        pEventHandler.InteractPuzzle(puzzle);
-                    }
-                    Debug.Log("Door has been de-rusted and unlcoked!");
-                    doorUnrusted.Invoke();
-                    doorDerustedDialogueTrigger.TriggerDialogue();
-                }
-                else
-                {
-                    inventory.ResetMugToEmpty(mugWithMixture);
-                    Debug.Log("The mixture is incorrect. The mug has been emptied.");
-                    doorStillRustedDialogueTrigger.TriggerDialogue();
-                }
-            }
+            TryOpenCloseDoor();
         }
     }
 
