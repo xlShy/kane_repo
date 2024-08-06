@@ -8,9 +8,10 @@ public class SceneFader : MonoBehaviour
     public Image fadeOutUIImage;
     public float fadeSpeed = 0.8f;
 
+    public bool isDoneFading = false;
     void Start()
     {
-        StartCoroutine(FadeInTimer());
+        //StartCoroutine(FadeInTimer());
     }
 
     public void FadeToScene(string sceneName)
@@ -20,7 +21,7 @@ public class SceneFader : MonoBehaviour
     }
     public void FadeIn()
     {
-        StartCoroutine(FadeInTimer());
+        StartCoroutine(FadeInTimer());        
     }
     public void FadeOut()
     {
@@ -28,11 +29,16 @@ public class SceneFader : MonoBehaviour
     }
     public IEnumerator FadeInTimer()
     {
+        isDoneFading = false;
         float alpha = fadeOutUIImage.color.a;
         while (alpha > 0)
         {
             alpha -= Time.deltaTime / fadeSpeed;
             SetColorAlpha(alpha);
+            if(alpha <= 0)
+            {
+                isDoneFading = true;
+            }
             yield return null;
         }
         fadeOutUIImage.gameObject.SetActive(false);
@@ -40,12 +46,17 @@ public class SceneFader : MonoBehaviour
 
     public IEnumerator FadeOutTimer()
     {
+        isDoneFading = false;
         fadeOutUIImage.gameObject.SetActive(true);
         float alpha = fadeOutUIImage.color.a;
         while (alpha < 1)
         {
             alpha += Time.deltaTime / fadeSpeed;
             SetColorAlpha(alpha);
+            if (alpha >= 1)
+            {
+                isDoneFading = true;
+            }
             yield return null;
         }
     }

@@ -582,6 +582,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4363477045500602218, guid: 008088181c3de244894b8f959d6d1655, type: 3}
   m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &427523135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1705814930387150567, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
+  m_PrefabInstance: {fileID: 1069602075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553eb41ebf6e6ba4b87d399883de0dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &474677514 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 57193296913840733, guid: d7cfeca6ba61e3740844d1222d674561, type: 3}
@@ -865,7 +876,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 999
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &864909264
 RectTransform:
@@ -2590,6 +2601,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: sceneFader
+      value: 
+      objectReference: {fileID: 427523135}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: playerObject
       value: 

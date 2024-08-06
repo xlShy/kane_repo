@@ -469,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutUIImage: {fileID: 1041475781}
   fadeSpeed: 0.8
+  isDoneFading: 0
 --- !u!114 &204181974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 204181973}
         m_TargetAssemblyTypeName: SceneFader, Assembly-CSharp
-        m_MethodName: FadeOut
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1639,7 +1640,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 999
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &556911549
 RectTransform:

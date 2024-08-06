@@ -30,7 +30,6 @@ public class IntroSceneFader : MonoBehaviour
 
     private void OnVideoEnd(VideoPlayer vp)
     {
-        print("Start Transition to level 1");
         StartCoroutine(sceneFader.FadeOutTimer());
         StartCoroutine(Transition2Stage1());
     }

@@ -9,7 +9,7 @@ public class SanityStatusEffect : MonoBehaviour
     private SanityHandler sanityHandler;
     private SanityPostProcessing postProcessing;
     [SerializeField] private CanvasManager canvasManager;
-
+    [SerializeField] private SceneFader sceneFader;
     public Transform playerObject;
 
     public RawImage visionDarken;
@@ -26,7 +26,6 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private bool threshold2Triggered = false;
     [SerializeField] private bool threshold3Triggered = false;
 
-    public UnityEvent OnPlayerFaint;
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
@@ -37,8 +36,7 @@ public class SanityStatusEffect : MonoBehaviour
         if (sanityValue <= 0)
         {
             sanityHandler.isSanityDepleted = true;
-            OnPlayerFaint.Invoke();
-            OnDepletedSanity();
+            StartCoroutine(WaitForFadeAndCallDepletedSanity());
         }
         else if (sanityValue <= threshHold3)
         {
@@ -78,7 +76,7 @@ public class SanityStatusEffect : MonoBehaviour
         threshold3Triggered = false;
     }
 
-    public void OnDepletedSanity()
+    public IEnumerator OnDepletedSanity()
     {
         canvasManager.DisableAllCanvas(canvasManager.UICanvas);
         canvasManager.DisableAllCanvas(canvasManager.PuzzleCanvas);
@@ -86,56 +84,21 @@ public class SanityStatusEffect : MonoBehaviour
         CharacterController controller = playerObject.GetComponent<CharacterController>();
         if (controller != null)
         {
+            print("set player pos");
             controller.enabled = false;
             playerObject.position = ShedRespawnPoint.Instance.ShedSpawnPoint.gameObject.transform.position; //takes the shedrespawnpoint 
             controller.enabled = true;
+            sanityHandler.ResetSanity();
         }
-        sanityHandler.ResetSanity();
+        sceneFader.FadeIn();
+        print(sceneFader.isDoneFading);
+        yield return new WaitUntil(() => sceneFader.isDoneFading);
     }
-    
-    //public void OnLowSanity(float alpha)
-    //{
-    //    if (visionChangeCoroutine != null)
-    //    {
-    //        StopCoroutine(visionChangeCoroutine);
-    //    }
-    //    visionChangeCoroutine = StartCoroutine(ChangeVision(alpha, darkenDuration));
-    //}
-    //public void OnHighSanity()
-    //{
-    //    if (visionChangeCoroutine != null)
-    //    {
-    //        StopCoroutine(visionChangeCoroutine);
-    //    }
-    //    visionChangeCoroutine = StartCoroutine(ChangeVision(0f, returnDuration));
-    //}
-    //private IEnumerator ChangeVision(float targetAlpha, float duration)
-    //{
-    //    float elapsedTime = 0f;
-    //    Color color = visionDarken.color;
-    //    float startAlpha = color.a;
 
-    //    while (elapsedTime < duration)
-    //    {
-    //        elapsedTime += Time.deltaTime;
-    //        color.a = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
-    //        visionDarken.color = color;
-    //        yield return null;
-    //    }
-
-    //    color.a = targetAlpha;
-    //    visionDarken.color = color;
-    //}
-
-    ////leave lng
-    //private void ResetVision()
-    //{
-    //    if (visionChangeCoroutine != null)
-    //    {
-    //        StopCoroutine(visionChangeCoroutine);
-    //    }
-    //    Color color = visionDarken.color;
-    //    color.a = 0f;
-    //    visionDarken.color = color;
-    //}
+    private IEnumerator WaitForFadeAndCallDepletedSanity()
+    {
+        sceneFader.FadeOut();
+        yield return new WaitUntil(() => sceneFader.isDoneFading);
+        StartCoroutine(OnDepletedSanity());
+    }
 }
