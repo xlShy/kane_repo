@@ -100,3 +100,4 @@ public class SanityStatusEffect : MonoBehaviour
         StartCoroutine(OnDepletedSanity());
     }
 }
+ 

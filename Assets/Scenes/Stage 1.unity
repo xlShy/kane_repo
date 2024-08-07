@@ -1022,17 +1022,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5770274257538322742, guid: 008088181c3de244894b8f959d6d1655, type: 3}
   m_PrefabInstance: {fileID: 346166332}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1053768277 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-  m_PrefabInstance: {fileID: 1505327738856034357}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1bf400481c42d040bf663aef918bb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1064283980 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 494004288430204394, guid: 1dff187e1f0d8324a945ea42d82a7c94, type: 3}
@@ -1071,10 +1060,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2093657872}
     - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
-      propertyPath: roomSanityRates.Items.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: roomSanityRates.Items.Array.data[0].Room
       value: 
       objectReference: {fileID: 2126964784}
@@ -1110,10 +1095,6 @@ PrefabInstance:
       propertyPath: roomSanityRates.Items.Array.data[8].Room
       value: 
       objectReference: {fileID: 40108139}
-    - target: {fileID: 5263484746582289340, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
-      propertyPath: roomSanityRates.Items.Array.data[8].SanityDecreaseRate
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 6528030965878477678, guid: f084a49f5bae20847a3c47ae84901bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.635544
@@ -1793,42 +1774,22 @@ PrefabInstance:
       propertyPath: chemicalMixingPlaceScript
       value: 
       objectReference: {fileID: 2093657872}
+    - target: {fileID: 3034599256280243241, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: sceneFader
+      value: 
+      objectReference: {fileID: 427523135}
+    - target: {fileID: 3034599256280243241, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: sanityHandler
+      value: 
+      objectReference: {fileID: 1356429949}
     - target: {fileID: 3256947214231966367, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: m_Name
       value: Level1Doors
       objectReference: {fileID: 0}
     - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1356429949}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSanity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SanityHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 3639735646624912487, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3993186148188869765, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.395
@@ -1897,18 +1858,6 @@ PrefabInstance:
       propertyPath: keyItemInventory
       value: 
       objectReference: {fileID: 2085152747}
-    - target: {fileID: 4180277050588139678, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999984
-      objectReference: {fileID: 0}
-    - target: {fileID: 4180277050588139678, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.001794075
-      objectReference: {fileID: 0}
-    - target: {fileID: 4180277050588139678, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.206
-      objectReference: {fileID: 0}
     - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: mixingScript
       value: 
@@ -1930,14 +1879,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2093657872}
     - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 596482459}
@@ -1957,30 +1898,6 @@ PrefabInstance:
       propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
       objectReference: {fileID: 851053277}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_Target
-      value: 
-      objectReference: {fileID: 1053768277}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
-      value: UnlockDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
-      value: DoorBase, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_FloatArgument
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864906671147501137, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
-      propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2896,10 +2813,6 @@ PrefabInstance:
     - target: {fileID: 1074133755145855360, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6459406859568947808, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8696512503627372795, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_Name

@@ -1,33 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class BasementDoorScript : InteractableObject
 {
     private DoorBase doorBase;
     private Level1Completed level1Completed;
-
-    [SerializeField] private float openSpeed = 5f;
     [SerializeField] private doorLockerScript doorLockerScript;
-    private void OnEnable()
-    {
-        //LevelManager.OnCompleteLevel1 += UnlockDoor;
-    }
+    [SerializeField] private SceneFader sceneFader;
+    [SerializeField] private SanityHandler sanityHandler;
+    [SerializeField] private float openSpeed = 5f;
+    [SerializeField] private string scene2Load;
+    
+    private AsyncOperation asyncLoad;
+
     private void Awake()
     {
         doorBase = GetComponent<DoorBase>();
         level1Completed = GetComponent<Level1Completed>();
-    }
-    private void Start()
-    {
-        doorBase.canOpen = false;
     }
     public override void Interact(int itemInteractedCase, Inventory inventory)
     {
         if (!doorBase.isOpen && doorBase.canOpen)
         {
             doorBase.OpenDoor(openSpeed);
-            level1Completed.CompleteLevel1();
+            //level1Completed.CompleteLevel1();
+            StartCoroutine(LoadCreditsScene());
         }
         else if (!doorBase.isOpen && !doorBase.canOpen)
         {
@@ -38,9 +38,14 @@ public class BasementDoorScript : InteractableObject
             doorBase.CloseDoor(openSpeed);
         }
     }
-    private void UnlockDoor()
+    IEnumerator LoadCreditsScene()
     {
-        print("basement is open");
-        doorBase.UnlockDoor();
+        asyncLoad = SceneManager.LoadSceneAsync(scene2Load);
+        asyncLoad.allowSceneActivation = false;  // Add this line
+        yield return new WaitUntil(() => sanityHandler.sanityValue == 0);
+
+        sceneFader.FadeOut();
+        yield return new WaitUntil(() => sceneFader.isDoneFading);
+        asyncLoad.allowSceneActivation = true;
     }
 }

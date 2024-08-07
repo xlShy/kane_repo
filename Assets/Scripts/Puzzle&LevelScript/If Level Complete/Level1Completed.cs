@@ -10,7 +10,6 @@ public class Level1Completed : MonoBehaviour
     [SerializeField] private LoadScene loadScene;
     [SerializeField] private SceneObjectsLoader sceneObjectsLoader;
     [SerializeField] private SanityStatusEffect sanityStatusEffect;
-    [SerializeField] private GameObject player;
     [SerializeField] private SceneTransitionPlayerData playerData;
 
     private bool isComplete = false;
