@@ -5,24 +5,17 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance { get; private set; }
+    public static DialogueManager instance { get; private set; }
     [SerializeField] private Text dialogueText;
-    private Queue<DialogueInfo> dialogueQueue = new Queue<DialogueInfo>();
     private Coroutine dialogueCoroutine;
-    private bool isDisplayingDialogue = false;
-    private const int MAX_QUEUE_SIZE = 2;
-
-    private class DialogueInfo
-    {
-        public List<string> Content;
-        public float Duration;
-    }
+    public bool isDisplayingDialogue = false;
+    private bool isInteractDialogue = false;
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -31,51 +24,37 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public bool StartDialogue(List<string> content, float duration, bool isInteract = false)
     {
-        dialogueCoroutine = StartCoroutine(ProcessDialogueQueue());
-    }
-
-    public bool EnqueueDialogue(List<string> content, float duration)
-    {
-        if (dialogueQueue.Count < MAX_QUEUE_SIZE)
+        if (!isDisplayingDialogue || (isInteract && !isInteractDialogue))
         {
-            DialogueInfo info = new DialogueInfo
+            if (dialogueCoroutine != null)
             {
-                Content = new List<string>(content),
-                Duration = duration
-            };
-            dialogueQueue.Enqueue(info);
+                StopCoroutine(dialogueCoroutine);
+            }
+            dialogueCoroutine = StartCoroutine(DisplayDialogue(content, duration, isInteract));
             return true;
         }
         return false;
     }
 
-    private IEnumerator ProcessDialogueQueue()
-    {
-        while (true)
-        {
-            if(dialogueQueue.Count > 0 && !isDisplayingDialogue)
-            {
-                DialogueInfo currentDialogue = dialogueQueue.Dequeue();
-                yield return DisplayAllDialogues(currentDialogue);
-            }
-            yield return null;
-        }
-    }
-
-    private IEnumerator DisplayAllDialogues(DialogueInfo info)
+    private IEnumerator DisplayDialogue(List<string> content, float duration, bool isInteract)
     {
         isDisplayingDialogue = true;
-        for (int i = 0; i < info.Content.Count; i++)
+        isInteractDialogue = isInteract;
+
+        for (int i = 0; i < content.Count; i++)
         {
             dialogueText.gameObject.SetActive(true);
-            dialogueText.text = info.Content[i];
-            yield return new WaitForSeconds(info.Duration);
+            dialogueText.text = content[i];
+            yield return new WaitForSeconds(duration);
             dialogueText.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.5f);
         }
-        isDisplayingDialogue = false; 
+
+        isDisplayingDialogue = false;
+        isInteractDialogue = false;
+        dialogueCoroutine = null;
     }
 
     private void OnDisable()

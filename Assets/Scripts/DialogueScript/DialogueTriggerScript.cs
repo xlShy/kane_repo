@@ -10,6 +10,7 @@ public class DialogueTriggerScript : MonoBehaviour
     [SerializeField] private List<string> dialogueContent;
     [SerializeField] private float dialogueDuration;
     [SerializeField] private bool isRepeating;
+    [SerializeField] private bool isInteractDialogue;
     public bool alreadyActivated = false;
     public UnityEvent OnTriggerDialogueAudio;
 
@@ -17,8 +18,8 @@ public class DialogueTriggerScript : MonoBehaviour
     {
         if (!alreadyActivated && dialogueContent.Count > 0)
         {
-            bool enqueued = DialogueManager.Instance.EnqueueDialogue(dialogueContent, dialogueDuration);
-            if (enqueued && !isRepeating)
+            bool started = DialogueManager.instance.StartDialogue(dialogueContent, dialogueDuration, isInteractDialogue);
+            if (started && !isRepeating)
             {
                 alreadyActivated = true;
             }
@@ -27,15 +28,18 @@ public class DialogueTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        OnTriggerDialogueAudio?.Invoke();
-        TriggerDialogue();
+        if (!DialogueManager.instance.isDisplayingDialogue || isInteractDialogue)
+        {
+            OnTriggerDialogueAudio?.Invoke();
+            TriggerDialogue();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!isRepeating)
         {
-            alreadyActivated = true;
+            alreadyActivated = false;  // Reset this so it can be triggered again in the future
         }
     }
 
@@ -45,7 +49,7 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             int randomIndex = Random.Range(0, dialogueContent.Count);
             string randomContent = dialogueContent[randomIndex];
-            DialogueManager.Instance.EnqueueDialogue(new List<string> { randomContent }, dialogueDuration);
+            DialogueManager.instance.StartDialogue(new List<string> { randomContent }, dialogueDuration, isInteractDialogue);
         }
     }
 }
