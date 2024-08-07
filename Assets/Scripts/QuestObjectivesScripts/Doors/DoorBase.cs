@@ -16,6 +16,7 @@ public class DoorBase : MonoBehaviour
     public AudioSource doorisOpen;
     public AudioSource doorisClosed;
     public AudioSource doorIsLocked;
+    public AudioSource doorIsUnlocked;
 
     [SerializeField] private GameObject doorAnchor;
     private float openSpeed = 5f;

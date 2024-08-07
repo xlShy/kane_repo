@@ -73,7 +73,7 @@ public class KeyRequiredDoorScript : InteractableObject
             {
                 if (doorBase != null && doorBase.doorisOpen != null)
                 {
-                    doorBase.doorisOpen.Play();
+                    doorBase.doorIsUnlocked.Play();
                 }
                 yesKey?.TriggerDialogue();
 
