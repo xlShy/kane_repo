@@ -68,6 +68,10 @@ public class SanityHandler : MonoBehaviour
             ResetSanity();
         }
     }
+    public void SetSanity(float amountSet)
+    {
+        sanityValue = amountSet;
+    }
     private void DecreaseSanityOnInterval()
     {
         ChangeSanity(-decreasePercentage);

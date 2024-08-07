@@ -1121,7 +1121,6 @@ Transform:
   m_Children:
   - {fileID: 7330348102720642546}
   - {fileID: 6854830605047707624}
-  - {fileID: 2507429108893928532}
   - {fileID: 2706750789197319350}
   - {fileID: 6370430394484402817}
   - {fileID: 7579134664892239727}
@@ -4782,8 +4781,8 @@ GameObject:
   - component: {fileID: 3252984365818223853}
   - component: {fileID: 8294197140808396801}
   - component: {fileID: 7511754452628569342}
-  m_Layer: 0
-  m_Name: Entrance2 (1)
+  m_Layer: 8
+  m_Name: Basement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4798,11 +4797,11 @@ Transform:
   m_GameObject: {fileID: 6459406859568947808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.5, y: 12.46, z: 2.25}
+  m_LocalPosition: {x: -13.5, y: -6.9799995, z: 2.25}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2897738747934471332}
+  m_Father: {fileID: 9135830506550912649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3252984365818223853
 MeshFilter:
@@ -5385,6 +5384,7 @@ Transform:
   - {fileID: 432164966470769624}
   - {fileID: 6920470963072211387}
   - {fileID: 4192258327135521945}
+  - {fileID: 2507429108893928532}
   m_Father: {fileID: 1879248069939099512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8045643393819743589
@@ -14129,7 +14129,7 @@ MonoBehaviour:
   - Boarded up. At least the bigger wildlife won't kill me in here.
   dialogueDuration: 4
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -18509,7 +18509,7 @@ MonoBehaviour:
   - Various books. I can make out accounting books amongst other things.
   dialogueDuration: 4
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -21801,7 +21801,7 @@ MonoBehaviour:
   - Strange picture. Must be a nice fella.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -22160,7 +22160,7 @@ MonoBehaviour:
   - The Kane family?  But I don't recognize these faces...
   dialogueDuration: 4
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -29512,7 +29512,7 @@ MonoBehaviour:
   - Scraps. People must've squatted here.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -31605,7 +31605,7 @@ MonoBehaviour:
   - Strange...Why did they even board up a window?
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -35967,7 +35967,7 @@ MonoBehaviour:
   - Such precious books unrecognizable from the damage.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -61392,7 +61392,7 @@ MonoBehaviour:
   - Ergh...the stench...
   dialogueDuration: 4
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -69212,7 +69212,7 @@ MonoBehaviour:
   - Not books for reading, but books for record keeping.
   dialogueDuration: 4
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -77629,7 +77629,7 @@ MonoBehaviour:
   - The picture is too damaged to make out who this is.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -82053,7 +82053,7 @@ MonoBehaviour:
   - So many scraps around the house.
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -95645,7 +95645,7 @@ MonoBehaviour:
   - A foul smell comes from here. I'll keep it closed.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -96446,7 +96446,7 @@ MonoBehaviour:
   - I can't quite make out who this is.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -96901,7 +96901,7 @@ MonoBehaviour:
     from wear.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -101571,7 +101571,7 @@ MonoBehaviour:
   - An ashtray. Mr. Kane must have liked to smoke in his office.
   dialogueDuration: 4
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -105301,7 +105301,7 @@ MonoBehaviour:
   - Damaged beyond recognition.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -110872,7 +110872,7 @@ MonoBehaviour:
   - What's this table doing here? It's way too heavy...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -111813,7 +111813,7 @@ MonoBehaviour:
   - Windows are boarded up. To protect from the elements? Or something else...
   dialogueDuration: 4
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -113301,7 +113301,7 @@ MonoBehaviour:
   - Instructions... for a derusting mixture..?
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

@@ -11,7 +11,7 @@ public class BasementDoorScript : InteractableObject
     [SerializeField] private doorLockerScript doorLockerScript;
     private void OnEnable()
     {
-        LevelManager.OnCompleteLevel1 += UnlockDoor;
+        //LevelManager.OnCompleteLevel1 += UnlockDoor;
     }
     private void Awake()
     {

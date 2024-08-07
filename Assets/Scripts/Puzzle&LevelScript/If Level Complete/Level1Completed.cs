@@ -26,7 +26,6 @@ public class Level1Completed : MonoBehaviour
         {
             return;
         }
-        sanityHandler.sanityValue = 0.055f;
         isComplete = true;
 
     }
@@ -39,6 +38,5 @@ public class Level1Completed : MonoBehaviour
             loadScene.LoadNextScene("Stage 2");
             isNextScene = true; 
         }
-        //player.transform.position = playerData.playerPositionOnSpawn.transform.position;   
     }
 }
