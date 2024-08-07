@@ -13,9 +13,11 @@ public class SanityPostProcessing : MonoBehaviour
 
     [Header("Post Processing Effects")]
     private Vignette vignette;
+    public float lastVignetteValue;
+    public float currentIntensity;
+    public bool hasAdjusted = false;
 
     [Header("Breathing Vignette Settings")]
-
     [SerializeField] private float breathingCycleDuration = 2f;
 
     Coroutine vignetteCoroutine;
@@ -43,6 +45,8 @@ public class SanityPostProcessing : MonoBehaviour
         {
             StopCoroutine(vignetteCoroutine);
         }
+        hasAdjusted = false;
+        lastVignetteValue = currentIntensity;
         vignetteCoroutine = StartCoroutine(BreathingVignetteCoroutine(minIntensity, maxIntensity));
     }
     public void StopBreathingVignette()
@@ -59,19 +63,33 @@ public class SanityPostProcessing : MonoBehaviour
     private IEnumerator BreathingVignetteCoroutine(float minIntensity, float maxIntensity)
     {
         float elapsedTime = 0f;
+        float adjustmentDuration = 1f; // Time to transition to new intensity
+        float adjustmentProgress = 0f;
 
         while (true)
         {
             elapsedTime += Time.deltaTime;
-            float t = elapsedTime / breathingCycleDuration;
+            
 
-            // Use a sine wave to create a smooth breathing effect
-            float breathingProgress = Mathf.Sin(t * Mathf.PI * 2) * 0.5f + 0.5f;
-            float currentIntensity = Mathf.Lerp(minIntensity, maxIntensity, breathingProgress);
+            if (!hasAdjusted)
+            {
+                adjustmentProgress += Time.deltaTime / adjustmentDuration;
+                currentIntensity = Mathf.Lerp(lastVignetteValue, maxIntensity, adjustmentProgress);
 
+                if (adjustmentProgress >= 1f)
+                {
+                    hasAdjusted = true;
+                    adjustmentProgress = 0f;
+                }
+            }
+            else
+            {
+                float t = elapsedTime / breathingCycleDuration;
+                float breathingProgress = Mathf.Sin(t * Mathf.PI * 2) * 0.5f + 0.5f;
+                currentIntensity = Mathf.Lerp(minIntensity, maxIntensity, breathingProgress);         
+            }
             vignette.intensity.Override(currentIntensity);
 
-            // Reset elapsed time when a full cycle is complete
             if (elapsedTime >= breathingCycleDuration)
             {
                 elapsedTime = 0f;

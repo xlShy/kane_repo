@@ -39,7 +39,7 @@ public class SanityStatusEffect : MonoBehaviour
             StartCoroutine(WaitForFadeAndCallDepletedSanity());
         }
         else if (sanityValue <= threshHold3)
-        {
+        {            
             if (threshold3Triggered)
                 return;
             postProcessing.StartSanityEffect(0.7f, 0.9f);
@@ -50,7 +50,7 @@ public class SanityStatusEffect : MonoBehaviour
         else if (sanityValue <= threshHold2)
         {
             if (threshold2Triggered)
-                return;;
+                return;
             postProcessing.StartSanityEffect(0.4f, 0.7f);
             threshold2Triggered = true;
             threshold1Triggered = false;
@@ -65,7 +65,6 @@ public class SanityStatusEffect : MonoBehaviour
         else
         {
             postProcessing.StopBreathingVignette();
-            //OnHighSanity();
             ResetThresholds();
         }
     }
@@ -75,7 +74,6 @@ public class SanityStatusEffect : MonoBehaviour
         threshold2Triggered = false;
         threshold3Triggered = false;
     }
-
     public IEnumerator OnDepletedSanity()
     {
         canvasManager.DisableAllCanvas(canvasManager.UICanvas);
