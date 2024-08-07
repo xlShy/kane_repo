@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private SceneFader sceneFader;
-
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void LoadSceneByIndex(int sceneIndex)
     {
         StartCoroutine(LoadVideo(sceneIndex));
