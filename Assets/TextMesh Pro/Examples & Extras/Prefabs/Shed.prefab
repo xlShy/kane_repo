@@ -197,7 +197,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -606,7 +606,7 @@ MonoBehaviour:
   - Maintenance records.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -754,7 +754,7 @@ MonoBehaviour:
   - Toolbox. There's nothing left in here other than tape.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   - Hammer. Just some surface rust, otherwise it's in good condition.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   - House repair guides?
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   - DIY books...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -2605,7 +2605,7 @@ MonoBehaviour:
   - Hardbound instruction manuals...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

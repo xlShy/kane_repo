@@ -10,6 +10,7 @@ public class SanityStatusEffect : MonoBehaviour
     private SanityPostProcessing postProcessing;
     [SerializeField] private CanvasManager canvasManager;
     [SerializeField] private SceneFader sceneFader;
+    [SerializeField] DeathScreenEnabler deathScreenEnabler;
     public Transform playerObject;
 
     public RawImage visionDarken;
@@ -22,6 +23,7 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private float threshHold2 = .3f;
     [SerializeField] private float threshHold3 = .1f;
 
+    [SerializeField] private bool isDead;
     [SerializeField] private bool threshold1Triggered = false;
     [SerializeField] private bool threshold2Triggered = false;
     [SerializeField] private bool threshold3Triggered = false;
@@ -33,8 +35,10 @@ public class SanityStatusEffect : MonoBehaviour
     }
     public void CheckSanityValue(float sanityValue)
     {
-        if (sanityValue <= 0)
+        
+        if (sanityValue <= 0 && !isDead)
         {
+            isDead = true;
             sanityHandler.isSanityDepleted = true;
             StartCoroutine(WaitForFadeAndCallDepletedSanity());
         }
@@ -76,25 +80,28 @@ public class SanityStatusEffect : MonoBehaviour
     }
     public IEnumerator OnDepletedSanity()
     {
+        deathScreenEnabler.isDoneShowing = false;
         canvasManager.DisableAllCanvas(canvasManager.UICanvas);
         canvasManager.DisableAllCanvas(canvasManager.PuzzleCanvas);
 
+        deathScreenEnabler.EnableDeathScreen();
+        yield return new WaitForSeconds(3f);
         CharacterController controller = playerObject.GetComponent<CharacterController>();
         if (controller != null)
         {
-            print("set player pos");
             controller.enabled = false;
             playerObject.position = ShedRespawnPoint.Instance.ShedSpawnPoint.gameObject.transform.position; //takes the shedrespawnpoint 
             controller.enabled = true;
             sanityHandler.ResetSanity();
         }
-        sceneFader.FadeIn();
-        print(sceneFader.isDoneFading);
+        sceneFader.FadeIn();      
         yield return new WaitUntil(() => sceneFader.isDoneFading);
+        isDead = false;
     }
 
     private IEnumerator WaitForFadeAndCallDepletedSanity()
     {
+        print("hi");
         sceneFader.FadeOut();
         yield return new WaitUntil(() => sceneFader.isDoneFading);
         StartCoroutine(OnDepletedSanity());
