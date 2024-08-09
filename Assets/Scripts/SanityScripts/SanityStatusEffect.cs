@@ -8,9 +8,12 @@ public class SanityStatusEffect : MonoBehaviour
 {
     private SanityHandler sanityHandler;
     private SanityPostProcessing postProcessing;
+
     [SerializeField] private CanvasManager canvasManager;
     [SerializeField] private SceneFader sceneFader;
-    [SerializeField] DeathScreenEnabler deathScreenEnabler;
+    [SerializeField] private AudioHandler audioHandler;
+    [SerializeField] private DeathScreenEnabler deathScreenEnabler;
+
     public Transform playerObject;
 
     public RawImage visionDarken;
@@ -38,26 +41,33 @@ public class SanityStatusEffect : MonoBehaviour
         
         if (sanityValue <= 0 && !isDead)
         {
+            audioHandler.StopSanityAudio();
             isDead = true;
             sanityHandler.isSanityDepleted = true;
             StartCoroutine(WaitForFadeAndCallDepletedSanity());
         }
-        else if (sanityValue <= threshHold3)
+        else if (sanityValue <= threshHold3 && !sanityHandler.isSanityIncreasing)
         {            
-            if (threshold3Triggered)
+            if (threshold3Triggered && !sanityHandler.isSanityIncreasing)
                 return;
             postProcessing.StartSanityEffect(0.7f, 0.9f);
             threshold3Triggered = true;
             threshold2Triggered = false;
             threshold1Triggered = false;
+
+            audioHandler.StopSanityAudio();
+            audioHandler.PlaySelectedAudio(1);
+            
         }
-        else if (sanityValue <= threshHold2)
+        else if (sanityValue <= threshHold2 && !sanityHandler.isSanityIncreasing)
         {
             if (threshold2Triggered)
                 return;
             postProcessing.StartSanityEffect(0.4f, 0.7f);
             threshold2Triggered = true;
             threshold1Triggered = false;
+
+            audioHandler.PlaySelectedAudio(0);
         }
         else if (sanityValue <= threshHold1)
         {
@@ -68,6 +78,7 @@ public class SanityStatusEffect : MonoBehaviour
         }
         else
         {
+            audioHandler.StopSanityAudio();
             postProcessing.StopBreathingVignette();
             ResetThresholds();
         }
