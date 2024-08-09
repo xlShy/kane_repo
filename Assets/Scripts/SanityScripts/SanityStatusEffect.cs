@@ -53,7 +53,7 @@ public class SanityStatusEffect : MonoBehaviour
             if (threshold3Triggered && !sanityHandler.isSanityIncreasing)
                 return;
             postProcessing.StartVignetteEffect(0.7f, 0.9f);
-            postProcessing.ToggleChomaticAbberation(true);
+            //postProcessing.ToggleChomaticAbberation(true);
             postProcessing.StartLensDistortionEffect();
             postProcessing.StartDepthOfFieldEffect();
             threshold3Triggered = true;

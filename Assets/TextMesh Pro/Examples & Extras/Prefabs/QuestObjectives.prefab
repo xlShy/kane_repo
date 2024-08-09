@@ -413,7 +413,7 @@ MonoBehaviour:
   - I guess I have to get the right code...
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3330,7 +3330,7 @@ MonoBehaviour:
   - Maybe this TV means something...
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   - Something can be done with this clock...
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3777,7 +3777,7 @@ MonoBehaviour:
   - Alright... Alright... I'm feeling fine now...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   - Alright... Alright... I'm feeling fine now...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3856,7 +3856,7 @@ MonoBehaviour:
   - Alright... Alright... I'm feeling fine now...
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4046,7 +4046,7 @@ MonoBehaviour:
   - A blueprint, huh.
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4449,6 +4449,9 @@ PrefabInstance:
       addedObject: {fileID: 6416578035728409611}
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1292659633707852515}
+    - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6333681135080983005}
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
@@ -4456,6 +4459,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1399225767707950338}
+    - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1293737660475795951}
   m_SourcePrefab: {fileID: 100100000, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
 --- !u!4 &1650755204995386356 stripped
 Transform:
@@ -4504,10 +4510,24 @@ MonoBehaviour:
   - I somehow solved the clock!
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1292659633707852515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135684447244177742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayOnce: 1
+  isAudioPlayed: 0
 --- !u!114 &6333681135080983005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4524,7 +4544,19 @@ MonoBehaviour:
   item: {fileID: 0}
   itemPickedUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1292659633707852515}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1293737660475795951}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
   keyItem: {fileID: 2875940197166157586}
@@ -4694,6 +4726,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0a068dce608609c49b54655f7211896e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1293737660475795951
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135684447244177742}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2956856568664466765, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
+  m_audioClip: {fileID: 8300000, guid: b30feb5c6e2bff24b8a34470d468ce8e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5051,7 +5179,7 @@ MonoBehaviour:
   - Huh....
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -5966,7 +6094,7 @@ MonoBehaviour:
   - I cracked the code!
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -6897,7 +7025,7 @@ MonoBehaviour:
   - That's one, still won't turn on though...
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -6917,7 +7045,7 @@ MonoBehaviour:
   - I think I need something before I can activate this....
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -6937,7 +7065,7 @@ MonoBehaviour:
   - Got the fuse working! Lets go!
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8026,7 +8154,7 @@ MonoBehaviour:
   - I guess this'll be where I mix the ingredients.
   dialogueDuration: 3
   isRepeating: 0
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8046,7 +8174,7 @@ MonoBehaviour:
   - Can't pick up the mixture with just my bare hands, I need something.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8162,7 +8290,7 @@ MonoBehaviour:
   - I'll need to pour the ingredients here.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8184,7 +8312,7 @@ MonoBehaviour:
   - I'll need to look into the instructions, gotta make this right.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8206,7 +8334,7 @@ MonoBehaviour:
   - Did I get it right?
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8228,7 +8356,7 @@ MonoBehaviour:
   - Alright, time to test it out.
   dialogueDuration: 3
   isRepeating: 1
-  alreadyActivated: 0
+  isInteractDialogue: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

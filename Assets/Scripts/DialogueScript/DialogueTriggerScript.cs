@@ -16,6 +16,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        OnTriggerDialogueAudio?.Invoke();
         if ((!hasPlayedOnce || isRepeating) && dialogueContent.Count > 0)
         {
             bool started = DialogueManager.instance.StartDialogue(dialogueContent, dialogueDuration, isInteractDialogue);
@@ -30,7 +31,7 @@ public class DialogueTriggerScript : MonoBehaviour
     {
         if ((!hasPlayedOnce || isRepeating) && (!DialogueManager.instance.isDisplayingDialogue || isInteractDialogue))
         {
-            OnTriggerDialogueAudio?.Invoke();
+            
             TriggerDialogue();
         }
     }
