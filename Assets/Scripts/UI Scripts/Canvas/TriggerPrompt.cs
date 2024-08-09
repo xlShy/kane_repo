@@ -14,7 +14,8 @@ public class TriggerPrompt : MonoBehaviour
         }
         else
         {
-            Debug.LogError("JournalUpdatedPromptScript reference is missing!");
+            print(journalPrompt);
+            //Debug.LogError("JournalUpdatedPromptScript reference is missing!");
         }
     }
 }

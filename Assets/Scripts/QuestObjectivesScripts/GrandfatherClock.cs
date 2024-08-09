@@ -19,6 +19,7 @@ public class GrandfatherClock : InteractableObject
     [SerializeField] private AudioSource puzzleCompleteSounds;
     [SerializeField] private AudioSource journalUpdatedSounds;
 
+    public UnityEvent OnInteractDialogue;
     public UnityEvent OnCompleteGrandfathersClock;
 
     public bool isPuzzleComplete = false;
@@ -27,6 +28,7 @@ public class GrandfatherClock : InteractableObject
     {
         if (itemInteractedCase == 2 && !isPuzzleComplete)
         {
+            OnInteractDialogue?.Invoke();
             puzzleCanvas.SetActive(true);
             clockChecker = FindObjectOfType<ClockChecker>();
 
