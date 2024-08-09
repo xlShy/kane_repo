@@ -42,6 +42,8 @@ public class SanityStatusEffect : MonoBehaviour
         if (sanityValue <= 0 && !isDead)
         {
             audioHandler.StopSanityAudio();
+            postProcessing.ToggleChomaticAbberation(false);
+            postProcessing.StopAllCoroutines();
             isDead = true;
             sanityHandler.isSanityDepleted = true;
             StartCoroutine(WaitForFadeAndCallDepletedSanity());
@@ -50,7 +52,10 @@ public class SanityStatusEffect : MonoBehaviour
         {            
             if (threshold3Triggered && !sanityHandler.isSanityIncreasing)
                 return;
-            postProcessing.StartSanityEffect(0.7f, 0.9f);
+            postProcessing.StartVignetteEffect(0.7f, 0.9f);
+            postProcessing.ToggleChomaticAbberation(true);
+            postProcessing.StartLensDistortionEffect();
+            postProcessing.StartDepthOfFieldEffect();
             threshold3Triggered = true;
             threshold2Triggered = false;
             threshold1Triggered = false;
@@ -63,7 +68,8 @@ public class SanityStatusEffect : MonoBehaviour
         {
             if (threshold2Triggered)
                 return;
-            postProcessing.StartSanityEffect(0.4f, 0.7f);
+            postProcessing.StartVignetteEffect(0.4f, 0.7f);
+            postProcessing.ToggleChomaticAbberation(true);
             threshold2Triggered = true;
             threshold1Triggered = false;
 
@@ -73,13 +79,14 @@ public class SanityStatusEffect : MonoBehaviour
         {
             if (threshold1Triggered)
                 return;
-            postProcessing.StartSanityEffect(0.0f, 0.4f);
+            postProcessing.StartVignetteEffect(0.0f, 0.4f);
             threshold1Triggered = true;
         }
         else
         {
             audioHandler.StopSanityAudio();
-            postProcessing.StopBreathingVignette();
+            postProcessing.StopAllCoroutines();
+            postProcessing.ToggleChomaticAbberation(false);
             ResetThresholds();
         }
     }

@@ -1747,17 +1747,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9087116602498022858, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1844657729 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-  m_PrefabInstance: {fileID: 4614911185076699634}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 625623e357863804a8fdf0565e8f3685, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1874984282 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3933173937399866479, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
@@ -2937,10 +2926,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 427523135}
     - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: audioHandler
-      value: 
-      objectReference: {fileID: 1844657729}
-    - target: {fileID: 864382233524305535, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 511383847}
@@ -3076,26 +3061,6 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1969405602}
-    - target: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: audioSource.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: audioSource.Array.data[0]
-      value: 
-      objectReference: {fileID: 1969405602}
-    - target: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: sanityAudioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: sanityAudioClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: cae854b48212135429fb92d425c1ca37, type: 3}
-    - target: {fileID: 6966049360554763160, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
-      propertyPath: sanityAudioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 43339a20462636843ba433bfa9e9c328, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -87,9 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreenCanvas: {fileID: 0}
   sceneFader: {fileID: 0}
-  fadeInDuration: 1
-  stayDuration: 2
-  fadeOutDuration: 1
+  fadeInDuration: 2
+  stayDuration: 3
+  fadeOutDuration: 2
   isDoneShowing: 0
 --- !u!1 &104341112640658525
 GameObject:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasManager: {fileID: 926579298934901709}
   sceneFader: {fileID: 0}
-  audioHandler: {fileID: 0}
+  audioHandler: {fileID: 6966049360554763160}
   deathScreenEnabler: {fileID: 2974308837515419438}
   playerObject: {fileID: 0}
   visionDarken: {fileID: 0}
@@ -338,10 +338,18 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 0}
   disable: 0
   sanityProfile: {fileID: 11400000, guid: f8e4e9ab79d405a4b90887e05ca54414, type: 2}
+  breathingCycleDuration: 2
   lastVignetteValue: 0
   currentIntensity: 0
   hasAdjusted: 0
-  breathingCycleDuration: 2
+  isChromaticOn: 0
+  minDistortionX: 0.3
+  maxDistortionX: 0.1
+  minDistortionY: 0.3
+  maxDistortionY: 0.1
+  xCycleOffset: 0.5
+  minFocalLength: 35
+  maxFocalLength: 150
 --- !u!1 &6456800679941445462
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,5 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625623e357863804a8fdf0565e8f3685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanityAudioClips: []
-  audioSource: []
+  sanityAudioClips:
+  - {fileID: 8300000, guid: cae854b48212135429fb92d425c1ca37, type: 3}
+  - {fileID: 8300000, guid: 43339a20462636843ba433bfa9e9c328, type: 3}
+  audioSource: {fileID: 0}

@@ -53,8 +53,8 @@ public class DeathScreenEnabler : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float newAlpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
             screenImage.color = new Color(currentColor.r, currentColor.g, currentColor.b, newAlpha);
-            yield return null;
+            yield return null;           
         }
-        screenImage.color = new Color(currentColor.r, currentColor.g, currentColor.b, endAlpha);        
+        //screenImage.color = new Color(currentColor.r, currentColor.g, currentColor.b, endAlpha);        
     }
 }
