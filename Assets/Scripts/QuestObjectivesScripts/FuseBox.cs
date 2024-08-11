@@ -41,6 +41,7 @@ public class FuseBox : InteractableObject
     //fuse count settings
     private int itemCount = 0;
     private int currentCount = 0;
+    private int fuseCount;
 
     [Header("Fuse Objective")]
     [SerializeField] private GameObject fuse1;
@@ -54,7 +55,10 @@ public class FuseBox : InteractableObject
             {
                 HandleFuses(0);
             }
-            int fuseCount = CountFuseItems(keyItems);
+            else
+            {
+                fuseCount = CountFuseItems(keyItems);
+            }
             HandleFuses(fuseCount);
         }
     }
@@ -62,8 +66,7 @@ public class FuseBox : InteractableObject
     {        
         if(itemCount == 0)
         {
-            //itemCount = items.Count(item => item is FuseItem);
-            //print(itemCount);
+            itemCount = items.Count(item => item is FuseItem);
         }
         else
         {
