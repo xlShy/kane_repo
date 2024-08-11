@@ -13,7 +13,7 @@ public class BasementDoorScript : InteractableObject
     [SerializeField] private SanityHandler sanityHandler;
     [SerializeField] private float openSpeed = 5f;
     [SerializeField] private string scene2Load;
-    
+
     private AsyncOperation asyncLoad;
 
     private void Awake()
@@ -43,9 +43,10 @@ public class BasementDoorScript : InteractableObject
         asyncLoad = SceneManager.LoadSceneAsync(scene2Load);
         asyncLoad.allowSceneActivation = false;  // Add this line
         yield return new WaitUntil(() => sanityHandler.sanityValue == 0);
-
+        
         sceneFader.FadeOut();
         yield return new WaitUntil(() => sceneFader.isDoneFading);
+
         asyncLoad.allowSceneActivation = true;
     }
 }

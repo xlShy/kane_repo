@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SanityHandler : MonoBehaviour
@@ -21,6 +22,11 @@ public class SanityHandler : MonoBehaviour
     public bool isSanityDepleted = false;
 
     public bool isCanvasOn = false;
+
+    public UnityEvent OnPlayerShed;
+    public UnityEvent OnPlayerHouse;
+    public UnityEvent OnPlayerOutside;
+
     private void Awake()
     {
         sanityChecker = GetComponent<SanityStatusEffect>();
@@ -92,14 +98,20 @@ public class SanityHandler : MonoBehaviour
     }
     private void PlayerOnHouse()
     {
+        print("on house");
+        OnPlayerHouse?.Invoke();
         isSanityDecreasing = true;
     }
     private void PlayerOnShed()
     {
+        print("on shed");
+        OnPlayerShed?.Invoke();
         isSanityIncreasing = true;
     }
     private void PlayerOnOutside()
     {
+        print("on outside");
+        OnPlayerOutside?.Invoke();
         isSanityDecreasing = false;
         isSanityIncreasing = false;
     }

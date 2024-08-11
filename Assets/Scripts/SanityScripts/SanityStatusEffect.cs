@@ -11,7 +11,7 @@ public class SanityStatusEffect : MonoBehaviour
 
     [SerializeField] private CanvasManager canvasManager;
     [SerializeField] private SceneFader sceneFader;
-    [SerializeField] private AudioHandler audioHandler;
+    [SerializeField] private SanityAudioHandler audioHandler;
     [SerializeField] private DeathScreenEnabler deathScreenEnabler;
 
     public Transform playerObject;
@@ -31,6 +31,8 @@ public class SanityStatusEffect : MonoBehaviour
     [SerializeField] private bool threshold2Triggered = false;
     [SerializeField] private bool threshold3Triggered = false;
 
+    [SerializeField] private AudioSource thumpSoundOnDeath;
+
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
@@ -42,8 +44,10 @@ public class SanityStatusEffect : MonoBehaviour
         if (sanityValue <= 0 && !isDead)
         {
             audioHandler.StopSanityAudio();
-            postProcessing.ToggleChomaticAbberation(false);
             postProcessing.StopAllCoroutines();
+            postProcessing.ToggleChomaticAbberation(false);
+            postProcessing.StopLensDistortionEffect();
+            postProcessing.StopDepthOfFieldEffect();
             isDead = true;
             sanityHandler.isSanityDepleted = true;
             StartCoroutine(WaitForFadeAndCallDepletedSanity());
@@ -53,7 +57,6 @@ public class SanityStatusEffect : MonoBehaviour
             if (threshold3Triggered && !sanityHandler.isSanityIncreasing)
                 return;
             postProcessing.StartVignetteEffect(0.7f, 0.9f);
-            //postProcessing.ToggleChomaticAbberation(true);
             postProcessing.StartLensDistortionEffect();
             postProcessing.StartDepthOfFieldEffect();
             threshold3Triggered = true;
@@ -87,6 +90,8 @@ public class SanityStatusEffect : MonoBehaviour
             audioHandler.StopSanityAudio();
             postProcessing.StopAllCoroutines();
             postProcessing.ToggleChomaticAbberation(false);
+            postProcessing.StopLensDistortionEffect();
+            postProcessing.StopDepthOfFieldEffect();
             ResetThresholds();
         }
     }
@@ -119,9 +124,9 @@ public class SanityStatusEffect : MonoBehaviour
 
     private IEnumerator WaitForFadeAndCallDepletedSanity()
     {
-        print("hi");
         sceneFader.FadeOut();
         yield return new WaitUntil(() => sceneFader.isDoneFading);
+        thumpSoundOnDeath.Play();
         StartCoroutine(OnDepletedSanity());
     }
 }

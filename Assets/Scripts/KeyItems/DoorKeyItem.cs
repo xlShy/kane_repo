@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DoorKeyItem : InventoryItem
 {
@@ -30,6 +31,7 @@ public class DoorKeyItem : InventoryItem
 
     public AudioSource keyDropOnClock;
 
+    public UnityEvent OnKeyPickedUp;
     private void Start()
     {
         interactableScript.itemPickedUp.AddListener(uponItemPickup);
@@ -40,16 +42,7 @@ public class DoorKeyItem : InventoryItem
     {
         gameObject.layer = LayerMask.NameToLayer("Default");
         fusePickup.Play();
-        Debug.Log("I am called to make dialogue!");
-        dialogueText.gameObject.SetActive(true);
-        dialogueText.text = dialogueContent;
-
-        if (dialogueCoroutine != null)
-        {
-            StopCoroutine(dialogueCoroutine);
-        }
-        dialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(dialogueDuration));
-
+        OnKeyPickedUp?.Invoke();
         meshRenderer.enabled = false;
     }
 

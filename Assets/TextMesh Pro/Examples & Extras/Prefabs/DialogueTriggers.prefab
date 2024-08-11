@@ -37,71 +37,8 @@ Transform:
   - {fileID: 8339605209962826404}
   - {fileID: 517966792792857369}
   - {fileID: 2018370553811290698}
-  - {fileID: 2902714294019156955}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &422784911726056460
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4628084084972138629}
-    m_Modifications:
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.0489807
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.58000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25.840664
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_Name
-      value: DT_Office Entrance
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
---- !u!4 &2902714294019156955 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-  m_PrefabInstance: {fileID: 422784911726056460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3073350416763430094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,11 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
-      value: The dining room. It's in disarray.
+      value: This must be the dining room, what a mess...
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.size
@@ -182,10 +119,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 3079161025336712366}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -211,9 +144,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 3079161025336712366}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4724165450175472970}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
@@ -227,20 +157,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
   m_PrefabInstance: {fileID: 3073350416763430094}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3079161025336712366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7439031172868981520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &4724165450175472970
 AudioSource:
   m_ObjectHideFlags: 0
@@ -403,11 +319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 3
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
-      value: Ah much better, this place feels safe somehow
+      value: Ah... this is better better, this place feels safe somehow
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.size
@@ -417,10 +333,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6933910596742943907}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -450,9 +362,6 @@ PrefabInstance:
       addedObject: {fileID: 5693229549214350354}
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6933910596742943907}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1990807435612894874}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
 --- !u!4 &24284395062700459 stripped
@@ -477,20 +386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4aa3818491eef2429956028888d7d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6933910596742943907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6943083854202155426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &1990807435612894874
 AudioSource:
   m_ObjectHideFlags: 0
@@ -657,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
@@ -735,11 +630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
-      value: The house office. It feels like a tornado passed through here.
+      value: Mr. Kane must have loved his books in his office.
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.size
@@ -749,10 +644,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2638102593180810168}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -778,9 +669,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 2638102593180810168}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3682850607200142595}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
@@ -789,20 +677,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
   m_PrefabInstance: {fileID: 4613713134762848906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2638102593180810168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981001030504650068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &3682850607200142595
 AudioSource:
   m_ObjectHideFlags: 0
@@ -954,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: m_Name
-      value: DialogueTrigger
+      value: DT_Entrance
       objectReference: {fileID: 0}
     - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: m_Size.x
@@ -971,6 +845,10 @@ PrefabInstance:
     - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: m_Center.z
       value: -0.099614024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: dialogueDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.size
@@ -992,10 +870,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8002845505358011092}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1022,9 +896,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8002845505358011092}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3583832073659505821}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
 --- !u!1 &762966933583154936 stripped
@@ -1032,20 +903,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
   m_PrefabInstance: {fileID: 5119641671600285990}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8002845505358011092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762966933583154936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &3583832073659505821
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1197,7 +1054,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: m_Name
-      value: DialogueTrigger (1)
+      value: DT_Basement
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0796614
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: m_Size.z
+      value: 5.542533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: m_Center.x
+      value: -0.32983065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567475658590004589, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: m_Center.z
+      value: -1.2362666
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
+      propertyPath: dialogueDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.size
@@ -1279,11 +1156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
-      value: The kitchen. It smells in here.
+      value: God, it reeks in here.
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.size
@@ -1293,10 +1170,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2145469089158896959}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1322,9 +1195,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 2145469089158896959}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2612793855127805117}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
@@ -1333,20 +1203,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
   m_PrefabInstance: {fileID: 6785430568280700275}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2145469089158896959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418833706929410733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &2612793855127805117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1510,11 +1366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueDuration
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: dialogueContent.Array.data[0]
-      value: This is the shed, its a little dark in here.
+      value: This is the shed? It's a little dark in here.
       objectReference: {fileID: 0}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.size
@@ -1524,10 +1380,6 @@ PrefabInstance:
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4891041545169188788}
     - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1554,9 +1406,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4891041545169188788}
-    - targetCorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7469414160408602276}
   m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
 --- !u!1 &3120981444509361213 stripped
@@ -1564,20 +1413,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
   m_PrefabInstance: {fileID: 7410093250691892195}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4891041545169188788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3120981444509361213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &7469414160408602276
 AudioSource:
   m_ObjectHideFlags: 0

@@ -271,6 +271,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 460637293232986812, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
   m_PrefabInstance: {fileID: 4706684788166481365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &122070936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5875575663054295351, guid: fee258287a54aa24ca3feffabbf06ed4, type: 3}
+  m_PrefabInstance: {fileID: 5281216167733464001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8e139de85c2d4aa3bb12f04ac5004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143102594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5997514656751849027, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -1099,6 +1110,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1380821852408076521, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3158971136999517817, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3670649596258185772, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3889818166917081472, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 4628084084972138629, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.20898
@@ -1143,6 +1170,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'DialogueTriggers '
       objectReference: {fileID: 0}
+    - target: {fileID: 6358123644476558710, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 6871051906758246340, guid: caef51bdf0966374ba2d26c42df77a84, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1722,6 +1757,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc32005accea6445bda6fc05f0eeaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1906590229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9194990936734386087, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+  m_PrefabInstance: {fileID: 4614911185076699634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1927819106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2084338442811740991, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
@@ -1890,6 +1936,10 @@ PrefabInstance:
       propertyPath: OnDoorOpenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 815429190}
+    - target: {fileID: 867586574461684927, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 1713447749899746211, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
       propertyPath: loadScene
       value: 
@@ -2050,6 +2100,10 @@ PrefabInstance:
       propertyPath: doorUnrusted.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
       objectReference: {fileID: 851053277}
+    - target: {fileID: 8079345010795681661, guid: 04f4f63aeec6e5f47919d1538de20bc7, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2073,67 +2127,6 @@ Transform:
   - {fileID: 4092208340807432008}
   m_Father: {fileID: 329810600418759713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1783008178248469099
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -18.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284966800129163223, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5591786953626511326, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: m_Name
-      value: DialogueTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501769864286034698, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 1779987973}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b50e86aab9b7a146b3f7bb38e7723f5, type: 3}
 --- !u!1001 &2286328679847662119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2214,6 +2207,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41860794691004331, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 476019505483191106, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: pEventHandler
       value: 
@@ -2250,6 +2247,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 3415768292073643410, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 3821920393107788955, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2347,27 +2348,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687961695}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2085152754}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 596482459}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1180527248}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 851053277}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1174190873}
     - target: {fileID: 6333681135080983005, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
-      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
+      propertyPath: OnCompleteGrandfathersClock.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1174190873}
     - target: {fileID: 6343051102639992546, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
@@ -2402,10 +2403,18 @@ PrefabInstance:
       propertyPath: OnCompleteChemicalMixing.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 2085152754}
+    - target: {fileID: 6416578035728409611, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 6819069457946620284, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: m_Name
       value: QuestObjectives
       objectReference: {fileID: 0}
+    - target: {fileID: 7118008635441341000, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 7167754557893450510, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
       propertyPath: initiateOfficeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2442,6 +2451,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1779987973}
+    - target: {fileID: 8302046948797116711, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 8852377614301990458, guid: d162122578d65234fb5d6f1e9786afdc, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2838,6 +2855,30 @@ PrefabInstance:
       propertyPath: consumableInventory
       value: 
       objectReference: {fileID: 1779987972}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerShed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerShed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerHouse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerHouse.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerOutside.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
+    - target: {fileID: 2593785832678190295, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
+      propertyPath: OnPlayerOutside.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 122070936}
     - target: {fileID: 2974308837515419438, guid: 856d628168029704abcc2c9bcfaa1502, type: 3}
       propertyPath: sceneFader
       value: 
@@ -2986,6 +3027,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1454528836680994584, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 2669984837228357383, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3184135907433713032, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3332064219489017981, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 3722847262028116307, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 4241241934271535154, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 4789946606888691175, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 5479261615805451804, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
+    - target: {fileID: 8092139804192236882, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 8696512503627372795, guid: 2c4e1b9640e7e0546b240b324bb11a45, type: 3}
       propertyPath: m_Name
       value: House
@@ -3265,6 +3342,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500450137395641742, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     - target: {fileID: 2506983060500602541, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
       propertyPath: m_Name
       value: Shed
@@ -3309,6 +3390,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8194458500901888912, guid: ef32a40dd647f394e99c33a42ba189e6, type: 3}
+      propertyPath: OnTriggerDialogueAudio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1906590229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3779,4 +3864,3 @@ SceneRoots:
   - {fileID: 4223139247932234675}
   - {fileID: 6518178835997648922}
   - {fileID: 1505327738856034357}
-  - {fileID: 1783008178248469099}

@@ -36,15 +36,15 @@ public class FuseItem : InventoryItem
     {
         gameObject.layer = LayerMask.NameToLayer("Default");
         fusePickup.Play();
-        //Debug.Log("I am called to make dialogue!");
-        dialogueText.gameObject.SetActive(true);
-        dialogueText.text = dialogueContent;
+        ////Debug.Log("I am called to make dialogue!");
+        //dialogueText.gameObject.SetActive(true);
+        //dialogueText.text = dialogueContent;
 
-        if (dialogueCoroutine != null)
-        {
-            StopCoroutine(dialogueCoroutine);
-        }
-        dialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(dialogueDuration));
+        //if (dialogueCoroutine != null)
+        //{
+        //    StopCoroutine(dialogueCoroutine);
+        //}
+        //dialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(dialogueDuration));
 
         meshRenderer.enabled = false;
     }

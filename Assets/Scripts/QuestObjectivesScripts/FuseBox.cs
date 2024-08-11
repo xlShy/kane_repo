@@ -18,6 +18,7 @@ public class FuseBox : InteractableObject
     [SerializeField] private GameObject televisionGameObject;
 
     [Header("DialogueComponents")]
+    [SerializeField] private DialogueTriggerScript noFuseInteraction;
     [SerializeField] private DialogueTriggerScript successFuseDialogue;
     [SerializeField] private DialogueTriggerScript notEnoughFusesDialogue;
     [SerializeField] private DialogueTriggerScript oneFuseDialogue;
@@ -49,19 +50,20 @@ public class FuseBox : InteractableObject
         if (itemInteractedCase == 2)
         {
             keyItems = inventory.GetKeyItems(requiredFuse);
-            if (keyItems == null)
+            if(keyItems == null)
             {
-                return;
+                HandleFuses(0);
             }
             int fuseCount = CountFuseItems(keyItems);
             HandleFuses(fuseCount);
         }
     }
     private int CountFuseItems(List<InventoryItem> items)
-    {
+    {        
         if(itemCount == 0)
         {
-            itemCount = items.Count(item => item is FuseItem);
+            //itemCount = items.Count(item => item is FuseItem);
+            //print(itemCount);
         }
         else
         {

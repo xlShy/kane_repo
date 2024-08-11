@@ -10,8 +10,10 @@ public class CreditsSceneFader : MonoBehaviour
 {
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private string scene2Load;
-
+    [SerializeField] private AudioSource audioSource;
     private AsyncOperation asyncLoad;
+
+    public UnityEvent OnEnterCredits;
 
     private void OnEnable()
     {
@@ -23,6 +25,8 @@ public class CreditsSceneFader : MonoBehaviour
     }
     private void Start()
     {
+        audioSource.Play();
+        OnEnterCredits?.Invoke();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         StartCoroutine(PlayEndCredits());

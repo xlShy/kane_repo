@@ -67,7 +67,6 @@ public class KeyRequiredDoorScript : InteractableObject
                     doorBase.doorIsLocked.Play();
                 }
                 noKey.TriggerDialogue();
-                OnTriggerAudioDialogue?.Invoke();
             }
             else
             {

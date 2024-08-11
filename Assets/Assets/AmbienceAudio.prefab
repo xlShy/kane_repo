@@ -181,7 +181,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 15.6
-  MaxDistance: 18.9
+  MaxDistance: 25.1
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -265,6 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211424278087194029}
+  - component: {fileID: 5875575663054295351}
   m_Layer: 0
   m_Name: AmbienceAudio
   m_TagString: Untagged
@@ -293,6 +294,29 @@ Transform:
   - {fileID: 8701474619260084171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5875575663054295351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282143659216204338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8e139de85c2d4aa3bb12f04ac5004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOutsideAmbienceOn: 0
+  isInsideAmbienceOn: 0
+  outsideAudio:
+  - {fileID: 2324795636514110577}
+  - {fileID: 6871150559494742805}
+  - {fileID: 4402161684016176231}
+  - {fileID: 7063804318123142768}
+  insideAudio:
+  - {fileID: 8697822150916213785}
+  - {fileID: 4496911261065483393}
+  hasReachedTargetVolume: 0
 --- !u!1 &6873441176015535871
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +498,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 15.6
-  MaxDistance: 18.9
+  MaxDistance: 25.18
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0

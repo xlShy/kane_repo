@@ -10,17 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1797297499434928969}
   - component: {fileID: 704457209774063134}
-  - component: {fileID: 129724795884191462}
   - component: {fileID: 480822147232691373}
   - component: {fileID: 4137583744650904579}
   - component: {fileID: 1719186017921342553}
   - component: {fileID: 8771061339724999673}
   - component: {fileID: 639179211563393165}
   - component: {fileID: 7723351239378635504}
-  - component: {fileID: 6886015866245759414}
   - component: {fileID: 867586574461684927}
   - component: {fileID: 8079345010795681661}
-  - component: {fileID: 4909810951694769778}
   - component: {fileID: 8381825875198921272}
   - component: {fileID: 6696958821369072887}
   - component: {fileID: 8571530885472888391}
@@ -69,20 +66,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.49888015, y: 5.97666, z: 3.9424322}
   m_Center: {x: -0.008082509, y: -0.38514423, z: -2.0070534}
---- !u!114 &129724795884191462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460987745038181372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!114 &480822147232691373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,18 +101,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 129724795884191462}
-        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
-        m_MethodName: PlayAudioDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8571530885472888391}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4137583744650904579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,19 +131,7 @@ MonoBehaviour:
   keyItems: []
   OnTriggerAudioDialogue:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6886015866245759414}
-        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
-        m_MethodName: PlayAudioDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7723351239378635504}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!82 &1719186017921342553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -557,20 +516,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6886015866245759414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460987745038181372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!114 &867586574461684927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,9 +534,22 @@ MonoBehaviour:
   dialogueDuration: 8
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7723351239378635504}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8079345010795681661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,23 +567,22 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &4909810951694769778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460987745038181372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8571530885472888391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &8381825875198921272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -677,7 +634,7 @@ AudioSource:
   m_GameObject: {fileID: 460987745038181372}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8322170015787508295, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: d0a0d0f16eb796c42b96e64d7fc3096e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -773,7 +730,7 @@ AudioSource:
   m_GameObject: {fileID: 460987745038181372}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2956856568664466765, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2a4562d91f4803d429616fd6366b7d0c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1389,6 +1346,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -1673,6 +1631,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -1693,6 +1652,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -2455,7 +2415,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.03
+          m_FloatArgument: 0.05
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4119,6 +4079,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4139,6 +4100,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4159,6 +4121,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

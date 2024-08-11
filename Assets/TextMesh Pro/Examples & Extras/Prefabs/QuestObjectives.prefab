@@ -414,6 +414,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3331,6 +3332,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3366,7 +3368,6 @@ GameObject:
   - component: {fileID: 8359063171714368865}
   - component: {fileID: 6620395277785796448}
   - component: {fileID: 206077933338092702}
-  - component: {fileID: 7552794503659533553}
   m_Layer: 0
   m_Name: PuzzleCanvas
   m_TagString: Untagged
@@ -3470,30 +3471,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceObject: {fileID: 4303823185850639545}
-  onCloseInterface: {fileID: 7552794503659533553}
+  onCloseInterface: {fileID: 0}
   combinationLockActivate: {fileID: 0}
   grandfatherClock: {fileID: 6333681135080983005}
   interfaceClosed:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7552794503659533553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8223693161518602548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueContent:
-  - Something can be done with this clock...
-  dialogueDuration: 3
-  isRepeating: 0
-  isInteractDialogue: 0
-  OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8789582139225666972
@@ -3652,31 +3633,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3538474416512081221}
+      objectReference: {fileID: 41860794691004331}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAudioDialogue
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueAudioHandler, Assembly-CSharp
+      value: DialogueTriggerScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 205558484276141305}
+      objectReference: {fileID: 0}
     - target: {fileID: 1726293722433841548, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1904464676975663929, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemDescription
@@ -3696,31 +3677,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9079984486386691874}
+      objectReference: {fileID: 3415768292073643410}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAudioDialogue
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueAudioHandler, Assembly-CSharp
+      value: DialogueTriggerScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 4425235369312476621}
+      objectReference: {fileID: 0}
     - target: {fileID: 3885343942524226307, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: itemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4154943395050250325, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       propertyPath: pillConsumeDialogue
@@ -3825,13 +3806,13 @@ PrefabInstance:
       addedObject: {fileID: 8916508988361686853}
     - targetCorrespondingSourceObject: {fileID: 350198573664701432, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 9079984486386691874}
+      addedObject: {fileID: 3415768292073643410}
     - targetCorrespondingSourceObject: {fileID: 350198573664701432, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4425235369312476621}
     - targetCorrespondingSourceObject: {fileID: 2941514820596367774, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 3538474416512081221}
+      addedObject: {fileID: 41860794691004331}
     - targetCorrespondingSourceObject: {fileID: 2941514820596367774, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
       insertIndex: -1
       addedObject: {fileID: 205558484276141305}
@@ -3841,7 +3822,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 350198573664701432, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
   m_PrefabInstance: {fileID: 910680779750749390}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9079984486386691874
+--- !u!114 &3415768292073643410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3850,11 +3831,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 612283834564853558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
+  dialogueContent:
+  - What are these...These got to power something right?
+  dialogueDuration: 2.5
+  isRepeating: 0
+  isInteractDialogue: 0
+  isPlayedOnce: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4425235369312476621}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &4425235369312476621
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3977,6 +3977,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -3996,7 +3997,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2941514820596367774, guid: caa5889674bd4f044a7c7a987f6bc761, type: 3}
   m_PrefabInstance: {fileID: 910680779750749390}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3538474416512081221
+--- !u!114 &41860794691004331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4005,11 +4006,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2625949863365326160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
+  dialogueContent:
+  - What are these...These got to power something right?
+  dialogueDuration: 2.5
+  isRepeating: 0
+  isInteractDialogue: 0
+  isPlayedOnce: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 205558484276141305}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &205558484276141305
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4142,6 +4162,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4171,6 +4192,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4358,9 +4380,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - A blueprint, huh.
-  dialogueDuration: 3
+  dialogueDuration: 1.5
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -4763,7 +4786,7 @@ PrefabInstance:
       addedObject: {fileID: 6416578035728409611}
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1292659633707852515}
+      addedObject: {fileID: 7118008635441341000}
     - targetCorrespondingSourceObject: {fileID: 3947983854921624827, guid: f54f1c4581845754cb5a4fe5ada3e0d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6333681135080983005}
@@ -4824,14 +4847,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContent:
-  - I somehow solved the clock!
-  dialogueDuration: 3
+  - I guess that works.
+  dialogueDuration: 0.5
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 1
   OnTriggerDialogueAudio:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1292659633707852515
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4833882783310276847}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7118008635441341000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4840,11 +4876,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2135684447244177742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayOnce: 0
-  isAudioPlayed: 0
+  dialogueContent:
+  - What do I even do with this clock.
+  dialogueDuration: 1
+  isRepeating: 0
+  isInteractDialogue: 0
+  isPlayedOnce: 1
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1293737660475795951}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6333681135080983005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4875,13 +4930,13 @@ MonoBehaviour:
   OnInteractDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1292659633707852515}
-        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
-        m_MethodName: PlayAudioDialogue
-        m_Mode: 2
+      - m_Target: {fileID: 7118008635441341000}
+        m_TargetAssemblyTypeName: DialogueTriggerScript, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1293737660475795951}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4890,18 +4945,6 @@ MonoBehaviour:
   OnCompleteGrandfathersClock:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1292659633707852515}
-        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
-        m_MethodName: PlayAudioDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4833882783310276847}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CameraFlash, Assembly-CSharp
         m_MethodName: TriggerFlash
@@ -5604,10 +5647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContent:
-  - Huh....
-  dialogueDuration: 3
+  - What's happening!
+  dialogueDuration: 1
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -5791,7 +5835,7 @@ PrefabInstance:
       addedObject: {fileID: 3563464968953563954}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8306344115985269229}
+      addedObject: {fileID: 8302046948797116711}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb60c5e550f73394b9b595d0334b475d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 548686554304627385}
@@ -5840,6 +5884,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   keyDropOnClock: {fileID: 0}
+  OnKeyPickedUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8302046948797116711}
+        m_TargetAssemblyTypeName: DialogueTriggerScript, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3563464968953563954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5856,8 +5915,31 @@ MonoBehaviour:
   item: {fileID: 1430177801737104772}
   itemPickedUp:
     m_PersistentCalls:
+      m_Calls: []
+  mixingScript: {fileID: 0}
+  pickUpSound: {fileID: 0}
+--- !u!114 &8302046948797116711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280233845622992722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b97162f0694e264b9af95c87904f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContent:
+  - I hope this is the key for the front door.
+  dialogueDuration: 1
+  isRepeating: 0
+  isInteractDialogue: 0
+  isPlayedOnce: 0
+  OnTriggerDialogueAudio:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8306344115985269229}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
         m_MethodName: PlayAudioDialogue
         m_Mode: 2
@@ -5869,22 +5951,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  mixingScript: {fileID: 0}
-  pickUpSound: {fileID: 0}
---- !u!114 &8306344115985269229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4280233845622992722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 1
-  isAudioPlayed: 0
 --- !u!82 &548686554304627385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6523,6 +6589,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -7407,9 +7474,6 @@ PrefabInstance:
       addedObject: {fileID: 8852377614301990458}
     - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7826515572961324246}
-    - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5891905975665170735}
     - targetCorrespondingSourceObject: {fileID: 5357118724427721932, guid: 81dc9326b418b934f89c6f2784c4a1e4, type: 3}
       insertIndex: -1
@@ -7457,9 +7521,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - That's one, still won't turn on though...
-  dialogueDuration: 3
+  dialogueDuration: 1.4
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -7477,9 +7542,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - I think I need something before I can activate this....
-  dialogueDuration: 3
-  isRepeating: 0
+  dialogueDuration: 1.4
+  isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -7496,27 +7562,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContent:
-  - Got the fuse working! Lets go!
-  dialogueDuration: 3
+  - Let there be lights.
+  dialogueDuration: 1
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7826515572961324246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4154368768992171548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 0
-  isAudioPlayed: 0
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2684792171097083588}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5891905975665170735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7542,6 +7607,7 @@ MonoBehaviour:
   requiredFuse: {fileID: 1643083584572518391}
   dialogueText: {fileID: 0}
   televisionGameObject: {fileID: 3996929409546077778}
+  noFuseInteraction: {fileID: 8258944374557843499}
   successFuseDialogue: {fileID: 8852377614301990458}
   notEnoughFusesDialogue: {fileID: 8258944374557843499}
   oneFuseDialogue: {fileID: 5431916737317676389}
@@ -7607,18 +7673,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7826515572961324246}
-        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
-        m_MethodName: PlayAudioDialogue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2684792171097083588}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7846,7 +7900,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8322170015787508295, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: a4df3c1527db6104d92228883cdd7837, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7942,7 +7996,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 8322170015787508295, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3e36e801d8bbaf34e8bc439e0b3cd97d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8711,6 +8765,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 0
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8731,6 +8786,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8847,6 +8903,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8869,6 +8926,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8891,6 +8949,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -8913,6 +8972,7 @@ MonoBehaviour:
   dialogueDuration: 3
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

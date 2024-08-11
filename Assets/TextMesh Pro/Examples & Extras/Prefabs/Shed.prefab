@@ -604,9 +604,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - Maintenance records.
-  dialogueDuration: 3
+  dialogueDuration: 0.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -708,9 +709,6 @@ PrefabInstance:
       addedObject: {fileID: 8495505407244181287}
     - targetCorrespondingSourceObject: {fileID: 2537278621163763141, guid: ff9a4dccd0eb39f46a4fece184d7e7ed, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 2032156305612933636}
-    - targetCorrespondingSourceObject: {fileID: 2537278621163763141, guid: ff9a4dccd0eb39f46a4fece184d7e7ed, type: 3}
-      insertIndex: 3
       addedObject: {fileID: 8194458500901888912}
     - targetCorrespondingSourceObject: {fileID: 2537278621163763141, guid: ff9a4dccd0eb39f46a4fece184d7e7ed, type: 3}
       insertIndex: -1
@@ -744,20 +742,6 @@ MonoBehaviour:
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
   dialogue: {fileID: 8194458500901888912}
---- !u!114 &2032156305612933636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2779909655751187251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 0
-  isAudioPlayed: 0
 --- !u!114 &8194458500901888912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,14 +755,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContent:
-  - Toolbox. There's nothing left in here other than tape.
-  dialogueDuration: 3
+  - Pretty cool toolbox, shame there isn't anything worthwhile I can use.
+  dialogueDuration: 2.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2032156305612933636}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
         m_MethodName: PlayAudioDialogue
         m_Mode: 2
@@ -1778,9 +1763,6 @@ PrefabInstance:
       addedObject: {fileID: 5795024879748390562}
     - targetCorrespondingSourceObject: {fileID: 8082643372655433999, guid: 122517eb2f4b4344f823b25c5cd04568, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 439027393744267002}
-    - targetCorrespondingSourceObject: {fileID: 8082643372655433999, guid: 122517eb2f4b4344f823b25c5cd04568, type: 3}
-      insertIndex: 3
       addedObject: {fileID: 500450137395641742}
     - targetCorrespondingSourceObject: {fileID: 8082643372655433999, guid: 122517eb2f4b4344f823b25c5cd04568, type: 3}
       insertIndex: -1
@@ -1819,20 +1801,6 @@ MonoBehaviour:
   mixingScript: {fileID: 0}
   pickUpSound: {fileID: 0}
   dialogue: {fileID: 500450137395641742}
---- !u!114 &439027393744267002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7582065494711883494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c9035bc2b12e94ab9b3d4757b92285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayOnce: 0
-  isAudioPlayed: 0
 --- !u!114 &500450137395641742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,14 +1814,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContent:
-  - Hammer. Just some surface rust, otherwise it's in good condition.
-  dialogueDuration: 3
+  - A hammer, seems to be in good condition
+  dialogueDuration: 1.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 439027393744267002}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
         m_MethodName: PlayAudioDialogue
         m_Mode: 2
@@ -2107,9 +2076,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - House repair guides?
-  dialogueDuration: 3
+  dialogueDuration: 0.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -2719,9 +2689,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - DIY books...
-  dialogueDuration: 3
+  dialogueDuration: 0.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -2871,9 +2842,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContent:
   - Hardbound instruction manuals...
-  dialogueDuration: 3
+  dialogueDuration: 0.5
   isRepeating: 1
   isInteractDialogue: 0
+  isPlayedOnce: 0
   OnTriggerDialogueAudio:
     m_PersistentCalls:
       m_Calls: []

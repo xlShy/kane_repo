@@ -11,25 +11,32 @@ public class DialogueTriggerScript : MonoBehaviour
     [SerializeField] private float dialogueDuration;
     [SerializeField] private bool isRepeating;
     [SerializeField] private bool isInteractDialogue;
-    private bool hasPlayedOnce = false;
+    [SerializeField] private bool isPlayedOnce;
+    private bool isDialougeAudioPlayed;
+    private bool hasDisplayedOnce = false;
     public UnityEvent OnTriggerDialogueAudio;
 
     public void TriggerDialogue()
-    {
-        OnTriggerDialogueAudio?.Invoke();
-        if ((!hasPlayedOnce || isRepeating) && dialogueContent.Count > 0)
+    {      
+        if ((!hasDisplayedOnce || isRepeating) && dialogueContent.Count > 0)
         {
             bool started = DialogueManager.instance.StartDialogue(dialogueContent, dialogueDuration, isInteractDialogue);
             if (started)
             {
-                hasPlayedOnce = true;
+                hasDisplayedOnce = true;
             }
         }
+        if (isPlayedOnce && isDialougeAudioPlayed)
+        {
+            return;
+        }
+        OnTriggerDialogueAudio?.Invoke();
+        isDialougeAudioPlayed = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((!hasPlayedOnce || isRepeating) && (!DialogueManager.instance.isDisplayingDialogue || isInteractDialogue))
+        if ((!hasDisplayedOnce || isRepeating) && (!DialogueManager.instance.isDisplayingDialogue || isInteractDialogue))
         {
             
             TriggerDialogue();
@@ -38,14 +45,14 @@ public class DialogueTriggerScript : MonoBehaviour
 
     public void TriggerRandomDialogue()
     {
-        if ((!hasPlayedOnce || isRepeating) && dialogueContent.Count > 0)
+        if ((!hasDisplayedOnce || isRepeating) && dialogueContent.Count > 0)
         {
             int randomIndex = Random.Range(0, dialogueContent.Count);
             string randomContent = dialogueContent[randomIndex];
             bool started = DialogueManager.instance.StartDialogue(new List<string> { randomContent }, dialogueDuration, isInteractDialogue);
             if (started)
             {
-                hasPlayedOnce = true;
+                hasDisplayedOnce = true;
             }
         }
     }
@@ -53,6 +60,6 @@ public class DialogueTriggerScript : MonoBehaviour
     // Optional: Method to reset the trigger if needed (e.g., for scene changes or specific game events)
     public void ResetTrigger()
     {
-        hasPlayedOnce = false;
+        hasDisplayedOnce = false;
     }
 }
