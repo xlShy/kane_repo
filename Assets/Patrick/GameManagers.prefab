@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 864382233524305535}
   - component: {fileID: 907859345274863793}
   - component: {fileID: 3832957786758876470}
+  - component: {fileID: 7661651902640345537}
   m_Layer: 0
   m_Name: SanityManager
   m_TagString: Untagged
@@ -273,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increasePercentage: 0.2
-  decreasePercentage: 0.01
+  decreasePercentage: 0.001
   originalInterval: 1
   intervalValueOnCanvasEnabled: 0.1
   currentInterval: 0
@@ -406,6 +407,21 @@ MonoBehaviour:
   threshold2Triggered: 0
   threshold3Triggered: 0
   thumpSoundOnDeath: {fileID: 3832957786758876470}
+  OnRespawningPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9194990936734386087}
+        m_TargetAssemblyTypeName: DialogueAudioHandler, Assembly-CSharp
+        m_MethodName: PlayAudioDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7661651902640345537}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &907859345274863793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +460,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2956856568664466765, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 63a911c1174a20147a27c2dcc1b06e83, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &7661651902640345537
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496121777398930138}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2956856568664466765, guid: ba9fe4e9629be1649b3cf0a083d449d5, type: 2}
+  m_audioClip: {fileID: 8300000, guid: b5fa952ded2241c4aa57f7303406221c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -901,8 +1013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sanityAudioClips:
-  - {fileID: 8300000, guid: cae854b48212135429fb92d425c1ca37, type: 3}
-  - {fileID: 8300000, guid: 43339a20462636843ba433bfa9e9c328, type: 3}
+  - {fileID: 8300000, guid: 5cbb9c740bea19d42a69ed52641f8ab9, type: 3}
+  - {fileID: 8300000, guid: 2d2c44ba811c6694f8a0916d95c332e4, type: 3}
   audioSource: {fileID: 0}
 --- !u!82 &7719087035986903194
 AudioSource:

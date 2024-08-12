@@ -423,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutUIImage: {fileID: 1690891226}
   fadeSpeed: 0.8
+  isDoneFading: 0
 --- !u!4 &639778222
 Transform:
   m_ObjectHideFlags: 0
@@ -481,7 +482,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663325543}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ae88e33d4eeeeec4fbb21cf9a52139ef, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 688bcfb6058809649889ee7f1604abc9, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

@@ -9,10 +9,6 @@ public class SceneFader : MonoBehaviour
     public float fadeSpeed = 0.8f;
 
     public bool isDoneFading = false;
-    void Start()
-    {
-        //StartCoroutine(FadeInTimer());
-    }
 
     public void FadeToScene(string sceneName)
     {
@@ -60,7 +56,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
     }
-
     void SetColorAlpha(float alpha)
     {
         fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);

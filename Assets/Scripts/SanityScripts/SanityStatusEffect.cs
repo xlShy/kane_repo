@@ -33,6 +33,8 @@ public class SanityStatusEffect : MonoBehaviour
 
     [SerializeField] private AudioSource thumpSoundOnDeath;
 
+    public UnityEvent OnRespawningPlayer;
+
     private void Awake()
     {
         sanityHandler = GetComponent<SanityHandler>();
@@ -117,6 +119,7 @@ public class SanityStatusEffect : MonoBehaviour
             controller.enabled = true;
             sanityHandler.ResetSanity();
         }
+        OnRespawningPlayer?.Invoke();
         sceneFader.FadeIn();      
         yield return new WaitUntil(() => sceneFader.isDoneFading);
         isDead = false;
