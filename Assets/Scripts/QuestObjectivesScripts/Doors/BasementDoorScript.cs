@@ -16,6 +16,7 @@ public class BasementDoorScript : InteractableObject
 
     private AsyncOperation asyncLoad;
 
+    public AudioSource knockingSource;
     private void Awake()
     {
         doorBase = GetComponent<DoorBase>();
@@ -37,6 +38,14 @@ public class BasementDoorScript : InteractableObject
         {
             doorBase.CloseDoor(openSpeed);
         }
+    }
+    public void PlayKnockingNoise()
+    {
+        knockingSource.Play();
+    }
+    public void StopKnockingNoise()
+    {
+        knockingSource.Stop();
     }
     IEnumerator LoadCreditsScene()
     {
